@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="Make_Mpdec" />
+		<Option pch_mode="2" />
+		<Option compiler="gnu_gcc_492_compiler_32_bit" />
+		<Build>
+			<Target title="LibWin32">
+				<Option output="../../../../ExternalTools/msys32/local/Win32/lib/mpdec-2" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="" />
+				<Option object_output="obj/Release/" />
+				<Option type="2" />
+				<Option compiler="gnu_gcc_492_compiler_tdm" />
+				<Compiler>
+					<Add option="-O2" />
+					<Add option="-std=c++11" />
+					<Add option="-Wall" />
+					<Add option="-m32" />
+					<Add option="-DCONFIG_32" />
+					<Add option="-DASM" />
+					<Add option="-DPPRO" />
+					<Add option="-D__STDC_LIMIT_MACROS" />
+					<Add directory="../Include/Win32" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+					<Add option="-m32" />
+				</Linker>
+			</Target>
+			<Target title="LibWin64">
+				<Option output="../../../../ExternalTools/msys32/local/Win64/lib/mpdec-2" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="" />
+				<Option object_output="obj/Release64/" />
+				<Option type="2" />
+				<Option compiler="gnu_gcc_492_compiler_tdm" />
+				<Compiler>
+					<Add option="-O2" />
+					<Add option="-std=c++11" />
+					<Add option="-Wall" />
+					<Add option="-DCONFIG_64" />
+					<Add option="-DASM" />
+					<Add option="-Dx64" />
+					<Add option="-D__STDC_LIMIT_MACROS" />
+					<Add directory="../Include/Win64" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Linker>
+			<Add directory="../NewDecimal" />
+		</Linker>
+		<Unit filename="../Include/Win32/mpdecimal.h">
+			<Option target="LibWin32" />
+		</Unit>
+		<Unit filename="../Include/Win64/mpdecimal.h">
+			<Option target="LibWin64" />
+		</Unit>
+		<Unit filename="basearith.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="basearith.h" />
+		<Unit filename="bits.h" />
+		<Unit filename="constants.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="constants.h" />
+		<Unit filename="context.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="convolute.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="convolute.h" />
+		<Unit filename="crt.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="crt.h" />
+		<Unit filename="difradix2.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="difradix2.h" />
+		<Unit filename="fnt.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="fnt.h" />
+		<Unit filename="fourstep.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="fourstep.h" />
+		<Unit filename="io.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="io.h" />
+		<Unit filename="main.cpp">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="main.h">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="memory.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="memory.h" />
+		<Unit filename="mpdecimal.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="mpsignal.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="numbertheory.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="numbertheory.h" />
+		<Unit filename="sixstep.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="sixstep.h" />
+		<Unit filename="transpose.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="transpose.h" />
+		<Unit filename="typearith.h" />
+		<Unit filename="umodarith.h" />
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<debugger />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

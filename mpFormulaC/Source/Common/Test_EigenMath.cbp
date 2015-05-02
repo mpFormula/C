@@ -1,0 +1,688 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="Test_EigenMath" />
+		<Option pch_mode="2" />
+		<Option compiler="gnu_gcc_492_compiler_32_bit" />
+		<Build>
+			<Target title="LibWin32_Float">
+				<Option output="../../../ExternalTools/msys32/local/Win32/lib/UseEigenFloat" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/Win32_Float" />
+				<Option type="1" />
+				<Option compiler="gnu_gcc_492_compiler_tdm" />
+				<Compiler>
+					<Add option="-O2" />
+					<Add option="-std=c++11" />
+					<Add option="-m32" />
+					<Add option="-DUse_Float2" />
+					<Add directory="../../../ExternalLibraries/Eigen" />
+					<Add directory="Include" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+					<Add option="-m32" />
+					<Add library="libEigenFloat.a" />
+					<Add library="libBoostMathLongDouble.a" />
+					<Add directory="../../../ExternalTools/msys32/local/Win32/lib" />
+				</Linker>
+			</Target>
+			<Target title="LibWin32_Double">
+				<Option output="../../../ExternalTools/msys32/local/Win32/lib/UseEigenDouble" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/Win32_Double" />
+				<Option type="1" />
+				<Option compiler="gnu_gcc_492_compiler_tdm" />
+				<Compiler>
+					<Add option="-O2" />
+					<Add option="-std=c++11" />
+					<Add option="-m32" />
+					<Add option="-DUse_Double2" />
+					<Add directory="../../../ExternalLibraries/Eigen" />
+					<Add directory="Include" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+					<Add option="-m32" />
+					<Add library="libEigenDouble.a" />
+					<Add library="libBoostMathLongDouble.a" />
+					<Add directory="../../../ExternalTools/msys32/local/Win32/lib" />
+				</Linker>
+			</Target>
+			<Target title="LibWin32_LongDouble">
+				<Option output="../../../ExternalTools/msys32/local/Win32/lib/UseEigenLongDouble" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/Win32_LongDouble" />
+				<Option type="1" />
+				<Option compiler="gnu_gcc_492_compiler_tdm" />
+				<Compiler>
+					<Add option="-O2" />
+					<Add option="-std=c++11" />
+					<Add option="-m32" />
+					<Add option="-DUse_LongDouble2" />
+					<Add directory="../../../ExternalLibraries/Eigen" />
+					<Add directory="Include" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+					<Add option="-m32" />
+					<Add library="libEigenLongDouble.a" />
+					<Add library="libBoostMathLongDouble.a" />
+					<Add directory="../../../ExternalTools/msys32/local/Win32/lib" />
+				</Linker>
+			</Target>
+			<Target title="LibWin32_Mpfr">
+				<Option output="../../../ExternalTools/msys32/local/Win32/lib/UseEigenMpfr" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/Win32_Mpfr" />
+				<Option type="1" />
+				<Option compiler="gnu_gcc_492_compiler_tdm" />
+				<Compiler>
+					<Add option="-Os" />
+					<Add option="-std=c++11" />
+					<Add option="-m32" />
+					<Add option="-DUse_Mpfr2" />
+					<Add directory="Include" />
+					<Add directory="Include/Win32" />
+					<Add directory="../../../ExternalTools/msys32/local/Win32/include" />
+					<Add directory="../../../ExternalLibraries/Eigen" />
+					<Add directory="../../../ExternalTools/msys32/local/Win32/include/flint" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+					<Add option="-m32" />
+					<Add library="libEigenMpfr.a" />
+					<Add library="libmpfci.a" />
+					<Add library="libmpc.a" />
+					<Add library="libmpfi.a" />
+					<Add library="libmpfr.a" />
+					<Add library="libgmp.a" />
+					<Add library="libmpdec-2.a" />
+					<Add directory="../../../ExternalTools/msys32/local/Win32/lib" />
+				</Linker>
+			</Target>
+			<Target title="LibWin32_Mpfi">
+				<Option output="../../../ExternalTools/msys32/local/Win32/lib/UseDLLEigenMpfi" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/Win32_Mpfi" />
+				<Option type="1" />
+				<Option compiler="gnu_gcc_492_compiler_tdm" />
+				<Compiler>
+					<Add option="-Os" />
+					<Add option="-std=c++11" />
+					<Add option="-m32" />
+					<Add option="-DUse_Mpfi2" />
+					<Add directory="../../../ExternalLibraries/Eigen" />
+					<Add directory="../../../ExternalTools/msys32/local/Win32/include" />
+					<Add directory="Include" />
+					<Add directory="Include/Win32" />
+					<Add directory="../../../ExternalTools/msys32/local/Win32/include/flint" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+					<Add option="-m32" />
+					<Add library="libEigenMpfi.a" />
+					<Add library="libmpfci.a" />
+					<Add library="libmpc.a" />
+					<Add library="libmpfi.a" />
+					<Add library="libmpfr.a" />
+					<Add library="libgmp.a" />
+					<Add library="libmpdec-2.a" />
+					<Add directory="../../../ExternalTools/msys32/local/Win32/lib" />
+				</Linker>
+			</Target>
+			<Target title="LibWin32_Mpdec">
+				<Option output="../../../ExternalTools/msys32/local/Win32/lib/UseEigenMpdec" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/Win32_Mpdec" />
+				<Option type="1" />
+				<Option compiler="gnu_gcc_492_compiler_tdm" />
+				<Compiler>
+					<Add option="-Os" />
+					<Add option="-std=c++11" />
+					<Add option="-m32" />
+					<Add option="-DUse_Mpdec2" />
+					<Add option="-D__STDC_LIMIT_MACROS" />
+					<Add directory="../../../ExternalLibraries/Eigen" />
+					<Add directory="../../../ExternalTools/msys32/local/Win32/include" />
+					<Add directory="Include" />
+					<Add directory="Include/Win32" />
+					<Add directory="../../../ExternalTools/msys32/local/Win32/include/flint" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+					<Add option="-m32" />
+					<Add library="libEigenMpdec.a" />
+					<Add library="libmpfci.a" />
+					<Add library="libmpc.a" />
+					<Add library="libmpfi.a" />
+					<Add library="libmpfr.a" />
+					<Add library="libgmp.a" />
+					<Add library="libmpdec-2.a" />
+					<Add directory="../../../ExternalTools/msys32/local/Win32/lib" />
+				</Linker>
+			</Target>
+			<Target title="LibWin32_Mpq">
+				<Option output="../../../ExternalTools/msys32/local/Win32/lib/UseDLLEigenMpq" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/Win32_Mpdec" />
+				<Option type="1" />
+				<Option compiler="gnu_gcc_492_compiler_tdm" />
+				<Compiler>
+					<Add option="-Os" />
+					<Add option="-std=c++11" />
+					<Add option="-m32" />
+					<Add option="-DUse_Mpq2" />
+					<Add directory="../../../ExternalLibraries/Eigen" />
+					<Add directory="../../../ExternalTools/msys32/local/Win32/include" />
+					<Add directory="Include" />
+					<Add directory="Include/Win32" />
+					<Add directory="../../../ExternalTools/msys32/local/Win32/include/flint" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+					<Add option="-m32" />
+					<Add library="libEigenMpq.a" />
+					<Add library="libmpfci.a" />
+					<Add library="libmpc.a" />
+					<Add library="libmpfi.a" />
+					<Add library="libmpfr.a" />
+					<Add library="libgmp.a" />
+					<Add library="libmpdec-2.a" />
+					<Add directory="../../../ExternalTools/msys32/local/Win32/lib" />
+				</Linker>
+			</Target>
+			<Target title="LibWin32_Arb">
+				<Option output="../../../ExternalTools/msys32/local/Win32/lib/UseEigenArb" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/Win32_Mpfr" />
+				<Option type="1" />
+				<Option compiler="gnu_gcc_492_compiler_tdm" />
+				<Compiler>
+					<Add option="-Os" />
+					<Add option="-std=c++11" />
+					<Add option="-m32" />
+					<Add option="-DUse_Arb2" />
+					<Add directory="Include" />
+					<Add directory="Include/Win32" />
+					<Add directory="../../../ExternalTools/msys32/local/Win32/include" />
+					<Add directory="../../../ExternalLibraries/Eigen" />
+					<Add directory="../../../ExternalTools/msys32/local/Win32/include/flint" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+					<Add option="-m32" />
+					<Add library="libEigenArb.a" />
+					<Add library="libarb.a" />
+					<Add library="libflint.a" />
+					<Add library="libmpfci.a" />
+					<Add library="libmpc.a" />
+					<Add library="libmpfi.a" />
+					<Add library="libmpfr.a" />
+					<Add library="libgmp.a" />
+					<Add library="libmpdec-2.a" />
+					<Add directory="../../../ExternalTools/msys32/local/Win32/lib" />
+				</Linker>
+			</Target>
+			<Target title="LibWin32_Num">
+				<Option output="../../../ExternalTools/msys32/local/Win32/lib/UseDLLEigenALL" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/Win32_Num" />
+				<Option type="1" />
+				<Option compiler="gnu_gcc_492_compiler_tdm" />
+				<Compiler>
+					<Add option="-Os" />
+					<Add option="-std=c++11" />
+					<Add option="-m32" />
+					<Add option="-DUse_ALL" />
+					<Add option="-D__STDC_LIMIT_MACROS" />
+					<Add directory="Include" />
+					<Add directory="Include/Win32" />
+					<Add directory="../../../ExternalLibraries/Eigen" />
+					<Add directory="../../../ExternalTools/msys32/local/Win32/include" />
+					<Add directory="../../../ExternalTools/msys32/local/Win32/include/flint" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+					<Add option="-m32" />
+					<Add library="libEigenArb.a" />
+					<Add library="libEigenMpq.a" />
+					<Add library="libEigenMpdec.a" />
+					<Add library="libEigenMpfi.a" />
+					<Add library="libEigenMpfr.a" />
+					<Add library="libEigenFloat.a" />
+					<Add library="libEigenDouble.a" />
+					<Add library="libEigenLongDouble.a" />
+					<Add library="libarb.a" />
+					<Add library="libflint.a" />
+					<Add library="libmpfci.a" />
+					<Add library="libmpc.a" />
+					<Add library="libmpfi.a" />
+					<Add library="libmpfr.a" />
+					<Add library="libgmp.a" />
+					<Add library="libmpdec-2.a" />
+					<Add library="libBoostMathLongDouble.a" />
+					<Add directory="../../../ExternalTools/msys32/local/Win32/lib" />
+				</Linker>
+			</Target>
+			<Target title="LibWin32_Num_Make_DLL">
+				<Option output="../../../ExternalTools/msys32/local/Win32/lib/mpNumC" imp_lib="$(TARGET_OUTPUT_DIR)$(TARGET_OUTPUT_BASENAME).a" def_file="$(TARGET_OUTPUT_DIR)$(TARGET_OUTPUT_BASENAME).def" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/Win32_Num" />
+				<Option type="3" />
+				<Option compiler="gnu_gcc_492_compiler_tdm" />
+				<Option createDefFile="1" />
+				<Compiler>
+					<Add option="-Os" />
+					<Add option="-std=c++11" />
+					<Add option="-m32" />
+					<Add option="-DUse_ALL" />
+					<Add option="-DBUILD_MPNUMC_DLL" />
+					<Add directory="Include" />
+					<Add directory="Include/Win32" />
+					<Add directory="../../../ExternalLibraries/Eigen" />
+					<Add directory="../../../ExternalTools/msys32/local/Win32/include" />
+					<Add directory="../../../ExternalTools/msys32/local/Win32/include/flint" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+					<Add option="-m32" />
+					<Add library="libEigenArb.a" />
+					<Add library="libEigenMpq.a" />
+					<Add library="libEigenMpdec.a" />
+					<Add library="libEigenMpfi.a" />
+					<Add library="libEigenMpfr.a" />
+					<Add library="libEigenFloat.a" />
+					<Add library="libEigenDouble.a" />
+					<Add library="libEigenLongDouble.a" />
+					<Add library="libarb.a" />
+					<Add library="libflint.a" />
+					<Add library="libmpfci.a" />
+					<Add library="libmpc.a" />
+					<Add library="libmpfi.a" />
+					<Add library="libmpfr.a" />
+					<Add library="libgmp.a" />
+					<Add library="libmpdec-2.a" />
+					<Add library="libBoostMathLongDouble.a" />
+					<Add directory="../../../ExternalTools/msys32/local/Win32/lib" />
+				</Linker>
+			</Target>
+			<Target title="LibWin64_Float">
+				<Option output="../../../ExternalTools/msys32/local/Win64/lib/UseEigenFloat" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/Win64_Float" />
+				<Option type="1" />
+				<Option compiler="gnu_gcc_492_compiler_tdm" />
+				<Compiler>
+					<Add option="-O2" />
+					<Add option="-std=c++11" />
+					<Add option="-DUse_Float2" />
+					<Add directory="../../../ExternalLibraries/Eigen" />
+					<Add directory="Include" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+					<Add library="libEigenFloat.a" />
+					<Add library="libBoostMathLongDouble.a" />
+					<Add directory="../../../ExternalTools/msys32/local/Win64/lib" />
+				</Linker>
+			</Target>
+			<Target title="LibWin64_Double">
+				<Option output="../../../ExternalTools/msys32/local/Win64/lib/UseEigenDouble" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/Win64_Double" />
+				<Option type="1" />
+				<Option compiler="gnu_gcc_492_compiler_tdm" />
+				<Compiler>
+					<Add option="-O2" />
+					<Add option="-std=c++11" />
+					<Add option="-DUse_Double2" />
+					<Add directory="../../../ExternalLibraries/Eigen" />
+					<Add directory="Include" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+					<Add library="libEigenDouble.a" />
+					<Add library="libBoostMathLongDouble.a" />
+					<Add directory="../../../ExternalTools/msys32/local/Win64/lib" />
+				</Linker>
+			</Target>
+			<Target title="LibWin64_LongDouble">
+				<Option output="../../../ExternalTools/msys32/local/Win64/lib/UseEigenLongDouble" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/Win64_LongDouble" />
+				<Option type="1" />
+				<Option compiler="gnu_gcc_492_compiler_tdm" />
+				<Compiler>
+					<Add option="-O2" />
+					<Add option="-std=c++11" />
+					<Add option="-DUse_LongDouble2" />
+					<Add directory="../../../ExternalLibraries/Eigen" />
+					<Add directory="Include" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+					<Add library="libEigenLongDouble.a" />
+					<Add library="libBoostMathLongDouble.a" />
+					<Add directory="../../../ExternalTools/msys32/local/Win64/lib" />
+				</Linker>
+			</Target>
+			<Target title="LibWin64_Mpfr">
+				<Option output="../../../ExternalTools/msys32/local/Win64/lib/UseEigenMpfr" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/Win64_Mpfr" />
+				<Option type="1" />
+				<Option compiler="gnu_gcc_492_compiler_tdm" />
+				<Compiler>
+					<Add option="-Os" />
+					<Add option="-std=c++11" />
+					<Add option="-DUse_Mpfr2" />
+					<Add directory="Include" />
+					<Add directory="Include/Win64" />
+					<Add directory="../../../ExternalTools/msys32/local/Win64/include" />
+					<Add directory="../../../ExternalLibraries/Eigen" />
+					<Add directory="../../../ExternalTools/msys32/local/Win64/include/flint" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+					<Add library="libEigenMpfr.a" />
+					<Add library="libmpfci.a" />
+					<Add library="libmpc.a" />
+					<Add library="libmpfi.a" />
+					<Add library="libmpfr.a" />
+					<Add library="libgmp.a" />
+					<Add library="libmpdec-2.a" />
+					<Add directory="../../../ExternalTools/msys32/local/Win64/lib" />
+				</Linker>
+			</Target>
+			<Target title="LibWin64_Mpfi">
+				<Option output="../../../ExternalTools/msys32/local/Win64/lib/UseDLLEigenMpfi" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/Win64_Mpfi" />
+				<Option type="1" />
+				<Option compiler="gnu_gcc_492_compiler_tdm" />
+				<Compiler>
+					<Add option="-Os" />
+					<Add option="-std=c++11" />
+					<Add option="-DUse_Mpfi2" />
+					<Add directory="../../../ExternalLibraries/Eigen" />
+					<Add directory="../../../ExternalTools/msys32/local/Win64/include" />
+					<Add directory="Include" />
+					<Add directory="Include/Win64" />
+					<Add directory="../../../ExternalTools/msys32/local/Win64/include/flint" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+					<Add library="libEigenMpfi.a" />
+					<Add library="libmpfci.a" />
+					<Add library="libmpc.a" />
+					<Add library="libmpfi.a" />
+					<Add library="libmpfr.a" />
+					<Add library="libgmp.a" />
+					<Add library="libmpdec-2.a" />
+					<Add directory="../../../ExternalTools/msys32/local/Win64/lib" />
+				</Linker>
+			</Target>
+			<Target title="LibWin64_Mpdec">
+				<Option output="../../../ExternalTools/msys32/local/Win64/lib/UseEigenMpdec" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/Win64_Mpdec" />
+				<Option type="1" />
+				<Option compiler="gnu_gcc_492_compiler_tdm" />
+				<Compiler>
+					<Add option="-Os" />
+					<Add option="-std=c++11" />
+					<Add option="-DUse_Mpdec2" />
+					<Add option="-D__STDC_LIMIT_MACROS" />
+					<Add directory="../../../ExternalLibraries/Eigen" />
+					<Add directory="../../../ExternalTools/msys32/local/Win64/include" />
+					<Add directory="Include" />
+					<Add directory="Include/Win64" />
+					<Add directory="../../../ExternalTools/msys32/local/Win64/include/flint" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+					<Add library="libEigenMpdec.a" />
+					<Add library="libmpfci.a" />
+					<Add library="libmpc.a" />
+					<Add library="libmpfi.a" />
+					<Add library="libmpfr.a" />
+					<Add library="libgmp.a" />
+					<Add library="libmpdec-2.a" />
+					<Add directory="../../../ExternalTools/msys32/local/Win64/lib" />
+				</Linker>
+			</Target>
+			<Target title="LibWin64_Mpq">
+				<Option output="../../../ExternalTools/msys32/local/Win64/lib/UseDLLEigenMpq" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/Win64_Mpdec" />
+				<Option type="1" />
+				<Option compiler="gnu_gcc_492_compiler_tdm" />
+				<Compiler>
+					<Add option="-Os" />
+					<Add option="-std=c++11" />
+					<Add option="-DUse_Mpq2" />
+					<Add directory="../../../ExternalLibraries/Eigen" />
+					<Add directory="../../../ExternalTools/msys32/local/Win64/include" />
+					<Add directory="Include" />
+					<Add directory="Include/Win64" />
+					<Add directory="../../../ExternalTools/msys32/local/Win64/include/flint" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+					<Add library="libEigenMpq.a" />
+					<Add library="libmpfci.a" />
+					<Add library="libmpc.a" />
+					<Add library="libmpfi.a" />
+					<Add library="libmpfr.a" />
+					<Add library="libgmp.a" />
+					<Add library="libmpdec-2.a" />
+					<Add directory="../../../ExternalTools/msys32/local/Win64/lib" />
+				</Linker>
+			</Target>
+			<Target title="LibWin64_Arb">
+				<Option output="../../../ExternalTools/msys32/local/Win64/lib/UseEigenArb" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/Win64_Arb" />
+				<Option type="1" />
+				<Option compiler="gnu_gcc_492_compiler_tdm" />
+				<Compiler>
+					<Add option="-Os" />
+					<Add option="-std=c++11" />
+					<Add option="-DUse_Arb2" />
+					<Add directory="Include" />
+					<Add directory="Include/Win64" />
+					<Add directory="../../../ExternalTools/msys32/local/Win64/include" />
+					<Add directory="../../../ExternalLibraries/Eigen" />
+					<Add directory="../../../ExternalTools/msys32/local/Win64/include/flint" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+					<Add library="libEigenArb.a" />
+					<Add library="libarb.a" />
+					<Add library="libflint.a" />
+					<Add library="libmpfci.a" />
+					<Add library="libmpc.a" />
+					<Add library="libmpfi.a" />
+					<Add library="libmpfr.a" />
+					<Add library="libgmp.a" />
+					<Add library="libmpdec-2.a" />
+					<Add directory="../../../ExternalTools/msys32/local/Win64/lib" />
+				</Linker>
+			</Target>
+			<Target title="LibWin64_Num">
+				<Option output="../../../ExternalTools/msys32/local/Win64/lib/UseDLLEigenALL" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/Win64_Num" />
+				<Option type="1" />
+				<Option compiler="gnu_gcc_492_compiler_tdm" />
+				<Compiler>
+					<Add option="-Os" />
+					<Add option="-std=c++11" />
+					<Add option="-DUse_ALL" />
+					<Add option="-D__STDC_LIMIT_MACROS" />
+					<Add directory="Include" />
+					<Add directory="Include/Win64" />
+					<Add directory="../../../ExternalLibraries/Eigen" />
+					<Add directory="../../../ExternalTools/msys32/local/Win64/include" />
+					<Add directory="../../../ExternalTools/msys32/local/Win64/include/flint" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+					<Add library="libEigenArb.a" />
+					<Add library="libEigenMpq.a" />
+					<Add library="libEigenMpdec.a" />
+					<Add library="libEigenMpfi.a" />
+					<Add library="libEigenMpfr.a" />
+					<Add library="libEigenFloat.a" />
+					<Add library="libEigenDouble.a" />
+					<Add library="libEigenLongDouble.a" />
+					<Add library="libarb.a" />
+					<Add library="libflint.a" />
+					<Add library="libmpfci.a" />
+					<Add library="libmpc.a" />
+					<Add library="libmpfi.a" />
+					<Add library="libmpfr.a" />
+					<Add library="libgmp.a" />
+					<Add library="libmpdec-2.a" />
+					<Add library="libBoostMathLongDouble.a" />
+					<Add directory="../../../ExternalTools/msys32/local/Win64/lib" />
+				</Linker>
+			</Target>
+			<Target title="LibWin64_Num_Make_DLL">
+				<Option output="../../../ExternalTools/msys32/local/Win64/lib/mpNumC" imp_lib="$(TARGET_OUTPUT_DIR)$(TARGET_OUTPUT_BASENAME).a" def_file="$(TARGET_OUTPUT_DIR)$(TARGET_OUTPUT_BASENAME).def" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/Win64_Num_Make_DLL" />
+				<Option type="3" />
+				<Option compiler="gnu_gcc_492_compiler_tdm" />
+				<Option createDefFile="1" />
+				<Compiler>
+					<Add option="-Os" />
+					<Add option="-std=c++11" />
+					<Add option="-DUse_ALL" />
+					<Add option="-DBUILD_MPNUMC_DLL" />
+					<Add directory="Include" />
+					<Add directory="Include/Win64" />
+					<Add directory="../../../ExternalLibraries/Eigen" />
+					<Add directory="../../../ExternalTools/msys32/local/Win64/include" />
+					<Add directory="../../../ExternalTools/msys32/local/Win64/include/flint" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+					<Add library="libEigenArb.a" />
+					<Add library="libEigenMpq.a" />
+					<Add library="libEigenMpdec.a" />
+					<Add library="libEigenMpfi.a" />
+					<Add library="libEigenMpfr.a" />
+					<Add library="libEigenFloat.a" />
+					<Add library="libEigenDouble.a" />
+					<Add library="libEigenLongDouble.a" />
+					<Add library="libarb.a" />
+					<Add library="libflint.a" />
+					<Add library="libmpfci.a" />
+					<Add library="libmpc.a" />
+					<Add library="libmpfi.a" />
+					<Add library="libmpfr.a" />
+					<Add library="libgmp.a" />
+					<Add library="libmpdec-2.a" />
+					<Add library="libBoostMathLongDouble.a" />
+					<Add directory="../../../ExternalTools/msys32/local/Win64/lib" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="-fexceptions" />
+		</Compiler>
+		<Unit filename="Include/mpNumC.h" />
+		<Unit filename="Include/mpNum_Internal.h">
+			<Option target="LibWin32_Float" />
+			<Option target="LibWin32_Double" />
+			<Option target="LibWin32_LongDouble" />
+			<Option target="LibWin32_Mpfr" />
+			<Option target="LibWin32_Mpfi" />
+			<Option target="LibWin32_Mpdec" />
+			<Option target="LibWin32_Mpq" />
+			<Option target="LibWin32_Num" />
+			<Option target="LibWin64_Float" />
+			<Option target="LibWin64_Double" />
+			<Option target="LibWin64_LongDouble" />
+			<Option target="LibWin64_Mpfr" />
+			<Option target="LibWin64_Mpfi" />
+			<Option target="LibWin64_Mpdec" />
+			<Option target="LibWin64_Mpq" />
+			<Option target="LibWin64_Num" />
+			<Option target="LibWin32_Arb" />
+			<Option target="LibWin64_Arb" />
+		</Unit>
+		<Unit filename="UseEigenDouble.cpp">
+			<Option target="LibWin32_Double" />
+			<Option target="LibWin32_Num" />
+			<Option target="LibWin32_Num_Make_DLL" />
+			<Option target="LibWin64_Double" />
+			<Option target="LibWin64_Num" />
+			<Option target="LibWin64_Num_Make_DLL" />
+		</Unit>
+		<Unit filename="UseEigenFloat.cpp">
+			<Option target="LibWin32_Float" />
+			<Option target="LibWin32_Num" />
+			<Option target="LibWin32_Num_Make_DLL" />
+			<Option target="LibWin64_Float" />
+			<Option target="LibWin64_Num" />
+			<Option target="LibWin64_Num_Make_DLL" />
+		</Unit>
+		<Unit filename="UseEigenLongDouble.cpp">
+			<Option target="LibWin32_LongDouble" />
+			<Option target="LibWin32_Num" />
+			<Option target="LibWin32_Num_Make_DLL" />
+			<Option target="LibWin64_LongDouble" />
+			<Option target="LibWin64_Num" />
+			<Option target="LibWin64_Num_Make_DLL" />
+		</Unit>
+		<Unit filename="UseEigenMpdec.cpp">
+			<Option target="LibWin32_Mpdec" />
+			<Option target="LibWin32_Num" />
+			<Option target="LibWin32_Num_Make_DLL" />
+			<Option target="LibWin64_Mpdec" />
+			<Option target="LibWin64_Num" />
+			<Option target="LibWin64_Num_Make_DLL" />
+		</Unit>
+		<Unit filename="UseEigenMpfi.cpp">
+			<Option target="LibWin32_Mpfi" />
+			<Option target="LibWin32_Num" />
+			<Option target="LibWin32_Num_Make_DLL" />
+			<Option target="LibWin64_Mpfi" />
+			<Option target="LibWin64_Num" />
+			<Option target="LibWin64_Num_Make_DLL" />
+		</Unit>
+		<Unit filename="UseEigenMpfr.cpp">
+			<Option target="LibWin32_Mpfr" />
+			<Option target="LibWin32_Num" />
+			<Option target="LibWin32_Num_Make_DLL" />
+			<Option target="LibWin64_Mpfr" />
+			<Option target="LibWin64_Num" />
+			<Option target="LibWin64_Num_Make_DLL" />
+		</Unit>
+		<Unit filename="UseEigenMpq.cpp">
+			<Option target="LibWin32_Mpq" />
+			<Option target="LibWin32_Num" />
+			<Option target="LibWin32_Num_Make_DLL" />
+			<Option target="LibWin64_Mpq" />
+			<Option target="LibWin64_Num" />
+			<Option target="LibWin64_Num_Make_DLL" />
+		</Unit>
+		<Unit filename="UseEigenNum.cpp">
+			<Option target="LibWin32_Num" />
+			<Option target="LibWin32_Num_Make_DLL" />
+			<Option target="LibWin64_Num" />
+			<Option target="LibWin64_Num_Make_DLL" />
+		</Unit>
+		<Unit filename="mainUse.cpp">
+			<Option target="LibWin32_Float" />
+			<Option target="LibWin32_Double" />
+			<Option target="LibWin32_LongDouble" />
+			<Option target="LibWin32_Mpfr" />
+			<Option target="LibWin32_Mpfi" />
+			<Option target="LibWin32_Mpdec" />
+			<Option target="LibWin32_Mpq" />
+			<Option target="LibWin32_Num" />
+			<Option target="LibWin64_Float" />
+			<Option target="LibWin64_Double" />
+			<Option target="LibWin64_LongDouble" />
+			<Option target="LibWin64_Mpfr" />
+			<Option target="LibWin64_Mpfi" />
+			<Option target="LibWin64_Mpdec" />
+			<Option target="LibWin64_Mpq" />
+			<Option target="LibWin64_Num" />
+			<Option target="LibWin32_Arb" />
+			<Option target="LibWin64_Arb" />
+		</Unit>
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<debugger />
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

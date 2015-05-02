@@ -1,0 +1,11 @@
+﻿<Properties>
+  <Array name="bookmarks" />
+  <Array name="files">
+    <Element value="E:\Extra\mpFormulaTDM\mpFormulaC\Source\mpNumerix2\TestmpNumerix2\Program.vb" />
+  </Array>
+  <Properties name="projectSavedData">
+    <Properties name="customTool">
+      <runOnBuild value="False" />
+    </Properties>
+  </Properties>
+</Properties>

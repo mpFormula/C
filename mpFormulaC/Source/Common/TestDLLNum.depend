@@ -1,0 +1,12 @@
+# depslib dependency file v1.0
+1393964084 source:c:\extra\gcc\cppprograms\testdlleigen\testdllnummain.cpp
+	"mpNumC.h"
+
+1392742755 c:\extra\gcc\cppprograms\testdlleigen\mpnumc.h
+	<mp_Constants.h>
+
+1395758709 c:\extra\gcc\mpnum\common\include\mp_constants.h
+
+1395844230 c:\extra\gcc\mpnum\common\include\mpnumc.h
+	<mp_Constants.h>
+

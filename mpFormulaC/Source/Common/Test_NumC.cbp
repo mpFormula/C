@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="Test_NumC" />
+		<Option pch_mode="2" />
+		<Option compiler="gnu_gcc_492_compiler_32_bit" />
+		<Build>
+			<Target title="LibWin32">
+				<Option output="../../../ExternalTools/msys32/local/Win32/lib/TestDLLNum" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/Win32" />
+				<Option type="1" />
+				<Option compiler="gnu_gcc_492_compiler_tdm" />
+				<Compiler>
+					<Add option="-O2" />
+					<Add option="-m32" />
+					<Add option="-DUSE_MPNUMC_DLL" />
+					<Add directory="Include" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+					<Add option="-m32" />
+					<Add library="..\..\..\ExternalTools\msys32\local\Win32\lib\mpNumC.dll" />
+					<Add directory="../Win32/Bin" />
+				</Linker>
+			</Target>
+			<Target title="LibWin64">
+				<Option output="../../../ExternalTools/msys32/local/Win64/lib/TestDLLNum" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/Win64" />
+				<Option type="1" />
+				<Option compiler="gnu_gcc_492_compiler_tdm" />
+				<Compiler>
+					<Add option="-O2" />
+					<Add option="-DUSE_MPNUMC_DLL" />
+					<Add directory="Include" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+					<Add library="..\..\..\ExternalTools\msys32\local\Win64\lib\mpNumC.dll" />
+					<Add directory="../Win32/Bin" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="-fexceptions" />
+		</Compiler>
+		<Unit filename="TestDLLNumMain.cpp" />
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<debugger />
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

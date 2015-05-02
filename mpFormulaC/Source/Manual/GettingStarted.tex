@@ -1,0 +1,105 @@
+\chapter{Introduction}
+\label{Introduction1} 
+
+
+
+\section{Overview: Features and Setup}
+
+
+\subsection{Features}
+The mpFormulaC distribution consists of two parts: the mpFormulaC Library and the mpFormulaC Toolbox.
+
+\subsection{The mpFormulaC Library}
+
+The mpFormulaC Library is a collection of numerical functions and procedures in multiprecision arithmetic. It is intended to be usable on multiple platforms (i.e. platforms supported by a recent version of the GNU Compiler Collection, e.g. Windows, GNU/Linux, Mac OS) and is provided in the form of source code, with interfaces to C and C++. 
+
+The following multi-precision types are supported:
+
+\begin{itemize}		
+  \item The MPZ arbitrary precision integer type of the GMP library. 
+  \item The MPQ arbitrary precision rational type of the GMP library. 
+  \item The MPD arbitrary precision decimal floating point type of the libmpdec library. 
+  \item The MPFR arbitrary precision real binary floating point type of the MPFR library.
+  \item The MPC arbitrary precision complex binary floating point type of the MPC library.
+  \item The MPFI arbitrary precision real binary interval arithmetic floating point type of the MPFI library.
+  \item The MPFCI arbitrary precision complex binary interval arithmetic floating point type of the XSC-MPFI library.   
+\end{itemize}
+
+In addition, the following hardware-based floating-point types are supported:
+
+\begin{itemize}		
+	\item The conventional single (32 bit) precision real binary floating point type (float in C).
+	\item The conventional single (32 bit) precision complex binary floating point type (float in C).	
+	\item The conventional double (64 bit) precision real binary floating point type (double in C).
+	\item The conventional double (64 bit) precision complex binary floating point type (double in C).	
+	\item The extended precision (80 bit) real binary floating point type of the Intel FPU.
+	\item The extended precision (80 bit) complex binary floating point type of the Intel FPU.	
+\end{itemize}
+
+
+All of these types are available as scalars, vectors, and matrices.
+
+\vpara
+The mpFormulaC Library is based on GMP \citep{Granlund12}, MPFR \citep{MPFR_2007}, MPFI  \citep{MPFI_2005}, MPC \citep{mpc_2012}, XSC-MPFI \citep{Blomquist2012}, MPFRC++ \citep{Holoborodko2012}, libmpdec \citep{mpd_2012}, Eigen \citep{Guennebaud2010}, Boost Math \citep{boost_math}, Boost Random \citep{boost_random}.
+
+
+
+	
+\subsection{The mpFormulaC Toolbox}	
+The mpFormulaC Toolbox provides precompiled binaries for the Windows platform with multiple interfaces:
+
+\begin{itemize}	
+
+\item A C interface: provides the most direct and efficient access to the numerical routines, and can be used as basis for other interfaces. Is intended to work with most C compilers, and can also be used from Objective C.
+\item A C++ interface: provides a rich set of multiprecision arithmetic functions, operators and procedures, which are accessible in a familiar syntax, thanks to operator overloading. Both 32 bit and 64 bit versions are provided. Is intended to work with most C++ compilers, and can also be used from Objective C++.
+\item A COM (Component Object Model) interface: multiprecision arithmetic functions and procedures, with arithmetic operators emulated as properties. Both 32 bit and 64 bit versions are provided. This interface makes the numerical routines available to all languages with COM support, including VBScript, JScript (Windows Script Host), Visual Basic for Applications, Visual Basic 6.0, OpenOffice  Basic, Lua, Ruby, PHP CLI, Perl, Python, R (Statistical System) and Mathematica.
+\item A .NET Framework 4.0 interface: As for C++, arithmetic functions, operators and procedures are accessible in a familiar syntax. Both 32 bit and 64 bit versions are provided. This interface makes the numerical routines available to all languages with .NET Framework support, including VB.NET, C\#, JScript 2010, F\#, MS C++ (CLI), IronPython and Matlab.
+%\item A Java interface (Java SDK 1.5 or later): multiprecision arithmetic functions and procedures, with arithmetic operators emulated as properties. Both 32 bit and 64 bit versions are provided. Based on jni4net \citep{Savara2011}.
+%\item A SQLite interface: provides access from SQL to the numerical routines to manipulate arbitrary precisons numbers stored as strings.	Based on the System.Data.SQLite \citep{Hipp2014}.
+\item A Names Pipes and Command Line interface: this is designed to make sure that the calling application and the routines in the library are executed in separate processes, greatly enhancing stability. 
+
+\end{itemize}
+	
+
+
+
+\subsection{System Requirement}
+\label{System Requirements}
+This mpFormulaC Toolbox has the following system requirement:
+
+\begin{itemize}
+  \item Microsoft Windows with Microsoft .NET Framework version 4.x (Full).
+\end{itemize}
+
+
+
+\subsection{Installation}
+\label{Installation}
+The mpFormulaC Toolbox can be downloaded from 
+
+\href{https://github.com/DUHadler/}{https://github.com/DUHadler/}. 
+
+Double-click on the downloaded file to start installation and then follow the instructions.
+
+\href{https://github.com/DUHadler/DUHTest1/tags}{https://github.com/DUHadler/DUHTest1/tags}. 
+
+
+\href{https://github.com/DUHadler/DUHTest1/releases}{https://github.com/DUHadler/DUHTest1/releases}. 
+
+
+
+\section{License}
+\label{mpFormulaLicense}
+
+The mpFormulaC Toolbox is free software. It is licensed under the GNU Lesser General Public License, Version 3 (see appendix \ref{LGPLv3}).
+The manual for the mpFormulaC Library and Toolbox (this document) is licensed under the GNU Free Documentation License, Version 1.3 (see appendix \ref{GNUFDL}).
+
+
+
+
+\section{No Warranty}
+\label{No Warranty} 
+
+There is no warranty. See the GNU General Public License, Version 3 (see appendix \ref{GPLv3}) for details.
+
+

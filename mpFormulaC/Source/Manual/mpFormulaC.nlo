@@ -1,0 +1,39 @@
+\nomenclatureentry{a$\Gamma(x)$@[{$\Gamma(x)$}]\begingroup Gamma Function\nomeqref {6.7.4}|nompageref}{67}
+\nomenclatureentry{a$(a)_n$@[{$(a)_n$}]\begingroup Pochhammer symbol\nomeqref {6.7.6}|nompageref}{67}
+\nomenclatureentry{a$I_x(a,b)$@[{$I_x(a,b)$}]\begingroup Normalised incomplete beta function\nomeqref {6.7.7}|nompageref}{68}
+\nomenclatureentry{a$I'_x(a,b)$@[{$I'_x(a,b)$}]\begingroup Derivative of the normalised incomplete beta function\nomeqref {6.7.11}|nompageref}{71}
+\nomenclatureentry{apmf@[{pmf}]\begingroup probability mass function\nomeqref {17.1.0}|nompageref}{278}
+\nomenclatureentry{apdf@[{pdf}]\begingroup probability density function\nomeqref {17.1.0}|nompageref}{278}
+\nomenclatureentry{aCDF@[{CDF}]\begingroup cumulative distribution function\nomeqref {17.1.0}|nompageref}{278}
+\nomenclatureentry{a$f_{\text{Beta}}(a,b,x)$@[{$f_{\text{Beta}}(a,b,x)$}]\begingroup pdf of the central Beta-distribution\nomeqref {17.2.0}|nompageref}{285}
+\nomenclatureentry{a$F_{\text{Beta}}(a,b,x)$@[{$F_{\text{Beta}}(a,b,x)$}]\begingroup CDF of the central Beta-distribution\nomeqref {17.2.1}|nompageref}{285}
+\nomenclatureentry{a$f_{\text{Bin}}(n, k; p)$@[{$f_{\text{Bin}}(n, k; p)$}]\begingroup pmf of the  binomial distribution\nomeqref {17.3.0}|nompageref}{288}
+\nomenclatureentry{a$F_{\text{Bin}}(n, k; p)$@[{$F_{\text{Bin}}(n, k; p)$}]\begingroup CDF of the binomial distribution\nomeqref {17.3.1}|nompageref}{288}
+\nomenclatureentry{a$f_{\chi^2}(n, x)$@[{$f_{\chi^2}(n, x)$}]\begingroup pdf of the central chi-square distribution\nomeqref {17.4.0}|nompageref}{290}
+\nomenclatureentry{a$F_{\chi^2}(n, x)$@[{$F_{\chi^2}(n, x)$}]\begingroup CDF of the central chi-square distribution\nomeqref {17.4.1}|nompageref}{290}
+\nomenclatureentry{a$\chi^2_{\nu,\alpha}$@[{$\chi^2_{\nu,\alpha}$}]\begingroup $\alpha$ quantile of the central $\chi^2$-distribution with $\nu$ degrees of freedom\nomeqref {17.4.4}|nompageref}{291}
+\nomenclatureentry{a$f_F(m,n,x)$@[{$f_F(m,n,x)$}]\begingroup pdf of the central $F$-distribution\nomeqref {17.6.0}|nompageref}{294}
+\nomenclatureentry{a$F_F(m,n,x)$@[{$F_F(m,n,x)$}]\begingroup CDF of the central $F$-distribution\nomeqref {17.6.1}|nompageref}{294}
+\nomenclatureentry{a$F_{\nu_1,\nu_2,\alpha}$@[{$F_{\nu_1,\nu_2,\alpha}$}]\begingroup $\alpha$ quantile of the central $F$-distribution with $\nu_1$ and $\nu_2$ degrees of freedom\nomeqref {17.6.2}|nompageref}{294}
+\nomenclatureentry{a$f_{\text{NegBin}}(n, k; p)$@[{$f_{\text{NegBin}}(n, k; p)$}]\begingroup pmf of the negative binomial distribution\nomeqref {17.10.0}|nompageref}{303}
+\nomenclatureentry{a$F_{\text{NegBin}}(n, k; p)$@[{$F_{\text{NegBin}}(n, k; p)$}]\begingroup CDF of the negative binomial distribution\nomeqref {17.10.1}|nompageref}{303}
+\nomenclatureentry{a$\phi(x)$@[{$\phi(x)$}]\begingroup pdf of the standardized normal distribution\nomeqref {17.11.0}|nompageref}{305}
+\nomenclatureentry{a$F_N(x; \mu, \sigma^2)$@[{$F_N(x; \mu, \sigma^2)$}]\begingroup pdf of the normal distribution with mean $\mu$ and variance $\sigma^2$\nomeqref {17.11.0}|nompageref}{305}
+\nomenclatureentry{a$\Phi(x)$@[{$\Phi(x)$}]\begingroup CDF of the standardized normal distribution\nomeqref {17.11.3}|nompageref}{305}
+\nomenclatureentry{a$F_N(x; \mu, \sigma^2)$@[{$F_N(x; \mu, \sigma^2)$}]\begingroup CDF of the normal distribution with mean $\mu$ and variance $\sigma^2$\nomeqref {17.11.3}|nompageref}{305}
+\nomenclatureentry{a$\Phi^{-1}(\alpha)$@[{$\Phi^{-1}(\alpha)$}]\begingroup Inverse CDF of the standardized normal distribution\nomeqref {17.11.6}|nompageref}{306}
+\nomenclatureentry{a$z_{\alpha}$@[{$z_{\alpha}$}]\begingroup $\alpha$ quantile of the standardized normal distribution\nomeqref {17.11.6}|nompageref}{306}
+\nomenclatureentry{a$F_N^{-1}(\alpha; \mu, \sigma^2)$@[{$F_N^{-1}(\alpha; \mu, \sigma^2)$}]\begingroup Inverse CDF of the normal distribution with mean $\mu$ and variance $\sigma^2$\nomeqref {17.11.6}|nompageref}{306}
+\nomenclatureentry{a$f_t(n, x)$@[{$f_t(n, x)$}]\begingroup pdf of the central $t$-distribution\nomeqref {17.13.0}|nompageref}{309}
+\nomenclatureentry{a$F_t(n, x)$@[{$F_t(n, x)$}]\begingroup CDF of the central $t$-distribution\nomeqref {17.13.1}|nompageref}{310}
+\nomenclatureentry{a$t_{\nu,\alpha}$@[{$t_{\nu,\alpha}$}]\begingroup $\alpha$ quantile of the central $t$-distribution with $\nu$ degrees of freedom\nomeqref {17.13.5}|nompageref}{310}
+\nomenclatureentry{a$f_{\text{Beta'}}(x;a,b,\lambda)$@[{$f_{\text{Beta'}}(x;a,b,\lambda)$}]\begingroup pdf of the (singly) noncentral Beta-distribution\nomeqref {18.1.0}|nompageref}{338}
+\nomenclatureentry{a$F_{\text{Beta'}}(x;a,b,\lambda)$@[{$F_{\text{Beta'}}(x;a,b,\lambda)$}]\begingroup CDF of the (singly) noncentral Beta-distribution\nomeqref {18.1.1}|nompageref}{338}
+\nomenclatureentry{a$f_{\chi^2}(n, x; \lambda)$@[{$f_{\chi^2}(n, x; \lambda)$}]\begingroup pdf of the noncentral chi-square distribution\nomeqref {18.2.0}|nompageref}{340}
+\nomenclatureentry{a$F_{\chi^2}(n, x; \lambda)$@[{$F_{\chi^2}(n, x; \lambda)$}]\begingroup CDF of the noncentral chi-square distribution\nomeqref {18.2.0}|nompageref}{340}
+\nomenclatureentry{a$f_{F'}(x;m,n)$@[{$f_{F'}(x;m,n)$}]\begingroup pdf of the (singly) noncentral $F$-distribution\nomeqref {18.3.0}|nompageref}{343}
+\nomenclatureentry{a$f_{F'}(x;m,n)$@[{$f_{F'}(x;m,n)$}]\begingroup CDF of the (singly) noncentral $F$-distribution\nomeqref {18.3.0}|nompageref}{343}
+\nomenclatureentry{a$f_{t'}\left(n,x, \delta\right)$@[{$f_{t'}\left(n,x, \delta\right)$}]\begingroup pdf of the (singly) noncentral t-distribution\nomeqref {18.4.0}|nompageref}{345}
+\nomenclatureentry{a$F_{t'}\left(n,x, \delta\right)$@[{$F_{t'}\left(n,x, \delta\right)$}]\begingroup CDF of the (singly) noncentral t-distribution\nomeqref {18.4.1}|nompageref}{345}
+\nomenclatureentry{a$t_{n,\delta;\alpha}$@[{$t_{n,\delta;\alpha}$}]\begingroup $\alpha$ quantile of the noncentral $t$-distribution with $\nu$ degrees of freedom and noncentrality parameter $\delta$\nomeqref {18.4.4}|nompageref}{345}
+\nomenclatureentry{a$T_{\text{Owen}}(a,b)$@[{$T_{\text{Owen}}(a,b)$}]\begingroup Owen's T-Function\nomeqref {18.6.0}|nompageref}{349}
