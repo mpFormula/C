@@ -1,2 +1,2 @@
 # mpFormulaC
-A library for multiprecision arithmetic in C.    Homepage: 
+A library for multiprecision arithmetic in C. 
