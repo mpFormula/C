@@ -1,0 +1,159 @@
+Kumaraswamy distribution
+
+L´evy distribution
+
+Maxwell distribution
+
+Moyal distribution (see also Walck)
+
+Zipf distribution
+
+
+
+Being special cases of other distributions they are not implemented separately: The Erlang
+distribution is a gamma distribution (3.9.8) with shape a 2 N, the geometric and Pascal
+distributions are negative binomial distribution 
+(3.9.18) with r = 1 and r 2 N respectively
+
+
+From Walck:
+
+Double-Exponential Distribution
+
+Generalized Gamma Distribution
+
+Hyperexponential Distribution
+
+Logarithmic Distribution
+
+
+
+
+Mpfci Class
+
+abs
+acos
+Acos_beta
+acosh
+ACOSH_f_aux
+ACOSH_p1
+acot
+acoth
+Arg: analytic argument function
+arg (non-analytic)wird in drop down nicht angezeigt, ist aber vorhanden
+argp1: arg(1+Z), non-analytic
+asin: 
+Asin_beta
+asinh
+atan
+Atan (point intervals)
+atanh
+Aux_1_atan: MPFR: ln[ 1+2/(sqrt(1+x^2)-1) ], [x] = x,
+Blow
+cidiv: division
+complex_division
+conj
+cos
+cosh
+cot
+coth
+double2Mpfci
+exp
+exp10
+exp2
+expm1
+expm1_H
+expm1_H1
+f_aux_asin
+f_aux_asin_Vn
+getvalueIm
+getvalueRe
+horizontal_check (2 versions)
+Im
+Im_Sqrt_point (2 versions)
+in (9 versions)
+int2MPfci
+isBounded
+isInf
+isNan
+isPoint
+isZero
+Ln (analytic ln)
+Lnp1 (analytic natural logarithm of 1+z)
+ln (non-analytic ln)
+log2
+log10
+mid
+minmax
+mpfi_t2Mpfci
+MpfiClass2Mpfci
+mpfi_t2Mpfci
+MpfiClass2Mpfci
+
+MANY OPERATORS
+
+P_cidiv
+pow (analytic power function, 2 versions)
+pow_all (Non-analytic power function for real interval exponent.)
+power (Power function for integer powers with optimal (save roundoff) accuracy.)
+power_fast
+power_point
+Q_atan_UPSIGN: ln[ 1 + 4y/(x^2+(1-y)^2) ]
+Re
+Re_Sqrt_point (2 versions)
+re_vert
+reci
+set_inf
+set_Mpfci
+set_nan
+set_zero
+sin
+sinh
+sqr
+sqrt (analytic square root function)
+sqrt (analytic nth root function)
+sqrt1mx2 (Calculating an optimal inclusion of sqrt(1-z^2);)
+sqrt1px2 (Calculating an optimal inclusion of sqrt(1+z^2);)
+sqrt1px2_Im
+sqrt1px2_infty_ci
+sqrt1px2_Re
+sqrt_all
+sqrt_all: sqrt_all(z,n) computes a list of n intervals containing all n-th roots of z
+Sqrt_zpx
+sqrtmx2m1: Calculating an optimal inclusion of sqrt(-z^2 -1);
+sqrtp1m1: Analytic function f(z) = sqrt(z+1)-1 with z=x+i*y in the principal branch.
+sqrtx2m1
+sqrtx2m1_Im
+sqrtx2m1_Re
+
+string2Mpfci
+Sup
+tan
+tanh
+times2pown
+to_string
+TwoPow2s_y2_x2
+update_res
+vertical_check
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

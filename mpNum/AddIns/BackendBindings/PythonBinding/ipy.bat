@@ -1,0 +1,1 @@
+ipy.exe -X:Frames -X:ColorfulConsole

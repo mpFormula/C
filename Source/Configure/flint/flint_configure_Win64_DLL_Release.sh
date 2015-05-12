@@ -1,0 +1,1 @@
+./configure --build=x86_64-MINGW64  --disable-static --enable-shared ABI=64  CFLAGS="-m64 -march=k8 -Wno-attributes" --with-gmp=/local/Win64_DLL  --with-mpfr=/local/Win64_DLL  --prefix=/local/Win64_DLL 
