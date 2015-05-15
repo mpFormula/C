@@ -35,7 +35,7 @@ Class=LaTeXView
 Document=FunctionsWithErrorBounds.tex
 
 [Frame1_View0,0]
-TopLine=5588
+TopLine=5507
 Cursor=166557
 
 [Frame2]
@@ -53,8 +53,8 @@ Class=LaTeXView
 Document=Appendices.tex
 
 [Frame2_View0,0]
-TopLine=755
-Cursor=36808
+TopLine=707
+Cursor=35923
 
 [SessionInfo]
 FrameCount=3
