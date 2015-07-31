@@ -1,0 +1,10 @@
+﻿<Properties>
+  <Array name="bookmarks" />
+  <Array name="files" />
+  <Properties name="projectSavedData">
+    <Properties name="customTool">
+      <fileNames value="" />
+      <runOnBuild value="False" />
+    </Properties>
+  </Properties>
+</Properties>

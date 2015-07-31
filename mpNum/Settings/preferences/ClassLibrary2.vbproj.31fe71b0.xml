@@ -1,0 +1,11 @@
+﻿<Properties>
+  <Array name="bookmarks" />
+  <Array name="files">
+    <Element value="C:\Extra\mpFormulaTDM\mpFormulaC\Source\ClassLibrary2\ClassLibrary2\Class1.vb" />
+  </Array>
+  <Properties name="projectSavedData">
+    <Properties name="customTool">
+      <runOnBuild value="False" />
+    </Properties>
+  </Properties>
+</Properties>

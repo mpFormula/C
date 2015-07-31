@@ -1,64 +1,29 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
 <CodeBlocks_layout_file>
-	<ActiveTarget name="LibWin64_Num_Make_DLL" />
-	<File name="UseEigenMpq.cpp" open="0" top="0" tabpos="10" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<ActiveTarget name="LibWin32_Num_Make_DLL" />
+	<File name="Include\mpNumC.h" open="1" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="48" topLine="0" />
+			<Cursor1 position="54" topLine="0" />
 		</Cursor>
 	</File>
-	<File name="UseEigenNum.cpp" open="0" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="UseArb.cpp" open="0" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="198" topLine="16" />
+			<Cursor1 position="813" topLine="28" />
 		</Cursor>
 	</File>
-	<File name="mainUse.cpp" open="1" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="UseFmpq.cpp" open="0" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="6967" topLine="220" />
+			<Cursor1 position="1296" topLine="29" />
 		</Cursor>
 	</File>
-	<File name="UseEigenArb.cpp" open="1" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="UseAcb.cpp" open="0" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="172" topLine="0" />
+			<Cursor1 position="946" topLine="36" />
 		</Cursor>
 	</File>
-	<File name="Include\mpNumC.h" open="0" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="UseFmpz.cpp" open="1" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="740" topLine="27" />
-		</Cursor>
-	</File>
-	<File name="Include\mpNum_Internal.h" open="1" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="21534" topLine="240" />
-		</Cursor>
-	</File>
-	<File name="UseEigenDouble.cpp" open="0" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="76" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="UseEigenFloat.cpp" open="0" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="256" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="UseEigenLongDouble.cpp" open="0" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="426" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="UseEigenMpdec.cpp" open="0" top="0" tabpos="7" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="50" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="UseEigenMpfi.cpp" open="0" top="0" tabpos="8" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="20" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="UseEigenMpfr.cpp" open="0" top="0" tabpos="9" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="49" topLine="0" />
+			<Cursor1 position="3481" topLine="177" />
 		</Cursor>
 	</File>
 </CodeBlocks_layout_file>

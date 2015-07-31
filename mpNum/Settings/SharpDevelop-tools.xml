@@ -12,6 +12,96 @@
   <TOOL>
     <INITIALDIRECTORY>
     </INITIALDIRECTORY>
+    <ARGUMENTS>
+    </ARGUMENTS>
+    <COMMAND>${StartupPath}\..\..\GUI\CalculatorDlg.exe</COMMAND>
+    <MENUCOMMAND>Calculator</MENUCOMMAND>
+    <PROMPTFORARGUMENTS>False</PROMPTFORARGUMENTS>
+    <USEOUTPUTPAD>False</USEOUTPUTPAD>
+  </TOOL>
+  <TOOL>
+    <INITIALDIRECTORY>
+    </INITIALDIRECTORY>
+    <ARGUMENTS>
+    </ARGUMENTS>
+    <COMMAND>${StartupPath}\..\..\GUI\FunctionNavigator.exe</COMMAND>
+    <MENUCOMMAND>Function Navigator</MENUCOMMAND>
+    <PROMPTFORARGUMENTS>False</PROMPTFORARGUMENTS>
+    <USEOUTPUTPAD>False</USEOUTPUTPAD>
+  </TOOL>
+  <TOOL>
+    <INITIALDIRECTORY>
+    </INITIALDIRECTORY>
+    <ARGUMENTS>
+    </ARGUMENTS>
+    <COMMAND>${StartupPath}\..\..\GUI\FileViewer.exe</COMMAND>
+    <MENUCOMMAND>File Viewer</MENUCOMMAND>
+    <PROMPTFORARGUMENTS>False</PROMPTFORARGUMENTS>
+    <USEOUTPUTPAD>False</USEOUTPUTPAD>
+  </TOOL>
+  <TOOL>
+    <INITIALDIRECTORY>
+    </INITIALDIRECTORY>
+    <ARGUMENTS>
+    </ARGUMENTS>
+    <COMMAND>${StartupPath}\..\..\GUI\ChartViewer.exe</COMMAND>
+    <MENUCOMMAND>Chart Viewer</MENUCOMMAND>
+    <PROMPTFORARGUMENTS>False</PROMPTFORARGUMENTS>
+    <USEOUTPUTPAD>False</USEOUTPUTPAD>
+  </TOOL>
+  <TOOL>
+    <INITIALDIRECTORY>
+    </INITIALDIRECTORY>
+    <ARGUMENTS>
+    </ARGUMENTS>
+    <COMMAND>${StartupPath}\..\..\GUI\WpfInWinForms.exe</COMMAND>
+    <MENUCOMMAND>3D Function Viewer</MENUCOMMAND>
+    <PROMPTFORARGUMENTS>False</PROMPTFORARGUMENTS>
+    <USEOUTPUTPAD>False</USEOUTPUTPAD>
+  </TOOL>
+  <TOOL>
+    <INITIALDIRECTORY>
+    </INITIALDIRECTORY>
+    <ARGUMENTS>
+    </ARGUMENTS>
+    <COMMAND>${StartupPath}\..\..\GUI\HTMLViewer.exe</COMMAND>
+    <MENUCOMMAND>HTML Viewer</MENUCOMMAND>
+    <PROMPTFORARGUMENTS>False</PROMPTFORARGUMENTS>
+    <USEOUTPUTPAD>False</USEOUTPUTPAD>
+  </TOOL>
+  <TOOL>
+    <INITIALDIRECTORY>
+    </INITIALDIRECTORY>
+    <ARGUMENTS>
+    </ARGUMENTS>
+    <COMMAND>${StartupPath}\..\..\</COMMAND>
+    <MENUCOMMAND>Open Root Directory</MENUCOMMAND>
+    <PROMPTFORARGUMENTS>False</PROMPTFORARGUMENTS>
+    <USEOUTPUTPAD>False</USEOUTPUTPAD>
+  </TOOL>
+  <TOOL>
+    <INITIALDIRECTORY>
+    </INITIALDIRECTORY>
+    <ARGUMENTS>
+    </ARGUMENTS>
+    <COMMAND>${StartupPath}\..\..\GUI\StartNumExp.exe</COMMAND>
+    <MENUCOMMAND>Numerical Explorations</MENUCOMMAND>
+    <PROMPTFORARGUMENTS>False</PROMPTFORARGUMENTS>
+    <USEOUTPUTPAD>False</USEOUTPUTPAD>
+  </TOOL>
+  <TOOL>
+    <INITIALDIRECTORY>
+    </INITIALDIRECTORY>
+    <ARGUMENTS>
+    </ARGUMENTS>
+    <COMMAND>a.exe</COMMAND>
+    <MENUCOMMAND>==== Installation Required:  ====</MENUCOMMAND>
+    <PROMPTFORARGUMENTS>False</PROMPTFORARGUMENTS>
+    <USEOUTPUTPAD>False</USEOUTPUTPAD>
+  </TOOL>
+  <TOOL>
+    <INITIALDIRECTORY>
+    </INITIALDIRECTORY>
     <ARGUMENTS>${StartupPath}\..\..\Source\Manual\mpFormulaC.tex  --master --start-always</ARGUMENTS>
     <COMMAND>${StartupPath}\..\..\..\ExternalTools\texstudio2.8.8\texstudio.exe</COMMAND>
     <MENUCOMMAND>TexStudio (mpFormulaC Manual)</MENUCOMMAND>
@@ -43,7 +133,7 @@
     </INITIALDIRECTORY>
     <ARGUMENTS>
     </ARGUMENTS>
-    <COMMAND>${StartupPath}\..\..\..\..\WinPython-32bit-3.3.5.0\Spyder.exe</COMMAND>
+    <COMMAND>${StartupPath}\..\..\..\..\PortableApps\WinPython-32bit-3.3.5.0\Spyder.exe</COMMAND>
     <MENUCOMMAND>CPython 32 bit</MENUCOMMAND>
     <PROMPTFORARGUMENTS>False</PROMPTFORARGUMENTS>
     <USEOUTPUTPAD>False</USEOUTPUTPAD>
@@ -53,7 +143,7 @@
     </INITIALDIRECTORY>
     <ARGUMENTS>
     </ARGUMENTS>
-    <COMMAND>${StartupPath}\..\..\..\..\R\RStudio\bin\rstudio.exe</COMMAND>
+    <COMMAND>${StartupPath}\..\..\..\..\PortableApps\R\RStudio\bin\rstudio.exe</COMMAND>
     <MENUCOMMAND>R Studio</MENUCOMMAND>
     <PROMPTFORARGUMENTS>False</PROMPTFORARGUMENTS>
     <USEOUTPUTPAD>False</USEOUTPUTPAD>
@@ -63,18 +153,8 @@
     </INITIALDIRECTORY>
     <ARGUMENTS>
     </ARGUMENTS>
-    <COMMAND>${StartupPath}\..\..\..\..\LibreOfficePortable\LibreOfficePortable.exe</COMMAND>
+    <COMMAND>${StartupPath}\..\..\..\..\PortableApps\LibreOfficePortable\LibreOfficePortable.exe</COMMAND>
     <MENUCOMMAND>LibreOffice</MENUCOMMAND>
-    <PROMPTFORARGUMENTS>False</PROMPTFORARGUMENTS>
-    <USEOUTPUTPAD>False</USEOUTPUTPAD>
-  </TOOL>
-  <TOOL>
-    <INITIALDIRECTORY>
-    </INITIALDIRECTORY>
-    <ARGUMENTS>
-    </ARGUMENTS>
-    <COMMAND>${StartupPath}\..\..\</COMMAND>
-    <MENUCOMMAND>Open Root Directory</MENUCOMMAND>
     <PROMPTFORARGUMENTS>False</PROMPTFORARGUMENTS>
     <USEOUTPUTPAD>False</USEOUTPUTPAD>
   </TOOL>

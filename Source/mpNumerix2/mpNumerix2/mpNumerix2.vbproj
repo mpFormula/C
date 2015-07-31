@@ -23,6 +23,10 @@
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Platform)' == 'AnyCPU' ">
     <PlatformTarget>x86</PlatformTarget>
+    <BaseAddress>4194304</BaseAddress>
+    <RegisterForComInterop>False</RegisterForComInterop>
+    <GenerateSerializationAssemblies>Auto</GenerateSerializationAssemblies>
+    <FileAlignment>4096</FileAlignment>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <OutputPath>bin\Debug\</OutputPath>
@@ -32,12 +36,13 @@
     <DefineConstants>DEBUG=1,TRACE=1</DefineConstants>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
-    <OutputPath>bin\Release\</OutputPath>
+    <OutputPath>..\..\..\mpNum\Win32\</OutputPath>
     <DebugSymbols>False</DebugSymbols>
     <DebugType>None</DebugType>
     <Optimize>False</Optimize>
     <DefineConstants>TRACE=1</DefineConstants>
     <BaseIntermediateOutputPath>obj\</BaseIntermediateOutputPath>
+    <StartAction>Project</StartAction>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Platform)' == 'x86' ">
     <PlatformTarget>x86</PlatformTarget>
@@ -61,19 +66,19 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Library.vb" />
+    <Compile Include="Properties\AssemblyInfo.vb" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+  </ItemGroup>
+  <ItemGroup>
     <Import Include="Microsoft.VisualBasic" />
     <Import Include="System" />
     <Import Include="System.Collections" />
     <Import Include="System.Collections.Generic" />
     <Import Include="System.Data" />
     <Import Include="System.Diagnostics" />
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Include="Library.vb" />
-    <Compile Include="Properties\AssemblyInfo.vb" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="app.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

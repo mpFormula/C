@@ -23,3 +23,13 @@
 
 1420751692 i:\data\mpformula40\toolbox\mpnum\common\include\mpmathtonative.h
 
+1427386852 source:c:\extra\mpformulatdm\mpformulac\source\common\testdllnummain.cpp
+	"mpNumC.h"
+	<stdio.h>
+
+1427664320 c:\extra\mpformulatdm\mpformulac\source\common\include\mpnumc.h
+	<mp_Constants.h>
+	<mpfr.h>
+
+1422120294 c:\extra\mpformulatdm\mpformulac\source\common\include\mp_constants.h
+

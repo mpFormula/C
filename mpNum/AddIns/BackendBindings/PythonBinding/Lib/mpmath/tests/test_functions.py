@@ -326,6 +326,44 @@ def test_atan2():
     assert atan2(-inf,10).ae(-pi/2)
     assert atan2(-inf,-10).ae(-pi/2)
 
+def test_areal_inverses():
+    assert asin(mpf(0)) == 0
+    assert asinh(mpf(0)) == 0
+    assert acosh(mpf(1)) == 0
+    assert isinstance(asin(mpf(0.5)), mpf)
+    assert isinstance(asin(mpf(2.0)), mpc)
+    assert isinstance(acos(mpf(0.5)), mpf)
+    assert isinstance(acos(mpf(2.0)), mpc)
+    assert isinstance(atanh(mpf(0.1)), mpf)
+    assert isinstance(atanh(mpf(1.1)), mpc)
+
+    random.seed(1)
+    for i in range(50):
+        x = random.uniform(0, 1)
+        assert asin(mpf(x)).ae(math.asin(x))
+        assert acos(mpf(x)).ae(math.acos(x))
+
+        x = random.uniform(-10, 10)
+        assert asinh(mpf(x)).ae(cmath.asinh(x).real)
+        assert isinstance(asinh(mpf(x)), mpf)
+        x = random.uniform(1, 10)
+        assert acosh(mpf(x)).ae(cmath.acosh(x).real)
+        assert isinstance(acosh(mpf(x)), mpf)
+        x = random.uniform(-10, 0.999)
+        assert isinstance(acosh(mpf(x)), mpc)
+
+        x = random.uniform(-1, 1)
+        assert atanh(mpf(x)).ae(cmath.atanh(x).real)
+        assert isinstance(atanh(mpf(x)), mpf)
+
+    dps = mp.dps
+    mp.dps = 300
+    assert isinstance(asin(0.5), mpf)
+    mp.dps = 1000
+    assert asin(1).ae(pi/2)
+    assert asin(-1).ae(-pi/2)
+    mp.dps = dps
+
 def test_invhyperb_inaccuracy():
     mp.dps = 15
     assert (asinh(1e-5)*10**5).ae(0.99999999998333333)
@@ -353,6 +391,39 @@ def test_complex_functions():
             assert sinh(mpc(z)).ae(cmath.sinh(z))
             assert cosh(mpc(z)).ae(cmath.cosh(z))
             assert tanh(mpc(z)).ae(cmath.tanh(z))
+
+def test_complex_inverse_functions():
+    mp.dps = 15
+    iv.dps = 15
+    for (z1, z2) in random_complexes(30):
+        # apparently cmath uses a different branch, so we
+        # can't use it for comparison
+        assert sinh(asinh(z1)).ae(z1)
+        #
+        assert acosh(z1).ae(cmath.acosh(z1))
+        assert atanh(z1).ae(cmath.atanh(z1))
+        assert atan(z1).ae(cmath.atan(z1))
+        # the reason we set a big eps here is that the cmath
+        # functions are inaccurate
+        assert asin(z1).ae(cmath.asin(z1), rel_eps=1e-12)
+        assert acos(z1).ae(cmath.acos(z1), rel_eps=1e-12)
+        one = mpf(1)
+    for i in range(-9, 10, 3):
+        for k in range(-9, 10, 3):
+            a = 0.9*j*10**k + 0.8*one*10**i
+            b = cos(acos(a))
+            assert b.ae(a)
+            b = sin(asin(a))
+            assert b.ae(a)
+    one = mpf(1)
+    err = 2*10**-15
+    for i in range(-9, 9, 3):
+        for k in range(-9, 9, 3):
+            a = -0.9*10**k + j*0.8*one*10**i
+            b = cosh(acosh(a))
+            assert b.ae(a, err)
+            b = sinh(asinh(a))
+            assert b.ae(a, err)
 
 def test_reciprocal_functions():
     assert sec(3).ae(-1.01010866590799375)

@@ -1,6 +1,9 @@
 \begin{XTRmpFunctionsExtract}
-\mpFunctionTwo
-{TOwenBoost? mpNum? Owen's T-Function}
-{h? mpNum? A real number.}
-{a? mpNum? A real number.}
+\mpFunctionFiveNotImplemented
+{StudentTTestSampleSize2i? mpNumList? returns sample size estimations and related information for Student's t-test}
+{Type1Error? mpNum? An real number greater then 0 and less than 1.}
+{Type2Error? mpNum? An real number greater then 0 and less than 1.}
+{Mean? mpNum[]? An array of reals, representing the means}
+{StDev? mpNum[]? An array of positive reals, representing the standard deviations}
+{Output? String? A string describing the output choices}
 \end{XTRmpFunctionsExtract}

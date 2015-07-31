@@ -1,6 +1,0 @@
-E:\Extra\mpFormulaTDM\mpFormulaC\Source\mpNumerix2\TestmpNumerix2a\bin\Release\TestmpNumerix2a.exe.config
-E:\Extra\mpFormulaTDM\mpFormulaC\Source\mpNumerix2\TestmpNumerix2a\bin\Release\TestmpNumerix2a.exe
-E:\Extra\mpFormulaTDM\mpFormulaC\Source\mpNumerix2\TestmpNumerix2a\bin\Release\mpNumerix2.dll
-E:\Extra\mpFormulaTDM\mpFormulaC\Source\mpNumerix2\TestmpNumerix2a\bin\Release\mpNumerix2.xml
-E:\Extra\mpFormulaTDM\mpFormulaC\Source\mpNumerix2\TestmpNumerix2a\obj\Release\TestmpNumerix2a.csprojResolveAssemblyReference.cache
-E:\Extra\mpFormulaTDM\mpFormulaC\Source\mpNumerix2\TestmpNumerix2a\obj\Release\TestmpNumerix2a.exe

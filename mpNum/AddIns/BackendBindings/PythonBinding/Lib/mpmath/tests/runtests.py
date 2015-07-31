@@ -129,7 +129,7 @@ def testit(importdir='', testdir=''):
                         if etype in (KeyboardInterrupt, SystemExit):
                             raise
                         print("")
-                        print("TEST FAILED2!")
+                        print("TEST FAILED!")
                         print("")
                         traceback.print_exc()
                     t2 = clock()
@@ -156,4 +156,3 @@ if __name__ == '__main__':
         r.write_results(show_missing=True, summary=True, coverdir="/tmp")
     else:
         testit(importdir, testdir)
-

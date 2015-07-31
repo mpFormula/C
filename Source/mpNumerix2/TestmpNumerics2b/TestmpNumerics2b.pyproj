@@ -25,7 +25,7 @@
     <StartProgram>E:\Extra\mpFormulaTDM\mpFormulaC\mpNum\AddIns\BackendBindings\PythonBinding\ipy.exe</StartProgram>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
-    <OutputPath>bin\Release\</OutputPath>
+    <OutputPath>..\..\..\mpNum\Win32\</OutputPath>
     <DebugSymbols>False</DebugSymbols>
     <DebugType>None</DebugType>
     <Optimize>True</Optimize>
@@ -34,7 +34,7 @@
     <StartArguments>Program.py</StartArguments>
     <StartWorkingDirectory>.\</StartWorkingDirectory>
     <StartAction>Program</StartAction>
-    <StartProgram>E:\Extra\mpFormulaTDM\mpFormulaC\mpNum\AddIns\BackendBindings\PythonBinding\ipy.exe</StartProgram>
+    <StartProgram>C:\Extra\mpFormulaTDM\mpFormulaC\mpNum\AddIns\BackendBindings\PythonBinding\ipy.exe</StartProgram>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="IronPython">

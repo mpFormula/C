@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
 <CodeBlocks_layout_file>
-	<ActiveTarget name="LibWin64_Arb" />
-	<File name="DistributionFunctions.cpp" open="1" top="0" tabpos="7" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="216" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="ElementaryFunctions.cpp" open="1" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<ActiveTarget name="LibWin64_Mpq" />
+	<File name="ElementaryFunctions.cpp" open="0" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
 			<Cursor1 position="433" topLine="0" />
 		</Cursor>
 	</File>
-	<File name="Include\libEigen.h" open="1" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="MatrixCplx_LinAlg.cpp" open="0" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="7961" topLine="167" />
+			<Cursor1 position="1600" topLine="36" />
+		</Cursor>
+	</File>
+	<File name="mainDLL.cpp" open="0" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="138" topLine="0" />
 		</Cursor>
 	</File>
 	<File name="Include\mp_Constants.h" open="0" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
@@ -21,29 +21,29 @@
 			<Cursor1 position="1725" topLine="47" />
 		</Cursor>
 	</File>
-	<File name="MatrixCplx.cpp" open="1" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="MatrixCplx.cpp" open="0" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
 			<Cursor1 position="0" topLine="0" />
 		</Cursor>
 	</File>
-	<File name="MatrixCplx_LinAlg.cpp" open="1" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="Include\libEigen.h" open="0" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="1600" topLine="36" />
+			<Cursor1 position="1595" topLine="61" />
 		</Cursor>
 	</File>
-	<File name="MatrixReal.cpp" open="1" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="MatrixReal.cpp" open="0" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="542" topLine="0" />
+			<Cursor1 position="587" topLine="0" />
 		</Cursor>
 	</File>
-	<File name="MatrixReal_LinAlg.cpp" open="1" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="MatrixReal_LinAlg.cpp" open="0" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
 			<Cursor1 position="433" topLine="0" />
 		</Cursor>
 	</File>
-	<File name="mainDLL.cpp" open="0" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="DistributionFunctions.cpp" open="0" top="0" tabpos="7" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="138" topLine="0" />
+			<Cursor1 position="216" topLine="0" />
 		</Cursor>
 	</File>
 </CodeBlocks_layout_file>

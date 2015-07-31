@@ -2,7 +2,7 @@
 %% This is file, `file.tex',
 %% generated with the extract package.
 %% 
-%% Generated on :  2015/05/15,12:35
+%% Generated on :  2015/07/31,19:14
 %% From source  :  mpFormulaC.tex
 %% Using options:  active,generate=file,extract-cmd={chapter,section},extract-env={mpFunctionsExtract}
 %% 
@@ -21,6 +21,2331 @@
 \section{No Warranty}
 
 \section{Related Software}
+
+\chapter{Tutorials}
+
+\section{Why multi-precision arithmetic?}
+
+\section{Graphics using Latex}
+
+\section{Graphics using .NET Framework}
+
+\chapter{Python: Built-in numerical types}
+
+\section{Truth Value Testing}
+
+\section{Boolean Operations: and, or, not}
+
+\section{Comparisons}
+
+\section{Numeric Types - int, float, complex}
+
+\section{Long integers}
+
+\section{Fractions}
+
+\chapter{Basic Usage}
+
+\section{Number types}
+
+\section{Precision and representation issues}
+
+\section{Conversion and printing}
+
+\section{Rounding}
+
+\begin{mpFunctionsExtract}
+\mpFunctionOne
+{ceil? mpNum?  a number down to the nearest integer.}
+{x? mpNum? A real number.}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionOne
+{floor? mpNum?  a number down to the nearest integer.}
+{x? mpNum? A real number.}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionOne
+{nint? mpNum?  a number down to the nearest integer.}
+{x? mpNum? A real number.}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionOne
+{frac? mpNum? the fractional part of $x$.}
+{x? mpNum? A colpmex or real number.}
+\end{mpFunctionsExtract}
+
+\section{Components of Real and Complex Numbers}
+
+\begin{mpFunctionsExtract}
+\mpFunctionTwo
+{ldexp? mpNum? $x \cdot 2^{y}$}
+{x? mpNum? A real number.}
+{y? mpNum? A real number.}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionOne
+{frexp? mpNumList? returns simultaneously significand and exponent of $x$}
+{x? mpNum? A real number.}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionTwo
+{mpc? mpNum? a complex number $z$ build from the real components $x$ and $y$ as $z=x+iy$.}
+{x? mpNum? A real number.}
+{y? mpNum? A real number.}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionOne
+{polar? mpNum? Returns the polar representation of the complex number $z$.}
+{z? mpNum? A complex or real number.}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionTwo
+{rect? mpNum? the complex number represented by polar coordinates $(r,\phi)$.}
+{x? mpNum? A real number.}
+{y? mpNum? A real number.}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionOne
+{re? mpNum? the real part of $x$, $\Re(x)$.}
+{z? mpNum? A complex number.}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionOne
+{im? mpNum? the imaginary part of $x$, $\Im(x)$.}
+{z? mpNum? A complex number.}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionOne
+{abs? mpNum? the absolute value of $z=x+iy$}
+{z? mpNum? A real or complex number.}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionOne
+{fabs? mpNum? the absolute value of $z=x+iy$}
+{z? mpNum? A real or complex number.}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionOne
+{arg? mpNum? the argument of $z=x+iy$}
+{z? mpNum? A complex number.}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionOne
+{phase? mpNum? the argument of $z=x+iy$}
+{z? mpNum? A complex number.}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionOne
+{sign? mpNum? the value of the sign of $x, \text{sign}(x)$.}
+{x? mpNum? A real or complex number.}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionOne
+{conj? mpNum? the complex conjugate of $z$, $\overline{z}$}
+{z? mpNum? A complex number.}
+\end{mpFunctionsExtract}
+
+\section{Arithmetic operations}
+
+\begin{mpFunctionsExtract}
+\mpFunctionThree
+{fadd? mpNum? the sum of the numbers x and y, giving a floating-point result, optionally using a custom precision and rounding mode..}
+{x? mpNum? A complex number.}
+{y? mpNum? A complex number.}
+{Keywords? String? prec, dps, exact, rounding.}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionTwo
+{fsum? mpNum? the sum of the numbers x and y, giving a floating-point result, optionally using a custom precision and rounding mode..}
+{terms? mpNum? a finite number of terms.}
+{Keywords? String? absolute=False, squared=False.}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionThree
+{fsub? mpNum? the sum of the numbers x and y, giving a floating-point result, optionally using a custom precision and rounding mode..}
+{x? mpNum? A complex number.}
+{y? mpNum? A complex number.}
+{Keywords? String? prec, dps, exact, rounding.}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionTwo
+{fneg? mpNum? the sum of the numbers x and y, giving a floating-point result, optionally using a custom precision and rounding mode..}
+{x? mpNum? A complex number.}
+{Keywords? String? prec, dps, exact, rounding.}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionThree
+{fmul? mpNum? the sum of the numbers x and y, giving a floating-point result, optionally using a custom precision and rounding mode..}
+{x? mpNum? A complex number.}
+{y? mpNum? A complex number.}
+{Keywords? String? prec, dps, exact, rounding.}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionTwo
+{fprod? mpNum? a product containing a finite number of factors}
+{factors? mpNum? a finite number of factors}
+{Keywords? String? prec, dps, exact, rounding.}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionTwo
+{fdot? mpNum? a product containing a finite number of factors}
+{factors? mpNum? a finite number of factors}
+{Keywords? String? prec, dps, exact, rounding.}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionThree
+{fdiv? mpNum? the sum of the numbers x and y, giving a floating-point result, optionally using a custom precision and rounding mode..}
+{x? mpNum? A complex number.}
+{y? mpNum? A complex number.}
+{Keywords? String? prec, dps, exact, rounding.}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionTwo
+{fmod? mpReal? the remainder of $x/y$}
+{x? mpReal? A real number.}
+{y? mpReal? A real number.}
+\end{mpFunctionsExtract}
+
+\section{Logical Operators }
+
+\section{Comparison Operators and Sorting}
+
+\begin{mpFunctionsExtract}
+\mpFunctionTwo
+{chop? mpNum? Chops off small real or imaginary parts, or converts numbers close to zero to exact zeros}
+{x? mpNum? A real or complex number.}
+{Keywords? String? tol=None}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionThree
+{almosteq? mpNum? Determine whether the difference between $s$ and $t$ is smaller than a given epsilon, either relatively or absolutely.}
+{s? mpNum? A real or complex number.}
+{t? mpNum? A real or complex number.}
+{Keywords? String? rel\_eps=None, abs\_eps=None}
+\end{mpFunctionsExtract}
+
+\section{Properties of numbers}
+
+\begin{mpFunctionsExtract}
+\mpFunctionOne
+{isnormal? Boolean?  Determine whether x is 'normal' in the sense of floating-point representation; that is, return False if x is zero, an infinity or NaN; otherwise return True. By extension, a complex number x is considered 'normal' if its magnitude is normal}
+{Number1? mpNum? A real or complex number.}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionOne
+{isfinite? Boolean?  Return True if x is a finite number, i.e. neither an infinity or a NaN}
+{Number1? mpNum? A real or complex number.}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionOne
+{isinf? Boolean?  True if the absolute value of x is infinite; otherwise return False}
+{Number1? mpNum? A real or complex number.}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionOne
+{isnan? Boolean?  Return True if x is a NaN (not-a-number), or for a complex number, whether either the real or complex part is NaN; otherwise return False}
+{Number1? mpNum? A real or complex number.}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionTwo
+{isint? Boolean? Return True if x is integer-valued; otherwise return False.}
+{x? mpNum? A real number.}
+{Kexwords? String? gaussian=False.}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionOne
+{mag? mpNum? Quick logarithmic magnitude estimate of a number.}
+{x? mpNum? A real number.}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionOne
+{.nint\_distance? mpNum? Return $(n,d)$ where $n$ is the nearest integer to $x$ and $d$ is an estimate of $\log_2(|x-n|)$.}
+{x? mpNum? A real number.}
+\end{mpFunctionsExtract}
+
+\section{Number generation}
+
+\begin{mpFunctionsExtract}
+\mpFunctionZero
+{rand? mpNum? Returns an mpf with value chosen randomly from $[0,1)$. The number of randomly generated bits in the mantissa is equal to the working precision.}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionTwo
+{fraction? mpNum?  Given Python integers $(p,q)$, returns a lazy mpf representing the fraction $p/q$. The value is updated with the precision.}
+{p? mpNum? an integer.}
+{q? mpNum? an integer.}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionThree
+{arange? mpNum?  This is a generalized version of Python's range() function that accepts fractional endpoints and step sizes and returns a list of mpf instance.}
+{a? mpNum? a real number.}
+{b? mpNum? a real number.}
+{h? mpNum? a real number.}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionFour
+{linspace? mpNum?  This is a generalized version of Python's range() function that accepts fractional endpoints and step sizes and returns a list of mpf instance.}
+{a? mpNum? a real number.}
+{b? mpNum? a real number.}
+{h? mpNum? a real number.}
+{Keywords? String? endpoint=True.}
+\end{mpFunctionsExtract}
+
+\section{Matrices}
+
+\begin{mpFunctionsExtract}
+\mpFunctionTwo
+{matrix? mpNum?  This is a generalized version of Python's range() function that accepts fractional endpoints and step sizes and returns a list of mpf instance.}
+{data? Object? an object specifying the matrix.}
+{Keywords? String? random, random-symmetric, random-complex, random-hermitian, zeros, ones, eye, row-vector, col-vector, diagonal.}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionThree
+{MatrixAdd? mpNum? the sum of the numbers x and y, giving a floating-point result, optionally using a custom precision and rounding mode..}
+{x? mpNum? A complex number.}
+{y? mpNum? A complex number.}
+{Keywords? String? prec, dps, exact, rounding.}
+\end{mpFunctionsExtract}
+
+\chapter{Elementary Functions}
+
+\section{Constants}
+
+\begin{mpFunctionsExtract}
+\mpFunctionZero
+{pi? mpNum?  pi: 3.14159...}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionZero
+{degree? mpNum?  degree = 1 deg = pi / 180: 0.0174533...}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionZero
+{e? mpNum?  the base of the natural logarithm, e = exp(1): 2.71828...}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionZero
+{phi? mpNum?  Golden ratio phi: 1.61803...}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionZero
+{euler? mpNum?  Euler's constant: 0.577216...}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionZero
+{catalan? mpNum?  Catalan's constant: 0.915966...}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionZero
+{apery? mpNum?  Apery's constant: 1.20206...}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionZero
+{khinchin? mpNum?  Khinchin's constant: 2.68545...}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionZero
+{glaisher? mpNum?  Glaisher's constant: 1.28243...}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionZero
+{mertens? mpNum?  Mertens' constant: 0.261497...}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionZero
+{twinprime? mpNum?  Twin prime constant: 0.660162...}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionZero
+{inf? mpNum? the value of the representation of  $+\infty$ in the current precision.}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionZero
+{nan? mpNum? the value of the representation of Not a Number (NaN) in the current precision.}
+\end{mpFunctionsExtract}
+
+\section{Exponential and Logarithmic Functions}
+
+\begin{mpFunctionsExtract}
+\mpFunctionOne
+{exp? mpNum? the complex exponential of $z$}
+{z? mpNum? A complex number.}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionOne
+{expj? mpNum?  $10^z$}
+{z? mpNum? A complex number.}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionOne
+{expjpi? mpNum?  $10^z$}
+{z? mpNum? A complex number.}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionOne
+{expm1? mpNum?  $10^z$}
+{z? mpNum? A complex number.}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionOne
+{exp10? mpNum?  $10^z$}
+{z? mpNum? A complex number.}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionOne
+{exp2? mpNum?  $2^z$}
+{z? mpNum? A complex number.}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionTwo
+{Logb? mpNum? the value of the logarithm  to base $b$: $\text{logb}(x) = \log_{b}(x)$.}
+{x? mpNum? A real number.}
+{b? mpNum? A real number.}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionTwo
+{log? mpNum? the complex natural logarithm of $z$}
+{z? mpNum? A complex number.}
+{base? mpNum? the base of the logarithm. A real number.}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionOne
+{ln? mpNum? the complex natural logarithm of $z$}
+{z? mpNum? A complex number.}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionOne
+{log10? mpNum? $\log_{10}(z)$}
+{z? mpNum? A complex number.}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionOne
+{log2? mpNum? $\log_{2}(z)$}
+{z? mpNum? A complex number.}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionOne
+{lnp1? mpNum? the value of the function $\ln(1+x)$.}
+{x? mpNum? A real number.}
+\end{mpFunctionsExtract}
+
+\section{Roots and Power Functions}
+
+\begin{mpFunctionsExtract}
+\mpFunctionOne
+{square? mpNum? the square of $z$.}
+{z? mpNum? A complex number.}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionTwo
+{power? mpNum? an complex power of $z$}
+{z1? mpNum? A complex number.}
+{z2? mpNum? A complex number.}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionTwo
+{powm1? mpNum? an integer power of $z$}
+{z? mpNum? A complex number.}
+{k? mpNum?  A complex number.}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionOne
+{sqrt? mpNum? the square root of $z$}
+{z? mpNum? A complex number.}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionTwo
+{hypot? mpNum? the value of $\sqrt{x^2+y^2}$.}
+{x? mpNum? A real number.}
+{y? mpNum? A real number.}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionOne
+{cbrt? mpNum? the square root of $z$}
+{z? mpNum? A complex number.}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionTwo
+{root? mpNum? the value of the $n^{th}$ root of $x$, $\sqrt[n]{x}, n=2,3,...$.}
+{z? mpNum? A complex number.}
+{n? mpNum? An integer.}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionTwo
+{nthroot? mpNum? the value of the $n^{th}$ root of $x$, $\sqrt[n]{x}, n=2,3,...$.}
+{n? mpNum? An integer.}
+{y? mpNum? A real number.}
+\end{mpFunctionsExtract}
+
+\section{Trigonometric Functions}
+
+\begin{mpFunctionsExtract}
+\mpFunctionOne
+{degrees? mpNum? the value of $x$ converted to degrees, with the input $x$ in radians.}
+{x? mpNum? A real number.}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionOne
+{radians? mpNum? the value of $x$ converted to radians, with the input $x$ in degrees.}
+{x? mpNum? A real number.}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionOne
+{sin? mpNum? complex sine of $z$}
+{z? mpNum? A complex number.}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionOne
+{cos? mpNum? complex cosine of $z$}
+{z? mpNum? A complex number.}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionOne
+{tan? mpNum? complex tangent of $z$}
+{z? mpNum? A complex number.}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionOne
+{sec? mpNum? the complex secant of $z$}
+{z? mpNum? A complex number.}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionOne
+{csc? mpNum? the complex cosecant of $z$}
+{z? mpNum? A complex number.}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionOne
+{cot? mpNum? the complex cotangent of $z$}
+{z? mpNum? A complex number.}
+\end{mpFunctionsExtract}
+
+\section{Hyperbolic Functions}
+
+\begin{mpFunctionsExtract}
+\mpFunctionOne
+{sinh? mpNum? the complex hyperbolic sine of $z$}
+{z? mpNum? A complex number.}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionOne
+{cosh? mpNum? the complex hyperbolic cosine of $z$}
+{z? mpNum? A complex number.}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionOne
+{tanh? mpNum? the complex hyperbolic tangent of $z$}
+{z? mpNum? A complex number.}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionOne
+{sech? mpNum? the complex hyperbolic secant of $z$}
+{z? mpNum? A complex number.}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionOne
+{csch? mpNum? the complex hyperbolic cosecant of $z$}
+{z? mpNum? A complex number.}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionOne
+{coth? mpNum? the complex hyperbolic cotangent of $z$}
+{z? mpNum? A complex number.}
+\end{mpFunctionsExtract}
+
+\section{Inverse Trigonometric Functions}
+
+\begin{mpFunctionsExtract}
+\mpFunctionOne
+{asin? mpNum? the inverse complex sine of $z$}
+{z? mpNum? A complex number.}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionOne
+{acos? mpNum? the inverse complex cosine of $z$}
+{z? mpNum? A complex number.}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionOne
+{atan? mpNum? the inverse complex tangent of $z$}
+{z? mpNum? A complex number.}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionTwo
+{Atan2? mpNum? the value of the arc-tangent of $x$ in radians.}
+{x? mpNum? A real number.}
+{y? mpNum? A real number.}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionOne
+{acot? mpNum? the inverse complex cotangent of $z$}
+{z? mpNum? A complex number.}
+\end{mpFunctionsExtract}
+
+\section{Inverse Hyperbolic Functions}
+
+\begin{mpFunctionsExtract}
+\mpFunctionOne
+{asinh? mpNum? the inverse complex hyperbolic sine of $z$}
+{z? mpNum? A complex number.}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionOne
+{acosh? mpNum? the inverse complex hyperbolic cosine of $z$}
+{z? mpNum? A complex number.}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionOne
+{atanh? mpNum? the inverse complex hyperbolic tangent of $z$}
+{z? mpNum? A complex number.}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionOne
+{acoth? mpNum? the inverse complex hyperbolic cotangent of $z$}
+{z? mpNum? A complex number.}
+\end{mpFunctionsExtract}
+
+\chapter{Linear Algebra}
+
+\section{Norms}
+
+\begin{mpFunctionsExtract}
+\mpFunctionTwo
+{norm? mpNumList? the entrywise $p$-norm of an iterable x, i.e. the vector norm.}
+{Y? mpNum[]? An array of real numbers.}
+{Keywords? String?  p=2.}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionTwo
+{mnorm? mpNumList? the matrix (operator) $p$-norm of A. Currently p=1 and p=inf are supported.}
+{A? mpNum[]? An array of real numbers.}
+{Keywords? String?  p=1.}
+\end{mpFunctionsExtract}
+
+\section{Decompositions}
+
+\begin{mpFunctionsExtract}
+\mpFunctionTwo
+{cholesky? mpNum? the Cholesky decomposition of a symmetric positive-definite matrix $A$.}
+{A? mpNum[]? A symmetric matrix.}
+{Keywords? String?  tol=None.}
+\end{mpFunctionsExtract}
+
+\section{Linear Equations}
+
+\begin{mpFunctionsExtract}
+\mpFunctionThree
+{lu\_solve? mpNum? solves a linear equation system using a LU decomposition.}
+{A? mpNum[]? A symmetric matrix.}
+{b? mpNum[]? A symmetric matrix.}
+{Keywords? String?  tol=None.}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionFour
+{residual? mpNum? the residual  $||Ax-b||$.}
+{A? mpNum[]? A square matrix.}
+{b? mpNum[]? A vector.}
+{x? mpNum[]? A vector.}
+{Keywords? String?  tol=None.}
+\end{mpFunctionsExtract}
+
+\section{Matrix Factorization}
+
+\begin{mpFunctionsExtract}
+\mpFunctionTwo
+{lu? mpNum? an explicit LU factorization of a matrix, returning P, L, U}
+{A? mpNum[]? A square matrix.}
+{Keywords? String?  tol=None.}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionTwo
+{qr? mpNum? an explicit QR factorization of a matrix, returning Q, R}
+{A? mpNum[]? A square matrix.}
+{Keywords? String?  tol=None.}
+\end{mpFunctionsExtract}
+
+\chapter{Factorials and gamma functions}
+
+\section{Factorials}
+
+\begin{mpFunctionsExtract}
+\mpFunctionOne
+{Factorial? mpNum? the factorial, $x!$.}
+{z? mpNum? A real or complex number.}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionOne
+{fac? mpNum? the factorial, $x!$.}
+{z? mpNum? A real or complex number.}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionOne
+{fac2? mpNum? the double factorial $x!!$.}
+{z? mpNum? A real or complex number.}
+\end{mpFunctionsExtract}
+
+\section{Binomial coefficient}
+
+\begin{mpFunctionsExtract}
+\mpFunctionTwo
+{binomial? mpNum? the binomial coefficient.}
+{n? mpNum? A real or complex number.}
+{k? mpNum? A real or complex number.}
+\end{mpFunctionsExtract}
+
+\section{Pochhammer symbol, Rising and falling factorials}
+
+\begin{mpFunctionsExtract}
+\mpFunctionTwoNotImplemented
+{RelativePochhammerMpMath? mpNum? the relative Pochhammer symbol.}
+{a? mpNum? An integer.}
+{x? mpNum? An integer.}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionTwo
+{rf? mpNum? the rising factorial.}
+{x? mpNum? A real or complex number.}
+{n? mpNum? A real or complex number.}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionTwo
+{ff? mpNum? the falling factorial.}
+{x? mpNum? A real or complex number.}
+{n? mpNum? A real or complex number.}
+\end{mpFunctionsExtract}
+
+\section{Super- and hyperfactorials}
+
+\begin{mpFunctionsExtract}
+\mpFunctionOne
+{superfac? mpNum? the superfactorial.}
+{z? mpNum? A real or complex number.}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionOne
+{hyperfac? mpNum? the hyperfactorial.}
+{z? mpNum? A real or complex number.}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionOne
+{barnesg? mpNum? the Barnes G-function.}
+{z? mpNum? A real or complex number.}
+\end{mpFunctionsExtract}
+
+\section{Gamma functions}
+
+\begin{mpFunctionsExtract}
+\mpFunctionOne
+{gamma? mpNum? the gamma function, $\Gamma(x)$.}
+{z? mpNum? A real or complex number.}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionOne
+{rgamma? mpNum? the reciprocal of the gamma function, $1/\Gamma(z)$.}
+{z? mpNum? A real or complex number.}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionTwo
+{gammaprod? mpNum?  the  product / quotient of gamma functions.}
+{a? mpNum? A real or complex iterables.}
+{b? mpNum? A real or complex iterables.}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionOne
+{loggamma? mpNum? the principal branch of the log-gamma function, $\ln\Gamma(z)$.}
+{z? mpNum? A real or complex number.}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionFour
+{gammainc? mpNum? the incomplete gamma function with integration limits $[a, b]$.}
+{z? mpNum? A real or complex number.}
+{a? mpNum? A real or complex number (default = 0).}
+{b? mpNum? A real or complex number (default = inf).}
+{Keywords? String?  regularized=False.}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionTwoNotImplemented
+{GammaPDerivativeMpMath? mpNum? the partial derivative with respect to $x$ of the incomplete gamma function $P(a,x)$.}
+{a? mpNum? A real number.}
+{x? mpNum? A real number.}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionTwoNotImplemented
+{GammaPMpMath? mpNum? the normalised incomplete gamma function $P(a,x)$.}
+{a? mpNum? A real number.}
+{x? mpNum? A real number.}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionTwoNotImplemented
+{GammaQMpMath? mpNum? the normalised incomplete gamma function $Q(a,x)$.}
+{a? mpNum? A real number.}
+{x? mpNum? A real number.}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionTwoNotImplemented
+{NonNormalisedGammaPMpMath? mpNum? the non-normalised incomplete gamma function $\Gamma(a,x)$.}
+{a? mpNum? A real number.}
+{x? mpNum? A real number.}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionTwoNotImplemented
+{NonNormalisedGammaQMpMath? mpNum? the non-normalised incomplete gamma function $\gamma(a,x)$.}
+{a? mpNum? A real number.}
+{x? mpNum? A real number.}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionTwoNotImplemented
+{TricomiGammaMpMath? mpNum? Tricomi's entire incomplete gamma function $\gamma^*(a,x)$.}
+{a? mpNum? A real number.}
+{x? mpNum? A real number.}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionTwoNotImplemented
+{GammaPinvMpMath? mpNum? the inverse of the normalised incomplete gamma function $P(a,x)$.}
+{a? mpNum? A real number.}
+{p? mpNum? A real number.}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionTwoNotImplemented
+{GammaQinvMpMath? mpNum? the inverse of the normalised incomplete gamma function $Q(a,x)$.}
+{a? mpNum? A real number.}
+{q? mpNum? A real number.}
+\end{mpFunctionsExtract}
+
+\section{Polygamma functions and harmonic numbers}
+
+\begin{mpFunctionsExtract}
+\mpFunctionTwo
+{polygamma? mpNum? the polygamma function of order $m$ of $z$, $\psi^{(m)}(z)$.}
+{m? mpNum? A real or complex number.}
+{z? mpNum? A real or complex number.}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionTwo
+{psi? mpNum? the polygamma function of order $m$ of $z$, $\psi^{(m)}(z)$.}
+{m? mpNum? A real or complex number.}
+{z? mpNum? A real or complex number.}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionOne
+{digamma? mpNum? the digamma function.}
+{z? mpNum? A real or complex number.}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionOne
+{harmonic? mpNum? a floating-point approximation of the $n$-th harmonic number $H(n)$.}
+{n? mpNum? An  real or complex number.}
+\end{mpFunctionsExtract}
+
+\section{Beta Functions}
+
+\begin{mpFunctionsExtract}
+\mpFunctionTwo
+{beta? mpNum? the beta function, $B(x,y)=\Gamma(x) \Gamma(y)/\Gamma(x+y)$.}
+{x? mpNum? A real or complex number.}
+{y? mpNum? A real or complex number.}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionTwoNotImplemented
+{LnBetaMpMath? mpNum? the logarithm of the beta function $\ln B(a,b)|$ with $a,b \neq 0,-1,-2,\ldots$.}
+{a? mpNum? A real number.}
+{b? mpNum? A real number.}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionFive
+{betainc? mpNum? the generalized incomplete beta function.}
+{a? mpNum? A real or complex number.}
+{b? mpNum? A real or complex number.}
+{x1? mpNum? A real or complex number (default = 0).}
+{x2? mpNum? A real or complex number (default = 1).}
+{Keywords? String?  regularized=False.}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionThreeNotImplemented
+{IBetaNonNormalizedMpMath? mpNum? the non-normalised incomplete beta function.}
+{a? mpNum? A real number.}
+{b? mpNum? A real number.}
+{x? mpNum? A real number.}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionThreeNotImplemented
+{IBetaMpMath? mpNum? the normalised incomplete beta function.}
+{a? mpNum? A real number.}
+{b? mpNum? A real number.}
+{x? mpNum? A real number.}
+\end{mpFunctionsExtract}
+
+\chapter{Exponential integrals and error functions}
+
+\section{Exponential integrals}
+
+\begin{mpFunctionsExtract}
+\mpFunctionOne
+{ei? mpNum? the exponential integral.}
+{z? mpNum? A real or complex number.}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionOne
+{e1? mpNum? the exponential integral $\text{E}_1(x)$.}
+{z? mpNum? A real or complex number.}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionTwo
+{expint? mpNum? the generalized exponential integral or En-function.}
+{n? mpNum? A real or complex number.}
+{z? mpNum? A real or complex number.}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionTwoNotImplemented
+{GeneralizedExponentialIntegralEpMpMath? mpNum? the generalized exponential integrals $\text{E}_n(x)$ of real order $p$.}
+{x? mpNum? A real number.}
+{p? mpNum? A real number.}
+\end{mpFunctionsExtract}
+
+\section{Logarithmic integral}
+
+\begin{mpFunctionsExtract}
+\mpFunctionOne
+{li? mpNum? the logarithmic integral.}
+{z? mpNum? A real or complex number.}
+\end{mpFunctionsExtract}
+
+\section{Trigonometric integrals}
+
+\begin{mpFunctionsExtract}
+\mpFunctionOne
+{ci? mpNum? the cosine integral.}
+{z? mpNum? A real or complex number.}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionOne
+{si? mpNum? the sine integral.}
+{z? mpNum? A real or complex number.}
+\end{mpFunctionsExtract}
+
+\section{Hyperbolic integrals}
+
+\begin{mpFunctionsExtract}
+\mpFunctionOne
+{chi? mpNum? the hyperbolic cosine integral.}
+{z? mpNum? A real or complex number.}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionOne
+{shi? mpNum? the hyperbolic sine integral.}
+{z? mpNum? A real or complex number.}
+\end{mpFunctionsExtract}
+
+\section{Error functions}
+
+\begin{mpFunctionsExtract}
+\mpFunctionOne
+{erf? mpNum? the error function, $\text{erf}(x)$.}
+{z? mpNum? A real or complex number.}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionOne
+{erfc? mpNum? the complementary error function, $\text{erfc}(x)=1-\text{erf}(x)$.}
+{z? mpNum? A real or complex number.}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionOne
+{erfi? mpNum? the imaginary error function, $\text{erfi}(x)$.}
+{z? mpNum? A real or complex number.}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionOne
+{erfinv? mpNum? the inverse error function, $\text{erfinv}(x)$.}
+{x? mpNum? A real number.}
+\end{mpFunctionsExtract}
+
+\section{The normal distribution}
+
+\begin{mpFunctionsExtract}
+\mpFunctionThree
+{npdf? mpNum? the normal probability density function.}
+{x? mpNum? A real number.}
+{mu? mpNum? A real number.}
+{sigma? mpNum? A real number.}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionThree
+{ncdf? mpNum? the normal cumulative distribution function.}
+{x? mpNum? A real number.}
+{mu? mpNum? A real number.}
+{sigma? mpNum? A real number.}
+\end{mpFunctionsExtract}
+
+\section{Fresnel integrals}
+
+\begin{mpFunctionsExtract}
+\mpFunctionOne
+{fresnels? mpNum? the Fresnel sine integral.}
+{z? mpNum? A real or complex number.}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionOne
+{fresnelc? mpNum? the Fresnel cosine integral.}
+{z? mpNum? A real or complex number.}
+\end{mpFunctionsExtract}
+
+\section{Other Special Functions}
+
+\begin{mpFunctionsExtract}
+\mpFunctionTwo
+{lambertw? mpNum? the Lambert W function.}
+{z? mpNum? A real or complex number.}
+{Keywords? String? k=0.}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionTwo
+{agm? mpNum? the arithmetic-geometric mean of $a$ and $b$.}
+{a? mpNum? A real or complex number.}
+{b? mpNum? A real or complex number.}
+\end{mpFunctionsExtract}
+
+\chapter{Bessel functions and related functions}
+
+\section{Bessel functions}
+
+\begin{mpFunctionsExtract}
+\mpFunctionTwoNotImplemented
+{BesselIeMpMath? mpNum? $I_{\nu, e}(x) = I_{\nu}(x) \exp(-|x|)$, the exponentially scaled modified Bessel function $I_{\nu}(z)$ of the first kind of order $\nu$, $x \geq 0$ if $\nu$ is not an integer.}
+{x? mpNum? A real number.}
+{$\nu$? mpNum? A real number.}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionTwoNotImplemented
+{BesselKeMpMath? mpNum? $K_{\nu, e}(x) = K_{\nu}(x) \exp(x)$, the exponentially scaled modified Bessel function $K_{\nu}(z)$ of the first kind of order $\nu$, $x > 0$.}
+{x? mpNum? A real number.}
+{$\nu$? mpNum? A real number.}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionThree
+{besselj? mpNum? the Bessel function of the first kind $J_n(x)$.}
+{n? mpNum? A real or complex number.}
+{x? mpNum? A real or complex number.}
+{Keywords? String? derivative=0.}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionOne
+{j0? mpNum? the Bessel function $J_0(x)$.}
+{x? mpNum? A real or complex number.}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionOne
+{j1? mpNum? the Bessel function $J_1(x)$.}
+{x? mpNum? A real or complex number.}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionThree
+{bessely? mpNum? the Bessel function of the second kind $Y_n(x)$.}
+{n? mpNum? A real or complex number.}
+{x? mpNum? A real or complex number.}
+{Keywords? String? derivative=0.}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionThree
+{besseli? mpNum? the modified Bessel function of the first kind $J_n(x)$.}
+{n? mpNum? A real or complex number.}
+{x? mpNum? A real or complex number.}
+{Keywords? String? derivative=0.}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionTwo
+{besselk? mpNum? the modified Bessel function of the second kind $K_n(x)$.}
+{n? mpNum? A real or complex number.}
+{x? mpNum? A real or complex number.}
+\end{mpFunctionsExtract}
+
+\section{Bessel function zeros}
+
+\begin{mpFunctionsExtract}
+\mpFunctionThree
+{besseljzero? mpNum? the m-th positive zero of the Bessel function of the first kind}
+{v? mpNum? A real or complex number.}
+{m? mpNum? A real or complex number.}
+{Keywords? String? derivative=0.}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionThree
+{besselyzero? mpNum? the m-th positive zero of the Bessel function of the second kind}
+{v? mpNum? A real or complex number.}
+{m? mpNum? A real or complex number.}
+{Keywords? String? derivative=0.}
+\end{mpFunctionsExtract}
+
+\section{Hankel functions}
+
+\begin{mpFunctionsExtract}
+\mpFunctionTwo
+{hankel1? mpNum? the Hankel function of the first kind}
+{n? mpNum? A real or complex number.}
+{x? mpNum? A real or complex number.}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionTwo
+{hankel2? mpNum? the Hankel function of the second kind}
+{n? mpNum? A real or complex number.}
+{x? mpNum? A real or complex number.}
+\end{mpFunctionsExtract}
+
+\section{Kelvin functions}
+
+\begin{mpFunctionsExtract}
+\mpFunctionTwo
+{ber? mpNum? the Kelvin function ber}
+{n? mpNum? A real or complex number.}
+{z? mpNum? A real or complex number.}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionTwo
+{bei? mpNum? the Kelvin function bei}
+{n? mpNum? A real or complex number.}
+{z? mpNum? A real or complex number.}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionTwo
+{ker? mpNum? the Kelvin function ker}
+{n? mpNum? A real or complex number.}
+{z? mpNum? A real or complex number.}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionTwo
+{kei? mpNum? the Kelvin function kei}
+{n? mpNum? A real or complex number.}
+{z? mpNum? A real or complex number.}
+\end{mpFunctionsExtract}
+
+\section{Struve Functions}
+
+\begin{mpFunctionsExtract}
+\mpFunctionTwo
+{struveh? mpNum? the Struve function H}
+{n? mpNum? A real or complex number.}
+{z? mpNum? A real or complex number.}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionTwo
+{struvel? mpNum? the modified Struve function L}
+{n? mpNum? A real or complex number.}
+{z? mpNum? A real or complex number.}
+\end{mpFunctionsExtract}
+
+\section{Anger-Weber functions}
+
+\begin{mpFunctionsExtract}
+\mpFunctionTwo
+{angerj? mpNum? the Anger function J}
+{v? mpNum? A real or complex number.}
+{z? mpNum? A real or complex number.}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionTwo
+{webere? mpNum? the Weber function E}
+{v? mpNum? A real or complex number.}
+{z? mpNum? A real or complex number.}
+\end{mpFunctionsExtract}
+
+\section{Lommel functions}
+
+\begin{mpFunctionsExtract}
+\mpFunctionThree
+{lommels1? mpNum? the First Lommel functions s}
+{u? mpNum? A real or complex number.}
+{v? mpNum? A real or complex number.}
+{z? mpNum? A real or complex number.}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionThree
+{lommels2? mpNum? the Second Lommel functions S}
+{u? mpNum? A real or complex number.}
+{v? mpNum? A real or complex number.}
+{z? mpNum? A real or complex number.}
+\end{mpFunctionsExtract}
+
+\section{Airy and Scorer functions}
+
+\begin{mpFunctionsExtract}
+\mpFunctionTwo
+{airyai? mpNum? the Airy function Ai}
+{z? mpNum? A real or complex number.}
+{Keywords? String? derivative=0.}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionTwo
+{airybi? mpNum? the Airy function Bi}
+{z? mpNum? A real or complex number.}
+{Keywords? String? derivative=0.}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionTwo
+{airyaizero? mpNum? the $k$-th zero of the Airy Ai-function}
+{k? mpNum? An integer.}
+{Keywords? String? derivative=0.}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionTwo
+{airybizero? mpNum? the $k$-th zero of the Airy Bi-function}
+{k? mpNum? An integer.}
+{Keywords? String? derivative=0, complex=0.}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionOne
+{scorergi? mpNum? the Scorer function Gi}
+{z? mpNum? A real or complex number.}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionOne
+{scorerhi? mpNum? the Scorer function Gi}
+{z? mpNum? A real or complex number.}
+\end{mpFunctionsExtract}
+
+\section{Coulomb wave functions}
+
+\begin{mpFunctionsExtract}
+\mpFunctionThree
+{coulombf? mpNum? the regular Coulomb wave function}
+{l? mpNum? A real or complex number.}
+{eta? mpNum? A real or complex number.}
+{z? mpNum? A real or complex number.}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionThree
+{coulombg? mpNum? the irregular Coulomb wave function}
+{l? mpNum? A real or complex number.}
+{eta? mpNum? A real or complex number.}
+{z? mpNum? A real or complex number.}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionTwo
+{coulombc? mpNum? the normalizing Gamow constant for Coulomb wave functions}
+{l? mpNum? A real or complex number.}
+{eta? mpNum? A real or complex number.}
+\end{mpFunctionsExtract}
+
+\section{Parabolic cylinder functions}
+
+\begin{mpFunctionsExtract}
+\mpFunctionTwo
+{pcfd? mpNum? the parabolic cylinder function D}
+{n? mpNum? A real or complex number.}
+{z? mpNum? A real or complex number.}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionTwo
+{pcfu? mpNum? the parabolic cylinder function U}
+{a? mpNum? A real or complex number.}
+{z? mpNum? A real or complex number.}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionTwo
+{pcfv? mpNum? the parabolic cylinder function V}
+{a? mpNum? A real or complex number.}
+{z? mpNum? A real or complex number.}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionTwo
+{pcfw? mpNum? Computes the parabolic cylinder function W}
+{a? mpNum? A real or complex number.}
+{z? mpNum? A real or complex number.}
+\end{mpFunctionsExtract}
+
+\chapter{Orthogonal polynomials}
+
+\section{Legendre functions}
+
+\begin{mpFunctionsExtract}
+\mpFunctionTwo
+{legendre? mpNum? the Legendre polynomial $P_n(x)$}
+{n? mpNum? A real or complex number.}
+{x? mpNum? A real or complex number.}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionFour
+{legenp? mpNum? the (associated) Legendre function of the first kind of degree $n$ and order $m$, $P_n^m(z)$.}
+{n? mpNum? A real or complex number.}
+{m? mpNum? A real or complex number.}
+{z? mpNum? A real or complex number.}
+{Keywords? String? type=2.}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionFour
+{legenq? mpNum? the (associated) Legendre function of the second kind of degree $n$ and order $m$, $Q_n^m(z)$.}
+{n? mpNum? A real or complex number.}
+{m? mpNum? A real or complex number.}
+{z? mpNum? A real or complex number.}
+{Keywords? String? type=2.}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionFour
+{spherharm? mpNum? the spherical harmonic $Y_l^m(\theta,\phi)$}
+{l? mpNum? A real or complex number.}
+{m? mpNum? A real or complex number.}
+{theta? mpNum? A real or complex number.}
+{phi? mpNum? A real or complex number.}
+\end{mpFunctionsExtract}
+
+\section{Chebyshev polynomials}
+
+\begin{mpFunctionsExtract}
+\mpFunctionTwo
+{chebyt? mpNum? the Chebyshev polynomial of the first kind $T_n(x)$}
+{n? mpNum? A real or complex number.}
+{x? mpNum? A real or complex number.}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionTwo
+{chebyu? mpNum? the Chebyshev polynomial of the second kind $U_n(x)$}
+{n? mpNum? A real or complex number.}
+{x? mpNum? A real or complex number.}
+\end{mpFunctionsExtract}
+
+\section{Jacobi and Gegenbauer polynomials}
+
+\begin{mpFunctionsExtract}
+\mpFunctionFour
+{jacobi? mpNum? the Jacobi polynomial $P_n^{(a,b)}$}
+{n? mpNum? A real or complex number.}
+{a? mpNum? A real or complex number.}
+{b? mpNum? A real or complex number.}
+{z? mpNum? A real or complex number.}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionThreeNotImplemented
+{ZernikeRadialMpMath? mpNum? the Zernike radial polynomials $R^m_n(r)$.}
+{n? mpNum? An Integer.}
+{m? mpNum? An Integer.}
+{x? mpNum? A real number.}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionThree
+{gegenbauer? mpNum? the Gegenbauer polynomial $C_n^{(a)}(z)$}
+{n? mpNum? A real or complex number.}
+{a? mpNum? A real or complex number.}
+{z? mpNum? A real or complex number.}
+\end{mpFunctionsExtract}
+
+\section{Hermite and Laguerre polynomials}
+
+\begin{mpFunctionsExtract}
+\mpFunctionTwo
+{hermite? mpNum? the Hermite polynomial $H_n(z)$}
+{n? mpNum? A real or complex number.}
+{z? mpNum? A real or complex number.}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionThree
+{laguerre? mpNum? the generalized Laguerre polynomial $L_n^{\alpha}(z)$}
+{n? mpNum? A real or complex number.}
+{a? mpNum? A real or complex number.}
+{z? mpNum? A real or complex number.}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionTwoNotImplemented
+{LaguerreLMpMath? mpNum? $L_n (x)$, the Laguerre polynomials of degree $n \geq 0$.}
+{n? mpNum? An Integer.}
+{x? mpNum? A real number.}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionThreeNotImplemented
+{AssociatedLaguerreMpMath? mpNum? $L^m_n (x)$, the associated Laguerre polynomials of degree $n \geq 0$ and order $m \geq 0$.}
+{n? mpNum? An Integer.}
+{m? mpNum? An Integer.}
+{x? mpNum? A real number.}
+\end{mpFunctionsExtract}
+
+\chapter{Hypergeometric functions}
+
+\section{Confluent Hypergeometric Limit Function}
+
+\begin{mpFunctionsExtract}
+\mpFunctionTwo
+{hyp0f1? mpNum? the hypergeometric function ${}_0F_1$}
+{a? mpNum? A real or complex number.}
+{z? mpNum? A real or complex number.}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionTwoNotImplemented
+{Hypergeometric0F1RegularizedMpMath? mpNum? the regularized confluent hypergeometric limit function ${}_0F_1(b; x)$.}
+{b? mpNum? A real number.}
+{x? mpNum? A real number.}
+\end{mpFunctionsExtract}
+
+\section{Kummer's Confluent Hypergeometric Functions and related functions}
+
+\begin{mpFunctionsExtract}
+\mpFunctionThree
+{hyp1f1? mpNum? the confluent hypergeometric function of the first kind ${}_1F_1(a,b;z)$}
+{a? mpNum? A real or complex number.}
+{b? mpNum? A real or complex number.}
+{z? mpNum? A real or complex number.}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionThreeNotImplemented
+{Hypergeometric1F1RegularizedMpMath? mpNum? Kummer's regularized confluent hypergeometric function ${}_1F_1(a, b; x)$.}
+{a? mpNum? A real number.}
+{b? mpNum? A real number.}
+{z? mpNum? A real number.}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionThree
+{hyperu? mpNum? the Tricomi confluent hypergeometric function $U$}
+{a? mpNum? A real or complex number.}
+{b? mpNum? A real or complex number.}
+{z? mpNum? A real or complex number.}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionThree
+{hyp2f0? mpNum? the hypergeometric function ${}_2F_0$}
+{a? mpNum? A real or complex number.}
+{b? mpNum? A real or complex number.}
+{z? mpNum? A real or complex number.}
+\end{mpFunctionsExtract}
+
+\section{Whittaker functions M and W}
+
+\begin{mpFunctionsExtract}
+\mpFunctionThree
+{whitm? mpNum? the Whittaker function $M$}
+{k? mpNum? A real or complex number.}
+{m? mpNum? A real or complex number.}
+{z? mpNum? A real or complex number.}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionThree
+{whitw? mpNum? the Whittaker function $W$}
+{k? mpNum? A real or complex number.}
+{m? mpNum? A real or complex number.}
+{z? mpNum? A real or complex number.}
+\end{mpFunctionsExtract}
+
+\section{Gauss Hypergeometric Function}
+
+\begin{mpFunctionsExtract}
+\mpFunctionFour
+{hyp2f1? mpNum? the square of $z$.}
+{a? mpNum? A real or complex number.}
+{b? mpNum? A real or complex number.}
+{c? mpNum? A real or complex number.}
+{z? mpNum? A real or complex number.}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionFourNotImplemented
+{Hypergeometric2F1RegularizedMpMath? mpNum? the regularized Gauss hypergeometric function ${}_2F_1(a, b; c; x)$.}
+{a? mpNum? A real number.}
+{b? mpNum? A real number.}
+{c? mpNum? A real number.}
+{z? mpNum? A real number.}
+\end{mpFunctionsExtract}
+
+\section{Additional Hypergeometric Functions}
+
+\begin{mpFunctionsExtract}
+\mpFunctionFour
+{hyp1f2? mpNum? the the hypergeometric function ${}_1F_2(a_1; b_1, b_2; z)$}
+{a1? mpNum? A real or complex number.}
+{b1? mpNum? A real or complex number.}
+{b2? mpNum? A real or complex number.}
+{z? mpNum? A real or complex number.}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionFive
+{hyp2f2? mpNum? the hypergeometric function  ${}_2F_2(a_1; b_1, b_2; z)$.}
+{a1? mpNum? A real or complex number.}
+{a2? mpNum? A real or complex number.}
+{b1? mpNum? A real or complex number.}
+{b2? mpNum? A real or complex number.}
+{z? mpNum? A real or complex number.}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionSix
+{hyp2f3? mpNum? the hypergeometric function ${}_2F_3(a_1,a2;b_1,b_2,b_3;z)$.}
+{a1? mpNum? A real or complex number.}
+{a2? mpNum? A real or complex number.}
+{b1? mpNum? A real or complex number.}
+{b2? mpNum? A real or complex number.}
+{b3? mpNum? A real or complex number.}
+{z? mpNum? A real or complex number.}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionSix
+{hyp3f2? mpNum? hypergeometric function ${}_3F_2$.}
+{a1? mpNum? A real or complex number.}
+{a2? mpNum? A real or complex number.}
+{a3? mpNum? A real or complex number.}
+{b1? mpNum? A real or complex number.}
+{b2? mpNum? A real or complex number.}
+{z? mpNum? A real or complex number.}
+\end{mpFunctionsExtract}
+
+\section{Generalized hypergeometric functions}
+
+\begin{mpFunctionsExtract}
+\mpFunctionThree
+{hyper? mpNum? the generalized hypergeometric function${}_pF_q$}
+{as? mpNum? list of real or complex numbers.}
+{bs? mpNum? list of real or complex numbers.}
+{z? mpNum? A real or complex number.}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionFour
+{hypercomb? mpNum? a weighted combination of hypergeometric functions}
+{f? mpFunction? a real or function.}
+{params? mpNum? list of real or complex numbers.}
+{z? mpNum? A real or complex number.}
+{Keywords? String ? discardknownzeros=True.}
+\end{mpFunctionsExtract}
+
+\section{Meijer G-function}
+
+\begin{mpFunctionsExtract}
+\mpFunctionFour
+{meijerg? mpNum? the  Meijer G-function}
+{as? mpNum? list of real or complex numbers.}
+{bs? mpNum? list of real or complex numbers.}
+{z? mpNum? A real or complex number.}
+{Keywords? String?  r=1, series=1.}
+\end{mpFunctionsExtract}
+
+\section{Bilateral hypergeometric series}
+
+\begin{mpFunctionsExtract}
+\mpFunctionFour
+{bihyper? mpNum? the  bilateral hypergeometric series}
+{as? mpNum? list of real or complex numbers.}
+{bs? mpNum? list of real or complex numbers.}
+{z? mpNum? A real or complex number.}
+{Keywords? String?  r=1, series=1.}
+\end{mpFunctionsExtract}
+
+\section{Hypergeometric functions of two variables}
+
+\begin{mpFunctionsExtract}
+\mpFunctionFour
+{hyper2d? mpNum? the sum the generalized 2D hypergeometric series}
+{a? mpNum? A real or complex number.}
+{b? mpNum? A real or complex number.}
+{x? mpNum? A real or complex number.}
+{y? mpNum? A real or complex number.}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionSix
+{appellf1? mpNum? the Appell F1 hypergeometric function of two variables.}
+{a? mpNum? A real or complex number.}
+{b1? mpNum? A real or complex number.}
+{b2? mpNum? A real or complex number.}
+{c? mpNum? A real or complex number.}
+{x? mpNum? A real or complex number.}
+{y? mpNum? A real or complex number.}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionSeven
+{appellf2? mpNum? the Appell F2 hypergeometric function of two variables.}
+{a? mpNum? A real or complex number.}
+{b1? mpNum? A real or complex number.}
+{b2? mpNum? A real or complex number.}
+{c1? mpNum? A real or complex number.}
+{c2? mpNum? A real or complex number.}
+{x? mpNum? A real or complex number.}
+{y? mpNum? A real or complex number.}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionSeven
+{appellf3? mpNum? the Appell F3 hypergeometric function of two variables.}
+{a1? mpNum? A real or complex number.}
+{a2? mpNum? A real or complex number.}
+{b1? mpNum? A real or complex number.}
+{b2? mpNum? A real or complex number.}
+{c? mpNum? A real or complex number.}
+{x? mpNum? A real or complex number.}
+{y? mpNum? A real or complex number.}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionSix
+{appellf4? mpNum? the Appell F4 hypergeometric function of two variables.}
+{a? mpNum? A real or complex number.}
+{b? mpNum? A real or complex number.}
+{c1? mpNum? A real or complex number.}
+{c2? mpNum? A real or complex number.}
+{x? mpNum? A real or complex number.}
+{y? mpNum? A real or complex number.}
+\end{mpFunctionsExtract}
+
+\chapter{Elliptic functions}
+
+\section{Elliptic arguments}
+
+\begin{mpFunctionsExtract}
+\mpFunctionOne
+{qfrom? mpNum? the elliptic nome $q$.}
+{Keywords? String? m=x; k=x; tau=x; qbar=x.}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionOne
+{qbarfrom? mpNum? the number-theoretic nome $\overline{q}$.}
+{Keywords? String? m=x; k=x; tau=x; q=x.}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionOne
+{mfrom? mpNum? the elliptic parameter $m$.}
+{Keywords? String? k=x; tau=x; q=x; qbar=x.}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionOne
+{kfrom? mpNum? the elliptic modulus $k$.}
+{Keywords? String? m=x; tau=x; q=x; qbar=x.}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionOne
+{taufrom? mpNum? the elliptic half-period ratio $\tau$.}
+{Keywords? String? m=x; k=x; q=x; qbar=x.}
+\end{mpFunctionsExtract}
+
+\section{Legendre elliptic integrals}
+
+\begin{mpFunctionsExtract}
+\mpFunctionOne
+{ellipk? mpNum? the complete elliptic integral of the first kind, $K(m)$.}
+{m? mpNum? A real or complex number.}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionTwo
+{ellipf? mpNum? the Legendre incomplete elliptic integral of the first kind $F(\phi,m)$.}
+{phi? mpNum? A real or complex number.}
+{m? mpNum? A real or complex number.}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionOne
+{ellipe? mpNum? the Legendre complete elliptic integral of the second kind $E(m)$.}
+{m? mpNum? A real or complex number.}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionTwo
+{ellipef? mpNum? the Legendre incomplete elliptic integral of the second kind $E(\phi,m)$.}
+{phi? mpNum? A real or complex number.}
+{m? mpNum? A real or complex number.}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionTwo
+{ellippi? mpNum? the complete elliptic integral of the third kind $\Pi(n,m$.}
+{n? mpNum? A real or complex number.}
+{m? mpNum? A real or complex number.}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionThree
+{ellippif? mpNum? the Legendre incomplete elliptic integral of the third kind $\Pi(n;\phi,m)$.}
+{n? mpNum? A real or complex number.}
+{phi? mpNum? A real or complex number.}
+{m? mpNum? A real or complex number.}
+\end{mpFunctionsExtract}
+
+\section{Carlson symmetric elliptic integrals}
+
+\begin{mpFunctionsExtract}
+\mpFunctionThree
+{elliprf? mpNum? the Carlson symmetric elliptic integral of the first kind.}
+{x? mpNum? A real or complex number.}
+{y? mpNum? A real or complex number.}
+{z? mpNum? A real or complex number.}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionThree
+{elliprc? mpNum? the degenerate Carlson symmetric elliptic integral of the first kind.}
+{x? mpNum? A real or complex number.}
+{y? mpNum? A real or complex number.}
+{Keywords? String? pv=True.}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionFour
+{elliprj? mpNum? the Carlson symmetric elliptic integral of the third kind.}
+{x? mpNum? A real or complex number.}
+{y? mpNum? A real or complex number.}
+{z? mpNum? A real or complex number.}
+{p? mpNum? A real or complex number.}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionThree
+{elliprd? mpNum? the Carlson symmetric elliptic integral of the second kind.}
+{x? mpNum? A real or complex number.}
+{y? mpNum? A real or complex number.}
+{z? mpNum? A real or complex number.}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionThree
+{elliprg? mpNum? the Carlson completely symmetric elliptic integral of the second kind.}
+{x? mpNum? A real or complex number.}
+{y? mpNum? A real or complex number.}
+{z? mpNum? A real or complex number.}
+\end{mpFunctionsExtract}
+
+\section{Jacobi theta functions}
+
+\begin{mpFunctionsExtract}
+\mpFunctionFour
+{jtheta? mpNum? the Jacobi theta function $\vartheta_n(z,q)$.}
+{n? mpNum? An integer, where $n=1,2,3,4$.}
+{z? mpNum? A real or complex number.}
+{q? mpNum? A real or complex number.}
+{Keywords? String? derivative=0.}
+\end{mpFunctionsExtract}
+
+\section{Jacobi elliptic functions}
+
+\begin{mpFunctionsExtract}
+\mpFunctionFour
+{ellipfun? mpNum? any of the Jacobi elliptic functions.}
+{kind? String? A function identifier.}
+{u? mpNum? A real or complex number.}
+{m? mpNum? A real or complex number.}
+{Keywords? String?  q=None, k=None, tau=None.}
+\end{mpFunctionsExtract}
+
+\section{Klein j-invariant}
+
+\begin{mpFunctionsExtract}
+\mpFunctionOne
+{kleinj? mpNum? the Klein j-invariant.}
+{tau? mpNum? A real or complex number.}
+\end{mpFunctionsExtract}
+
+\chapter{Zeta functions, L-series and polylogarithms}
+
+\section{Riemann and Hurwitz zeta functions}
+
+\begin{mpFunctionsExtract}
+\mpFunctionTwo
+{zeta? mpNum? the Riemann zeta function}
+{s? mpNum? A real or complex number.}
+{Keywords? String? derivative=0.}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionThree
+{hurwitz? mpNum? the  Hurwitz  zeta function}
+{s? mpNum? A real or complex number.}
+{a? mpNum? A real or complex number.}
+{Keywords? String? derivative=0.}
+\end{mpFunctionsExtract}
+
+\section{Dirichlet L-series}
+
+\begin{mpFunctionsExtract}
+\mpFunctionOne
+{altzeta? mpNum? the Dirichlet eta function, $\eta(s)$}
+{s? mpNum? A real or complex number.}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionOneNotImplemented
+{DirichletEtam1MpMath? mpNum? the Dirichlet function $\eta(s) - 1$.}
+{x? mpNum? A real number.}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionOneNotImplemented
+{DirichletBetaMpMath? mpNum? the Dirichlet function $\beta(s)$.}
+{s? mpNum? A real number.}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionOneNotImplemented
+{DirichletLambdaMpMath? mpNum? the Dirichlet function $\beta(s)$.}
+{s? mpNum? A real number.}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionThree
+{dirichlet? mpNum? the Dirichlet L-function}
+{s? mpNum? A real or complex number.}
+{chi? mpNum? A periodic sequence.}
+{Keywords? mpNum? derivative=0.}
+\end{mpFunctionsExtract}
+
+\section{Stieltjes constants}
+
+\begin{mpFunctionsExtract}
+\mpFunctionTwo
+{stieltjes? mpNum? the $n$-th Stieltjes constant}
+{n? mpNum? A real or complex number.}
+{a? mpNum? A real or complex number.}
+\end{mpFunctionsExtract}
+
+\section{Zeta function zeros}
+
+\begin{mpFunctionsExtract}
+\mpFunctionTwo
+{zetazero? mpNum? the $n$-th nontrivial zero of $\zeta(s)$ on the critical line}
+{n? mpNum? An integer.}
+{Keywords? String? verbose=False.}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionOne
+{nzeros? mpNum? the number of zeros of the Riemann zeta function in $(0,1) \times (0,t)$, usually denoted by $N(t)$.}
+{t? mpNum? An integer.}
+\end{mpFunctionsExtract}
+
+\section{Riemann-Siegel Z function and related functions}
+
+\begin{mpFunctionsExtract}
+\mpFunctionOne
+{siegelz? mpNum? the Riemann-Siegel Z function}
+{t? mpNum? A real or complex number.}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionOne
+{siegeltheta? mpNum? the Riemann-Siegel theta function}
+{t? mpNum? A real or complex number.}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionOne
+{grampoint? mpNum? the $n$-th Gram point $g_n$, defined as the solution to the equation $\theta(g_n)=\pi n$ where $\theta(t)$ is the Riemann-Siegel theta function}
+{n? mpNum? A real or complex number.}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionOne
+{backlunds? mpNum? the function $S(t) = \text{arg}\zeta\left(\tfrac{1}{2}+it\right)/\pi$.}
+{t? mpNum? A real or complex number.}
+\end{mpFunctionsExtract}
+
+\section{Lerch transcendent and related functions}
+
+\begin{mpFunctionsExtract}
+\mpFunctionThree
+{lerchphi? mpNum? the Lerch transcendent}
+{z? mpNum? A real or complex number.}
+{s? mpNum? A real or complex number.}
+{a? mpNum? A real or complex number.}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionTwoNotImplemented
+{FermiDiracIntMpMath? mpNum? the complete Fermi-Dirac integrals $F_n(x)$ of integer order.}
+{x? mpNum? A real number.}
+{n? mpNum? An Integer.}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionOneNotImplemented
+{FermiDiracPHalfMpMath? mpNum? the complete Fermi-Dirac integral $F_{-1/2}(x)$.}
+{s? mpNum? A real number.}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionOneNotImplemented
+{FermiDiracHalfMpMath? mpNum? the complete Fermi-Dirac integral $F_{1/2}(x)$.}
+{s? mpNum? A real number.}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionOneNotImplemented
+{FermiDirac3HalfMpMath? mpNum? the complete Fermi-Dirac integral $F_{3/2}(x)$.}
+{s? mpNum? A real number.}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionTwoNotImplemented
+{LegendreChiMpMath? mpNum? the Legendre Chi-Function function $\chi_s(x)$.}
+{s? mpNum? A real number.}
+{x? mpNum? A real number.}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionOneNotImplemented
+{InverseTangentMpMath? mpNum? the inverse-tangent integral.}
+{x? mpNum? A real number.}
+\end{mpFunctionsExtract}
+
+\section{Polylogarithms and Clausen functions}
+
+\begin{mpFunctionsExtract}
+\mpFunctionTwo
+{polylog? mpNum? the polylogarithm}
+{s? mpNum? A real or complex number.}
+{z? mpNum? A real or complex number.}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionOne
+{dilog? mpNum? the dilogarithm function $\text{Li}_2(x)$.}
+{x? mpNum? A real number.}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionTwoNotImplemented
+{DebyeMpMath? mpNum? the Debye function of order $n$.}
+{n? mpNum? An Integer.}
+{x? mpNum? A real number.}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionTwo
+{clsinlog? mpNum? the Clausen sine function}
+{s? mpNum? A real or complex number.}
+{z? mpNum? A real or complex number.}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionTwo
+{clcos? mpNum? the Clausen cosine function}
+{s? mpNum? A real or complex number.}
+{z? mpNum? A real or complex number.}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionTwo
+{polyexp? mpNum? the polyexponential function}
+{s? mpNum? A real or complex number.}
+{z? mpNum? A real or complex number.}
+\end{mpFunctionsExtract}
+
+\section{Zeta function variants}
+
+\begin{mpFunctionsExtract}
+\mpFunctionOne
+{primezeta? mpNum? the prime zeta function.}
+{s? mpNum? A real or complex number.}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionTwo
+{secondzeta? mpNum? the secondary zeta function}
+{s? mpNum? A real or complex number.}
+{Keywords? String? a=0.015, error=False.}
+\end{mpFunctionsExtract}
+
+\chapter{Number-theoretical, combinatorial and integer functions}
+
+\section{Fibonacci numbers}
+
+\begin{mpFunctionsExtract}
+\mpFunctionTwo
+{fibonacci? mpNum? the $n$-th Fibonacci number, $F(n)$}
+{n? mpNum? A real or complex number.}
+{Keywords? String? derivative=0.}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionTwo
+{fib? mpNum? the $n$-th Fibonacci number, $F(n)$}
+{n? mpNum? A real or complex number.}
+{Keywords? String? derivative=0.}
+\end{mpFunctionsExtract}
+
+\section{Bernoulli numbers and polynomials}
+
+\begin{mpFunctionsExtract}
+\mpFunctionOne
+{bernoulli? mpNum? the $n$th Bernoulli number, $B_n$, for any integer $n>0$}
+{n? mpNum? An integer}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionOne
+{bernfrac? mpNum? a tuple of integers $(p,q)$ such that $p/q=B_n$ exactly, where $B_n$denotes the $n$-th Bernoulli number.}
+{n? mpNum? An integer}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionTwo
+{bernpoly? mpNum? the Bernoulli polynomial $B_n(z)$}
+{n? mpNum? A real or complex number.}
+{z? mpNum? A real or complex number.}
+\end{mpFunctionsExtract}
+
+\section{Euler numbers and polynomials}
+
+\begin{mpFunctionsExtract}
+\mpFunctionOne
+{eulernum? mpNum? the $n$-th Euler number}
+{n? mpNum? An integer}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionTwo
+{eulerpoly? mpNum? the Euler polynomial $E_n(z)$}
+{n? mpNum? A real or complex number.}
+{z? mpNum? A real or complex number.}
+\end{mpFunctionsExtract}
+
+\section{Bell numbers and polynomials}
+
+\begin{mpFunctionsExtract}
+\mpFunctionTwo
+{bell? mpNum? the Bell polynomial $B_n(x)$}
+{n? mpNum? A non-negative integer.}
+{x? mpNum? A real or complex number.}
+\end{mpFunctionsExtract}
+
+\section{Stirling numbers}
+
+\begin{mpFunctionsExtract}
+\mpFunctionThree
+{stirling1? mpNum? the Stirling number of the first kind $s(n,k)$}
+{n? mpNum? A real or complex number.}
+{k? mpNum? A real or complex number.}
+{Keywords? String? exact=False.}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionThree
+{stirling2? mpNum? the Stirling number of the second kind $s(n,k)$}
+{n? mpNum? A real or complex number.}
+{k? mpNum? A real or complex number.}
+{Keywords? String? exact=False.}
+\end{mpFunctionsExtract}
+
+\section{Prime counting functions}
+
+\begin{mpFunctionsExtract}
+\mpFunctionOne
+{primepi? mpNum? the prime counting function}
+{x? mpNum? A real number}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionOne
+{primepi2? mpNum? an interval (as an mpi instance) providing bounds for the value of the prime counting function $\pi(x)$}
+{x? mpNum? A real number}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionOne
+{riemannr? mpNum? the Riemann R function, a smooth approximation of the prime counting function $\pi(x)$}
+{x? mpNum? A real number}
+\end{mpFunctionsExtract}
+
+\section{Miscellaneous functions}
+
+\begin{mpFunctionsExtract}
+\mpFunctionTwo
+{cyclotomic? mpNum? the cyclotomic polynomial $\Phi_n(x)$}
+{n? mpNum? A real or complex number.}
+{x? mpNum? A real or complex number.}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionOne
+{mangoldt? mpNum? the von Mangoldt function}
+{n? mpNum? An integer}
+\end{mpFunctionsExtract}
+
+\chapter{q-functions}
+
+\section{q-Pochhammer symbol}
+
+\begin{mpFunctionsExtract}
+\mpFunctionThree
+{qp? mpNum? the q-Pochhammer symbol (or q-rising factorial)}
+{a? mpNum? A real or complex number.}
+{q? mpNum? A real or complex number.}
+{n? mpNum? An integer.}
+\end{mpFunctionsExtract}
+
+\section{q-gamma and factorial}
+
+\begin{mpFunctionsExtract}
+\mpFunctionTwo
+{qgamma? mpNum? the q-gamma function}
+{z? mpNum? A real or complex number.}
+{q? mpNum? A real or complex number.}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionTwo
+{qfac? mpNum? the  q-factorial}
+{z? mpNum? A real or complex number.}
+{q? mpNum? A real or complex number.}
+\end{mpFunctionsExtract}
+
+\section{Hypergeometric q-series}
+
+\begin{mpFunctionsExtract}
+\mpFunctionFour
+{qhyper? mpNum? the hypergeometric q-series}
+{as? mpNum? A real or complex number.}
+{bs? mpNum? A real or complex number.}
+{q? mpNum? A real or complex number.}
+{z? mpNum? A real or complex number.}
+\end{mpFunctionsExtract}
+
+\chapter{Matrix functions}
+
+\section{Matrix exponential}
+
+\begin{mpFunctionsExtract}
+\mpFunctionTwo
+{expm? mpNum? the matrix exponential of a square matrix $A$}
+{A? mpNum? A real or complex matrix.}
+{Keywords? String? method='taylor'.}
+\end{mpFunctionsExtract}
+
+\section{Matrix cosine}
+
+\begin{mpFunctionsExtract}
+\mpFunctionOne
+{cosm? mpNum? the matrix cosine of a square matrix $A$}
+{A? mpNum? A real or complex matrix.}
+\end{mpFunctionsExtract}
+
+\section{Matrix sine}
+
+\begin{mpFunctionsExtract}
+\mpFunctionOne
+{sinm? mpNum? the matrix sine of a square matrix $A$}
+{A? mpNum? A real or complex matrix.}
+\end{mpFunctionsExtract}
+
+\section{Matrix square root}
+
+\begin{mpFunctionsExtract}
+\mpFunctionTwo
+{sqrtm? mpNum? a square root of a square matrix $A$}
+{A? mpNum? A real or complex matrix.}
+{Keywords? String?  mayrotate=2.}
+\end{mpFunctionsExtract}
+
+\section{Matrix logarithm}
+
+\begin{mpFunctionsExtract}
+\mpFunctionOne
+{logm? mpNum? the matrix logarithm of a square matrix $A$}
+{A? mpNum? A real or complex matrix.}
+\end{mpFunctionsExtract}
+
+\section{Matrix power}
+
+\begin{mpFunctionsExtract}
+\mpFunctionTwo
+{powm? mpNum? $A^r=\exp(A \log r)$ for a matrix $A$ and complex number $r$}
+{A? mpNum? A real or complex matrix.}
+{r? mpNum? A real or complex number.}
+\end{mpFunctionsExtract}
+
+\chapter{Eigensystems and related Decompositions}
+
+\section{Singular value decomposition}
+
+\begin{mpFunctionsExtract}
+\mpFunctionTwo
+{svd? mpNum? the singular value decomposition of matrix A}
+{A? mpNum? A real or complex number.}
+{Keywords? String? compute\_uv = True.}
+\end{mpFunctionsExtract}
+
+\section{The Schur decomposition}
+
+\begin{mpFunctionsExtract}
+\mpFunctionOne
+{schur? mpNum? the Schur decomposition of a square matrix $A$}
+{A? mpNum? A real or complex matrix.}
+\end{mpFunctionsExtract}
+
+\section{The eigenvalue problem}
+
+\begin{mpFunctionsExtract}
+\mpFunctionTwo
+{eig? mpNum? the solution of the (ordinary) eigenvalue problem for a real or complex square matrix $A$}
+{A? mpNum? A real or complex number.}
+{Keywords? String? left = False, right = False.}
+\end{mpFunctionsExtract}
+
+\section{The symmetric eigenvalue problem}
+
+\begin{mpFunctionsExtract}
+\mpFunctionTwo
+{eigh? mpNum? the solution of the (ordinary) eigenvalue problem for a real symmetric or complex hermitian square matrix $A$}
+{A? mpNum? A real or complex number.}
+{Keywords? String? eigvals\_only = False.}
+\end{mpFunctionsExtract}
 
 \chapter{GMP, MPD, and related libraries: an overview}
 
@@ -632,1258 +2957,6 @@
 \end{mpFunctionsExtract}
 
 \chapter{FMPQ}
-
-\chapter{MPD}
-
-\section{Multiprecision Decimal Numbers (MPD)}
-
-\section{MPD Context}
-
-\chapter{MPFR}
-
-\section{Multiprecision with correct rounding (MPFR)}
-
-\section{MPFR Context}
-
-\section{Constants}
-
-\begin{mpFunctionsExtract}
-\mpFunctionZero
-{ConstLog2? mpNum? the value of the natural logarithm of 2, $\ln(2) = 0.69314718055994...$.}
-\end{mpFunctionsExtract}
-
-\begin{mpFunctionsExtract}
-\mpFunctionZero
-{Pi? mpNum? the value of $\pi = 3.1415926535897932...$.}
-\end{mpFunctionsExtract}
-
-\begin{mpFunctionsExtract}
-\mpFunctionZero
-{Catalan? mpNum? the value of Catalan's constant, $G = 0.9159655941772190...$.}
-\end{mpFunctionsExtract}
-
-\begin{mpFunctionsExtract}
-\mpFunctionZero
-{EulerGamma? mpNum? the value of Euler's Gamma, $\gamma = 0.57721566490153286...$.}
-\end{mpFunctionsExtract}
-
-\begin{mpFunctionsExtract}
-\mpFunctionZero
-{MachineEpsilon? mpNum? the value of the Machine Epsilon in the current precision}
-\end{mpFunctionsExtract}
-
-\begin{mpFunctionsExtract}
-\mpFunctionZero
-{MaxReal? mpNum? the value of the largest representable real number in the current precision.}
-\end{mpFunctionsExtract}
-
-\begin{mpFunctionsExtract}
-\mpFunctionZero
-{MaxInteger? mpNum? the value of the largest representable integer in the current precision.}
-\end{mpFunctionsExtract}
-
-\begin{mpFunctionsExtract}
-\mpFunctionZero
-{MinReal? mpNum? the value of the smallest representable positive real number in the current precision.}
-\end{mpFunctionsExtract}
-
-\begin{mpFunctionsExtract}
-\mpFunctionZero
-{MinInteger? mpNum? the value of the smallest representable positive integer in the current precision.}
-\end{mpFunctionsExtract}
-
-\begin{mpFunctionsExtract}
-\mpFunctionZero
-{PosInf? mpNum? the value of the representation of  $+\infty$ in the current precision.}
-\end{mpFunctionsExtract}
-
-\begin{mpFunctionsExtract}
-\mpFunctionZero
-{NegInf? mpNum? the value of the representation of  $-\infty$ in the current precision.}
-\end{mpFunctionsExtract}
-
-\begin{mpFunctionsExtract}
-\mpFunctionZero
-{NaN? mpNum? the value of the representation of Not a Number (NaN) in the current precision.}
-\end{mpFunctionsExtract}
-
-\section{Sign, Powers and Roots}
-
-\begin{mpFunctionsExtract}
-\mpFunctionOne
-{Sign? mpNum? the value of the sign of $x, \text{sign}(x)$.}
-{x? mpNum? A real number.}
-\end{mpFunctionsExtract}
-
-\begin{mpFunctionsExtract}
-\mpFunctionTwo
-{Copysign? mpNum? $|x|\cdot \text{sign(y)}$.}
-{x? mpNum? A real number.}
-{y? mpNum? A real number.}
-\end{mpFunctionsExtract}
-
-\begin{mpFunctionsExtract}
-\mpFunctionOne
-{Abs? mpNum? the absolute value of $x$, $|x| = \sqrt{x^2}$.}
-{x? mpNum? A real number.}
-\end{mpFunctionsExtract}
-
-\begin{mpFunctionsExtract}
-\mpFunctionOne
-{Reci? mpNum? the absolute value of the reciprocal of $x,  1/x = x^{-1}$}
-{x? mpNum? A real number.}
-\end{mpFunctionsExtract}
-
-\begin{mpFunctionsExtract}
-\mpFunctionOne
-{Square? mpNum? the absolute value of the square of $x,  x^2$.}
-{x? mpNum? A real number.}
-\end{mpFunctionsExtract}
-Additional HTML Comment only in extracted file
-
-\begin{mpFunctionsExtract}
-\mpFunctionTwo
-{Power\_k? mpNum? the value of $x^k, k \in  \mathbb{Z}$}
-{x? mpNum? A real number.}
-{k? mpNum? An integer.}
-\end{mpFunctionsExtract}
-
-\begin{mpFunctionsExtract}
-\mpFunctionTwo
-{Power? mpNum? the value of $x^y, y \in  \mathbb{R}$.}
-{x? mpNum? A real number.}
-{y? mpNum? A real number.}
-\end{mpFunctionsExtract}
-
-\begin{mpFunctionsExtract}
-\mpFunctionTwo
-{Powm1? mpNum? the value of $x^y-1, y \in  \mathbb{R}$.}
-{x? mpNum? A real number.}
-{y? mpNum? A real number.}
-\end{mpFunctionsExtract}
-
-\begin{mpFunctionsExtract}
-\mpFunctionTwo
-{X2pY2? mpNum? the value of $x^2+y^2$.}
-{x? mpNum? A real number.}
-{y? mpNum? A real number.}
-\end{mpFunctionsExtract}
-
-\begin{mpFunctionsExtract}
-\mpFunctionTwo
-{X2mY2? mpNum? the value of $x^2-y^2$.}
-{x? mpNum? A real number.}
-{y? mpNum? A real number.}
-\end{mpFunctionsExtract}
-
-\begin{mpFunctionsExtract}
-\mpFunctionOne
-{Sqrt? mpNum? the absolute value of the square root of $x, \sqrt{x}$.}
-{x? mpNum? A real number.}
-\end{mpFunctionsExtract}
-
-\begin{mpFunctionsExtract}
-\mpFunctionOne
-{Sqrt\_n? mpNum? the absolute value of the square root of a nonnegative Integer$n, \sqrt{n}$.}
-{x? mpNum? An integer.}
-\end{mpFunctionsExtract}
-
-\begin{mpFunctionsExtract}
-\mpFunctionOne
-{ReciSqrt? mpNum? the absolute value of the reciprocal square root of $x, \sqrt{x}$.}
-{x? mpNum? A real number.}
-\end{mpFunctionsExtract}
-
-\begin{mpFunctionsExtract}
-\mpFunctionOne
-{Cbrt? mpNum? the absolute value of the cube root of $x, \sqrt[3]{x}$.}
-{x? mpNum? A real number.}
-\end{mpFunctionsExtract}
-
-\begin{mpFunctionsExtract}
-\mpFunctionOne
-{Sqrtp1m1? mpNum? the value of $\sqrt{x+1}-1$.}
-{x? mpNum? A real number.}
-\end{mpFunctionsExtract}
-
-\begin{mpFunctionsExtract}
-\mpFunctionOne
-{Sqrt1px2? mpNum? the value of $\sqrt{1+x^2}$.}
-{x? mpNum? A real number.}
-\end{mpFunctionsExtract}
-
-\begin{mpFunctionsExtract}
-\mpFunctionOne
-{Sqrt1mx2? mpNum? the value of $\sqrt{1-x^2}$.}
-{x? mpNum? A real number.}
-\end{mpFunctionsExtract}
-
-\begin{mpFunctionsExtract}
-\mpFunctionOne
-{Sqrtx2m1? mpNum? the value of $\sqrt{x^2-1}$.}
-{x? mpNum? A real number.}
-\end{mpFunctionsExtract}
-
-\begin{mpFunctionsExtract}
-\mpFunctionTwo
-{Hypot? mpNum? the value of $\sqrt{x^2+y^2}$.}
-{x? mpNum? A real number.}
-{y? mpNum? A real number.}
-\end{mpFunctionsExtract}
-
-\begin{mpFunctionsExtract}
-\mpFunctionTwo
-{NthRoot? mpNum? the value of the $n^{th}$ root of $x$, $\sqrt[n]{x}, n=2,3,...$.}
-{n? mpNum? An integer.}
-{y? mpNum? A real number.}
-\end{mpFunctionsExtract}
-
-\section{Exponential, Logarithmic, and Lambert Functions}
-
-\begin{mpFunctionsExtract}
-\mpFunctionOne
-{Exp? mpNum? the value of the exponential function,  $\text{exp}(x) = e^x = \exp(x)$.}
-{x? mpNum? A real number.}
-\end{mpFunctionsExtract}
-
-\begin{mpFunctionsExtract}
-\mpFunctionOne
-{Exp10? mpNum? the value of the exponential function, $\text{exp10}(x) = 10^x = \exp_{10}(x)$.}
-{x? mpNum? A real number.}
-\end{mpFunctionsExtract}
-
-\begin{mpFunctionsExtract}
-\mpFunctionOne
-{Exp2? mpNum? the value of the exponential function, $\text{exp2}(x) = 2^x = \exp_2(x)$.}
-{x? mpNum? A real number.}
-\end{mpFunctionsExtract}
-
-\begin{mpFunctionsExtract}
-\mpFunctionOne
-{Expm1? mpNum? the value of the function $\text{expm1}(x) = e^{x}-1$.}
-{x? mpNum? A real number.}
-\end{mpFunctionsExtract}
-
-\begin{mpFunctionsExtract}
-\mpFunctionOne
-{Expx2? mpNum? the value of the function $\text{expx2}(x) = e^{x^2}$.}
-{x? mpNum? A real number.}
-\end{mpFunctionsExtract}
-
-\begin{mpFunctionsExtract}
-\mpFunctionOne
-{Expx2m1? mpNum? the value of the function $\text{expx2m1}(x) = e^{x^2}-1$.}
-{x? mpNum? A real number.}
-\end{mpFunctionsExtract}
-
-\begin{mpFunctionsExtract}
-\mpFunctionOne
-{Expmx2? mpNum? the value of the function $\text{expmx2}(x) = e^{-x^2}$.}
-{x? mpNum? A real number.}
-\end{mpFunctionsExtract}
-
-\begin{mpFunctionsExtract}
-\mpFunctionOne
-{Expmx2m1? mpNum? the value of the function $\text{expmx2m1}(x) = e^{-x^2}-1$.}
-{x? mpNum? A real number.}
-\end{mpFunctionsExtract}
-
-\begin{mpFunctionsExtract}
-\mpFunctionOne
-{Ln? mpNum? the value of the natural logarithm $\text{ln}(x) = \log_e(x)$.}
-{x? mpNum? A real number.}
-\end{mpFunctionsExtract}
-
-\begin{mpFunctionsExtract}
-\mpFunctionOne
-{Lnp1? mpNum? the value of the function $\ln(1+x)$.}
-{x? mpNum? A real number.}
-\end{mpFunctionsExtract}
-
-\begin{mpFunctionsExtract}
-\mpFunctionOne
-{Log10? mpNum? the value of the decadic logarithm $\text{log10}(x) = \log_{10}(x)$.}
-{x? mpNum? A real number.}
-\end{mpFunctionsExtract}
-
-\begin{mpFunctionsExtract}
-\mpFunctionOne
-{Log2? mpNum? the value of the binary logarithm $\text{log2}(x) = \log_{2}(x)$.}
-{x? mpNum? A real number.}
-\end{mpFunctionsExtract}
-
-\begin{mpFunctionsExtract}
-\mpFunctionOne
-{Log? mpNum? the value of the logarithm  to base $b$: $\text{logb}(x) = \log_{b}(x)$.}
-{x? mpNum? A real number.}
-\end{mpFunctionsExtract}
-
-\begin{mpFunctionsExtract}
-\mpFunctionOne
-{LnCos? mpNum? the value of the logarithm of the cosine of $x$: $\text{LnCos}(x) =\ln(\cos(x))$.}
-{x? mpNum? A real number.}
-\end{mpFunctionsExtract}
-
-\begin{mpFunctionsExtract}
-\mpFunctionOne
-{LnSin? mpNum? the value of the logarithm of the sine of $x$: $\text{LnSin}(x) =\ln(\sin(x))$}
-{x? mpNum? A real number.}
-\end{mpFunctionsExtract}
-
-\begin{mpFunctionsExtract}
-\mpFunctionTwo
-{LnSqrtx2y2? mpNum? the value of the function $\text{LnSqrtx2y2}(x) =\ln \left(\sqrt{x^2+y^2} \right)$.}
-{x? mpNum? A real number.}
-{y? mpNum? A real number.}
-\end{mpFunctionsExtract}
-
-\begin{mpFunctionsExtract}
-\mpFunctionTwo
-{LnSqrtxp1T2y2? mpNum? the value of the function $\text{LnSqrtxp1T2y2}(x) =\ln \left(\sqrt{(x+1)^2+y^2} \right)$.}
-{x? mpNum? A real number.}
-{y? mpNum? A real number.}
-\end{mpFunctionsExtract}
-
-\begin{mpFunctionsExtract}
-\mpFunctionOne
-{LambertW0? mpNum? the value of the Lambert functions $W_0(x)$}
-{x? mpNum? A real number.}
-\end{mpFunctionsExtract}
-
-\begin{mpFunctionsExtract}
-\mpFunctionOne
-{LambertWm1? mpNum? the value of the Lambert functions $W_{-1}(x)$}
-{x? mpNum? A real number.}
-\end{mpFunctionsExtract}
-
-\section{Trigonometric Functions}
-
-\begin{mpFunctionsExtract}
-\mpFunctionOne
-{Sin? mpNum? the value of the sine of $x$, with $x$ in radians.}
-{x? mpNum? A real number.}
-\end{mpFunctionsExtract}
-
-\begin{mpFunctionsExtract}
-\mpFunctionOne
-{SinDeg? mpNum? the value of the sine of $x$, with $x$ in degrees}
-{x? mpNum? A real number.}
-\end{mpFunctionsExtract}
-
-\begin{mpFunctionsExtract}
-\mpFunctionOne
-{Cos? mpNum? the value of the cosine of $x$, with $x$ in radians.}
-{x? mpNum? A real number.}
-\end{mpFunctionsExtract}
-
-\begin{mpFunctionsExtract}
-\mpFunctionOne
-{CosDeg? mpNum? the value of the cosine of $x$, with $x$ in degrees}
-{x? mpNum? A real number.}
-\end{mpFunctionsExtract}
-
-\begin{mpFunctionsExtract}
-\mpFunctionOne
-{Tan? mpNum? the value of the tangent of $x$, with $x$ in radians.}
-{x? mpNum? A real number.}
-\end{mpFunctionsExtract}
-
-\begin{mpFunctionsExtract}
-\mpFunctionOne
-{TanDeg? mpNum? the value of the tangent of $x$, with $x$ in degrees}
-{x? mpNum? A real number.}
-\end{mpFunctionsExtract}
-
-\begin{mpFunctionsExtract}
-\mpFunctionOne
-{Csc? mpNum? the value of the cosecant of $x$, with $x$ in radians.}
-{x? mpNum? A real number.}
-\end{mpFunctionsExtract}
-
-\begin{mpFunctionsExtract}
-\mpFunctionOne
-{CscDeg? mpNum? the value of the cosecant of $x$, with $x$ in degrees}
-{x? mpNum? A real number.}
-\end{mpFunctionsExtract}
-
-\begin{mpFunctionsExtract}
-\mpFunctionOne
-{Sec? mpNum? the value of the secant of $x$, with $x$ in radians.}
-{x? mpNum? A real number.}
-\end{mpFunctionsExtract}
-
-\begin{mpFunctionsExtract}
-\mpFunctionOne
-{SecDeg? mpNum? the value of the secant of $x$, with $x$ in degrees}
-{x? mpNum? A real number.}
-\end{mpFunctionsExtract}
-
-\begin{mpFunctionsExtract}
-\mpFunctionOne
-{Cot? mpNum? the value of the cotangent of $x$, with $x$ in radians.}
-{x? mpNum? A real number.}
-\end{mpFunctionsExtract}
-
-\begin{mpFunctionsExtract}
-\mpFunctionOne
-{CotDeg? mpNum? the value of the cotangent of $x$, with $x$ in degrees}
-{x? mpNum? A real number.}
-\end{mpFunctionsExtract}
-
-\begin{mpFunctionsExtract}
-\mpFunctionOne
-{Sinca? mpNum? the sinus cardinal function}
-{x? mpNum? A real number.}
-\end{mpFunctionsExtract}
-
-\begin{mpFunctionsExtract}
-\mpFunctionOne
-{Sinh? mpNum? the value of the hyperbolic sine of $x$, with $x$ in radians.}
-{x? mpNum? A real number.}
-\end{mpFunctionsExtract}
-
-\begin{mpFunctionsExtract}
-\mpFunctionOne
-{SinhDeg? mpNum? the value of the hyperbolic sine of $x$, with $x$ in degrees}
-{x? mpNum? A real number.}
-\end{mpFunctionsExtract}
-
-\begin{mpFunctionsExtract}
-\mpFunctionOne
-{Cosh? mpNum? the value of the hyperbolic cosine of $x$, with $x$ in radians.}
-{x? mpNum? A real number.}
-\end{mpFunctionsExtract}
-
-\begin{mpFunctionsExtract}
-\mpFunctionOne
-{CoshDeg? mpNum? the value of the hyperbolic cosine of $x$, with $x$ in degrees}
-{x? mpNum? A real number.}
-\end{mpFunctionsExtract}
-
-\begin{mpFunctionsExtract}
-\mpFunctionOne
-{Tanh? mpNum? the value of the hyperbolic cosine of $x$, with $x$ in radians.}
-{x? mpNum? A real number.}
-\end{mpFunctionsExtract}
-
-\begin{mpFunctionsExtract}
-\mpFunctionOne
-{TanhDeg? mpNum? the value of the hyperbolic cosine of $x$, with $x$ in degrees}
-{x? mpNum? A real number.}
-\end{mpFunctionsExtract}
-
-\begin{mpFunctionsExtract}
-\mpFunctionOne
-{Csch? mpNum? the value of the hyperbolic cosecant of $x$, with $x$ in radians.}
-{x? mpNum? A real number.}
-\end{mpFunctionsExtract}
-
-\begin{mpFunctionsExtract}
-\mpFunctionOne
-{CschDeg? mpNum? the value of the hyperbolic cosecant of $x$, with $x$ in degrees}
-{x? mpNum? A real number.}
-\end{mpFunctionsExtract}
-
-\begin{mpFunctionsExtract}
-\mpFunctionOne
-{Sech? mpNum? the value of the hyperbolic cosecant of $x$, with $x$ in radians.}
-{x? mpNum? A real number.}
-\end{mpFunctionsExtract}
-
-\begin{mpFunctionsExtract}
-\mpFunctionOne
-{SechDeg? mpNum? the value of the hyperbolic cosecant of $x$, with $x$ in degrees}
-{x? mpNum? A real number.}
-\end{mpFunctionsExtract}
-
-\begin{mpFunctionsExtract}
-\mpFunctionOne
-{Coth? mpNum? the value of the hyperbolic cotangent of $x$, with $x$ in radians.}
-{x? mpNum? A real number.}
-\end{mpFunctionsExtract}
-
-\begin{mpFunctionsExtract}
-\mpFunctionOne
-{CothDeg? mpNum? the value of the hyperbolic cotangent of $x$, with $x$ in degrees}
-{x? mpNum? A real number.}
-\end{mpFunctionsExtract}
-
-\begin{mpFunctionsExtract}
-\mpFunctionOne
-{Sinhca? mpNum? the hyperbolic sinus cardinal function.}
-{x? mpNum? A real number.}
-\end{mpFunctionsExtract}
-
-\section{Inverse Trigonometric Functions}
-
-\begin{mpFunctionsExtract}
-\mpFunctionOne
-{Asin? mpNum? the value of the arc-sine of $x$ in radians.}
-{x? mpNum? A real number.}
-\end{mpFunctionsExtract}
-
-\begin{mpFunctionsExtract}
-\mpFunctionOne
-{AsinDeg? mpNum? the value of the arc-sine of $x$ in degrees}
-{x? mpNum? A real number.}
-\end{mpFunctionsExtract}
-
-\begin{mpFunctionsExtract}
-\mpFunctionOne
-{Acos? mpNum? the value of the arc-cosine of $x$ in radians.}
-{x? mpNum? A real number.}
-\end{mpFunctionsExtract}
-
-\begin{mpFunctionsExtract}
-\mpFunctionOne
-{AcosDeg? mpNum? the value of the arc-cosine of $x$ in degrees}
-{x? mpNum? A real number.}
-\end{mpFunctionsExtract}
-
-\begin{mpFunctionsExtract}
-\mpFunctionOne
-{Atan? mpNum? the value of the arc-tangent of $x$ in radians.}
-{x? mpNum? A real number.}
-\end{mpFunctionsExtract}
-
-\begin{mpFunctionsExtract}
-\mpFunctionOne
-{AtanDeg? mpNum? the value of the arc-tangent of $x$ in degrees}
-{x? mpNum? A real number.}
-\end{mpFunctionsExtract}
-
-\begin{mpFunctionsExtract}
-\mpFunctionTwo
-{Atan2? mpNum? the value of the arc-tangent of $x$ in radians.}
-{x? mpNum? A real number.}
-{y? mpNum? A real number.}
-\end{mpFunctionsExtract}
-
-\begin{mpFunctionsExtract}
-\mpFunctionTwo
-{Atan2Deg? mpNum? the value of the arc-tangent of $x$ in degrees}
-{x? mpNum? A real number.}
-{y? mpNum? A real number.}
-\end{mpFunctionsExtract}
-
-\begin{mpFunctionsExtract}
-\mpFunctionOne
-{Acot? mpNum? the value of the arc-cotangent of $x$ in radians.}
-{x? mpNum? A real number.}
-\end{mpFunctionsExtract}
-
-\begin{mpFunctionsExtract}
-\mpFunctionOne
-{AcotDeg? mpNum? the value of the arc-cotangent of $x$ in degrees}
-{x? mpNum? A real number.}
-\end{mpFunctionsExtract}
-
-\begin{mpFunctionsExtract}
-\mpFunctionOne
-{Asinh? mpNum? the value of the hyperbolic arc-sine  of $x$ in radians.}
-{x? mpNum? A real number.}
-\end{mpFunctionsExtract}
-
-\begin{mpFunctionsExtract}
-\mpFunctionOne
-{AsinhDeg? mpNum? the value of hyperbolic arc-sine  of $x$ in degrees}
-{x? mpNum? A real number.}
-\end{mpFunctionsExtract}
-
-\begin{mpFunctionsExtract}
-\mpFunctionOne
-{Acosh? mpNum? the value of the hyperbolic arc-cosine  of $x$ in radians.}
-{x? mpNum? A real number.}
-\end{mpFunctionsExtract}
-
-\begin{mpFunctionsExtract}
-\mpFunctionOne
-{AcoshDeg? mpNum? the value of hyperbolic arc-cosine  of $x$ in degrees}
-{x? mpNum? A real number.}
-\end{mpFunctionsExtract}
-
-\begin{mpFunctionsExtract}
-\mpFunctionOne
-{Atanh? mpNum? the value of the hyperbolic arc-tangent  of $x$ in radians.}
-{x? mpNum? A real number.}
-\end{mpFunctionsExtract}
-
-\begin{mpFunctionsExtract}
-\mpFunctionOne
-{AtanhDeg? mpNum? the value of hyperbolic arc-tangent  of $x$ in degrees}
-{x? mpNum? A real number.}
-\end{mpFunctionsExtract}
-
-\begin{mpFunctionsExtract}
-\mpFunctionOne
-{Acoth? mpNum? the value of the hyperbolic arc-cotangent  of $x$ in radians.}
-{x? mpNum? A real number.}
-\end{mpFunctionsExtract}
-
-\begin{mpFunctionsExtract}
-\mpFunctionOne
-{AcothDeg? mpNum? the value of hyperbolic arc-cotangent  of $x$ in degrees}
-{x? mpNum? A real number.}
-\end{mpFunctionsExtract}
-
-\section{Elementary Functions of Mathematical Physics}
-
-\begin{mpFunctionsExtract}
-\mpFunctionOne
-{BesselJ0? mpNum? $J_0(x)$, the Bessel function of the 1st kind, order zero.}
-{x? mpNum? A real number.}
-\end{mpFunctionsExtract}
-
-\begin{mpFunctionsExtract}
-\mpFunctionOne
-{BesselJ1? mpNum? $J_1(x)$, the Bessel function of the 1st kind, order one.}
-{x? mpNum? A real number.}
-\end{mpFunctionsExtract}
-
-\begin{mpFunctionsExtract}
-\mpFunctionTwo
-{BesselJn? mpNum? $J_n(x)$, the Bessel function of the 1st kind, order $n$.}
-{x? mpNum? A real number.}
-{n? mpNum? An Integer.}
-\end{mpFunctionsExtract}
-
-\begin{mpFunctionsExtract}
-\mpFunctionOne
-{BesselY0? mpNum? $Y_0(x)$, the Bessel function of the second kind, order zero.}
-{x? mpNum? A real number.}
-\end{mpFunctionsExtract}
-
-\begin{mpFunctionsExtract}
-\mpFunctionOne
-{BesselY1? mpNum? $Y_1(x)$, the Bessel function of the second kind, order one.}
-{x? mpNum? A real number.}
-\end{mpFunctionsExtract}
-
-\begin{mpFunctionsExtract}
-\mpFunctionTwo
-{BesselYn? mpNum? $Y_n(x)$, the Bessel function of the second kind, order $n$.}
-{x? mpNum? A real number.}
-{n? mpNum? An Integer.}
-\end{mpFunctionsExtract}
-
-\begin{mpFunctionsExtract}
-\mpFunctionOne
-{Erf? mpNum? the value of the error function.}
-{x? mpNum? A real number.}
-\end{mpFunctionsExtract}
-
-\begin{mpFunctionsExtract}
-\mpFunctionOne
-{Erfc? mpNum? the value of the complementary error function.}
-{x? mpNum? A real number.}
-\end{mpFunctionsExtract}
-
-\begin{mpFunctionsExtract}
-\mpFunctionOne
-{Tgamma? mpNum? the gamma function for $x \neq 0, -1, -2,\ldots$.}
-{x? mpNum? A real number.}
-\end{mpFunctionsExtract}
-
-\begin{mpFunctionsExtract}
-\mpFunctionOne
-{Lgamma? mpNum? the logarithm of the gamma function.}
-{x? mpNum? A real number.}
-\end{mpFunctionsExtract}
-
-\begin{mpFunctionsExtract}
-\mpFunctionTwo
-{Pochhammer? mpNum? the Pochhammer symbol.}
-{a? mpNum? An integer.}
-{x? mpNum? An integer.}
-\end{mpFunctionsExtract}
-
-\begin{mpFunctionsExtract}
-\mpFunctionTwo
-{Beta? mpNum? the Beta function.}
-{a? mpNum? A real number.}
-{b? mpNum? A real number.}
-\end{mpFunctionsExtract}
-
-\begin{mpFunctionsExtract}
-\mpFunctionTwo
-{LnBetaBoost? mpNum? the logarithm of the beta function $\ln B(a,b)|$ with $a,b \neq 0,-1,-2,\ldots$.}
-{a? mpNum? A real number.}
-{b? mpNum? A real number.}
-\end{mpFunctionsExtract}
-
-\begin{mpFunctionsExtract}
-\mpFunctionThree
-{IBetaBoost? mpNum? the normalised incomplete beta function.}
-{a? mpNum? A real number.}
-{b? mpNum? A real number.}
-{x? mpNum? A real number.}
-\end{mpFunctionsExtract}
-
-\begin{mpFunctionsExtract}
-\mpFunctionThree
-{IBetacBoost? mpNum? the normalised complement of the incomplete beta function, $1 - I_x(a,b)$.}
-{a? mpNum? A real number.}
-{b? mpNum? A real number.}
-{x? mpNum? A real number.}
-\end{mpFunctionsExtract}
-
-\begin{mpFunctionsExtract}
-\mpFunctionThree
-{IBetaNonNormalizedBoost? mpNum? the non-normalised incomplete beta function.}
-{a? mpNum? A real number.}
-{b? mpNum? A real number.}
-{x? mpNum? A real number.}
-\end{mpFunctionsExtract}
-
-\begin{mpFunctionsExtract}
-\mpFunctionThree
-{IBetacNonNormalizedBoost? mpNum? the non-normalised complement of the incomplete beta function, $1 - B_x(a,b)$.}
-{a? mpNum? A real number.}
-{b? mpNum? A real number.}
-{x? mpNum? A real number.}
-\end{mpFunctionsExtract}
-
-\begin{mpFunctionsExtract}
-\mpFunctionThree
-{IBetaInvBoost? mpNum? the inverse of the normalised incomplete beta function $I_x(a,b)$.}
-{a? mpNum? A real number.}
-{b? mpNum? A real number.}
-{p? mpNum? A real number.}
-\end{mpFunctionsExtract}
-
-\begin{mpFunctionsExtract}
-\mpFunctionThree
-{IBetacInvBoost? mpNum? the inverse of the complement of the normalised incomplete beta function $1 - I_x(a,b)$.}
-{a? mpNum? A real number.}
-{b? mpNum? A real number.}
-{q? mpNum? A real number.}
-\end{mpFunctionsExtract}
-
-\begin{mpFunctionsExtract}
-\mpFunctionThree
-{IBetaInvaBoost? mpNum? the parameter $a$ of the normalised incomplete beta function $I_x(a,b)$, such that $I_x(a,b) = p$.}
-{x? mpNum? A real number.}
-{b? mpNum? A real number.}
-{p? mpNum? A real number.}
-\end{mpFunctionsExtract}
-
-\begin{mpFunctionsExtract}
-\mpFunctionThree
-{IBetacInvaBoost? mpNum? the parameter $a$ of the complement of the normalised incomplete beta function $1-I_x(a,b)$, such that $1-I_x(a,b) = q$.}
-{x? mpNum? A real number.}
-{b? mpNum? A real number.}
-{q? mpNum? A real number.}
-\end{mpFunctionsExtract}
-
-\begin{mpFunctionsExtract}
-\mpFunctionThree
-{IBetaInvbBoost? mpNum? the parameter $b$ of the normalised incomplete beta function $I_x(a,b)$, such that $I_x(a,b) = p$.}
-{x? mpNum? A real number.}
-{a? mpNum? A real number.}
-{p? mpNum? A real number.}
-\end{mpFunctionsExtract}
-
-\begin{mpFunctionsExtract}
-\mpFunctionThree
-{IBetacInvbBoost? mpNum? the parameter $b$ of the complement of the normalised incomplete beta function $1-I_x(a,b)$, such that $1-I_x(a,b) = q$.}
-{x? mpNum? A real number.}
-{a? mpNum? A real number.}
-{q? mpNum? A real number.}
-\end{mpFunctionsExtract}
-
-\begin{mpFunctionsExtract}
-\mpFunctionThree
-{IBetaDerivativeBoost? mpNum? the partial derivative with respect to $x$ of the incomplete beta function.}
-{x? mpNum? A real number.}
-{a? mpNum? A real number.}
-{b? mpNum? A real number.}
-\end{mpFunctionsExtract}
-
-\begin{mpFunctionsExtract}
-\mpFunctionOne
-{RiemannZeta? mpNum? the Riemann zeta function.}
-{s? mpNum? A real number.}
-\end{mpFunctionsExtract}
-
-\begin{mpFunctionsExtract}
-\mpFunctionOne
-{Dilogarithm? mpNum? the dilogarithm function $\text{Li}_2(x)$.}
-{x? mpNum? A real number.}
-\end{mpFunctionsExtract}
-
-\section{Integer and Remainder Related Functions}
-
-\begin{mpFunctionsExtract}
-\mpFunctionOne
-{Rint? mpNum? the rounded value of $x$.}
-{x? mpNum? A real number.}
-{RoundingMode? mpNum? An integer.}
-\end{mpFunctionsExtract}
-
-\begin{mpFunctionsExtract}
-\mpFunctionOne
-{RintRound? mpNum? the rounded value of $x$, rounded to the nearest integer, rounding halfway cases away from zero.}
-{x? mpNum? A real number.}
-\end{mpFunctionsExtract}
-
-\begin{mpFunctionsExtract}
-\mpFunctionOne
-{RintCeil? mpNum? the rounded value of $x$, rounded to the next higher or equal integer.}
-{x? mpNum? A real number.}
-\end{mpFunctionsExtract}
-
-\begin{mpFunctionsExtract}
-\mpFunctionOne
-{RintFloor? mpNum? the rounded value of $x$, rounded to the next lower or equal integer.}
-{x? mpNum? A real number.}
-\end{mpFunctionsExtract}
-
-\begin{mpFunctionsExtract}
-\mpFunctionOne
-{RintTrunc? mpNum? the rounded value of $x$, rounded to the next integer toward zero.}
-{x? mpNum? A real number.}
-\end{mpFunctionsExtract}
-
-\begin{mpFunctionsExtract}
-\mpFunctionOne
-{Frac? mpNum? the fractional part of $x$}
-{x? mpNum? A real number.}
-\end{mpFunctionsExtract}
-
-\begin{mpFunctionsExtract}
-\mpFunctionOne
-{Modf? mpNumList? simultaneously the integer and fractional part of $x$}
-{x? mpNum? A real number.}
-\end{mpFunctionsExtract}
-
-\begin{mpFunctionsExtract}
-\mpFunctionTwo
-{Fmod? mpNum? the remainder of $x/y$}
-{x? mpNum? A real number.}
-{y? mpNum? A real number.}
-\end{mpFunctionsExtract}
-
-\begin{mpFunctionsExtract}
-\mpFunctionTwo
-{Remainder? mpNum? the remainder of $x/y$}
-{x? mpNum? A real number.}
-{y? mpNum? A real number.}
-\end{mpFunctionsExtract}
-
-\begin{mpFunctionsExtract}
-\mpFunctionTwo
-{Remquo? mpNum? the remainder of $x/y$}
-{x? mpNum? A real number.}
-{y? mpNum? A real number.}
-\end{mpFunctionsExtract}
-
-\section{Miscellaneous Functions}
-
-\begin{mpFunctionsExtract}
-\mpFunctionTwo
-{Nexttoward? mpNum? the next floating-point number (with the precision of $x$ and the current exponent range) in the direction of $y$}
-{x? mpNum? A real number.}
-{y? mpNum? A real number.}
-\end{mpFunctionsExtract}
-
-\begin{mpFunctionsExtract}
-\mpFunctionOne
-{Nextabove? mpNum? the next floating-point number (with the precision of $x$ and the current exponent range) in the direction of plus infinity.}
-{x? mpNum? A real number.}
-\end{mpFunctionsExtract}
-
-\begin{mpFunctionsExtract}
-\mpFunctionOne
-{Nextbelow? mpNum? the next floating-point number (with the precision of $x$ and the current exponent range) in the direction of minus infinity.}
-{x? mpNum? A real number.}
-\end{mpFunctionsExtract}
-
-\begin{mpFunctionsExtract}
-\mpFunctionOne
-{Frexp? mpNumList? returns simultaneously significand and exponent of $x$}
-{x? mpNum? A real number.}
-\end{mpFunctionsExtract}
-
-\begin{mpFunctionsExtract}
-\mpFunctionTwo
-{Ldexp? mpNum? $x \cdot 2^{y}$}
-{x? mpNum? A real number.}
-{y? mpNum? A real number.}
-\end{mpFunctionsExtract}
-
-\begin{mpFunctionsExtract}
-\mpFunctionThree
-{Fma? mpNum? $(a \times b) + c$.}
-{a? mpNum? A real number.}
-{b? mpNum? A real number.}
-{c? mpNum? A real number.}
-\end{mpFunctionsExtract}
-
-\begin{mpFunctionsExtract}
-\mpFunctionThree
-{Fms? mpNum? $(a \times b) - c$.}
-{a? mpNum? A real number.}
-{b? mpNum? A real number.}
-{c? mpNum? A real number.}
-\end{mpFunctionsExtract}
-
-\section{Numerical Information Functions}
-
-\begin{mpFunctionsExtract}
-\mpFunctionOne
-{IsInf? Boolean? TRUE if $x$ is infinity (positive or negative), and FALSE otherwise.}
-{x? mpNum? A real number.}
-\end{mpFunctionsExtract}
-
-\begin{mpFunctionsExtract}
-\mpFunctionOne
-{IsInteger? Boolean? TRUE if $x$ is an integer, and FALSE otherwise.}
-{x? mpNum? A real number.}
-\end{mpFunctionsExtract}
-
-\begin{mpFunctionsExtract}
-\mpFunctionOne
-{IsNan? Boolean? TRUE if $x$ is an NaN (Not a Number), and FALSE otherwise.}
-{x? mpNum? A real number.}
-\end{mpFunctionsExtract}
-
-\begin{mpFunctionsExtract}
-\mpFunctionOne
-{IsNeg? Boolean? TRUE if $x$ is negative, and FALSE otherwise.}
-{x? mpNum? A real number.}
-\end{mpFunctionsExtract}
-
-\begin{mpFunctionsExtract}
-\mpFunctionOne
-{IsNonNeg? Boolean? TRUE if $x \geq 0$, and FALSE otherwise.}
-{x? mpNum? A real number.}
-\end{mpFunctionsExtract}
-
-\begin{mpFunctionsExtract}
-\mpFunctionOne
-{IsNonPos? Boolean? TRUE if $x \leq 0$, and FALSE otherwise.}
-{x? mpNum? A real number.}
-\end{mpFunctionsExtract}
-
-\begin{mpFunctionsExtract}
-\mpFunctionOne
-{IsPos? Boolean? TRUE if $x > 0$, and FALSE otherwise.}
-{x? mpNum? A real number.}
-\end{mpFunctionsExtract}
-
-\begin{mpFunctionsExtract}
-\mpFunctionOne
-{IsRegular? Boolean? TRUE if $x$ is an regular number (i.e. neither NaN nor an infinity nor zero), and FALSE otherwise.}
-{x? mpNum? A real number.}
-\end{mpFunctionsExtract}
-
-\begin{mpFunctionsExtract}
-\mpFunctionTwo
-{IsUnordered? Boolean? TRUE if $x$ or $y$ is NaN (i.e. they cannot be compared), and FALSE otherwise.}
-{x? mpNum? A real number.}
-{y? mpNum? A real number.}
-\end{mpFunctionsExtract}
-
-\begin{mpFunctionsExtract}
-\mpFunctionOne
-{IsZero? Boolean? TRUE if $x = 0$, and FALSE otherwise.}
-{x? mpNum? A real number.}
-\end{mpFunctionsExtract}
-
-\chapter{MPC}
-
-\section{Complex Multiprecision Numbers (MPC)}
-
-\section{Conversion between Real and Complex Numbers}
-
-\begin{mpFunctionsExtract}
-\mpFunctionTwo
-{cplxRect? mpNum? a complex number $z$ build from the real components $x$ and $y$ as $z=x+iy$.}
-{x? mpNum? A real number.}
-{y? mpNum? A real number.}
-\end{mpFunctionsExtract}
-
-\begin{mpFunctionsExtract}
-\mpFunctionOne
-{cplxReal? mpNum? the real component $x$ of $z=x+iy$.}
-{z? mpNum? A complex number.}
-\end{mpFunctionsExtract}
-
-\begin{mpFunctionsExtract}
-\mpFunctionOne
-{cplxImag? mpNum? the imaginary component $y$ of $z=x+iy$.}
-{z? mpNum? A complex number.}
-\end{mpFunctionsExtract}
-
-\begin{mpFunctionsExtract}
-\mpFunctionOne
-{cplxAbs? mpNum? the absolute value of $z=x+iy$}
-{z? mpNum? A complex number.}
-\end{mpFunctionsExtract}
-
-\begin{mpFunctionsExtract}
-\mpFunctionOne
-{cplxArg? mpNum? the argument of $z=x+iy$}
-{z? mpNum? A complex number.}
-\end{mpFunctionsExtract}
-
-\section{Unary and Arithmetic Operators }
-
-\begin{mpFunctionsExtract}
-\mpFunctionOne
-{cplxNeg? mpNum?  $-z=-x-iy$.}
-{z? mpNum? A complex number.}
-\end{mpFunctionsExtract}
-
-\begin{mpFunctionsExtract}
-\mpFunctionOne
-{cplxConj? mpNum? the conjugate of $z$, $\overline{z}=x-iy$}
-{z? mpNum? A complex number.}
-\end{mpFunctionsExtract}
-
-\begin{mpFunctionsExtract}
-\mpFunctionTwo
-{cplxAdd? mpNum?  $-z=-x-iy$.}
-{z1? mpNum? A complex number.}
-{z2? mpNum? A complex number.}
-\end{mpFunctionsExtract}
-
-\begin{mpFunctionsExtract}
-\mpFunctionOne
-{cplxSum? mpNum? the sum of up to 255 complex numbers.}
-{z? mpNum[]? An array of complex numbers.}
-\end{mpFunctionsExtract}
-
-\begin{mpFunctionsExtract}
-\mpFunctionTwo
-{cplxSub? mpNum? the difference of $z1$ and $z2$.}
-{z1? mpNum? A complex number.}
-{z2? mpNum? A complex number.}
-\end{mpFunctionsExtract}
-
-\begin{mpFunctionsExtract}
-\mpFunctionTwo
-{cplxMul? mpNum? the product of $z1$ and $z2$.}
-{z1? mpNum? A complex number.}
-{z2? mpNum? A complex number.}
-\end{mpFunctionsExtract}
-
-\begin{mpFunctionsExtract}
-\mpFunctionOne
-{cplxProduct? mpNum? the product of up to 255 complex numbers.}
-{z? mpNum[]? An array of complex numbers.}
-\end{mpFunctionsExtract}
-
-\begin{mpFunctionsExtract}
-\mpFunctionTwo
-{cplxDiv? mpNum? the difference of $z1$ and $z2$.}
-{z1? mpNum? A complex number.}
-{z2? mpNum? A complex number.}
-\end{mpFunctionsExtract}
-
-\section{Roots and Power Functions}
-
-\begin{mpFunctionsExtract}
-\mpFunctionOne
-{cplxSqr? mpNum? the square of $z$.}
-{z? mpNum? A complex number.}
-\end{mpFunctionsExtract}
-
-\begin{mpFunctionsExtract}
-\mpFunctionTwo
-{cplxPower? mpNum? an integer power of $z$}
-{z? mpNum? A complex number.}
-{k? mpNum? An integer.}
-\end{mpFunctionsExtract}
-
-\begin{mpFunctionsExtract}
-\mpFunctionTwo
-{cplxPowR? mpNum? an real power of $z$}
-{z? mpNum? A complex number.}
-{a? mpNum? A real number.}
-\end{mpFunctionsExtract}
-
-\begin{mpFunctionsExtract}
-\mpFunctionTwo
-{cplxPowC? mpNum? an complex power of $z$}
-{z1? mpNum? A complex number.}
-{z2? mpNum? A complex number.}
-\end{mpFunctionsExtract}
-
-\begin{mpFunctionsExtract}
-\mpFunctionOne
-{cplxSqrt? mpNum? the square root of $z$}
-{z? mpNum? A complex number.}
-\end{mpFunctionsExtract}
-
-\begin{mpFunctionsExtract}
-\mpFunctionTwo
-{cplxNthRoot? mpNum? an integer power of $z$}
-{z? mpNum? A complex number.}
-{n? mpNum? An integer.}
-\end{mpFunctionsExtract}
-
-\section{Exponential and Logarithmic Functions}
-
-\begin{mpFunctionsExtract}
-\mpFunctionOne
-{cplxExp? mpNum? the complex exponential of $z$}
-{z? mpNum? A complex number.}
-\end{mpFunctionsExtract}
-
-\begin{mpFunctionsExtract}
-\mpFunctionOne
-{cplxExp10? mpNum?  $10^z$}
-{z? mpNum? A complex number.}
-\end{mpFunctionsExtract}
-
-\begin{mpFunctionsExtract}
-\mpFunctionOne
-{cplxExp2? mpNum?  $2^z$}
-{z? mpNum? A complex number.}
-\end{mpFunctionsExtract}
-
-\begin{mpFunctionsExtract}
-\mpFunctionOne
-{cplxLn? mpNum? the complex natural logarithm of $z$}
-{z? mpNum? A complex number.}
-\end{mpFunctionsExtract}
-
-\begin{mpFunctionsExtract}
-\mpFunctionOne
-{cplxLog10? mpNum? $\log_{10}(z)$}
-{z? mpNum? A complex number.}
-\end{mpFunctionsExtract}
-
-\begin{mpFunctionsExtract}
-\mpFunctionOne
-{cplxLog2? mpNum? $\log_{2}(z)$}
-{z? mpNum? A complex number.}
-\end{mpFunctionsExtract}
-
-\section{Trigonometric Functions}
-
-\begin{mpFunctionsExtract}
-\mpFunctionOne
-{cplxSin? mpNum? complex sine of $z$}
-{z? mpNum? A complex number.}
-\end{mpFunctionsExtract}
-
-\begin{mpFunctionsExtract}
-\mpFunctionOne
-{cplxCos? mpNum? complex cosine of $z$}
-{z? mpNum? A complex number.}
-\end{mpFunctionsExtract}
-
-\begin{mpFunctionsExtract}
-\mpFunctionOne
-{cplxTan? mpNum? complex tangent of $z$}
-{z? mpNum? A complex number.}
-\end{mpFunctionsExtract}
-
-\begin{mpFunctionsExtract}
-\mpFunctionOne
-{cplxSec? mpNum? the complex secant of $z$}
-{z? mpNum? A complex number.}
-\end{mpFunctionsExtract}
-
-\begin{mpFunctionsExtract}
-\mpFunctionOne
-{cplxCsc? mpNum? the complex cosecant of $z$}
-{z? mpNum? A complex number.}
-\end{mpFunctionsExtract}
-
-\begin{mpFunctionsExtract}
-\mpFunctionOne
-{cplxCot? mpNum? the complex cotangent of $z$}
-{z? mpNum? A complex number.}
-\end{mpFunctionsExtract}
-
-\begin{mpFunctionsExtract}
-\mpFunctionOne
-{cplxSinh? mpNum? the complex hyperbolic sine of $z$}
-{z? mpNum? A complex number.}
-\end{mpFunctionsExtract}
-
-\begin{mpFunctionsExtract}
-\mpFunctionOne
-{cplxCosh? mpNum? the complex hyperbolic cosine of $z$}
-{z? mpNum? A complex number.}
-\end{mpFunctionsExtract}
-
-\begin{mpFunctionsExtract}
-\mpFunctionOne
-{cplxTanh? mpNum? the complex hyperbolic tangent of $z$}
-{z? mpNum? A complex number.}
-\end{mpFunctionsExtract}
-
-\begin{mpFunctionsExtract}
-\mpFunctionOne
-{cplxSech? mpNum? the complex hyperbolic secant of $z$}
-{z? mpNum? A complex number.}
-\end{mpFunctionsExtract}
-
-\begin{mpFunctionsExtract}
-\mpFunctionOne
-{cplxCsch? mpNum? the complex hyperbolic cosecant of $z$}
-{z? mpNum? A complex number.}
-\end{mpFunctionsExtract}
-
-\begin{mpFunctionsExtract}
-\mpFunctionOne
-{cplxCoth? mpNum? the complex hyperbolic cotangent of $z$}
-{z? mpNum? A complex number.}
-\end{mpFunctionsExtract}
-
-\section{Inverse Trigonometric Functions}
-
-\begin{mpFunctionsExtract}
-\mpFunctionOne
-{cplxASin? mpNum? the inverse complex sine of $z$}
-{z? mpNum? A complex number.}
-\end{mpFunctionsExtract}
-
-\begin{mpFunctionsExtract}
-\mpFunctionOne
-{cplxACos? mpNum? the inverse complex cosine of $z$}
-{z? mpNum? A complex number.}
-\end{mpFunctionsExtract}
-
-\begin{mpFunctionsExtract}
-\mpFunctionOne
-{cplxATan? mpNum? the inverse complex tangent of $z$}
-{z? mpNum? A complex number.}
-\end{mpFunctionsExtract}
-
-\begin{mpFunctionsExtract}
-\mpFunctionOne
-{cplxACot? mpNum? the inverse complex cotangent of $z$}
-{z? mpNum? A complex number.}
-\end{mpFunctionsExtract}
-
-\begin{mpFunctionsExtract}
-\mpFunctionOne
-{cplxASinh? mpNum? the inverse complex hyperbolic sine of $z$}
-{z? mpNum? A complex number.}
-\end{mpFunctionsExtract}
-
-\begin{mpFunctionsExtract}
-\mpFunctionOne
-{cplxACosh? mpNum? the inverse complex hyperbolic cosine of $z$}
-{z? mpNum? A complex number.}
-\end{mpFunctionsExtract}
-
-\begin{mpFunctionsExtract}
-\mpFunctionOne
-{cplxATanh? mpNum? the inverse complex hyperbolic tangent of $z$}
-{z? mpNum? A complex number.}
-\end{mpFunctionsExtract}
-
-\begin{mpFunctionsExtract}
-\mpFunctionOne
-{cplxACoth? mpNum? the inverse complex hyperbolic cotangent of $z$}
-{z? mpNum? A complex number.}
-\end{mpFunctionsExtract}
 
 \chapter{ARB}
 
@@ -5016,6 +6089,859 @@ Additional HTML Comment only in extracted file
 
 \section{Integrate functions: Evolution}
 
+\chapter{Examples: Multivariate Special Functions}
+
+\section{Functions Of Matrix Arguments}
+
+\begin{mpFunctionsExtract}
+\mpFunctionTwoNotImplemented
+{Gammap? mpNum? the multivariate gamma function.}
+{p? mpNum? An integer greater than 0.}
+{x? mpNum? A real number or an array of real numbers.}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionFourNotImplemented
+{Hypergeometric2F1Matrix? mpNum? the Gauss hypergeometric function for matrix argument.}
+{a? mpNum? A real number.}
+{b? mpNum? A real number.}
+{c? mpNum? A real number.}
+{T? mpNum? A real matrix.}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionThreeNotImplemented
+{Hypergeometric1F1Matrix? mpNum? Kummer's confluent hypergeometric function  for matrix argument.}
+{a? mpNum? A real number.}
+{b? mpNum? A real number.}
+{T? mpNum? A real matrix.}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionTwoNotImplemented
+{Hypergeometric0F1Matrix? mpNum? the confluent hypergeometric limit function for matrix argument.}
+{n? mpNum? A real number.}
+{T? mpNum? A real matrix.}
+\end{mpFunctionsExtract}
+
+\chapter{Examples: Moments, cumulants, and expansions}
+
+\section{Moments and cumulants}
+
+\begin{mpFunctionsExtract}
+\mpFunctionOneNotImplemented
+{CentralMomentsToRawMoments? mpNum? raw moments calculated from central moments.}
+{Central? mpNum? A real vector.}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionOneNotImplemented
+{RawMomentsToCentralMoments? mpNum? central moments calculated from raw moments.}
+{Raw? mpNum? A real vector.}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionOneNotImplemented
+{CentralMomentsToCumulants? mpNum? cumulants calculated from central moments.}
+{Central? mpNum? A real vector.}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionOneNotImplemented
+{CumulantsToCentralMoments? mpNum? central moments calculated from cumulants.}
+{Cumulants? mpNum? A real vector.}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionOneNotImplemented
+{RawMomentsToCumulants? mpNum? cumulants calculated from raw moments.}
+{Raw? mpNum? A real vector.}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionOneNotImplemented
+{CumulantsToRawMoments? mpNum? raw moments calculated from cumulants.}
+{Cumulants? mpNum? A real vector.}
+\end{mpFunctionsExtract}
+
+\section{The Edgeworth expansion}
+
+\section{The Cornish-Fisher expansion}
+
+\section{Saddlepoint approximations}
+
+\section{Inverse Saddlepoint approximations}
+
+\section[The Box-Davis expansion]{The Box-Davis expansion for a class of multivariate distributions}
+
+\begin{mpFunctionsExtract}
+\mpFunctionFourNotImplemented
+{BoxDavisDist? mpNumList? pdf, CDF and related information for the Box-Davis-distribution}
+{M? mpNum? A real number greater 0, defined as $M=-2 \rho \log(W)$}
+{f? mpNum? A real number greater 0, representing the degrees of freedom for the $\chi^2$-expansion}
+{omega? mpNum[]? An array of real numbers, representing the coefficients $\omega_i$}
+{Output? String? A string describing the output choices}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionFourNotImplemented
+{BoxDavisDistInv? mpNumList? quantiles and related information for the Box-Davis-distribution}
+{Prob? mpNum? A real number between 0 and 1.}
+{f? mpNum? A real number greater 0, representing the degrees of freedom for the $\chi^2$-expansion}
+{omega? mpNum[]? An array of real numbers, representing the coefficients$\omega_i$}
+{Output? String? A string describing the output choices}
+\end{mpFunctionsExtract}
+
+\section{The Product of Independent Beta Variables}
+
+\begin{mpFunctionsExtract}
+\mpFunctionFiveNotImplemented
+{BetaProductDist? mpNumList? pdf, CDF and related information for the central BetaProduct-distribution}
+{x? mpNum? A real number}
+{p? mpNum? An integer greater 0, representing the number of variates}
+{a? mpNum[]? An array of real numbers greater 0, representing the numerator  degrees of freedom}
+{b? mpNum[]? An array of real numbers greater 0, representing the denominator degrees of freedom}
+{Output? String? A string describing the output choices}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionFiveNotImplemented
+{BetaProductDistInv? mpNumList? quantiles and related information for the the central BetaProduct-distribution}
+{Prob? mpNum? A real number between 0 and 1.}
+{p? mpNum? An integer greater 0, representing the number of variates}
+{a? mpNum[]? An array of real numbers greater 0, representing the numerator  degrees of freedom}
+{b? mpNum[]? An array of real numbers greater 0, representing the denominator degrees of freedom}
+{Output? String? A string describing the output choices}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionFourNotImplemented
+{BetaProductDistInfo? mpNumList? moments and related information for the central BetaProduct-distribution}
+{p? mpNum? An integer greater 0, representing the number of variates}
+{a? mpNum[]? An array of real numbers greater 0, representing the numerator  degrees of freedom}
+{b? mpNum[]? An array of real numbers greater 0, representing the denominator degrees of freedom}
+{Output? String? A string describing the output choices}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionSixNotImplemented
+{BetaProductDistRandom? mpNumList? random numbers following a central BetaProduct-distribution}
+{Size? mpNum? A positive integer up to $10^7$}
+{p? mpNum? An integer greater 0, representing the number of variates}
+{a? mpNum[]? An array of real numbers greater 0, representing the numerator  degrees of freedom}
+{b? mpNum[]? An array of real numbers greater 0, representing the denominator degrees of freedom}
+{Generator? String? A string describing the random generator}
+{Output? String? A string describing the output choices}
+\end{mpFunctionsExtract}
+
+\chapter{Examples: Continuous Distribution Functions}
+
+\section{Distribution of the Sample Correlation Coefficient}
+
+\begin{mpFunctionsExtract}
+\mpFunctionFourNotImplemented
+{PearsonRhoDist? mpNumList? pdf, CDF and related information for the distribution of the sample correlation coefficient}
+{x? mpNum? A real number}
+{N? mpNum? A real number greater 2, representing the sample size}
+{rho? mpNum? A real number greater 0, representing the correlation coefficient}
+{Output? String? A string describing the output choices}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionFourNotImplemented
+{PearsonRhoDistInv? mpNumList? quantiles and related information for the distribution of the sample correlation coefficient}
+{Prob? mpNum? A real number between 0 and 1.}
+{N? mpNum? A real number greater 2, representing the sample size}
+{rho? mpNum? A real number greater 0, representing the correlation coefficient}
+{Output? String? A string describing the output choices}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionThreeNotImplemented
+{PearsonRhoDistInfo? mpNumList? moments and related information for the distribution of the sample correlation coefficient}
+{N? mpNum? A real number greater 2, representing the sample size}
+{rho? mpNum? A real number greater 0, representing the correlation coefficient}
+{Output? String? A string describing the output choices}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionFiveNotImplemented
+{PearsonRhoDistRan? mpNumList? random numbers following the distribution of the sample correlation coefficient}
+{Size? mpNum? A positive integer up to $10^7$}
+{N? mpNum? A real number greater 2, representing the sample size}
+{rho? mpNum? A real number greater 0, representing the correlation coefficient}
+{Generator? String? A string describing the random generator}
+{Output? String? A string describing the output choices}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionFourNotImplemented
+{PearsonRhoDistNoncentrality? mpNumList? confidence limits for the noncentrality parameter rhi and related information for the distribution of the sample correlation coefficient.}
+{alpha? mpNum? A real number between 0 and 1, specifies the confidence level (or Type I error).}
+{rho? mpNum? A real number between -1 and 1, representing the noncentrality parameter.}
+{N? mpNum? A real number greater 2, representing the sample size}
+{Output? String? A string describing the output choices}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionFourNotImplemented
+{PearsonRhoDistSampleSize? mpNumList? sample size estimates and related information for the distribution of the sample correlation coefficient.}
+{alpha? mpNum? A real number between 0 and 1, specifies the confidence level (or Type I error).}
+{beta? mpNum?  A real number between 0 and 1, specifies the Type II error (or 1 - Power).}
+{ModifiedNoncentrality? mpNum? A real number greater 0, representing the modified noncentrality parameter.}
+{Output? String? A string describing the output choices}
+\end{mpFunctionsExtract}
+
+\section{Distribution of the Sample Multiple Correlation Coefficient}
+
+\begin{mpFunctionsExtract}
+\mpFunctionFiveNotImplemented
+{Rho2Dist? mpNumList? pdf, CDF and related information for the distribution of the squared population multiple correlation coefficient}
+{x? mpNum? A real number}
+{p? mpNum? An integer greater 2, representing the number of variates}
+{N? mpNum? A real number greater p, representing the sample size}
+{Rho2? mpNum? A real number greater or equal 0, representing the squared sample multiple correlation coefficient}
+{Output? String? A string describing the output choices}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionFiveNotImplemented
+{Rho2DistInv? mpNumList? quantiles and related information for the distribution of the squared population multiple correlation coefficient}
+{Prob? mpNum? A real number between 0 and 1.}
+{p? mpNum? An integer greater 2, representing the number of variates}
+{N? mpNum? A real number greater p, representing the sample size}
+{Rho2? mpNum? A real number greater or equal 0, representing the squared sample multiple correlation coefficient}
+{Output? String? A string describing the output choices}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionFourNotImplemented
+{Rho2DistInfo? mpNumList? moments and related information for the distribution of the squared population multiple correlation coefficient}
+{p? mpNum? An integer greater 2, representing the number of variates}
+{N? mpNum? A real number greater p, representing the sample size}
+{Rho2? mpNum? A real number greater or equal 0, representing the squared sample multiple correlation coefficient}
+{Output? String? A string describing the output choices}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionSixNotImplemented
+{Rho2DistRan? mpNumList? random numbers following the distribution of the squared population multiple correlation coefficient}
+{Size? mpNum? A positive integer up to $10^7$}
+{p? mpNum? An integer greater 2, representing the number of variates}
+{N? mpNum? A real number greater p, representing the sample size}
+{Rho2? mpNum? A real number greater or equal 0, representing the squared sample multiple correlation coefficient}
+{Generator? String? A string describing the random generator}
+{Output? String? A string describing the output choices}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionFiveNotImplemented
+{Rho2DistNoncentrality? mpNumList? confidence limits for the noncentrality parameter $\rho^2$ and related information for the distribution of the squared population multiple correlation coefficient.}
+{alpha? mpNum? A real number between 0 and 1, specifies the confidence level (or Type I error).}
+{Rho2? mpNum? A real number greater or equal 0, representing the squared sample multiple correlation coefficient}
+{p? mpNum? An integer greater 2, representing the number of variates}
+{N? mpNum? A real number greater p, representing the sample size}
+{Output? String? A string describing the output choices}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionFiveNotImplemented
+{Rho2DistSampleSize? mpNumList? sample size estimates and related information for for the distribution of the squared population multiple correlation coefficient}
+{alpha? mpNum? A real number between 0 and 1, specifies the confidence level (or Type I error).}
+{beta? mpNum?  A real number between 0 and 1, specifies the Type II error (or 1 - Power).}
+{p? mpNum? An integer greater 2, representing the number of variates}
+{ModifiedNoncentrality? mpNum? A real number greater 0, representing the modified noncentrality parameter.}
+{Output? String? A string describing the output choices}
+\end{mpFunctionsExtract}
+
+\section{Skew Normal Distribution}
+
+\begin{mpFunctionsExtract}
+\mpFunctionFiveNotImplemented
+{SkewNormalDistBoost? mpNumList? returns pdf, CDF and related information for the skew normal distribution}
+{x? mpNum? A real number.}
+{a? mpNum? The location parameter.}
+{b? mpNum? The scale parameter}
+{c? mpNum? The shape parameter}
+{Output? String? A string describing the output choices}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionFiveNotImplemented
+{SkewNormalDistInvBoost? mpNumList? returns quantiles and related information for the the skew normal distribution}
+{Prob? mpNum? A real number between 0 and 1.}
+{a? mpNum? The location parameter.}
+{b? mpNum? The scale parameter}
+{c? mpNum? The shape parameter}
+{Output? String? A string describing the output choices}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionFourNotImplemented
+{SkewNormalDistInfoBoost? mpNumList? returns moments and related information for the skew normal distribution}
+{a? mpNum? The location parameter.}
+{b? mpNum? The scale parameter}
+{c? mpNum? The shape parameter}
+{Output? String? A string describing the output choices}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionSixNotImplemented
+{SkewNormalDistRanBoost? mpNumList? returns random numbers following a skew normal distribution}
+{Size? mpNum? A positive integer up to $10^7$}
+{a? mpNum? The location parameter.}
+{b? mpNum? The scale parameter}
+{c? mpNum? The shape parameter}
+{Generator? String? A string describing the random generator}
+{Output? String? A string describing the output choices}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionTwo
+{TOwenBoost? mpNum? Owen's T-Function}
+{h? mpNum? A real number.}
+{a? mpNum? A real number.}
+\end{mpFunctionsExtract}
+
+\section{Multivariate Normal Distribution}
+
+\section{Multivariate t-Distribution}
+
+\section{Noncentral Chi-Square Distribution}
+
+\begin{mpFunctionsExtract}
+\mpFunctionFourNotImplemented
+{NoncentralCDistEx? mpNumList? pdf, CDF and related information for the noncentral $\chi^2$-distribution}
+{x? mpNum? A real number}
+{n? mpNum? A real number greater 0, representing the degrees of freedom}
+{lambda? mpNum? A real number greater 0, representing the noncentrality parameter}
+{Output? String? A string describing the output choices}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionFourNotImplemented
+{NoncentralCDistInvEx? mpNumList? quantiles and related information for the noncentral $\chi^2$-distribution}
+{Prob? mpNum? A real number between 0 and 1.}
+{n? mpNum? A real number greater 0, representing the degrees of freedom}
+{lambda? mpNum? A real number greater 0, representing the noncentrality parameter}
+{Output? String? A string describing the output choices}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionThreeNotImplemented
+{NoncentralCDistInfoEx? mpNumList? moments and related information for the noncentral $\chi^2$-distribution}
+{n? mpNum? A real number greater 0, representing the degrees of freedom}
+{lambda? mpNum? A real number greater 0, representing the noncentrality parameter}
+{Output? String? A string describing the output choices}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionFourNotImplemented
+{NoncentralCDistNoncentralityEx? mpNumList? confidence limits for the noncentrality parameter lambda and related information for the noncentral $\chi^2$-distribution.}
+{alpha? mpNum? A real number between 0 and 1, specifies the confidence level (or Type I error).}
+{lambda? mpNum? A real number greater 0, representing the noncentrality parameter.}
+{n? mpNum? A real number greater 0, representing the degrees of freedom.}
+{Output? String? A string describing the output choices}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionFiveNotImplemented
+{NoncentralCDistSampleSizeEx? mpNumList? sample size estimates and related information for the noncentral $\chi^2$-distribution.}
+{alpha? mpNum? A real number between 0 and 1, specifies the confidence level (or Type I error).}
+{beta? mpNum?  A real number between 0 and 1, specifies the Type II error (or 1 - Power).}
+{n? mpNum? A real number greater 0, representing the denominator degrees of freedom.}
+{ModifiedNoncentrality? mpNum? A real number greater 0, representing the modified noncentrality parameter.}
+{Output? String? A string describing the output choices}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionFiveNotImplemented
+{NoncentralCDistRanEx? mpNumList? random numbers following a noncentral $\chi^2$-distribution}
+{Size? mpNum? A positive integer up to $10^7$}
+{n? mpNum? A real number greater 0, representing the degrees of freedom}
+{lambda? mpNum? A real number greater 0, representing the noncentrality parameter}
+{Generator? String? A string describing the random generator}
+{Output? String? A string describing the output choices}
+\end{mpFunctionsExtract}
+
+\section{Noncentral Beta-Distribution}
+
+\begin{mpFunctionsExtract}
+\mpFunctionFiveNotImplemented
+{NoncentralBetaDistBoost? mpNumList? pdf, CDF and related information for the central Beta-distribution}
+{x? mpNum? A real number}
+{m? mpNum? A real number greater 0, representing the numerator  degrees of freedom}
+{n? mpNum? A real number greater 0, representing the denominator degrees of freedom}
+{lambda? mpNum? A real number greater 0, representing the noncentrality parameter}
+{Output? String? A string describing the output choices}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionFiveNotImplemented
+{NoncentralBetaDistInvBoost? mpNumList? quantiles and related information for the the noncentral Beta-distribution}
+{Prob? mpNum? A real number between 0 and 1.}
+{m? mpNum? A real number greater 0, representing the numerator  degrees of freedom}
+{n? mpNum? A real number greater 0, representing the denominator degrees of freedom}
+{lambda? mpNum? A real number greater 0, representing the noncentrality parameter}
+{Output? String? A string describing the output choices}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionFourNotImplemented
+{NoncentralBetaDistInfoBoost? mpNumList? moments and related information for the noncentral Beta-distribution}
+{m? mpNum? A real number greater 0, representing the numerator  degrees of freedom}
+{n? mpNum? A real number greater 0, representing the denominator degrees of freedom}
+{lambda? mpNum? A real number greater 0, representing the noncentrality parameter}
+{Output? String? A string describing the output choices}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionSixNotImplemented
+{NoncentralBetaDistRanBoost? mpNumList? random numbers following a noncentral Beta-distribution}
+{Size? mpNum? A positive integer up to $10^7$}
+{m? mpNum? A real number greater 0, representing the numerator  degrees of freedom}
+{n? mpNum? A real number greater 0, representing the denominator degrees of freedom}
+{lambda? mpNum? A real number greater 0, representing the noncentrality parameter}
+{Generator? String? A string describing the random generator}
+{Output? String? A string describing the output choices}
+\end{mpFunctionsExtract}
+
+\section{Noncentral Student's t-Distribution}
+
+\begin{mpFunctionsExtract}
+\mpFunctionFourNotImplemented
+{NoncentralTDistBoost? mpNumList? pdf, CDF and related information for the noncentral $t$-distribution}
+{x? mpNum? A real number}
+{n? mpNum? A real number greater 0, representing the degrees of freedom}
+{delta? mpNum? A real number greater 0, representing the noncentrality parameter}
+{Output? String? A string describing the output choices}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionFourNotImplemented
+{NoncentralTDistInvBoost? mpNumList? quantiles and related information for the  noncentral $t$-distribution}
+{Prob? mpNum? A real number between 0 and 1.}
+{n? mpNum? A real number greater 0, representing the degrees of freedom}
+{delta? mpNum? A real number greater 0, representing the noncentrality parameter}
+{Output? String? A string describing the output choices}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionThreeNotImplemented
+{NoncentralTDistInfoBoost? mpNumList? moments and related information for the noncentral $t$-distribution}
+{n? mpNum? A real number greater 0, representing the degrees of freedom}
+{delta? mpNum? A real number greater 0, representing the noncentrality parameter}
+{Output? String? A string describing the output choices}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionFiveNotImplemented
+{NoncentralTDistRanBoost? mpNumList? random numbers following a noncentral $t$-distribution}
+{Size? mpNum? A positive integer up to $10^7$}
+{n? mpNum? A real number greater 0, representing the degrees of freedom}
+{delta? mpNum? A real number greater 0, representing the noncentrality parameter}
+{Generator? String? A string describing the random generator}
+{Output? String? A string describing the output choices}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionFiveNotImplemented
+{NoncentralTDistNoncentrality? mpNumList? confidence limits for the doubly noncentrality parameter delta and related information for the noncentral $t$-distribution.}
+{alpha? mpNum? A real number between 0 and 1, specifies the confidence level (or Type I error).}
+{delta? mpNum? A real number greater 0, representing the numerator noncentrality parameter}
+{theta? mpNum? A real number greater 0, representing the denominator noncentrality parameter}
+{n? mpNum? A real number greater 0, representing the degrees of freedom.}
+{Output? String? A string describing the output choices}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionFiveNotImplemented
+{NoncentralTDistSampleSize? mpNumList? sample size estimates and related information for the doubly noncentral $t$-distribution.}
+{alpha? mpNum? A real number between 0 and 1, specifies the confidence level (or Type I error).}
+{beta? mpNum?  A real number between 0 and 1, specifies the Type II error (or 1 - Power).}
+{ModifiedNoncentrality1? mpNum? A real number greater 0, representing the modified numerator noncentrality parameter.}
+{ModifiedNoncentrality2? mpNum? A real number greater 0, representing the modified denominator noncentrality parameter.}
+{Output? String? A string describing the output choices}
+\end{mpFunctionsExtract}
+
+\section{Doubly Noncentral Student's t-Distribution}
+
+\begin{mpFunctionsExtract}
+\mpFunctionFiveNotImplemented
+{DoublyNoncentralTDist? mpNumList? pdf, CDF and related information for the doubly noncentral $t$-distribution}
+{x? mpNum? A real number}
+{n? mpNum? A real number greater 0, representing the degrees of freedom}
+{delta? mpNum? A real number greater 0, representing the numerator noncentrality parameter}
+{theta? mpNum? A real number greater 0, representing the denominator noncentrality parameter}
+{Output? String? A string describing the output choices}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionFiveNotImplemented
+{DoublyNoncentralTDistInv? mpNumList? quantiles and related information for the  doubly noncentral $t$-distribution}
+{Prob? mpNum? A real number between 0 and 1.}
+{n? mpNum? A real number greater 0, representing the degrees of freedom}
+{delta? mpNum? A real number greater 0, representing the numerator noncentrality parameter}
+{theta? mpNum? A real number greater 0, representing the denominator noncentrality parameter}
+{Output? String? A string describing the output choices}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionFourNotImplemented
+{DoublyNoncentralTDistInfo? mpNumList? moments and related information for the doubly noncentral $t$-distribution}
+{n? mpNum? A real number greater 0, representing the degrees of freedom}
+{delta? mpNum? A real number greater 0, representing the numerator noncentrality parameter}
+{theta? mpNum? A real number greater 0, representing the denominator noncentrality parameter}
+{Output? String? A string describing the output choices}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionSixNotImplemented
+{DoublyNoncentralTDistRan? mpNumList? random numbers following a doubly noncentral $t$-distribution}
+{Size? mpNum? A positive integer up to $10^7$}
+{n? mpNum? A real number greater 0, representing the degrees of freedom}
+{delta? mpNum? A real number greater 0, representing the numerator noncentrality parameter}
+{theta? mpNum? A real number greater 0, representing the denominator noncentrality parameter}
+{Generator? String? A string describing the random generator}
+{Output? String? A string describing the output choices}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionFiveNotImplemented
+{DoublyNoncentralTDistNoncentrality? mpNumList? confidence limits for the doubly noncentrality parameter delta and related information for the noncentral $t$-distribution.}
+{alpha? mpNum? A real number between 0 and 1, specifies the confidence level (or Type I error).}
+{delta? mpNum? A real number greater 0, representing the numerator noncentrality parameter}
+{theta? mpNum? A real number greater 0, representing the denominator noncentrality parameter}
+{n? mpNum? A real number greater 0, representing the degrees of freedom.}
+{Output? String? A string describing the output choices}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionFiveNotImplemented
+{DoublyNoncentralTDistSampleSize? mpNumList? sample size estimates and related information for the doubly noncentral $t$-distribution.}
+{alpha? mpNum? A real number between 0 and 1, specifies the confidence level (or Type I error).}
+{beta? mpNum?  A real number between 0 and 1, specifies the Type II error (or 1 - Power).}
+{ModifiedNoncentrality1? mpNum? A real number greater 0, representing the modified numerator noncentrality parameter.}
+{ModifiedNoncentrality2? mpNum? A real number greater 0, representing the modified denominator noncentrality parameter.}
+{Output? String? A string describing the output choices}
+\end{mpFunctionsExtract}
+
+\section{NonCentral F-Distribution}
+
+\begin{mpFunctionsExtract}
+\mpFunctionFiveNotImplemented
+{NoncentralFDistBoost? mpNumList? pdf, CDF and related information for the noncentral $F$-distribution}
+{x? mpNum? A real number}
+{m? mpNum? A real number greater 0, representing the numerator  degrees of freedom}
+{n? mpNum? A real number greater 0, representing the denominator degrees of freedom}
+{lambda? mpNum? A real number greater 0, representing the noncentrality parameter}
+{Output? String? A string describing the output choices}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionFiveNotImplemented
+{NoncentralFDistInvBoost? mpNumList? quantiles and related information for the the noncentral $F$-distribution}
+{Prob? mpNum? A real number between 0 and 1.}
+{m? mpNum? A real number greater 0, representing the numerator  degrees of freedom}
+{n? mpNum? A real number greater 0, representing the denominator degrees of freedom}
+{lambda? mpNum? A real number greater 0, representing the noncentrality parameter}
+{Output? String? A string describing the output choices}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionFourNotImplemented
+{NoncentralFDistInfoBoost? mpNumList?  moments and related information for the noncentral $F$-distribution}
+{m? mpNum? A real number greater 0, representing the numerator  degrees of freedom}
+{n? mpNum? A real number greater 0, representing the denominator degrees of freedom}
+{lambda? mpNum? A real number greater 0, representing the noncentrality parameter}
+{Output? String? A string describing the output choices}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionSixNotImplemented
+{NoncentralFDistRanBoost? mpNumList? random numbers following a noncentral $F$-distribution}
+{Size? mpNum? A positive integer up to $10^7$}
+{m? mpNum? A real number greater 0, representing the numerator  degrees of freedom}
+{n? mpNum? A real number greater 0, representing the denominator degrees of freedom}
+{lambda? mpNum? A real number greater 0, representing the noncentrality parameter}
+{Generator? String? A string describing the random generator}
+{Output? String? A string describing the output choices}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionSixNotImplemented
+{NoncentralFDistNoncentralityEx? mpNumList? confidence limits for the noncentrality parameter lambda and related information for the noncentral $F$-distribution.}
+{alpha? mpNum? A real number between 0 and 1, specifies the confidence level (or Type I error).}
+{lambda1? mpNum? A real number greater 0, representing the numerator noncentrality parameter}
+{lambda2? mpNum? A real number greater 0, representing the denominator noncentrality parameter}
+{m? mpNum? A real number greater 0, representing the numerator  degrees of freedom.}
+{n? mpNum? A real number greater 0, representing the denominator degrees of freedom.}
+{Output? String? A string describing the output choices}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionSixNotImplemented
+{NoncentralFDistSampleSizeEx? mpNumList? sample size estimates and related information for the noncentral $F$-distribution.}
+{alpha? mpNum? A real number between 0 and 1, specifies the confidence level (or Type I error).}
+{beta? mpNum?  A real number between 0 and 1, specifies the Type II error (or 1 - Power).}
+{m? mpNum? A real number greater 0, representing the numerator  degrees of freedom.}
+{ModifiedNoncentrality1? mpNum? A real number greater 0, representing the modified numerator noncentrality parameter.}
+{ModifiedNoncentrality1? mpNum? A real number greater 0, representing the modified denominator noncentrality parameter.}
+{Output? String? A string describing the output choices}
+\end{mpFunctionsExtract}
+
+\section{Doubly NonCentral F-Distribution}
+
+\begin{mpFunctionsExtract}
+\mpFunctionSixNotImplemented
+{DoublyNoncentralFDistEx? mpNumList? pdf, CDF and related information for the noncentral $F$-distribution}
+{x? mpNum? A real number}
+{m? mpNum? A real number greater 0, representing the numerator  degrees of freedom}
+{n? mpNum? A real number greater 0, representing the denominator degrees of freedom}
+{lambda1? mpNum? A real number greater 0, representing the numerator noncentrality parameter}
+{lambda2? mpNum? A real number greater 0, representing the denominator noncentrality parameter}
+{Output? String? A string describing the output choices}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionSixNotImplemented
+{DoublyNoncentralFDistInvEx? mpNumList? quantiles and related information for the the noncentral $F$-distribution}
+{Prob? mpNum? A real number between 0 and 1.}
+{m? mpNum? A real number greater 0, representing the numerator  degrees of freedom}
+{n? mpNum? A real number greater 0, representing the denominator degrees of freedom}
+{lambda1? mpNum? A real number greater 0, representing the numerator noncentrality parameter}
+{lambda2? mpNum? A real number greater 0, representing the denominator noncentrality parameter}
+{Output? String? A string describing the output choices}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionFiveNotImplemented
+{DoublyNoncentralFDistInfoEx? mpNumList? moments and related information for the noncentral $F$-distribution}
+{m? mpNum? A real number greater 0, representing the numerator  degrees of freedom}
+{n? mpNum? A real number greater 0, representing the denominator degrees of freedom}
+{lambda1? mpNum? A real number greater 0, representing the numerator noncentrality parameter}
+{lambda2? mpNum? A real number greater 0, representing the denominator noncentrality parameter}
+{Output? String? A string describing the output choices}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionSixNotImplemented
+{DoublyNoncentralFDistRanEx? mpNumList? random numbers following a noncentral $F$-distribution}
+{Size? mpNum? A positive integer up to $10^7$}
+{m? mpNum? A real number greater 0, representing the numerator  degrees of freedom}
+{n? mpNum? A real number greater 0, representing the denominator degrees of freedom}
+{lambda1? mpNum? A real number greater 0, representing the numerator noncentrality parameter}
+{lambda2? mpNum? A real number greater 0, representing the denominator noncentrality parameter}
+{Generator? String? A string describing the random generator}
+{Output? String? A string describing the output choices}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionSixNotImplemented
+{DoublyNoncentralFDistNoncentralityEx? mpNumList? confidence limits for the noncentrality parameter lambda and related information for the noncentral $F$-distribution.}
+{alpha? mpNum? A real number between 0 and 1, specifies the confidence level (or Type I error).}
+{lambda1? mpNum? A real number greater 0, representing the numerator noncentrality parameter}
+{lambda2? mpNum? A real number greater 0, representing the denominator noncentrality parameter}
+{m? mpNum? A real number greater 0, representing the numerator  degrees of freedom.}
+{n? mpNum? A real number greater 0, representing the denominator degrees of freedom.}
+{Output? String? A string describing the output choices}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionSixNotImplemented
+{DoublyNoncentralFDistSampleSizeEx? mpNumList? sample size estimates and related information for the noncentral $F$-distribution.}
+{alpha? mpNum? A real number between 0 and 1, specifies the confidence level (or Type I error).}
+{beta? mpNum?  A real number between 0 and 1, specifies the Type II error (or 1 - Power).}
+{m? mpNum? A real number greater 0, representing the numerator  degrees of freedom.}
+{ModifiedNoncentrality1? mpNum? A real number greater 0, representing the modified numerator noncentrality parameter.}
+{ModifiedNoncentrality1? mpNum? A real number greater 0, representing the modified denominator noncentrality parameter.}
+{Output? String? A string describing the output choices}
+\end{mpFunctionsExtract}
+
+\section{Noncentral Distribution of Roy's Largest Root}
+
+\section{Noncentral Distribution of Wilks' Lambda}
+
+\begin{mpFunctionsExtract}
+\mpFunctionSixNotImplemented
+{NoncentralWilksLambdaDist? mpNumList? pdf, CDF and related information for the noncentral WilksLambda-distribution}
+{x? mpNum? A real number}
+{p? mpNum? An integer greater 0, representing the number of variates}
+{m? mpNum? A real number greater 0, representing the numerator  degrees of freedom}
+{n? mpNum? A real number greater 0, representing the denominator degrees of freedom}
+{Omega? mpNum? An array of real numbers representing the noncentrality parameter}
+{Output? String? A string describing the output choices}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionSixNotImplemented
+{NoncentralWilksLambdaDistInv? mpNumList? quantiles and related information for the the noncentral WilksLambda-distribution}
+{Prob? mpNum? A real number between 0 and 1.}
+{p? mpNum? An integer greater 0, representing the number of variates}
+{m? mpNum? A real number greater 0, representing the numerator  degrees of freedom}
+{n? mpNum? A real number greater 0, representing the denominator degrees of freedom}
+{Omega? mpNum? An array of real numbers representing the noncentrality parameter}
+{Output? String? A string describing the output choices}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionFiveNotImplemented
+{NoncentralWilksLambdaDistInfo? mpNumList? moments and related information for the noncentral WilksLambda-distribution}
+{p? mpNum? An integer greater 0, representing the number of variates}
+{m? mpNum? A real number greater 0, representing the numerator  degrees of freedom}
+{n? mpNum? A real number greater 0, representing the denominator degrees of freedom}
+{Omega? mpNum? An array of real numbers representing the noncentrality parameter}
+{Output? String? A string describing the output choices}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionSevenNotImplemented
+{NoncentralWilksLambdaDistRan? mpNumList? random numbers following a noncentral WilksLambda-distribution}
+{Size? mpNum? A positive integer up to $10^7$}
+{p? mpNum? An integer greater 0, representing the number of variates}
+{m? mpNum? A real number greater 0, representing the numerator  degrees of freedom}
+{n? mpNum? A real number greater 0, representing the denominator degrees of freedom}
+{Generator? String? A string describing the random generator}
+{Omega? mpNum? An array of real numbers representing the noncentrality parameter}
+{Output? String? A string describing the output choices}
+\end{mpFunctionsExtract}
+
+\section{Noncentral Distribution of Hotelling's T2}
+
+\section{Noncentral Distribution of Pillai's V}
+
+\section{Noncentral Distribution of Bartlett's M (2 samples)}
+
+\begin{mpFunctionsExtract}
+\mpFunctionSixNotImplemented
+{NoncentralBartlettsMDist? mpNumList? pdf, CDF and related information for the noncentral WilksLambda(CORR)-distribution}
+{x? mpNum? A real number}
+{p? mpNum? An integer greater 0, representing the number of variates}
+{m? mpNum? A real number greater 0, representing the numerator  degrees of freedom}
+{n? mpNum? A real number greater 0, representing the denominator degrees of freedom}
+{Omega? mpNum? An array of real numbers representing the noncentrality parameter}
+{Output? String? A string describing the output choices}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionSixNotImplemented
+{NoncentralBartlettsMDistInv? mpNumList? quantiles and related information for the the noncentral WilksLambda(CORR)-distribution}
+{Prob? mpNum? A real number between 0 and 1.}
+{p? mpNum? An integer greater 0, representing the number of variates}
+{m? mpNum? A real number greater 0, representing the numerator  degrees of freedom}
+{n? mpNum? A real number greater 0, representing the denominator degrees of freedom}
+{Omega? mpNum? An array of real numbers representing the noncentrality parameter}
+{Output? String? A string describing the output choices}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionFiveNotImplemented
+{NoncentralBartlettsMInfo? mpNumList? moments and related information for the noncentral WilksLambda(CORR)-distribution}
+{p? mpNum? An integer greater 0, representing the number of variates}
+{m? mpNum? A real number greater 0, representing the numerator  degrees of freedom}
+{n? mpNum? A real number greater 0, representing the denominator degrees of freedom}
+{Omega? mpNum? An array of real numbers representing the noncentrality parameter}
+{Output? String? A string describing the output choices}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionSevenNotImplemented
+{NoncentralBartlettsMDistRan? mpNumList? random numbers following a noncentral WilksLambda(CORR)-distribution}
+{Size? mpNum? A positive integer up to $10^7$}
+{p? mpNum? An integer greater 0, representing the number of variates}
+{m? mpNum? A real number greater 0, representing the numerator  degrees of freedom}
+{n? mpNum? A real number greater 0, representing the denominator degrees of freedom}
+{Generator? String? A string describing the random generator}
+{Omega? mpNum? An array of real numbers representing the noncentrality parameter}
+{Output? String? A string describing the output choices}
+\end{mpFunctionsExtract}
+
+\chapter{Examples: Discrete Distribution Functions}
+
+\section{Noncentral Distribution of Mann-Whitney's U (with Stratification)}
+
+\section{Noncentral Distribution of Wilcoxon's Signed Rank Test (with Stratification)}
+
+\section{Noncentral Distribution of Kendall's Tau}
+
+\section{Noncentral Distribution of Jonckheere-Terpsta's S}
+
+\section{Noncentral Distribution of Spearman's Rho}
+
+\section{Noncentral Distribution of Page's L}
+
+\section{Noncentral Distribution of Kruskal-Wallis' H}
+
+\section{Noncentral Distributions of Friedman's S}
+
+\chapter{Examples: Statistical Procedures}
+
+\section{Introduction to Inferential Statistics Functions}
+
+\section{Tests for the mean from 1 sample (Student's t-test)}
+
+\begin{mpFunctionsExtract}
+\mpFunctionFiveNotImplemented
+{StudentTTest1? mpNumList? p-values, confidence intervals and related information for Student's t-test}
+{Type1Error? mpNum? A real number greater then 0 and less than 1.}
+{N? mpNum[]? An array of integers greater than 1, representing the samples sizes}
+{Mean? mpNum[]? An array of reals, representing the means}
+{StDev? mpNum[]? An array of positive reals, representing the standard deviations}
+{Output? String? A string describing the output choices}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionFiveNotImplemented
+{StudentTTestPower1? mpNumList? returns power estimations and related information for Student's t-test}
+{Type1Error? mpNum? An real number greater then 0 and less than 1.}
+{N? mpNum[]? An array of integers greater than 1, representing the samples sizes}
+{Mean? mpNum[]? An array of reals, representing the means}
+{StDev? mpNum[]? An array of positive reals, representing the standard deviations}
+{Output? String? A string describing the output choices}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionFiveNotImplemented
+{StudentTTestSampleSize1? mpNumList? returns sample size estimations and related information for Student's t-test}
+{Type1Error? mpNum? An real number greater then 0 and less than 1.}
+{Type2Error? mpNum? An real number greater then 0 and less than 1.}
+{Mean? mpNum[]? An array of reals, representing the means}
+{StDev? mpNum[]? An array of positive reals, representing the standard deviations}
+{Output? String? A string describing the output choices}
+\end{mpFunctionsExtract}
+
+\section{Tests for means from 2 independent samples (Student's t-test)}
+
+\begin{mpFunctionsExtract}
+\mpFunctionFiveNotImplemented
+{StudentTTest2i? mpNumList? p-values, confidence intervals and related information for Student's t-test}
+{Type1Error? mpNum? A real number greater then 0 and less than 1.}
+{N? mpNum[]? An array of integers greater than 1, representing the samples sizes}
+{Mean? mpNum[]? An array of reals, representing the means}
+{StDev? mpNum[]? An array of positive reals, representing the standard deviations}
+{Output? String? A string describing the output choices}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionFiveNotImplemented
+{StudentTTestPower2i? mpNumList? returns power estimations and related information for Student's t-test}
+{Type1Error? mpNum? An real number greater then 0 and less than 1.}
+{N? mpNum[]? An array of integers greater than 1, representing the samples sizes}
+{Mean? mpNum[]? An array of reals, representing the means}
+{StDev? mpNum[]? An array of positive reals, representing the standard deviations}
+{Output? String? A string describing the output choices}
+\end{mpFunctionsExtract}
+
+\begin{mpFunctionsExtract}
+\mpFunctionFiveNotImplemented
+{StudentTTestSampleSize2i? mpNumList? returns sample size estimations and related information for Student's t-test}
+{Type1Error? mpNum? An real number greater then 0 and less than 1.}
+{Type2Error? mpNum? An real number greater then 0 and less than 1.}
+{Mean? mpNum[]? An array of reals, representing the means}
+{StDev? mpNum[]? An array of positive reals, representing the standard deviations}
+{Output? String? A string describing the output choices}
+\end{mpFunctionsExtract}
+
 \chapter{Interfaces to the C family of languages}
 
 \section{Windows, GNU/Linux, Mac OSX: GNU Compiler Collection}
@@ -5029,20 +6955,6 @@ Additional HTML Comment only in extracted file
 \section{Mac OSX: Objective C}
 
 \section{Mac OSX: Objective C++}
-
-\chapter{R (Statistical System)}
-
-\chapter{Python}
-
-\section{Overview}
-
-\section{CPython}
-
-\section{Cython: C extensions for the Python language}
-
-\chapter{LibreOffice Calc}
-
-\section{LibreOffice Calc}
 
 \chapter{Languages with CLR Support}
 
@@ -5060,33 +6972,11 @@ Additional HTML Comment only in extracted file
 
 \section{MatLab (.NET interface)}
 
-\chapter{Component Object Model (COM) Interface}
-
-\section{VBScript (Windows Script Host)}
-
-\section{JScript (Windows Script Host)}
-
-\section{Visual Basic for Applications, Visual Basic 6.0}
-
-\section{OpenOffice Basic}
-
-\section{Lua}
-
-\section{Ruby}
-
-\section{PHP CLI}
-
-\section{Perl}
-
-\section{MatLab (COM interface)}
-
 \chapter{Building the library}
 
 \section{Building the Library, Part 1}
 
 \section{Building the Library, Part 2}
-
-\section{Building the Library, Part 3}
 
 \section{Building the documentation}
 
@@ -5097,6 +6987,12 @@ Additional HTML Comment only in extracted file
 \section{Where to find VB Code}
 
 \section{How to run Permutation Code}
+
+\chapter{Roadmap}
+
+\section{CPython}
+
+\section{R (Statistical System)}
 
 \chapter{Acknowledgements}
 

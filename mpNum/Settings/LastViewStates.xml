@@ -1,4 +1,32 @@
 ﻿<Properties>
+  <Properties name="1e13ec5:20257171\GENERATED.CS">
+    <CaretOffset value="3634" />
+    <ScrollPositionY value="2676.4000000000005" />
+  </Properties>
+  <Properties name="1e13ec5:57854556\GENERATED.PY">
+    <CaretOffset value="498" />
+    <ScrollPositionY value="0" />
+  </Properties>
+  <Properties name="1e13ec5:C:\EXTRA\MPFORMULATDM\MPFORMULAC\SOURCE\CLASSLIBRARY2\CLASSLIBRARY2\CLASS1.VB">
+    <CaretOffset value="185" />
+    <ScrollPositionY value="2584" />
+  </Properties>
+  <Properties name="1e13ec5:C:\EXTRA\MPFORMULATDM\MPFORMULAC\SOURCE\MPNUMERIX2\MPNUMERIX2\LIBRARY.VB">
+    <CaretOffset value="14832" />
+    <ScrollPositionY value="7582" />
+  </Properties>
+  <Properties name="1e13ec5:C:\EXTRA\MPFORMULATDM\MPFORMULAC\SOURCE\MPNUMERIX2\TESTMPNUMERICS2B\PROGRAM.PY">
+    <CaretOffset value="79" />
+    <ScrollPositionY value="0" />
+  </Properties>
+  <Properties name="1e13ec5:C:\EXTRA\MPFORMULATDM\MPFORMULAC\SOURCE\MPNUMERIX2\TESTMPNUMERIX2A\PROGRAM.CS">
+    <CaretOffset value="514" />
+    <ScrollPositionY value="0" />
+  </Properties>
+  <Properties name="1e13ec5:C:\EXTRA\MPFORMULATDM\MPFORMULAC\SOURCE\MPNUMERIX2\TESTMPNUMERIX2\PROGRAM.VB">
+    <CaretOffset value="44" />
+    <ScrollPositionY value="0" />
+  </Properties>
   <Properties name="1e13ec5:E:\EXTRA\MPFORMULATDM\EXTERNALLIBRARIES\BOOST\BOOST\MATH\DISTRIBUTIONS\NON_CENTRAL_CHI_SQUARED.HPP">
     <CaretOffset value="21266" />
     <ScrollPositionY value="6871" />
@@ -33,6 +61,38 @@
   </Properties>
   <Properties name="1e13ec5:E:\EXTRA\MPFORMULATDM\MPFORMULAXL\SOURCE\MPMATH\MPMATHNETLIB\MPMATHCLASS.VB">
     <CaretOffset value="128" />
+    <ScrollPositionY value="0" />
+  </Properties>
+  <Properties name="1e13ec5:I:\DATA\MPFORMULATDM\MPFORMULAC\SOURCE\CLASSLIBRARY2\CLASSLIBRARY2\CLASS1.VB">
+    <CaretOffset value="14036" />
+    <ScrollPositionY value="40936.317012447944" />
+  </Properties>
+  <Properties name="1e13ec5:I:\DATA\MPFORMULATDM\MPFORMULAC\SOURCE\MPNUMERIX2\MPNUMERIX2\LIBRARY.VB">
+    <CaretOffset value="47025" />
+    <ScrollPositionY value="27130.2" />
+  </Properties>
+  <Properties name="1e13ec5:I:\DATA\MPFORMULATDM\MPFORMULAC\SOURCE\MPNUMERIX2\TESTCSHARP2\PROGRAM.CS">
+    <CaretOffset value="1153" />
+    <ScrollPositionY value="0" />
+  </Properties>
+  <Properties name="1e13ec5:I:\DATA\MPFORMULATDM\MPFORMULAC\SOURCE\MPNUMERIX2\TESTCSHARP\PROGRAM.VB">
+    <CaretOffset value="0" />
+    <ScrollPositionY value="0" />
+  </Properties>
+  <Properties name="1e13ec5:I:\DATA\MPFORMULATDM\MPFORMULAC\SOURCE\MPNUMERIX2\TESTMPNUMERICS2B\PROGRAM.PY">
+    <CaretOffset value="309" />
+    <ScrollPositionY value="0" />
+  </Properties>
+  <Properties name="1e13ec5:I:\DATA\MPFORMULATDM\MPFORMULAC\SOURCE\MPNUMERIX2\TESTMPNUMERIX2A\APP.CONFIG">
+    <CaretOffset value="0" />
+    <ScrollPositionY value="0" />
+  </Properties>
+  <Properties name="1e13ec5:I:\DATA\MPFORMULATDM\MPFORMULAC\SOURCE\MPNUMERIX2\TESTMPNUMERIX2A\PROGRAM.CS">
+    <CaretOffset value="317" />
+    <ScrollPositionY value="0" />
+  </Properties>
+  <Properties name="1e13ec5:I:\DATA\MPFORMULATDM\MPFORMULAC\SOURCE\MPNUMERIX2\TESTMPNUMERIX2\PROGRAM.VB">
+    <CaretOffset value="626" />
     <ScrollPositionY value="0" />
   </Properties>
   <Properties name="1e13ec5:I:\DATA\MPFORMULATDM\MPFORMULAXL\SAMPLE DATA\EMBEDDEDSTYLESHORT.HTML">
