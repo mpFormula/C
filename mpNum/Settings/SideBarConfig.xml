@@ -1,0 +1,26 @@
+<SideBarConfig version="1.0">
+  <SideBar activetab="${res:SharpDevelop.SideBar.ClipboardRing}">
+    <SideTab clipboardring="true" text="${res:SharpDevelop.SideBar.ClipboardRing}">
+      <SideTabItem text="Text:Public Function Str() As String&#xD;" value="&#xD;&#xA;  Public Function Str() As String&#xD;&#xA;    Return Fmpz.Fmpz_Get_Str_2(10, FmpzPtr)&#xD;&#xA;  End Function&#xD;&#xA;&#xD;&#xA;" />
+      <SideTabItem text="Text:Public Function __str__() As String&#xD;" value="&#xD;&#xA;  Public Function __str__() As String&#xD;&#xA;    Return Fmpz.Fmpz_Get_Str_2(10, FmpzPtr)&#xD;&#xA;  End Function&#xD;&#xA;&#xD;&#xA;" />
+      <SideTabItem text="Text:ToString" value="ToString" />
+      <SideTabItem text="Text:Public Shared Operator ^(ByVal m1 As mpFmpz, By..." value="&#xD;&#xA;  Public Shared Operator ^(ByVal m1 As mpFmpz, ByVal n As UInt32) As mpFmpz&#xD;&#xA;      Dim m3 As New mpFmpz()&#xD;&#xA;      Fmpz.Lib_Fmpz_Pow_Ui(m3.FmpzPtr, m1.FmpzPtr, n)&#xD;&#xA;    Return m3&#xD;&#xA;  End Operator&#xD;&#xA;" />
+      <SideTabItem text="Text:Public Shared Operator ^(ByVal m1 As mpFmpz, By..." value="&#xD;&#xA;  Public Shared Operator ^(ByVal m1 As mpFmpz, ByVal n As Int32) As mpFmpz&#xD;&#xA;      Dim m3 As New mpFmpz()&#xD;&#xA;      Fmpz.Lib_Fmpz_Pow_Ui(m3.FmpzPtr, m1.FmpzPtr, CUInt(n))&#xD;&#xA;    Return m3&#xD;&#xA;  End Operator&#xD;&#xA;" />
+      <SideTabItem text="Text:Public Function __repr__() As String&#xD;" value="&#xD;&#xA;  Public Function __repr__() As String&#xD;&#xA;    Return  &quot;mpFmpz('&quot; &amp; Fmpz.Fmpz_Get_Str_2(10, FmpzPtr) &amp; &quot;')&quot;&#xD;&#xA;  End Function&#xD;&#xA;" />
+      <SideTabItem text="Text:As mpFmpz" value=" As mpFmpz" />
+      <SideTabItem text="Text:ByVal m1 As mpFmpz, ByVal n As Int32" value="ByVal m1 As mpFmpz, ByVal n As Int32" />
+      <SideTabItem text="Text:Dim m3 As New mpFmpz()&#xD;" value="      Dim m3 As New mpFmpz()&#xD;&#xA;      Fmpz.Lib_Fmpz_Pow_Ui(m3.FmpzPtr, m1.FmpzPtr, CUInt(n))&#xD;&#xA;    Return m3&#xD;&#xA;" />
+      <SideTabItem text="Text:Public Shared Operator ^(ByVal m1 As mpFmpz, By..." value="  Public Shared Operator ^(ByVal m1 As mpFmpz, ByVal n As Int32) As mpFmpz&#xD;&#xA;      Dim m3 As New mpFmpz()&#xD;&#xA;      Fmpz.Lib_Fmpz_Pow_Ui(m3.FmpzPtr, m1.FmpzPtr, CUInt(n))&#xD;&#xA;    Return m3&#xD;&#xA;  End Operator&#xD;&#xA;" />
+      <SideTabItem text="Text:__pow__" value="__pow__" />
+      <SideTabItem text="Text:Public Function __pow__(ByVal n As Int32) As mp..." value="&#xD;&#xA;&#xD;&#xA;  Public Function __pow__(ByVal n As Int32) As mpFmpz&#xD;&#xA;      Dim m3 As New mpFmpz()&#xD;&#xA;      Fmpz.Lib_Fmpz_Pow_Ui(m3.FmpzPtr, FmpzPtr, CUInt(n))&#xD;&#xA;    Return m3&#xD;&#xA;  End Function&#xD;&#xA;&#xD;&#xA;" />
+      <SideTabItem text="Text:Public Function __pow__(ByVal n As Int32) As mp..." value="&#xD;&#xA;&#xD;&#xA;  Public Function __pow__(ByVal n As Int32) As mpFmpz&#xD;&#xA;      Dim m3 As New mpFmpz()&#xD;&#xA;      Fmpz.Lib_Fmpz_Pow_Ui(m3.FmpzPtr, FmpzPtr, CUInt(n))&#xD;&#xA;    Return m3&#xD;&#xA;  End Function&#xD;&#xA;" />
+      <SideTabItem text="Text:ByVal m2 As mpFmpz" value="ByVal m2 As mpFmpz" />
+      <SideTabItem text="Text:Dim n As UInt32 = m2" value="      Dim n As UInt32 = m2&#xD;&#xA;" />
+      <SideTabItem text="Text:Dim n As UInt32 = m2" value="      Dim n As UInt32 = m2" />
+      <SideTabItem text="Text:Return Fmpz.Lib_Fmpz_Get_Ui(m1.FmpzPtr)" value="Return Fmpz.Lib_Fmpz_Get_Ui(m1.FmpzPtr)" />
+      <SideTabItem text="Text:Dim n As UInt32 =" value="Dim n As UInt32 = " />
+      <SideTabItem text="Text:__rpow__" value="__rpow__" />
+      <SideTabItem text="Text:MsgBox(&quot;rpow&quot;)" value="      MsgBox(&quot;rpow&quot;)" />
+    </SideTab>
+  </SideBar>
+</SideBarConfig>

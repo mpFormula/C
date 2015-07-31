@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="Make_NumC" />
+		<Option pch_mode="2" />
+		<Option compiler="gnu_gcc_492_compiler_32_bit" />
+		<Build>
+			<Target title="Win32">
+				<Option output="../../mpNum/Win32/Bin/mpNumC" imp_lib="$(TARGET_OUTPUT_DIR)$(TARGET_OUTPUT_BASENAME).a" def_file="$(TARGET_OUTPUT_DIR)$(TARGET_OUTPUT_BASENAME).def" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/Win32" />
+				<Option type="3" />
+				<Option compiler="gnu_gcc_492_compiler_tdm" />
+				<Compiler>
+					<Add option="-O2" />
+					<Add option="-std=c++11" />
+					<Add option="-Wunused-local-typedefs" />
+					<Add option="-Wno-unused-local-typedefs" />
+					<Add option="-m32" />
+					<Add option="-DUse_ALL" />
+					<Add option="-D__STDC_LIMIT_MACROS" />
+					<Add option="-DBUILD_MPNUMC_DLL" />
+					<Add directory="../../../ExternalLibraries/Eigen" />
+					<Add directory="../../mpNum/Common/Include" />
+					<Add directory="../../mpNum/Win32/Include" />
+					<Add directory="../Win32/Include/flint" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+					<Add option="-m32" />
+					<Add library="..\..\mpNum\Win32\Bin\libEigenFloat.dll" />
+					<Add library="..\..\mpNum\Win32\Bin\libEigenDouble.dll" />
+					<Add library="..\..\mpNum\Win32\Bin\libEigenLongDouble.dll" />
+					<Add library="..\..\mpNum\Win32\Bin\libEigenMpdec.dll" />
+					<Add library="..\..\mpNum\Win32\Bin\libEigenMpfi.dll" />
+					<Add library="..\..\mpNum\Win32\Bin\libEigenMpfr.dll" />
+					<Add library="..\Win32\Bin\libEigenMpq.dll" />
+					<Add library="..\..\mpNum\Win32\Bin\libmpfi-0.dll" />
+					<Add library="..\..\mpNum\Win32\Bin\libmpfr-4.dll" />
+					<Add library="..\..\mpNum\Win32\Bin\libgmp-10.dll" />
+					<Add library="..\..\mpNum\Win32\Bin\libmpdec-2.4.1.dll" />
+				</Linker>
+			</Target>
+			<Target title="Win64">
+				<Option output="../../mpNum/Win64/Bin/mpNumC" imp_lib="$(TARGET_OUTPUT_DIR)$(TARGET_OUTPUT_BASENAME).a" def_file="$(TARGET_OUTPUT_DIR)$(TARGET_OUTPUT_BASENAME).def" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/Win64" />
+				<Option type="3" />
+				<Option compiler="gnu_gcc_492_compiler_tdm" />
+				<Compiler>
+					<Add option="-O2" />
+					<Add option="-std=c++11" />
+					<Add option="-Wno-unused-local-typedefs" />
+					<Add option="-DUse_ALL" />
+					<Add option="-D__STDC_LIMIT_MACROS" />
+					<Add option="-DBUILD_MPNUMC_DLL" />
+					<Add directory="../../../ExternalLibraries/Eigen" />
+					<Add directory="../../mpNum/Common/Include" />
+					<Add directory="../../mpNum/Win64/Include" />
+					<Add directory="../Win64/Include/flint" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+					<Add library="..\..\mpNum\Win64\Bin\libEigenDouble.dll" />
+					<Add library="..\..\mpNum\Win64\Bin\libEigenFloat.dll" />
+					<Add library="..\..\mpNum\Win64\Bin\libEigenLongDouble.dll" />
+					<Add library="..\..\mpNum\Win64\Bin\libEigenMpdec.dll" />
+					<Add library="..\..\mpNum\Win64\Bin\libEigenMpfi.dll" />
+					<Add library="..\..\mpNum\Win64\Bin\libEigenMpfr.dll" />
+					<Add library="..\Win64\Bin\libEigenMpq.dll" />
+					<Add library="..\..\mpNum\Win64\Bin\libmpdec-2.4.1.dll" />
+					<Add library="..\..\mpNum\Win64\Bin\libmpfi-0.dll" />
+					<Add library="..\..\mpNum\Win64\Bin\libmpfr-4.dll" />
+					<Add library="..\..\mpNum\Win64\Bin\libgmp-10.dll" />
+				</Linker>
+			</Target>
+		</Build>
+		<VirtualTargets>
+			<Add alias="Win" targets="Win32;Win64;" />
+		</VirtualTargets>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="-fexceptions" />
+		</Compiler>
+		<Unit filename="UseEigenDouble.cpp" />
+		<Unit filename="UseEigenFloat.cpp" />
+		<Unit filename="UseEigenLongDouble.cpp" />
+		<Unit filename="UseEigenMpdec.cpp" />
+		<Unit filename="UseEigenMpfi.cpp" />
+		<Unit filename="UseEigenMpfr.cpp" />
+		<Unit filename="UseEigenMpq.cpp" />
+		<Unit filename="UseEigenNum.cpp" />
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<debugger />
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

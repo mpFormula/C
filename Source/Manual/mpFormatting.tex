@@ -1,0 +1,1008 @@
+
+%********************************************************************************************
+%*  Regular function interfaces
+%********************************************************************************************
+
+\newcommand{\mpFunctionZero}[1] {
+\GetItem{#1}{1}[\result]
+\hypertarget{\result.HT}{}	
+\begin{tabular}{p{481pt}}
+\toprule
+{\sffamily Function {\bfseries \result}() As\GetItem{#1}{2}}\index{Multiprecision Functions!\result} \\
+\bottomrule
+\end{tabular}
+
+\vspace{0.3cm}
+The function {\sffamily \result} returns\GetItem{#1}{3}
+}
+
+
+
+\newcommand{\mpFunctionOne}[2] {
+\GetItem{#1}{1}[\result]
+\hypertarget{\result.HT}{}	
+\begin{tabular}{p{481pt}}
+\toprule
+{\sffamily Function {\bfseries \result}({\itshape{\bfseries \GetItem{#2}{1}} As\GetItem{#2}{2}}) As\GetItem{#1}{2}}\index{Multiprecision Functions!\result} \\
+\bottomrule
+\end{tabular}
+
+\vspace{0.3cm}
+The function {\sffamily \result} returns\GetItem{#1}{3}
+
+\vspace{0.3cm}
+\textbf{Parameter:}
+
+{\sffamily\itshape{\GetItem{#2}{1}}}:\GetItem{#2}{3}
+}
+
+
+
+\newcommand{\mpFunctionOneNotImplemented}[2] {
+\GetItem{#1}{1}[\result]
+\hypertarget{\result.HT}{}	
+\begin{tabular}{p{481pt}}
+\toprule
+{\sffamily Function {\bfseries \result}({\itshape{\bfseries \GetItem{#2}{1}} As\GetItem{#2}{2}}) As\GetItem{#1}{2}}\index{Multiprecision Functions!\result} \\
+\midrule
+\textcolor[rgb]{1,0,0}{NOT YET IMPLEMENTED} \\
+\bottomrule
+\end{tabular}
+
+\vspace{0.3cm}
+The function {\sffamily \result} returns\GetItem{#1}{3}
+
+\vspace{0.3cm}
+\textbf{Parameter:}
+
+{\sffamily\itshape{\GetItem{#2}{1}}}:\GetItem{#2}{3}
+}
+
+
+
+
+\newcommand{\mpFunctionTwo}[3] {
+\GetItem{#1}{1}[\result]
+\hypertarget{\result.HT}{}	
+\begin{tabular}{p{481pt}}
+\toprule
+{\sffamily Function {\bfseries \result}({\itshape{\bfseries \GetItem{#2}{1}} As\GetItem{#2}{2}, \itshape{\bfseries \GetItem{#3}{1}} As\GetItem{#3}{2}}) As\GetItem{#1}{2}}\index{Multiprecision Functions!\result} \\
+\bottomrule
+\end{tabular}
+
+\vspace{0.3cm}
+The function {\sffamily \result} returns\GetItem{#1}{3}
+
+\vspace{0.3cm}
+\textbf{Parameters:}
+
+{\sffamily\itshape{\GetItem{#2}{1}}}:\GetItem{#2}{3}
+
+{\sffamily\itshape{\GetItem{#3}{1}}}:\GetItem{#3}{3}
+}
+
+
+
+\newcommand{\mpFunctionTwoNotImplemented}[3] {
+\GetItem{#1}{1}[\result]
+\hypertarget{\result.HT}{}	
+\begin{tabular}{p{481pt}}
+\toprule
+{\sffamily Function {\bfseries \result}({\itshape{\bfseries \GetItem{#2}{1}} As\GetItem{#2}{2}, \itshape{\bfseries \GetItem{#3}{1}} As\GetItem{#3}{2}}) As\GetItem{#1}{2}}\index{Multiprecision Functions!\result} \\
+\midrule
+\textcolor[rgb]{1,0,0}{NOT YET IMPLEMENTED} \\
+\bottomrule
+\end{tabular}
+
+\vspace{0.3cm}
+The function {\sffamily \result} returns\GetItem{#1}{3}
+
+\vspace{0.3cm}
+\textbf{Parameters:}
+
+{\sffamily\itshape{\GetItem{#2}{1}}}:\GetItem{#2}{3}
+
+{\sffamily\itshape{\GetItem{#3}{1}}}:\GetItem{#3}{3}
+}
+
+
+
+\newcommand{\mpFunctionThree}[4] {
+\GetItem{#1}{1}[\result]
+\hypertarget{\result.HT}{}	
+\begin{tabular}{p{481pt}}
+\toprule
+{\sffamily Function {\bfseries \result}({\itshape{\bfseries \GetItem{#2}{1}} As\GetItem{#2}{2}, \itshape{\bfseries \GetItem{#3}{1}} As\GetItem{#3}{2}, \itshape{\bfseries \GetItem{#4}{1}} As\GetItem{#4}{2}}) As\GetItem{#1}{2}}\index{Multiprecision Functions!\result} \\
+\bottomrule
+\end{tabular}
+
+\vspace{0.3cm}
+The function {\sffamily \result} returns\GetItem{#1}{3}
+
+\vspace{0.3cm}
+
+\textbf{Parameters:}
+
+{\sffamily\itshape{\GetItem{#2}{1}}}:\GetItem{#2}{3}
+
+{\sffamily\itshape{\GetItem{#3}{1}}}:\GetItem{#3}{3}
+
+{\sffamily\itshape{\GetItem{#4}{1}}}:\GetItem{#4}{3}
+}
+
+
+
+\newcommand{\mpFunctionThreeNotImplemented}[4] {
+\GetItem{#1}{1}[\result]
+\hypertarget{\result.HT}{}	
+\begin{tabular}{p{481pt}}
+\toprule
+{\sffamily Function {\bfseries \result}({\itshape{\bfseries \GetItem{#2}{1}} As\GetItem{#2}{2}, \itshape{\bfseries \GetItem{#3}{1}} As\GetItem{#3}{2}, \itshape{\bfseries \GetItem{#4}{1}} As\GetItem{#4}{2}}) As\GetItem{#1}{2}}\index{Multiprecision Functions!\result} \\
+\midrule
+\textcolor[rgb]{1,0,0}{NOT YET IMPLEMENTED} \\
+\bottomrule
+\end{tabular}
+
+\vspace{0.3cm}
+The function {\sffamily \result} returns\GetItem{#1}{3}
+
+\vspace{0.3cm}
+
+\textbf{Parameters:}
+
+{\sffamily\itshape{\GetItem{#2}{1}}}:\GetItem{#2}{3}
+
+{\sffamily\itshape{\GetItem{#3}{1}}}:\GetItem{#3}{3}
+
+{\sffamily\itshape{\GetItem{#4}{1}}}:\GetItem{#4}{3}
+}
+
+
+
+\newcommand{\mpFunctionFour}[5] {
+\GetItem{#1}{1}[\result]
+\hypertarget{\result.HT}{}	
+\begin{tabular}{p{481pt}}
+\toprule
+{\sffamily Function {\bfseries \result}({\itshape{\bfseries \GetItem{#2}{1}} As\GetItem{#2}{2}, \itshape{\bfseries \GetItem{#3}{1}} As\GetItem{#3}{2}, \itshape{\bfseries \GetItem{#4}{1}} As\GetItem{#4}{2}, \itshape{\bfseries \GetItem{#5}{1}} As\GetItem{#5}{2}}) As\GetItem{#1}{2}}\index{Multiprecision Functions!\result} \\
+\bottomrule
+\end{tabular}
+
+\vspace{0.3cm}
+The function {\sffamily \result} returns\GetItem{#1}{3}
+
+\vspace{0.3cm}
+\textbf{Parameters:}
+
+{\sffamily\itshape{\GetItem{#2}{1}}}:\GetItem{#2}{3}
+
+{\sffamily\itshape{\GetItem{#3}{1}}}:\GetItem{#3}{3}
+
+{\sffamily\itshape{\GetItem{#4}{1}}}:\GetItem{#4}{3}
+
+{\sffamily\itshape{\GetItem{#5}{1}}}:\GetItem{#5}{3}
+}
+
+
+
+
+\newcommand{\mpFunctionFourNotImplemented}[5] {
+\GetItem{#1}{1}[\result]
+\hypertarget{\result.HT}{}	
+\begin{tabular}{p{481pt}}
+\toprule
+{\sffamily Function {\bfseries \result}({\itshape{\bfseries \GetItem{#2}{1}} As\GetItem{#2}{2}, \itshape{\bfseries \GetItem{#3}{1}} As\GetItem{#3}{2}, \itshape{\bfseries \GetItem{#4}{1}} As\GetItem{#4}{2}, \itshape{\bfseries \GetItem{#5}{1}} As\GetItem{#5}{2}}) As\GetItem{#1}{2}}\index{Multiprecision Functions!\result} \\
+\midrule
+\textcolor[rgb]{1,0,0}{NOT YET IMPLEMENTED} \\
+\bottomrule
+\end{tabular}
+
+\vspace{0.3cm}
+The function {\sffamily \result} returns\GetItem{#1}{3}
+
+\vspace{0.3cm}
+\textbf{Parameters:}
+
+{\sffamily\itshape{\GetItem{#2}{1}}}:\GetItem{#2}{3}
+
+{\sffamily\itshape{\GetItem{#3}{1}}}:\GetItem{#3}{3}
+
+{\sffamily\itshape{\GetItem{#4}{1}}}:\GetItem{#4}{3}
+
+{\sffamily\itshape{\GetItem{#5}{1}}}:\GetItem{#5}{3}
+}
+
+
+
+
+\newcommand{\mpFunctionFive}[6] {
+\GetItem{#1}{1}[\result]
+\hypertarget{\result.HT}{}	
+\begin{tabular}{p{481pt}}
+\toprule
+{\sffamily Function {\bfseries \result}({\itshape{\bfseries \GetItem{#2}{1}} As\GetItem{#2}{2}, \itshape{\bfseries \GetItem{#3}{1}} As\GetItem{#3}{2}, \itshape{\bfseries \GetItem{#4}{1}} As\GetItem{#4}{2}, \itshape{\bfseries \GetItem{#5}{1}} As\GetItem{#5}{2}, \itshape{\bfseries \GetItem{#6}{1}} As\GetItem{#6}{2}}) As\GetItem{#1}{2}}\index{Multiprecision Functions!\result} \\
+\bottomrule
+\end{tabular}
+
+\vspace{0.3cm}
+The function {\sffamily \result} returns\GetItem{#1}{3}
+
+\vspace{0.3cm}
+\textbf{Parameters:}
+
+{\sffamily\itshape{\GetItem{#2}{1}}}:\GetItem{#2}{3}
+
+{\sffamily\itshape{\GetItem{#3}{1}}}:\GetItem{#3}{3}
+
+{\sffamily\itshape{\GetItem{#4}{1}}}:\GetItem{#4}{3}
+
+{\sffamily\itshape{\GetItem{#5}{1}}}:\GetItem{#5}{3}
+
+{\sffamily\itshape{\GetItem{#6}{1}}}:\GetItem{#6}{3}
+}
+
+
+
+\newcommand{\mpFunctionFiveNotImplemented}[6] {
+\GetItem{#1}{1}[\result]
+\hypertarget{\result.HT}{}	
+\begin{tabular}{p{481pt}}
+\toprule
+{\sffamily Function {\bfseries \result}({\itshape{\bfseries \GetItem{#2}{1}} As\GetItem{#2}{2}, \itshape{\bfseries \GetItem{#3}{1}} As\GetItem{#3}{2}, \itshape{\bfseries \GetItem{#4}{1}} As\GetItem{#4}{2}, \itshape{\bfseries \GetItem{#5}{1}} As\GetItem{#5}{2}, \itshape{\bfseries \GetItem{#6}{1}} As\GetItem{#6}{2}}) As\GetItem{#1}{2}}\index{Multiprecision Functions!\result} \\
+\midrule
+\textcolor[rgb]{1,0,0}{NOT YET IMPLEMENTED} \\
+\bottomrule
+\end{tabular}
+
+\vspace{0.3cm}
+The function {\sffamily \result} returns\GetItem{#1}{3}
+
+\vspace{0.3cm}
+\textbf{Parameters:}
+
+{\sffamily\itshape{\GetItem{#2}{1}}}:\GetItem{#2}{3}
+
+{\sffamily\itshape{\GetItem{#3}{1}}}:\GetItem{#3}{3}
+
+{\sffamily\itshape{\GetItem{#4}{1}}}:\GetItem{#4}{3}
+
+{\sffamily\itshape{\GetItem{#5}{1}}}:\GetItem{#5}{3}
+
+{\sffamily\itshape{\GetItem{#6}{1}}}:\GetItem{#6}{3}
+}
+
+
+
+\newcommand{\mpFunctionSix}[7] {
+\GetItem{#1}{1}[\result]
+\hypertarget{\result.HT}{}	
+\begin{tabular}{p{481pt}}
+\toprule
+{\sffamily Function {\bfseries \result}({\itshape{\bfseries \GetItem{#2}{1}} As\GetItem{#2}{2}, \itshape{\bfseries \GetItem{#3}{1}} As\GetItem{#3}{2}, \itshape{\bfseries \GetItem{#4}{1}} As\GetItem{#4}{2}, \itshape{\bfseries \GetItem{#5}{1}} As\GetItem{#5}{2}, \itshape{\bfseries \GetItem{#6}{1}} As\GetItem{#6}{2}, \itshape{\bfseries \GetItem{#7}{1}} As\GetItem{#7}{2}}) As\GetItem{#1}{2}}\index{Multiprecision Functions!\result} \\
+\bottomrule
+\end{tabular}
+
+\vspace{0.3cm}
+The function {\sffamily \result} returns\GetItem{#1}{3}
+
+\vspace{0.3cm}
+\textbf{Parameters:}
+
+{\sffamily\itshape{\GetItem{#2}{1}}}:\GetItem{#2}{3}
+
+{\sffamily\itshape{\GetItem{#3}{1}}}:\GetItem{#3}{3}
+
+{\sffamily\itshape{\GetItem{#4}{1}}}:\GetItem{#4}{3}
+
+{\sffamily\itshape{\GetItem{#5}{1}}}:\GetItem{#5}{3}
+
+{\sffamily\itshape{\GetItem{#6}{1}}}:\GetItem{#6}{3}
+
+{\sffamily\itshape{\GetItem{#7}{1}}}:\GetItem{#7}{3}
+}
+
+
+
+\newcommand{\mpFunctionSixNotImplemented}[7] {
+\GetItem{#1}{1}[\result]
+\hypertarget{\result.HT}{}	
+\begin{tabular}{p{481pt}}
+\toprule
+{\sffamily Function {\bfseries \result}({\itshape{\bfseries \GetItem{#2}{1}} As\GetItem{#2}{2}, \itshape{\bfseries \GetItem{#3}{1}} As\GetItem{#3}{2}, \itshape{\bfseries \GetItem{#4}{1}} As\GetItem{#4}{2}, \itshape{\bfseries \GetItem{#5}{1}} As\GetItem{#5}{2}, \itshape{\bfseries \GetItem{#6}{1}} As\GetItem{#6}{2}, \itshape{\bfseries \GetItem{#7}{1}} As\GetItem{#7}{2}}) As\GetItem{#1}{2}}\index{Multiprecision Functions!\result} \\
+\midrule
+\textcolor[rgb]{1,0,0}{NOT YET IMPLEMENTED} \\
+\bottomrule
+\end{tabular}
+
+\vspace{0.3cm}
+The function {\sffamily \result} returns\GetItem{#1}{3}
+
+\vspace{0.3cm}
+\textbf{Parameters:}
+
+{\sffamily\itshape{\GetItem{#2}{1}}}:\GetItem{#2}{3}
+
+{\sffamily\itshape{\GetItem{#3}{1}}}:\GetItem{#3}{3}
+
+{\sffamily\itshape{\GetItem{#4}{1}}}:\GetItem{#4}{3}
+
+{\sffamily\itshape{\GetItem{#5}{1}}}:\GetItem{#5}{3}
+
+{\sffamily\itshape{\GetItem{#6}{1}}}:\GetItem{#6}{3}
+
+{\sffamily\itshape{\GetItem{#7}{1}}}:\GetItem{#7}{3}
+}
+
+
+\newcommand{\mpFunctionSeven}[8] {
+\GetItem{#1}{1}[\result]
+\hypertarget{\result.HT}{}	
+\begin{tabular}{p{481pt}}
+\toprule
+{\sffamily Function {\bfseries \result}({\itshape{\bfseries \GetItem{#2}{1}} As\GetItem{#2}{2}, \itshape{\bfseries \GetItem{#3}{1}} As\GetItem{#3}{2}, \itshape{\bfseries \GetItem{#4}{1}} As\GetItem{#4}{2}, \itshape{\bfseries \GetItem{#5}{1}} As\GetItem{#5}{2}, \itshape{\bfseries \GetItem{#6}{1}} As\GetItem{#6}{2}, \itshape{\bfseries \GetItem{#7}{1}} As\GetItem{#7}{2}, \itshape{\bfseries \GetItem{#8}{1}} As\GetItem{#8}{2}}) As\GetItem{#1}{2}}\index{Multiprecision Functions!\result} \\
+\bottomrule
+\end{tabular}
+
+\vspace{0.3cm}
+The function {\sffamily \result} returns\GetItem{#1}{3}
+
+\vspace{0.3cm}
+\textbf{Parameters:}
+
+{\sffamily\itshape{\GetItem{#2}{1}}}:\GetItem{#2}{3}
+
+{\sffamily\itshape{\GetItem{#3}{1}}}:\GetItem{#3}{3}
+
+{\sffamily\itshape{\GetItem{#4}{1}}}:\GetItem{#4}{3}
+
+{\sffamily\itshape{\GetItem{#5}{1}}}:\GetItem{#5}{3}
+
+{\sffamily\itshape{\GetItem{#6}{1}}}:\GetItem{#6}{3}
+
+{\sffamily\itshape{\GetItem{#7}{1}}}:\GetItem{#7}{3}
+
+{\sffamily\itshape{\GetItem{#8}{1}}}:\GetItem{#8}{3}
+}
+
+
+\newcommand{\mpFunctionSevenNotImplemented}[8] {
+\GetItem{#1}{1}[\result]
+\hypertarget{\result.HT}{}	
+\begin{tabular}{p{481pt}}
+\toprule
+{\sffamily Function {\bfseries \result}({\itshape{\bfseries \GetItem{#2}{1}} As\GetItem{#2}{2}, \itshape{\bfseries \GetItem{#3}{1}} As\GetItem{#3}{2}, \itshape{\bfseries \GetItem{#4}{1}} As\GetItem{#4}{2}, \itshape{\bfseries \GetItem{#5}{1}} As\GetItem{#5}{2}, \itshape{\bfseries \GetItem{#6}{1}} As\GetItem{#6}{2}, \itshape{\bfseries \GetItem{#7}{1}} As\GetItem{#7}{2}, \itshape{\bfseries \GetItem{#8}{1}} As\GetItem{#8}{2}}) As\GetItem{#1}{2}}\index{Multiprecision Functions!\result} \\
+\midrule
+\textcolor[rgb]{1,0,0}{NOT YET IMPLEMENTED} \\
+\bottomrule
+\end{tabular}
+
+\vspace{0.3cm}
+The function {\sffamily \result} returns\GetItem{#1}{3}
+
+\vspace{0.3cm}
+\textbf{Parameters:}
+
+{\sffamily\itshape{\GetItem{#2}{1}}}:\GetItem{#2}{3}
+
+{\sffamily\itshape{\GetItem{#3}{1}}}:\GetItem{#3}{3}
+
+{\sffamily\itshape{\GetItem{#4}{1}}}:\GetItem{#4}{3}
+
+{\sffamily\itshape{\GetItem{#5}{1}}}:\GetItem{#5}{3}
+
+{\sffamily\itshape{\GetItem{#6}{1}}}:\GetItem{#6}{3}
+
+{\sffamily\itshape{\GetItem{#7}{1}}}:\GetItem{#7}{3}
+
+{\sffamily\itshape{\GetItem{#8}{1}}}:\GetItem{#8}{3}
+}
+
+
+%********************************************************************************************
+%*  Worksheet function interfaces
+%********************************************************************************************
+
+\newcommand{\mpWorksheetFunctionZero}[1] {
+\GetItem{#1}{1}[\result]
+\hypertarget{\result.HT}{}	
+\label{\result} 
+\index{Spreadsheet Functions!\result}
+\begin{tabular}{p{481pt}}
+\toprule
+{\sffamily WorksheetFunction.{\bfseries \result}() As\GetItem{#1}{2}}\index{Multiprecision Functions!\result} \\
+\bottomrule
+\end{tabular}
+
+\vspace{0.3cm}
+The function {\sffamily WorksheetFunction.\result} returns\GetItem{#1}{3}
+}
+
+
+
+\newcommand{\mpWorksheetFunctionZeroNotImplemented}[1] {
+\GetItem{#1}{1}[\result]
+\hypertarget{\result.HT}{}	
+\label{\result} 
+\index{Spreadsheet Functions!\result}
+\begin{tabular}{p{481pt}}
+\toprule
+{\sffamily WorksheetFunction.{\bfseries \result}() As\GetItem{#1}{2}}\index{Multiprecision Functions!\result} \\
+\midrule
+\textcolor[rgb]{1,0,0}{NOT YET IMPLEMENTED} \\
+\bottomrule
+\end{tabular}
+
+\vspace{0.3cm}
+The function {\sffamily WorksheetFunction.\result} returns\GetItem{#1}{3}
+}
+
+
+
+\newcommand{\mpWorksheetFunctionOne}[2] {
+\GetItem{#1}{1}[\result]
+\hypertarget{\result.HT}{}	
+\label{\result} 
+\index{Spreadsheet Functions!\result}
+\begin{tabular}{p{481pt}}
+\toprule
+{\sffamily WorksheetFunction.{\bfseries \result}({\itshape{\bfseries \GetItem{#2}{1}} As\GetItem{#2}{2}}) As\GetItem{#1}{2}}\index{Multiprecision Functions!\result} \\
+\bottomrule
+\end{tabular}
+
+\vspace{0.3cm}
+The function {\sffamily WorksheetFunction.\result} returns\GetItem{#1}{3}
+
+\vspace{0.3cm}
+\textbf{Parameter:}
+
+{\sffamily\itshape{\GetItem{#2}{1}}}:\GetItem{#2}{3}
+}
+
+
+
+\newcommand{\mpWorksheetFunctionOneNotImplemented}[2] {
+\GetItem{#1}{1}[\result]
+\hypertarget{\result.HT}{}	
+\label{\result} 
+\index{Spreadsheet Functions!\result}
+\begin{tabular}{p{481pt}}
+\toprule
+{\sffamily WorksheetFunction.{\bfseries \result}({\itshape{\bfseries \GetItem{#2}{1}} As\GetItem{#2}{2}}) As\GetItem{#1}{2}}\index{Multiprecision Functions!\result} \\
+\midrule
+\textcolor[rgb]{1,0,0}{NOT YET IMPLEMENTED} \\
+\bottomrule
+\end{tabular}
+
+\vspace{0.3cm}
+The function {\sffamily WorksheetFunction.\result} returns\GetItem{#1}{3}
+
+\vspace{0.3cm}
+\textbf{Parameter:}
+
+{\sffamily\itshape{\GetItem{#2}{1}}}:\GetItem{#2}{3}
+}
+
+
+\newcommand{\mpWorksheetFunctionTwo}[3] {
+\GetItem{#1}{1}[\result]
+\hypertarget{\result.HT}{}	
+\label{\result} 
+\index{Spreadsheet Functions!\result}
+\begin{tabular}{p{481pt}}
+\toprule
+{\sffamily WorksheetFunction.{\bfseries \result}({\itshape{\bfseries \GetItem{#2}{1}} As\GetItem{#2}{2}, \itshape{\bfseries \GetItem{#3}{1}} As\GetItem{#3}{2}}) As\GetItem{#1}{2}}\index{Multiprecision Functions!\result} \\
+\bottomrule
+\end{tabular}
+
+\vspace{0.3cm}
+The function {\sffamily WorksheetFunction.\result} returns\GetItem{#1}{3}
+
+\vspace{0.3cm}
+\textbf{Parameters:}
+
+{\sffamily\itshape{\GetItem{#2}{1}}}:\GetItem{#2}{3}
+
+{\sffamily\itshape{\GetItem{#3}{1}}}:\GetItem{#3}{3}
+}
+
+
+
+\newcommand{\mpWorksheetFunctionTwoNotImplemented}[3] {
+\GetItem{#1}{1}[\result]
+\hypertarget{\result.HT}{}	
+\label{\result} 
+\index{Spreadsheet Functions!\result}
+\begin{tabular}{p{481pt}}
+\toprule
+{\sffamily WorksheetFunction.{\bfseries \result}({\itshape{\bfseries \GetItem{#2}{1}} As\GetItem{#2}{2}, \itshape{\bfseries \GetItem{#3}{1}} As\GetItem{#3}{2}}) As\GetItem{#1}{2}}\index{Multiprecision Functions!\result} \\
+\midrule
+\textcolor[rgb]{1,0,0}{NOT YET IMPLEMENTED} \\
+\bottomrule
+\end{tabular}
+
+\vspace{0.3cm}
+The function {\sffamily WorksheetFunction.\result} returns\GetItem{#1}{3}
+
+\vspace{0.3cm}
+\textbf{Parameters:}
+
+{\sffamily\itshape{\GetItem{#2}{1}}}:\GetItem{#2}{3}
+
+{\sffamily\itshape{\GetItem{#3}{1}}}:\GetItem{#3}{3}
+}
+
+
+
+\newcommand{\mpWorksheetFunctionThree}[4] {
+\GetItem{#1}{1}[\result]
+\hypertarget{\result.HT}{}	
+\label{\result} 
+\index{Spreadsheet Functions!\result}
+\begin{tabular}{p{481pt}}
+\toprule
+{\sffamily WorksheetFunction.{\bfseries \result}({\itshape{\bfseries \GetItem{#2}{1}} As\GetItem{#2}{2}, \itshape{\bfseries \GetItem{#3}{1}} As\GetItem{#3}{2}, \itshape{\bfseries \GetItem{#4}{1}} As\GetItem{#4}{2}}) As\GetItem{#1}{2}}\index{Multiprecision Functions!\result} \\
+\bottomrule
+\end{tabular}
+
+\vspace{0.3cm}
+The function {\sffamily WorksheetFunction.\result} returns\GetItem{#1}{3}
+
+\vspace{0.3cm}
+\textbf{Parameters:}
+
+{\sffamily\itshape{\GetItem{#2}{1}}}:\GetItem{#2}{3}
+
+{\sffamily\itshape{\GetItem{#3}{1}}}:\GetItem{#3}{3}
+
+{\sffamily\itshape{\GetItem{#4}{1}}}:\GetItem{#4}{3}
+}
+
+
+
+\newcommand{\mpWorksheetFunctionThreeNotImplemented}[4] {
+\GetItem{#1}{1}[\result]
+\hypertarget{\result.HT}{}	
+\label{\result} 
+\index{Spreadsheet Functions!\result}
+\begin{tabular}{p{481pt}}
+\toprule
+{\sffamily WorksheetFunction.{\bfseries \result}({\itshape{\bfseries \GetItem{#2}{1}} As\GetItem{#2}{2}, \itshape{\bfseries \GetItem{#3}{1}} As\GetItem{#3}{2}, \itshape{\bfseries \GetItem{#4}{1}} As\GetItem{#4}{2}}) As\GetItem{#1}{2}}\index{Multiprecision Functions!\result} \\
+\midrule
+\textcolor[rgb]{1,0,0}{NOT YET IMPLEMENTED} \\
+\bottomrule
+\end{tabular}
+
+\vspace{0.3cm}
+The function {\sffamily WorksheetFunction.\result} returns\GetItem{#1}{3}
+
+\vspace{0.3cm}
+\textbf{Parameters:}
+
+{\sffamily\itshape{\GetItem{#2}{1}}}:\GetItem{#2}{3}
+
+{\sffamily\itshape{\GetItem{#3}{1}}}:\GetItem{#3}{3}
+
+{\sffamily\itshape{\GetItem{#4}{1}}}:\GetItem{#4}{3}
+}
+
+
+
+
+\newcommand{\mpWorksheetFunctionFour}[5] {
+\GetItem{#1}{1}[\result]
+\hypertarget{\result.HT}{}	
+\label{\result} 
+\index{Spreadsheet Functions!\result}
+\begin{tabular}{p{481pt}}
+\toprule
+{\sffamily WorksheetFunction.{\bfseries \result}({\itshape{\bfseries \GetItem{#2}{1}} As\GetItem{#2}{2}, \itshape{\bfseries \GetItem{#3}{1}} As\GetItem{#3}{2}, \itshape{\bfseries \GetItem{#4}{1}} As\GetItem{#4}{2}, \itshape{\bfseries \GetItem{#5}{1}} As\GetItem{#5}{2}}) As\GetItem{#1}{2}}\index{Multiprecision Functions!\result} \\
+\bottomrule
+\end{tabular}
+
+\vspace{0.3cm}
+The function {\sffamily WorksheetFunction.\result} returns\GetItem{#1}{3}
+
+\vspace{0.3cm}
+\textbf{Parameters:}
+
+{\sffamily\itshape{\GetItem{#2}{1}}}:\GetItem{#2}{3}
+
+{\sffamily\itshape{\GetItem{#3}{1}}}:\GetItem{#3}{3}
+
+{\sffamily\itshape{\GetItem{#4}{1}}}:\GetItem{#4}{3}
+
+{\sffamily\itshape{\GetItem{#5}{1}}}:\GetItem{#5}{3}
+}
+
+
+
+
+
+\newcommand{\mpWorksheetFunctionFourNotImplemented}[5] {
+\GetItem{#1}{1}[\result]
+\hypertarget{\result.HT}{}	
+\label{\result} 
+\index{Spreadsheet Functions!\result}
+\begin{tabular}{p{481pt}}
+\toprule
+{\sffamily WorksheetFunction.{\bfseries \result}({\itshape{\bfseries \GetItem{#2}{1}} As\GetItem{#2}{2}, \itshape{\bfseries \GetItem{#3}{1}} As\GetItem{#3}{2}, \itshape{\bfseries \GetItem{#4}{1}} As\GetItem{#4}{2}, \itshape{\bfseries \GetItem{#5}{1}} As\GetItem{#5}{2}}) As\GetItem{#1}{2}}\index{Multiprecision Functions!\result} \\
+\midrule
+\textcolor[rgb]{1,0,0}{NOT YET IMPLEMENTED} \\
+\bottomrule
+\end{tabular}
+
+\vspace{0.3cm}
+The function {\sffamily WorksheetFunction.\result} returns\GetItem{#1}{3}
+
+\vspace{0.3cm}
+\textbf{Parameters:}
+
+{\sffamily\itshape{\GetItem{#2}{1}}}:\GetItem{#2}{3}
+
+{\sffamily\itshape{\GetItem{#3}{1}}}:\GetItem{#3}{3}
+
+{\sffamily\itshape{\GetItem{#4}{1}}}:\GetItem{#4}{3}
+
+{\sffamily\itshape{\GetItem{#5}{1}}}:\GetItem{#5}{3}
+}
+
+
+
+\newcommand{\mpWorksheetFunctionFive}[6] {
+\GetItem{#1}{1}[\result]
+\hypertarget{\result.HT}{}	
+\label{\result} 
+\index{Spreadsheet Functions!\result}
+\begin{tabular}{p{481pt}}
+\toprule
+{\sffamily WorksheetFunction.{\bfseries \result}({\itshape{\bfseries \GetItem{#2}{1}} As\GetItem{#2}{2}, \itshape{\bfseries \GetItem{#3}{1}} As\GetItem{#3}{2}, \itshape{\bfseries \GetItem{#4}{1}} As\GetItem{#4}{2}, \itshape{\bfseries \GetItem{#5}{1}} As\GetItem{#5}{2}, \itshape{\bfseries \GetItem{#6}{1}} As\GetItem{#6}{2}}) As\GetItem{#1}{2}}\index{Multiprecision Functions!\result} \\
+\bottomrule
+\end{tabular}
+
+\vspace{0.3cm}
+The function {\sffamily WorksheetFunction.\result} returns\GetItem{#1}{3}
+
+\vspace{0.3cm}
+\textbf{Parameters:}
+
+{\sffamily\itshape{\GetItem{#2}{1}}}:\GetItem{#2}{3}
+
+{\sffamily\itshape{\GetItem{#3}{1}}}:\GetItem{#3}{3}
+
+{\sffamily\itshape{\GetItem{#4}{1}}}:\GetItem{#4}{3}
+
+{\sffamily\itshape{\GetItem{#5}{1}}}:\GetItem{#5}{3}
+
+{\sffamily\itshape{\GetItem{#6}{1}}}:\GetItem{#6}{3}
+}
+
+
+
+\newcommand{\mpWorksheetFunctionFiveNotImplemented}[6] {
+\GetItem{#1}{1}[\result]
+\hypertarget{\result.HT}{}	
+\label{\result} 
+\index{Spreadsheet Functions!\result}
+\begin{tabular}{p{481pt}}
+\toprule
+{\sffamily WorksheetFunction.{\bfseries \result}({\itshape{\bfseries \GetItem{#2}{1}} As\GetItem{#2}{2}, \itshape{\bfseries \GetItem{#3}{1}} As\GetItem{#3}{2}, \itshape{\bfseries \GetItem{#4}{1}} As\GetItem{#4}{2}, \itshape{\bfseries \GetItem{#5}{1}} As\GetItem{#5}{2}, \itshape{\bfseries \GetItem{#6}{1}} As\GetItem{#6}{2}}) As\GetItem{#1}{2}}\index{Multiprecision Functions!\result} \\
+\midrule
+\textcolor[rgb]{1,0,0}{NOT YET IMPLEMENTED} \\
+\bottomrule
+\end{tabular}
+
+\vspace{0.3cm}
+The function {\sffamily WorksheetFunction.\result} returns\GetItem{#1}{3}
+
+\vspace{0.3cm}
+\textbf{Parameters:}
+
+{\sffamily\itshape{\GetItem{#2}{1}}}:\GetItem{#2}{3}
+
+{\sffamily\itshape{\GetItem{#3}{1}}}:\GetItem{#3}{3}
+
+{\sffamily\itshape{\GetItem{#4}{1}}}:\GetItem{#4}{3}
+
+{\sffamily\itshape{\GetItem{#5}{1}}}:\GetItem{#5}{3}
+
+{\sffamily\itshape{\GetItem{#6}{1}}}:\GetItem{#6}{3}
+}
+
+
+
+\newcommand{\mpWorksheetFunctionSix}[7] {
+\GetItem{#1}{1}[\result]
+\hypertarget{\result.HT}{}	
+\label{\result} 
+\index{Spreadsheet Functions!\result}
+\begin{tabular}{p{481pt}}
+\toprule
+{\sffamily WorksheetFunction.{\bfseries \result}({\itshape{\bfseries \GetItem{#2}{1}} As\GetItem{#2}{2}, \itshape{\bfseries \GetItem{#3}{1}} As\GetItem{#3}{2}, \itshape{\bfseries \GetItem{#4}{1}} As\GetItem{#4}{2}, \itshape{\bfseries \GetItem{#5}{1}} As\GetItem{#5}{2}, \itshape{\bfseries \GetItem{#6}{1}} As\GetItem{#6}{2}, \itshape{\bfseries \GetItem{#7}{1}} As\GetItem{#7}{2}}) As\GetItem{#1}{2}}\index{Multiprecision Functions!\result} \\
+\bottomrule
+\end{tabular}
+
+\vspace{0.3cm}
+The function {\sffamily WorksheetFunction.\result} returns\GetItem{#1}{3}
+
+\vspace{0.3cm}
+\textbf{Parameters:}
+
+{\sffamily\itshape{\GetItem{#2}{1}}}:\GetItem{#2}{3}
+
+{\sffamily\itshape{\GetItem{#3}{1}}}:\GetItem{#3}{3}
+
+{\sffamily\itshape{\GetItem{#4}{1}}}:\GetItem{#4}{3}
+
+{\sffamily\itshape{\GetItem{#5}{1}}}:\GetItem{#5}{3}
+
+{\sffamily\itshape{\GetItem{#6}{1}}}:\GetItem{#6}{3}
+
+{\sffamily\itshape{\GetItem{#7}{1}}}:\GetItem{#7}{3}
+}
+
+
+
+\newcommand{\mpWorksheetFunctionSixNotImplemented}[7] {
+\GetItem{#1}{1}[\result]
+\hypertarget{\result.HT}{}	
+\label{\result} 
+\index{Spreadsheet Functions!\result}
+\begin{tabular}{p{481pt}}
+\toprule
+{\sffamily WorksheetFunction.{\bfseries \result}({\itshape{\bfseries \GetItem{#2}{1}} As\GetItem{#2}{2}, \itshape{\bfseries \GetItem{#3}{1}} As\GetItem{#3}{2}, \itshape{\bfseries \GetItem{#4}{1}} As\GetItem{#4}{2}, \itshape{\bfseries \GetItem{#5}{1}} As\GetItem{#5}{2}, \itshape{\bfseries \GetItem{#6}{1}} As\GetItem{#6}{2}, \itshape{\bfseries \GetItem{#7}{1}} As\GetItem{#7}{2}}) As\GetItem{#1}{2}}\index{Multiprecision Functions!\result} \\
+\midrule
+\textcolor[rgb]{1,0,0}{NOT YET IMPLEMENTED} \\
+\bottomrule
+\end{tabular}
+
+\vspace{0.3cm}
+The function {\sffamily WorksheetFunction.\result} returns\GetItem{#1}{3}
+
+\vspace{0.3cm}
+\textbf{Parameters:}
+
+{\sffamily\itshape{\GetItem{#2}{1}}}:\GetItem{#2}{3}
+
+{\sffamily\itshape{\GetItem{#3}{1}}}:\GetItem{#3}{3}
+
+{\sffamily\itshape{\GetItem{#4}{1}}}:\GetItem{#4}{3}
+
+{\sffamily\itshape{\GetItem{#5}{1}}}:\GetItem{#5}{3}
+
+{\sffamily\itshape{\GetItem{#6}{1}}}:\GetItem{#6}{3}
+
+{\sffamily\itshape{\GetItem{#7}{1}}}:\GetItem{#7}{3}
+}
+
+
+
+
+
+
+\newcommand{\mpWorksheetFunctionSeven}[8] {
+\GetItem{#1}{1}[\result]
+\hypertarget{\result.HT}{}	
+\label{\result} 
+\index{Spreadsheet Functions!\result}
+\begin{tabular}{p{481pt}}
+\toprule
+{\sffamily WorksheetFunction.{\bfseries \result}({\itshape{\bfseries \GetItem{#2}{1}} As\GetItem{#2}{2}, \itshape{\bfseries \GetItem{#3}{1}} As\GetItem{#3}{2}, \itshape{\bfseries \GetItem{#4}{1}} As\GetItem{#4}{2}, \itshape{\bfseries \GetItem{#5}{1}} As\GetItem{#5}{2}, \itshape{\bfseries \GetItem{#6}{1}} As\GetItem{#6}{2}, \itshape{\bfseries \GetItem{#7}{1}} As\GetItem{#7}{2}, \itshape{\bfseries \GetItem{#8}{1}} As\GetItem{#8}{2}}) As\GetItem{#1}{2}}\index{Multiprecision Functions!\result} \\
+\bottomrule
+\end{tabular}
+
+\vspace{0.3cm}
+The function {\sffamily WorksheetFunction.\result} returns\GetItem{#1}{3}
+
+\vspace{0.3cm}
+\textbf{Parameters:}
+
+{\sffamily\itshape{\GetItem{#2}{1}}}:\GetItem{#2}{3}
+
+{\sffamily\itshape{\GetItem{#3}{1}}}:\GetItem{#3}{3}
+
+{\sffamily\itshape{\GetItem{#4}{1}}}:\GetItem{#4}{3}
+
+{\sffamily\itshape{\GetItem{#5}{1}}}:\GetItem{#5}{3}
+
+{\sffamily\itshape{\GetItem{#6}{1}}}:\GetItem{#6}{3}
+
+{\sffamily\itshape{\GetItem{#7}{1}}}:\GetItem{#7}{3}
+
+{\sffamily\itshape{\GetItem{#8}{1}}}:\GetItem{#8}{3}
+}
+
+
+
+
+\newcommand{\mpWorksheetFunctionSevenNotImplemented}[8] {
+\GetItem{#1}{1}[\result]
+\hypertarget{\result.HT}{}	
+\label{\result} 
+\index{Spreadsheet Functions!\result}
+\begin{tabular}{p{481pt}}
+\toprule
+{\sffamily WorksheetFunction.{\bfseries \result}({\itshape{\bfseries \GetItem{#2}{1}} As\GetItem{#2}{2}, \itshape{\bfseries \GetItem{#3}{1}} As\GetItem{#3}{2}, \itshape{\bfseries \GetItem{#4}{1}} As\GetItem{#4}{2}, \itshape{\bfseries \GetItem{#5}{1}} As\GetItem{#5}{2}, \itshape{\bfseries \GetItem{#6}{1}} As\GetItem{#6}{2}, \itshape{\bfseries \GetItem{#7}{1}} As\GetItem{#7}{2}, \itshape{\bfseries \GetItem{#8}{1}} As\GetItem{#8}{2}}) As\GetItem{#1}{2}}\index{Multiprecision Functions!\result} \\
+\midrule
+\textcolor[rgb]{1,0,0}{NOT YET IMPLEMENTED} \\
+\bottomrule
+\end{tabular}
+
+\vspace{0.3cm}
+The function {\sffamily WorksheetFunction.\result} returns\GetItem{#1}{3}
+
+\vspace{0.3cm}
+\textbf{Parameters:}
+
+{\sffamily\itshape{\GetItem{#2}{1}}}:\GetItem{#2}{3}
+
+{\sffamily\itshape{\GetItem{#3}{1}}}:\GetItem{#3}{3}
+
+{\sffamily\itshape{\GetItem{#4}{1}}}:\GetItem{#4}{3}
+
+{\sffamily\itshape{\GetItem{#5}{1}}}:\GetItem{#5}{3}
+
+{\sffamily\itshape{\GetItem{#6}{1}}}:\GetItem{#6}{3}
+
+{\sffamily\itshape{\GetItem{#7}{1}}}:\GetItem{#7}{3}
+
+{\sffamily\itshape{\GetItem{#8}{1}}}:\GetItem{#8}{3}
+}
+
+
+
+
+\newcommand{\mpWorksheetFunctionEight}[9] {
+\GetItem{#1}{1}[\result]
+\hypertarget{\result.HT}{}	
+\label{\result} 
+\index{Spreadsheet Functions!\result}
+\begin{tabular}{p{481pt}}
+\toprule
+{\sffamily WorksheetFunction.{\bfseries \result}({\itshape{\bfseries \GetItem{#2}{1}} As\GetItem{#2}{2}, \itshape{\bfseries \GetItem{#3}{1}} As\GetItem{#3}{2}, \itshape{\bfseries \GetItem{#4}{1}} As\GetItem{#4}{2}, \itshape{\bfseries \GetItem{#5}{1}} As\GetItem{#5}{2}, \itshape{\bfseries \GetItem{#6}{1}} As\GetItem{#6}{2}, \itshape{\bfseries \GetItem{#7}{1}} As\GetItem{#7}{2}, \itshape{\bfseries \GetItem{#8}{1}} As\GetItem{#8}{2}, \itshape{\bfseries \GetItem{#9}{1}} As\GetItem{#9}{2}}) As\GetItem{#1}{2}}\index{Multiprecision Functions!\result} \\
+\bottomrule
+\end{tabular}
+
+\vspace{0.3cm}
+The function {\sffamily WorksheetFunction.\result} returns\GetItem{#1}{3}
+
+\vspace{0.3cm}
+\textbf{Parameters:}
+
+{\sffamily\itshape{\GetItem{#2}{1}}}:\GetItem{#2}{3}
+
+{\sffamily\itshape{\GetItem{#3}{1}}}:\GetItem{#3}{3}
+
+{\sffamily\itshape{\GetItem{#4}{1}}}:\GetItem{#4}{3}
+
+{\sffamily\itshape{\GetItem{#5}{1}}}:\GetItem{#5}{3}
+
+{\sffamily\itshape{\GetItem{#6}{1}}}:\GetItem{#6}{3}
+
+{\sffamily\itshape{\GetItem{#7}{1}}}:\GetItem{#7}{3}
+
+{\sffamily\itshape{\GetItem{#8}{1}}}:\GetItem{#8}{3}
+
+{\sffamily\itshape{\GetItem{#9}{1}}}:\GetItem{#9}{3}
+}
+
+
+
+
+\newcommand{\mpWorksheetFunctionEightNotImplemented}[9] {
+\GetItem{#1}{1}[\result]
+\hypertarget{\result.HT}{}	
+\label{\result} 
+\index{Spreadsheet Functions!\result}
+\begin{tabular}{p{481pt}}
+\toprule
+{\sffamily WorksheetFunction.{\bfseries \result}({\itshape{\bfseries \GetItem{#2}{1}} As\GetItem{#2}{2}, \itshape{\bfseries \GetItem{#3}{1}} As\GetItem{#3}{2}, \itshape{\bfseries \GetItem{#4}{1}} As\GetItem{#4}{2}, \itshape{\bfseries \GetItem{#5}{1}} As\GetItem{#5}{2}, \itshape{\bfseries \GetItem{#6}{1}} As\GetItem{#6}{2}, \itshape{\bfseries \GetItem{#7}{1}} As\GetItem{#7}{2}, \itshape{\bfseries \GetItem{#8}{1}} As\GetItem{#8}{2}, \itshape{\bfseries \GetItem{#9}{1}} As\GetItem{#9}{2}}) As\GetItem{#1}{2}}\index{Multiprecision Functions!\result} \\
+\midrule
+\textcolor[rgb]{1,0,0}{NOT YET IMPLEMENTED} \\
+\bottomrule
+\end{tabular}
+
+\vspace{0.3cm}
+The function {\sffamily WorksheetFunction.\result} returns\GetItem{#1}{3}
+
+\vspace{0.3cm}
+\textbf{Parameters:}
+
+{\sffamily\itshape{\GetItem{#2}{1}}}:\GetItem{#2}{3}
+
+{\sffamily\itshape{\GetItem{#3}{1}}}:\GetItem{#3}{3}
+
+{\sffamily\itshape{\GetItem{#4}{1}}}:\GetItem{#4}{3}
+
+{\sffamily\itshape{\GetItem{#5}{1}}}:\GetItem{#5}{3}
+
+{\sffamily\itshape{\GetItem{#6}{1}}}:\GetItem{#6}{3}
+
+{\sffamily\itshape{\GetItem{#7}{1}}}:\GetItem{#7}{3}
+
+{\sffamily\itshape{\GetItem{#8}{1}}}:\GetItem{#8}{3}
+
+{\sffamily\itshape{\GetItem{#9}{1}}}:\GetItem{#9}{3}
+}
+
+
+
+
+%********************************************************************************************
+
+%*  Statistical algorithm summaries formatting
+%********************************************************************************************
+
+
+\newcommand{\mpTableTwoColsThreeRows}[5] {
+\GetItem{#1}{2}[\result]
+\GetItem{#1}{1} Table \ref{\result}.
+
+\begin{table}[ht]
+\centering
+\begin{tabular}{|l|l|}
+\hline
+\GetItem{#2}{1} & \GetItem{#2}{2}\\
+\hline
+\GetItem{#3}{1} &  \GetItem{#3}{2} \\
+\GetItem{#4}{1} &  \GetItem{#4}{2} \\
+\GetItem{#5}{1} &  \GetItem{#5}{2} \\
+\hline
+\end{tabular}
+	\caption{\result}
+  \label{\result} 
+\end{table}
+}
+
+
+
+\newcommand{\mpTableThreeColsThreeRows}[5] {
+\GetItem{#1}{2}[\result]
+\GetItem{#1}{1} Table \ref{\result}.
+
+\begin{table}[ht]
+\centering
+\begin{tabular}{|l|l|l|}
+\hline
+\GetItem{#2}{1} & \GetItem{#2}{2} & \GetItem{#2}{3}\\
+\hline
+\GetItem{#3}{1} & \GetItem{#3}{2} &  \GetItem{#3}{3} \\
+\GetItem{#4}{1} & \GetItem{#4}{2} &  \GetItem{#4}{3} \\
+\GetItem{#5}{1} & \GetItem{#5}{2} &  \GetItem{#5}{3} \\
+\hline
+\end{tabular}
+	\caption{\result}
+  \label{\result} 
+\end{table}
+}
+
+
+
+
+
+\newcommand{\mpTableFourColsTwoRowsThreeRows}[7] {
+\GetItem{#1}{2}[\result]
+\GetItem{#1}{1} Table \ref{\result}.
+
+\begin{table}[ht]
+\centering
+\begin{tabular}{|l|l|l|l|}
+\hline
+\GetItem{#2}{1} & \GetItem{#2}{2} & \GetItem{#2}{3} & \GetItem{#2}{4}\\
+\hline
+\GetItem{#3}{1} & \GetItem{#3}{2} & \GetItem{#3}{3} & \GetItem{#3}{4} \\
+\GetItem{#4}{1} & \GetItem{#4}{2} & \GetItem{#4}{3} & \GetItem{#4}{4} \\
+\hline
+\GetItem{#5}{1} & \GetItem{#5}{2} & \GetItem{#5}{3} & \GetItem{#5}{4} \\
+\GetItem{#6}{1} & \GetItem{#6}{2} & \GetItem{#6}{3} & \GetItem{#6}{4} \\
+\GetItem{#7}{1} & \GetItem{#7}{2} & \GetItem{#7}{3} & \GetItem{#7}{4} \\
+\hline
+\end{tabular}
+	\caption{\result}
+  \label{\result} 
+\end{table}
+}
+
+
+
+
+

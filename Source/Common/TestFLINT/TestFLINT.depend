@@ -1,0 +1,38 @@
+# depslib dependency file v1.0
+1388433679 source:c:\users\dietrichhadler\documents\codeblocks\test1\main.cpp
+	<iostream>
+
+1389216197 source:c:\extra\gcc\cppprograms\test1\main.cpp
+	<iostream>
+	<stdio.h>
+	<stdlib.h>
+	<gmp.h>
+	<mpfr.h>
+
+1389182958 c:\extra\gcc\msys\local\win32_debug\include\gmp.h
+	<iosfwd>
+	<cstdio>
+	<cstddef>
+	<stddef.h>
+
+1389183878 c:\extra\gcc\msys\local\win32_debug\include\mpfr.h
+	<gmp.h>
+
+1389126574 c:\extra\gcc\msys\local\win64\include\gmp.h
+	<iosfwd>
+	<cstdio>
+	<cstddef>
+	<stddef.h>
+
+1389133193 c:\extra\gcc\msys\local\win64\include\mpfr.h
+	<gmp.h>
+
+1389220076 c:\extra\gcc\msys\local\win64_debug\include\gmp.h
+	<iosfwd>
+	<cstdio>
+	<cstddef>
+	<stddef.h>
+
+1389221251 c:\extra\gcc\msys\local\win64_debug\include\mpfr.h
+	<gmp.h>
+

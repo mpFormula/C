@@ -1,0 +1,17 @@
+sqrt....
+This application has requested the Runtime to terminate it in an unusual way.
+Please contact the application's support team for more information.
+FAIL
+
+bits = 32
+x = (1 * 2^0)
+
+z = (1 * 2^0)
+
+w = (-1 * 2^0)
+
+../Makefile.subdirs:84: recipe for target '../build/fmpr/test/t-sqrt.exe_RUN' failed
+make[1]: *** [../build/fmpr/test/t-sqrt.exe_RUN] Error 3
+make[1]: Leaving directory '/home/MP64/arb-2.7.0/fmpr'
+Makefile:169: recipe for target 'check' failed
+make: *** [check] Error 2

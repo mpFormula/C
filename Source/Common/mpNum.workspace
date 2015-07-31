@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_workspace_file>
+	<Workspace title="mpNumTDM">
+		<Project filename="Make_BoostMath.cbp" />
+		<Project filename="Test_EigenMath.cbp" />
+		<Project filename="Test_NumC.cbp" />
+		<Project filename="TestFLINT/TestFLINT.cbp" />
+	</Workspace>
+</CodeBlocks_workspace_file>

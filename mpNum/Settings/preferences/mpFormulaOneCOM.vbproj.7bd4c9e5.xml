@@ -1,0 +1,16 @@
+﻿<Properties>
+  <Array name="bookmarks">
+    <Element value="Bookmark|I:\Data\mpFormulaTDM\mpFormulaXL\Source\MpMath\mpFormulaOneCOM\Library.vb|1860|2" />
+  </Array>
+  <Array name="files">
+    <Element value="I:\Data\mpFormulaTDM\mpFormulaXL\Source\MpMath\mpFormulaOneCOM\Library.vb" />
+    <Element value="I:\Data\mpFormulaTDM\mpFormulaXL\Source\MpMath\mpFormulaOneCOM\app.config" />
+    <Element value="I:\Data\mpFormulaTDM\mpFormulaXL\Source\MpMath\mpFormulaOneCOM\Properties\AssemblyInfo.vb" />
+  </Array>
+  <Properties name="projectSavedData">
+    <Properties name="customTool">
+      <fileNames value="" />
+      <runOnBuild value="False" />
+    </Properties>
+  </Properties>
+</Properties>
