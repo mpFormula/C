@@ -1,1 +1,0 @@
-ipy64.exe -X:Frames -X:ColorfulConsole

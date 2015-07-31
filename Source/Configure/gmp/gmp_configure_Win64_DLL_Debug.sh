@@ -1,1 +1,0 @@
-./configure --build=i686-w64-mingw32 --host=x86_64-w64-mingw32 --enable-fat  --disable-static --enable-shared ABI=64  CFLAGS="-m64 -g -march=k8 -Wno-attributes" --prefix=/local/Win64_DLL_Debug --exec-prefix=/local/Win64_DLL_Debug 

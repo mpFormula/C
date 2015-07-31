@@ -1,1 +1,0 @@
-./configure --build=x86_64-w64-mingw32 --host=x86_64-w64-mingw32  --disable-static --enable-shared  --disable-thread-safe   CFLAGS="-m64 -march=k8 -Wno-attributes  -D__USE_MINGW_ANSI_STDIO=1 -static-libgcc -static-libstdc++ " --with-gmp-include=/local/Win64_DLL/include --with-gmp-lib=/local/Win64_DLL/lib  --prefix=/local/Win64_DLL --exec-prefix=/local/Win64_DLL 
