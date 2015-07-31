@@ -1,40 +1,42 @@
-﻿
-using System;
+﻿using System;
 using mpNumerix2;
 
-namespace TestCSharp2
+static class Program
 {
-    class Program
-    {
-        
-        static void Demo1()
-        {
-            Console.WriteLine("Hello AcbMat!");
-    
-    		Int32 prec = 50;
-    		Int32 n = 2;
-    		mpAcbMat A = new mpAcbMat(n, n);
-    		mpAcbMat B = new mpAcbMat(n, n);
-    
-    		for (Int32 i = 0; i <= n - 1; i++) {
-    			for (Int32 j = 0; j <= n - 1; j++) {
-    				Acb.MatSetUi(A, i, j, 2 * i + j);
-    			}
-    		}
-    
-    		Acb.MatMul(B, A, A, prec);
-    		Acb.MatPrint(A, prec);
-    		Console.Write("A^2 = ");
-    		Acb.MatPrint(B, prec);
+	public static void Main()
+	{
+		Console.WriteLine("Hello World!");
 
-        }
-        
-        public static void Main(string[] args)
-        {
-            Console.WriteLine("Hello World!");
-            Demo1();
-            Console.Write("Press any key to continue . . . ");
-            Console.ReadKey(true);
-        }
-    }
+		mp mp = new mp();
+		mp.SetPrecision(40);
+		mpNum MatrixA = new mpNum();
+		mpNum MatrixB = new mpNum();
+		mpNum MatrixC = new mpNum();
+
+		Int32 n = 4;
+		mp.SetRandomMatrix(n, n, MatrixA);
+		mp.PrintMatrix("Here is the matrix A:", MatrixA);
+
+		mp.GetMatrixInverse(MatrixB, MatrixA, 0);
+		mp.PrintMatrix("Here is the matrix B:", MatrixB);
+
+		mp.GetMatrixProduct(MatrixA, MatrixB, MatrixC);
+		mp.PrintMatrix("Here is the product C = A * B:", MatrixC);
+
+
+		double Result = 55;
+		Console.WriteLine("Result: " + Result.ToString());
+
+//		Result = mp.GammaAmath(5);
+//		Console.WriteLine("ResultGamma: " + Result.ToString());
+
+
+//		for (long i = 1; i <= 10; i++) {
+//			Result = mp.StdDoubleSum(5 * i, 6);
+//			Console.WriteLine("Result: " + Result.ToString());
+//		}
+
+		Console.Write("Press any key to continue . . . ");
+		Console.ReadKey(true);
+	}
 }

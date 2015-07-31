@@ -339,412 +339,412 @@ return 0;
 
 
 	
-%	
-%	\newpage
-%	\chapter{R (Statistical System)}
-%	
-%	R is a free software programming language and a software environment for statistical computing and graphics. The R language is widely used among statisticians and data miners for developing statistical software[2][3] and data analysis.[3] Polls and surveys of data miners are showing R's popularity has increased substantially in recent years.[4][5][6]
-%	
-%	\vpara
-%	R is an implementation of the S programming language combined with lexical scoping semantics inspired by Scheme. S was created by John Chambers while at Bell Labs. R was created by Ross Ihaka and Robert Gentleman[7] at the University of Auckland, New Zealand, and is currently developed by the R Development Core Team, of which Chambers is a member. R is named partly after the first names of the first two R authors and partly as a play on the name of S.[8]
-%	
-%	\vpara
-%	R is a GNU project.[9][10] The source code for the R software environment is written primarily in C, Fortran, and R.[11] R is freely available under the GNU General Public License, and pre-compiled binary versions are provided for various operating systems. R uses a command line interface; however, several graphical user interfaces are available for use with R.
-%	
-%	\vpara
-%	R provides a wide variety of statistical and graphical techniques, including linear and nonlinear modeling, classical statistical tests, time-series analysis, classification, clustering, and others. R is easily extensible through functions and extensions, and the R community is noted for its active contributions in terms of packages. There are some important differences, but much code written for S runs unaltered. Many of R's standard functions are written in R itself, which makes it easy for users to follow the algorithmic choices made. For computationally intensive tasks, C, C++, and Fortran code can be linked and called at run time. Advanced users can write C, C++[12] or Java[13] code to manipulate R objects directly.
-%	
-%	\vpara
-%	R is highly extensible through the use of user-submitted packages for specific functions or specific areas of study. Due to its S heritage, R has stronger object-oriented programming facilities than most statistical computing languages. Extending R is also eased by its lexical scoping rules.[14]
-%	
-%	\vpara
-%	Another strength of R is static graphics, which can produce publication-quality graphs, including mathematical symbols. Dynamic and interactive graphics are available through additional packages.[15]
-%	
-%	\vpara
-%	R has its own LaTeX-like documentation format, which is used to supply comprehensive documentation, both on-line in a number of formats and in hard copy.
-%	
-%	\vpara
-%	R is an interpreted language; users typically access it through a command-line interpreter. If a user types "2+2" at the R command prompt and presses enter, the computer replies with "4", as shown below:
-%	
-%	> 2+2
-%	
-%	[1] 4
-%	
-%	\vpara
-%	Like many other languages, R supports matrix arithmetic. R's data structures include scalars, vectors, matrices, data frames (similar to tables in a relational database) and lists.[16] R's extensible object-system includes objects for (among others): regression models, time-series and geo-spatial coordinates.
-%	
-%	\vpara
-%	R supports procedural programming with functions and, for some functions, object-oriented programming with generic functions. A generic function acts differently depending on the type of arguments passed to it. In other words, the generic function dispatches the function (method) specific to that type of object. For example, R has a generic print() function that can print almost every type of object in R with a simple "print(objectname)" syntax.
-%	
-%	\vpara
-%	Although mostly used by statisticians and other practitioners requiring an environment for statistical computation and software development, R can also operate as a general matrix calculation toolbox - with performance benchmarks comparable to GNU Octave or MATLAB.[17]
-%	
-%	\vpara
-%	For further information on R, see \href{http://en.wikipedia.org/wiki/R_(programming_language)}{Wikipedia: R} (the text above has been copied from this reference), or the  \href{http://www.r-project.org/}{R Homepage}.
-%	
-%	\vpara
-%	COM support can be obtained by installing the \href{http://www.omegahat.org/RDCOMClient/}{R RDCOMClient} 
-%	
-%	Installation of the binary should be as straightforward as any other R package for Windows, e.g. use the command 
-%	
-%	\begin{verbatim} 
-%	install.packages("RDCOMClient", repos = "http://www.omegahat.org/R")
-%	\end{verbatim}
-%	
-%	or use the Packages menu and make certain to include the Omegahat repository in the list of repositories to search. 
-%	
-%	There exists also a commercial \href{http://rcom.univie.ac.at/main.html}{R for Excel distribution}.
-%	
-%	\vpara
-%	A popular GUI for R is \href{http://www.rstudio.com/}{Rstudio}.
-%	
-%	Within RStudio:
-%	
-%	Tools - Install Packages.
-%	
-%	Type RD in the dialogue box.
-%	
-%	RDCOMClient should appear in the drop down box.
-%	
-%	Select RDCOMClient and click on Install.
-%	
-%	Needs to be done separately for 32 bit and 64 bit.
-%	
-%	\vpara
-%	R contains packages which provide interfaces to 
-%	
-%	GMP (\href{http://mulcyber.toulouse.inra.fr/projects/gmp}{http://mulcyber.toulouse.inra.fr/projects/gmp}) and 
-%	
-%	MPFR (\href{http://rmpfr.r-forge.r-project.org/}{http://rmpfr.r-forge.r-project.org/}). 
-%	
-%	\vpara
-%	Book recommendation: \cite{Adler2012}.
-%	
-%	Book recommendation: \cite{Verzani2011}.
-%	
-%	Book recommendation: \cite{Chang2012}.
-%	
-%	\vpara
-%	Example for using the library
-%	
-%	\lstset{language={R}}
-%	\begin{lstlisting}
-%	#Enable COM support
-%	require("RDCOMClient")
-%	
-%	#Load the mpNumerics library
-%	mp = COMCreate("mpNumerics.mp_Lib")
-%	
-%	#Set Floating point type to MPFR with 60 decimal digits precision
-%	mp[["Prec10"]] = 160
-%	mp[["FloatingPointType"]] = 3
-%	
-%	#Assign values to x1 and x2
-%	x1 = mp$Real("4.5")
-%	x2 = mp$Real("1.1")
-%	
-%	#Perform arithmetic operations
-%	x3 = x1$Plus(x2)
-%	x4 = x1$Div(x2)
-%	
-%	#Display output
-%	mp[["Prec10"]]
-%	x3$Str()
-%	x4$Str()
-%	\end{lstlisting}
-%	
-%	\vpara
-%	Example for using Excel
-%	
-%	\lstset{language={R}}
-%	\begin{lstlisting}
-%	#Load Library
-%	require("rcom")
-%	
-%	#Create instance of Excel
-%	xlApp = comCreateObject("Excel.Application")
-%	
-%	#Add 1 workbook and make it visible
-%	wb = xlApp[["Workbooks"]]$Add()
-%	xlApp[["Visible"]] = TRUE
-%	
-%	#Display the name of the 1st worksheet
-%	ws = wb[["Worksheets", 1]]
-%	wsname = ws[["Name"]]
-%	wsname
-%	
-%	#Assign values to a range
-%	mrange = ws[["Range", "A1:B10"]]
-%	mrange[["Value"]] = 10.3
-%	
-%	#Display the values of the range
-%	d = mrange[["Value"]]
-%	d
-%	$
-%	\end{lstlisting}
-%	
-%	Within RStudio, on the menu bar, click Tools -> Install packages.
-%	
-%	In the textbox "Packages" enter "RMpfr" and click on "Install".
-%	
-%	This should install the RMpfr and GMP packages.
-%	
-%	\lstset{language={R}}
-%	\begin{lstlisting}
-%	#Load Library
-%	require("Rmpfr")
-%	
-%	n1.25 <- mpfr(5, precBits = 256)/4
-%	n1.25
-%	
-%	n1.25 ^ c(1:7, 20, 30)
-%	
-%	exp(n1.25)
-%	
-%	getGroupMembers("Math")
-%	
-%	showMethods(classes = "mpfr")
-%	
-%	showMethods(classes = "mpfrArray")
-%	
-%	\end{lstlisting}
-%	
-%	
-%
-%
-%\chapter{Python} 
-%
-%\section{Overview}
-%Python is a widely used general-purpose, high-level programming language. Its design philosophy emphasizes code readability, and its syntax allows programmers to express concepts in fewer lines of code than would be possible in languages such as C. The language provides constructs intended to enable clear programs on both a small and large scale.
-%
-%\vpara
-%Python supports multiple programming paradigms, including object-oriented, imperative and functional programming or procedural styles. It features a dynamic type system and automatic memory management and has a large and comprehensive standard library.
-%
-%\vpara
-%Like other dynamic languages, Python is often used as a scripting language, but is also used in a wide range of non-scripting contexts. Using third-party tools, Python code can be packaged into standalone executable programs. Python interpreters are available for many operating systems.
-%
-%
-%
-%
-%
-%
-%\newpage
-%\section{CPython}
-%
-%CPython, the reference implementation of Python, is free and open source software and has a community-based development model, as do nearly all of its alternative implementations. CPython is managed by the non-profit Python Software Foundation.
-%
-%\vpara
-%For further information on Python, see \href{http://en.wikipedia.org/wiki/Python_(programming_language)}{Wikipedia: Python} (the text above has been copied from this reference), or the  \href{http://www.python.org/}{Python Homepage}. Support for COM is included in the distribution of the \href{http://www.activestate.com/activepython/downloads}{ActivePython Community Edition}.
-%
-%\vpara
-%Python can use  GMP und MPFR thanks to \href{http://code.google.com/p/gmpy/}{GMPY2}, with documentation \href{https://gmpy2.readthedocs.org/en/latest/}{here}.
-%
-%\vpara
-%IPython is an integrations platform for various scientific libraries (NumPy, SciPy, matlibplot, pandas etc.) \href{http://ipython.org/}{http://ipython.org/}. Popular distributions are the 
-%
-%Community Edition of Anaconda: \href{http://docs.continuum.io/anaconda/index.html}{http://docs.continuum.io/anaconda/index.html}, 
-%
-%%EPDFree (aka Canopy Express): \href{https://www.enthought.com/products/epd/free/}{https://www.enthought.com/products/epd/free/} 
-%%
-%%and Python(x, y): \href{https://code.google.com/p/pythonxy/}{https://code.google.com/p/pythonxy/}. 
-%
-%\vpara
-%Book recommendation: \cite{McKinney2012}.
-%
-%\vpara
-%Example for using the library
-%
-%\lstset{language={Python}}
-%\begin{lstlisting}
-%#Enable COM support
-%from win32com.client import Dispatch
-%
-%#Load the mpNumerics library
-%mp = Dispatch("mpNumerics.mp_Lib")
-%
-%#Set Floating point type to MPFR with 60 decimal digits precision
-%mp.FloatingPointType = 3
-%mp.Prec10 = 60
-%
-%#Assign values to x1 and x2
-%x1 = mp.Real(4.5)
-%x2 = mp.Real(1.21)
-%
-%#Calculate x3 = x1 / x2
-%x3 = x1.Div(x2)
-%
-%#Print the value of x3
-%print (x3.Str())
-%\end{lstlisting}
-%
-%\vpara
-%Example for using Excel
-%
-%\lstset{language={Python}}
-%\begin{lstlisting}
-%#Enable COM support
-%from win32com.client import Dispatch
-%
-%#Load the Excel library
-%xl = Dispatch("Excel.Application")
-%xl.Visible = 1
-%xl.Workbooks.Add() 
-%xl.Cells(1,1).Value = "Hello442" 
-%print("From Python")
-%\end{lstlisting}
-%
-%
-%
-%To compile the mpmath library libraries, Python 2.7 is required.
-%
-%\subsection{Downloading and installing  CPython 2.7}
-%ActivePython is ActiveState's complete and ready-to-install distribution of Python. It provides a one-step installation of all essential Python modules, as well as extensive documentation. 
-%The Windows distribution ships with PyWin32 -- a suite of Windows tools developed by Mark Hammond, including bindings to the Win32 API and Windows COM. 
-%ActivePython can be downloaded from
-%
-%\vpara
-%\href{http://www.activestate.com/activepython/downloads}{http://www.activestate.com/activepython/downloads}.
-%
-%\vpara
-%The latest release version of the 2.7x series is 2.7.6.9. You need to download 2 separate files to support compilation of both 32 bit and 64 bit dlls.
-%
-%
-%
-%
-%
-%\newpage
-%\section{Cython: C extensions for the Python language}
-%
-%[Cython] is a programming language that makes writing C extensions for the Python language as easy as Python itself. It aims to become a superset of the [Python] language which gives it high-level, object-oriented, functional, and dynamic programming. Its main feature on top of these is support for optional static type declarations as part of the language. The source code gets translated into optimized C/C++ code and compiled as Python extension modules. This allows for both very fast program execution and tight integration with external C libraries, while keeping up the high programmer productivity for which the Python language is well known.
-%
-%The primary Python execution environment is commonly referred to as CPython, as it is written in C. Other major implementations use Java (Jython [Jython]), C\# (IronPython [IronPython]) and Python itself (PyPy [PyPy]). Written in C, CPython has been conducive to wrapping many external libraries that interface through the C language. It has, however, remained non trivial to write the necessary glue code in C, especially for programmers who are more fluent in a high-level language like Python than in a close-to-the-metal language like C.
-%
-%Originally based on the well-known Pyrex [Pyrex], the Cython project has approached this problem by means of a source code compiler that translates Python code to equivalent C code. This code is executed within the CPython runtime environment, but at the speed of compiled C and with the ability to call directly into C libraries. At the same time, it keeps the original interface of the Python source code, which makes it directly usable from Python code. These two-fold characteristics enable Cython’s two major use cases: extending the CPython interpreter with fast binary modules, and interfacing Python code with external C libraries.
-%
-%While Cython can compile (most) regular Python code, the generated C code usually gains major (and sometime impressive) speed improvements from optional static type declarations for both Python and C types. These allow Cython to assign C semantics to parts of the code, and to translate them into very efficient C code. Type declarations can therefore be used for two purposes: for moving code sections from dynamic Python semantics into static-and-fast C semantics, but also for directly manipulating types defined in external libraries. Cython thus merges the two worlds into a very broadly applicable programming language.
-%
-%
-%
-%
-%
-%\subsection{Using the C-API}
-%
-%This document describes how to write modules in C or C++ to extend the Python interpreter with new modules. Those modules can not only define new functions but also new object types and their methods. The document also describes how to embed the Python interpreter in another application, for use as an extension language. Finally, it shows how to compile and link extension modules so that they can be loaded dynamically (at run time) into the interpreter, if the underlying operating system supports this feature.
-%
-%This document assumes basic knowledge about Python. For an informal introduction to the language, see The Python Tutorial. The Python Language Reference gives a more formal definition of the language. The Python Standard Library documents the existing object types, functions and modules (both built-in and written in Python) that give the language its wide application range.
-%
-%For a detailed description of the whole Python/C API, see the separate Python/C API Reference Manual.
-%
-%. Extending Python with C or C++
-%
-%It is quite easy to add new built-in modules to Python, if you know how to program in C. Such extension modules can do two things that can’t be done directly in Python: they can implement new built-in object types, and they can call C library functions and system calls.
-%
-%To support extensions, the Python API (Application Programmers Interface) defines a set of functions, macros and variables that provide access to most aspects of the Python run-time system. The Python API is incorporated in a C source file by including the header "Python.h".
-%
-%The compilation of an extension module depends on its intended use as well as on your system setup; details are given in later chapters.
-%
-%Note:
-%The C extension interface is specific to CPython, and extension modules do not work on other Python implementations. In many cases, it is possible to avoid writing C extensions and preserve portability to other implementations. For example, if your use case is calling C library functions or system calls, you should consider using the ctypes module or the cffi library rather than writing custom C code. These modules let you write Python code to interface with C code and are more portable between implementations of Python than writing and compiling a C extension module.
-%
-%
-%\subsubsection{Downloading and installing Gmpy2}
-%
-%GMPY and GMPY2 are C-coded Python extension modules that support fast multiple-precision arithmetic. GMPY only supports the GMP library and provides fast multiple-precision integer and rational arithmetic. The limited mpf type from GMP is also supported. GMPY2 supports the GMP library for integer and rational arithmetic but GMPY2 adds support for multiple-precision real and complex arithmetic as provided by the MPFR and MPC libraries. 
-%
-%GMPY2 can be downloaded from
-%
-%\vpara
-%\href{https://code.google.com/p/gmpy/}{https://code.google.com/p/gmpy/}.
-%
-%The file which needs to downloaded is specific for the Python version. For Python 2.7x 32 bit, the file gmpy2-2.0.3.win32-py2.7.exe needs to be downloaded. After download, start the executable file and follow the instructions.
-%
-%\vpara
-%The license can be found in appendix \ref{LGPLv3})
-%
-%%The contributors are listed in section \ref{Contributors to mpMath}
-%
-%
-%
-%
-%
-%
-%\chapter{LibreOffice Calc}
-%\label{Spreadsheets} 
-%
-%
-%\section{LibreOffice Calc}
-%The mpFormulaPy library provides multiprecision arithmetic versions of  functions which are equivalent to the numerically orientated functions of LibreOffice Calc.
-%
-%
-%\subsection{Windows}
-%Installation on Windows, LibreOffice Portable:
-%
-%The mpmath directory needs to be copied into the LibreOffice Python site-packages directory:
-%\begin{verbatim}
-%\LibreOfficePortable\App\libreoffice\program\python-core-3.3.3\lib\site-packages
-%\end{verbatim}
-%If you want gmpy2 support, copy the files 
-%\begin{verbatim}
-%gmpy2.pyd
-%gmpy2-2.0.5-py3.3.egg-info
-%\end{verbatim}
-%into the same directory.
-%
-%The \verb|sheetFunction.py| file needs to be copied into the  LibreOffice Python Scripts directory:
-%\begin{verbatim}
-%\LibreOfficePortable\App\libreoffice\share\Scripts\python
-%\end{verbatim}
-%
-%
-%\subsection{Mac OSX}
-%Installation on the Macintosh:
-%
-%In Finder, navigate to:
-%\begin{verbatim}
-%Macintosh HD/Applications/LibreOffice
-%\end{verbatim}	
-%Right-Click on LibreOffice, and choose 'Show Package Contents'. This will open the LibreOffice  'Contents' subdirectory.
-%The mpmath directory needs to be copied into the Python site-packages directory:
-%\begin{verbatim}
-%Contents/Frameworks/LibreOfficePython.framework/Versions/3.3/lib/python3.3/site-packages
-%\end{verbatim}
-%The \verb|sheetFunction.py| file needs to be copied into the  LibreOffice Python Scripts directory:
-%\begin{verbatim}
-%Contents/Resources/Scripts/Python
-%\end{verbatim}
-%
-%
-%\subsection{GNU/Linux}
-%Installation on Ubuntu 14.04
-%
-%To install support for python scripting from within LibreOffice:
-%\begin{verbatim}
-%sudo apt-get install libreoffice-script-provider-python
-%\end{verbatim}
-%
-%To install mpmath for Python 3.x:
-%\begin{verbatim}
-%sudo apt-get install python3-mpmath
-%\end{verbatim}
-%
-%if nautilus is not already working, do the following:
-%\begin{verbatim}
-%sudo mkdir -p /root/.config/nautilus
-%gksu nautilus
-%\end{verbatim}
-%
-%if gksu was not already installed, you need to install it:
-%\begin{verbatim}
-%sudo apt-get install gksu
-%\end{verbatim}
-%
-%The \verb|sheetFunction.py| file needs to be copied into the LibreOffice Python Scripts directory:
-%\begin{verbatim}
-%Computer/usr/lib/libreoffice/share/Scripts/python
-%\end{verbatim}
-%
-%
-%
+	
+	\newpage
+	\chapter{R (Statistical System)}
+	
+	R is a free software programming language and a software environment for statistical computing and graphics. The R language is widely used among statisticians and data miners for developing statistical software[2][3] and data analysis.[3] Polls and surveys of data miners are showing R's popularity has increased substantially in recent years.[4][5][6]
+	
+	\vpara
+	R is an implementation of the S programming language combined with lexical scoping semantics inspired by Scheme. S was created by John Chambers while at Bell Labs. R was created by Ross Ihaka and Robert Gentleman[7] at the University of Auckland, New Zealand, and is currently developed by the R Development Core Team, of which Chambers is a member. R is named partly after the first names of the first two R authors and partly as a play on the name of S.[8]
+	
+	\vpara
+	R is a GNU project.[9][10] The source code for the R software environment is written primarily in C, Fortran, and R.[11] R is freely available under the GNU General Public License, and pre-compiled binary versions are provided for various operating systems. R uses a command line interface; however, several graphical user interfaces are available for use with R.
+	
+	\vpara
+	R provides a wide variety of statistical and graphical techniques, including linear and nonlinear modeling, classical statistical tests, time-series analysis, classification, clustering, and others. R is easily extensible through functions and extensions, and the R community is noted for its active contributions in terms of packages. There are some important differences, but much code written for S runs unaltered. Many of R's standard functions are written in R itself, which makes it easy for users to follow the algorithmic choices made. For computationally intensive tasks, C, C++, and Fortran code can be linked and called at run time. Advanced users can write C, C++[12] or Java[13] code to manipulate R objects directly.
+	
+	\vpara
+	R is highly extensible through the use of user-submitted packages for specific functions or specific areas of study. Due to its S heritage, R has stronger object-oriented programming facilities than most statistical computing languages. Extending R is also eased by its lexical scoping rules.[14]
+	
+	\vpara
+	Another strength of R is static graphics, which can produce publication-quality graphs, including mathematical symbols. Dynamic and interactive graphics are available through additional packages.[15]
+	
+	\vpara
+	R has its own LaTeX-like documentation format, which is used to supply comprehensive documentation, both on-line in a number of formats and in hard copy.
+	
+	\vpara
+	R is an interpreted language; users typically access it through a command-line interpreter. If a user types "2+2" at the R command prompt and presses enter, the computer replies with "4", as shown below:
+	
+	> 2+2
+	
+	[1] 4
+	
+	\vpara
+	Like many other languages, R supports matrix arithmetic. R's data structures include scalars, vectors, matrices, data frames (similar to tables in a relational database) and lists.[16] R's extensible object-system includes objects for (among others): regression models, time-series and geo-spatial coordinates.
+	
+	\vpara
+	R supports procedural programming with functions and, for some functions, object-oriented programming with generic functions. A generic function acts differently depending on the type of arguments passed to it. In other words, the generic function dispatches the function (method) specific to that type of object. For example, R has a generic print() function that can print almost every type of object in R with a simple "print(objectname)" syntax.
+	
+	\vpara
+	Although mostly used by statisticians and other practitioners requiring an environment for statistical computation and software development, R can also operate as a general matrix calculation toolbox - with performance benchmarks comparable to GNU Octave or MATLAB.[17]
+	
+	\vpara
+	For further information on R, see \href{http://en.wikipedia.org/wiki/R_(programming_language)}{Wikipedia: R} (the text above has been copied from this reference), or the  \href{http://www.r-project.org/}{R Homepage}.
+	
+	\vpara
+	COM support can be obtained by installing the \href{http://www.omegahat.org/RDCOMClient/}{R RDCOMClient} 
+	
+	Installation of the binary should be as straightforward as any other R package for Windows, e.g. use the command 
+	
+	\begin{verbatim} 
+	install.packages("RDCOMClient", repos = "http://www.omegahat.org/R")
+	\end{verbatim}
+	
+	or use the Packages menu and make certain to include the Omegahat repository in the list of repositories to search. 
+	
+	There exists also a commercial \href{http://rcom.univie.ac.at/main.html}{R for Excel distribution}.
+	
+	\vpara
+	A popular GUI for R is \href{http://www.rstudio.com/}{Rstudio}.
+	
+	Within RStudio:
+	
+	Tools - Install Packages.
+	
+	Type RD in the dialogue box.
+	
+	RDCOMClient should appear in the drop down box.
+	
+	Select RDCOMClient and click on Install.
+	
+	Needs to be done separately for 32 bit and 64 bit.
+	
+	\vpara
+	R contains packages which provide interfaces to 
+	
+	GMP (\href{http://mulcyber.toulouse.inra.fr/projects/gmp}{http://mulcyber.toulouse.inra.fr/projects/gmp}) and 
+	
+	MPFR (\href{http://rmpfr.r-forge.r-project.org/}{http://rmpfr.r-forge.r-project.org/}). 
+	
+	\vpara
+	Book recommendation: \cite{Adler2012}.
+	
+	Book recommendation: \cite{Verzani2011}.
+	
+	Book recommendation: \cite{Chang2012}.
+	
+	\vpara
+	Example for using the library
+	
+	\lstset{language={R}}
+	\begin{lstlisting}
+	#Enable COM support
+	require("RDCOMClient")
+	
+	#Load the mpNumerics library
+	mp = COMCreate("mpNumerics.mp_Lib")
+	
+	#Set Floating point type to MPFR with 60 decimal digits precision
+	mp[["Prec10"]] = 160
+	mp[["FloatingPointType"]] = 3
+	
+	#Assign values to x1 and x2
+	x1 = mp$Real("4.5")
+	x2 = mp$Real("1.1")
+	
+	#Perform arithmetic operations
+	x3 = x1$Plus(x2)
+	x4 = x1$Div(x2)
+	
+	#Display output
+	mp[["Prec10"]]
+	x3$Str()
+	x4$Str()
+	\end{lstlisting}
+	
+	\vpara
+	Example for using Excel
+	
+	\lstset{language={R}}
+	\begin{lstlisting}
+	#Load Library
+	require("rcom")
+	
+	#Create instance of Excel
+	xlApp = comCreateObject("Excel.Application")
+	
+	#Add 1 workbook and make it visible
+	wb = xlApp[["Workbooks"]]$Add()
+	xlApp[["Visible"]] = TRUE
+	
+	#Display the name of the 1st worksheet
+	ws = wb[["Worksheets", 1]]
+	wsname = ws[["Name"]]
+	wsname
+	
+	#Assign values to a range
+	mrange = ws[["Range", "A1:B10"]]
+	mrange[["Value"]] = 10.3
+	
+	#Display the values of the range
+	d = mrange[["Value"]]
+	d
+	$
+	\end{lstlisting}
+	
+	Within RStudio, on the menu bar, click Tools -> Install packages.
+	
+	In the textbox "Packages" enter "RMpfr" and click on "Install".
+	
+	This should install the RMpfr and GMP packages.
+	
+	\lstset{language={R}}
+	\begin{lstlisting}
+	#Load Library
+	require("Rmpfr")
+	
+	n1.25 <- mpfr(5, precBits = 256)/4
+	n1.25
+	
+	n1.25 ^ c(1:7, 20, 30)
+	
+	exp(n1.25)
+	
+	getGroupMembers("Math")
+	
+	showMethods(classes = "mpfr")
+	
+	showMethods(classes = "mpfrArray")
+	
+	\end{lstlisting}
+	
+	
+
+
+\chapter{Python} 
+
+\section{Overview}
+Python is a widely used general-purpose, high-level programming language. Its design philosophy emphasizes code readability, and its syntax allows programmers to express concepts in fewer lines of code than would be possible in languages such as C. The language provides constructs intended to enable clear programs on both a small and large scale.
+
+\vpara
+Python supports multiple programming paradigms, including object-oriented, imperative and functional programming or procedural styles. It features a dynamic type system and automatic memory management and has a large and comprehensive standard library.
+
+\vpara
+Like other dynamic languages, Python is often used as a scripting language, but is also used in a wide range of non-scripting contexts. Using third-party tools, Python code can be packaged into standalone executable programs. Python interpreters are available for many operating systems.
+
+
+
+
+
+
+\newpage
+\section{CPython}
+
+CPython, the reference implementation of Python, is free and open source software and has a community-based development model, as do nearly all of its alternative implementations. CPython is managed by the non-profit Python Software Foundation.
+
+\vpara
+For further information on Python, see \href{http://en.wikipedia.org/wiki/Python_(programming_language)}{Wikipedia: Python} (the text above has been copied from this reference), or the  \href{http://www.python.org/}{Python Homepage}. Support for COM is included in the distribution of the \href{http://www.activestate.com/activepython/downloads}{ActivePython Community Edition}.
+
+\vpara
+Python can use  GMP und MPFR thanks to \href{http://code.google.com/p/gmpy/}{GMPY2}, with documentation \href{https://gmpy2.readthedocs.org/en/latest/}{here}.
+
+\vpara
+IPython is an integrations platform for various scientific libraries (NumPy, SciPy, matlibplot, pandas etc.) \href{http://ipython.org/}{http://ipython.org/}. Popular distributions are the 
+
+Community Edition of Anaconda: \href{http://docs.continuum.io/anaconda/index.html}{http://docs.continuum.io/anaconda/index.html}, 
+
+%EPDFree (aka Canopy Express): \href{https://www.enthought.com/products/epd/free/}{https://www.enthought.com/products/epd/free/} 
+%
+%and Python(x, y): \href{https://code.google.com/p/pythonxy/}{https://code.google.com/p/pythonxy/}. 
+
+\vpara
+Book recommendation: \cite{McKinney2012}.
+
+\vpara
+Example for using the library
+
+\lstset{language={Python}}
+\begin{lstlisting}
+#Enable COM support
+from win32com.client import Dispatch
+
+#Load the mpNumerics library
+mp = Dispatch("mpNumerics.mp_Lib")
+
+#Set Floating point type to MPFR with 60 decimal digits precision
+mp.FloatingPointType = 3
+mp.Prec10 = 60
+
+#Assign values to x1 and x2
+x1 = mp.Real(4.5)
+x2 = mp.Real(1.21)
+
+#Calculate x3 = x1 / x2
+x3 = x1.Div(x2)
+
+#Print the value of x3
+print (x3.Str())
+\end{lstlisting}
+
+\vpara
+Example for using Excel
+
+\lstset{language={Python}}
+\begin{lstlisting}
+#Enable COM support
+from win32com.client import Dispatch
+
+#Load the Excel library
+xl = Dispatch("Excel.Application")
+xl.Visible = 1
+xl.Workbooks.Add() 
+xl.Cells(1,1).Value = "Hello442" 
+print("From Python")
+\end{lstlisting}
+
+
+
+To compile the mpmath library libraries, Python 2.7 is required.
+
+\subsection{Downloading and installing  CPython 2.7}
+ActivePython is ActiveState's complete and ready-to-install distribution of Python. It provides a one-step installation of all essential Python modules, as well as extensive documentation. 
+The Windows distribution ships with PyWin32 -- a suite of Windows tools developed by Mark Hammond, including bindings to the Win32 API and Windows COM. 
+ActivePython can be downloaded from
+
+\vpara
+\href{http://www.activestate.com/activepython/downloads}{http://www.activestate.com/activepython/downloads}.
+
+\vpara
+The latest release version of the 2.7x series is 2.7.6.9. You need to download 2 separate files to support compilation of both 32 bit and 64 bit dlls.
+
+
+
+
+
+\newpage
+\section{Cython: C extensions for the Python language}
+
+[Cython] is a programming language that makes writing C extensions for the Python language as easy as Python itself. It aims to become a superset of the [Python] language which gives it high-level, object-oriented, functional, and dynamic programming. Its main feature on top of these is support for optional static type declarations as part of the language. The source code gets translated into optimized C/C++ code and compiled as Python extension modules. This allows for both very fast program execution and tight integration with external C libraries, while keeping up the high programmer productivity for which the Python language is well known.
+
+The primary Python execution environment is commonly referred to as CPython, as it is written in C. Other major implementations use Java (Jython [Jython]), C\# (IronPython [IronPython]) and Python itself (PyPy [PyPy]). Written in C, CPython has been conducive to wrapping many external libraries that interface through the C language. It has, however, remained non trivial to write the necessary glue code in C, especially for programmers who are more fluent in a high-level language like Python than in a close-to-the-metal language like C.
+
+Originally based on the well-known Pyrex [Pyrex], the Cython project has approached this problem by means of a source code compiler that translates Python code to equivalent C code. This code is executed within the CPython runtime environment, but at the speed of compiled C and with the ability to call directly into C libraries. At the same time, it keeps the original interface of the Python source code, which makes it directly usable from Python code. These two-fold characteristics enable Cython’s two major use cases: extending the CPython interpreter with fast binary modules, and interfacing Python code with external C libraries.
+
+While Cython can compile (most) regular Python code, the generated C code usually gains major (and sometime impressive) speed improvements from optional static type declarations for both Python and C types. These allow Cython to assign C semantics to parts of the code, and to translate them into very efficient C code. Type declarations can therefore be used for two purposes: for moving code sections from dynamic Python semantics into static-and-fast C semantics, but also for directly manipulating types defined in external libraries. Cython thus merges the two worlds into a very broadly applicable programming language.
+
+
+
+
+
+\subsection{Using the C-API}
+
+This document describes how to write modules in C or C++ to extend the Python interpreter with new modules. Those modules can not only define new functions but also new object types and their methods. The document also describes how to embed the Python interpreter in another application, for use as an extension language. Finally, it shows how to compile and link extension modules so that they can be loaded dynamically (at run time) into the interpreter, if the underlying operating system supports this feature.
+
+This document assumes basic knowledge about Python. For an informal introduction to the language, see The Python Tutorial. The Python Language Reference gives a more formal definition of the language. The Python Standard Library documents the existing object types, functions and modules (both built-in and written in Python) that give the language its wide application range.
+
+For a detailed description of the whole Python/C API, see the separate Python/C API Reference Manual.
+
+. Extending Python with C or C++
+
+It is quite easy to add new built-in modules to Python, if you know how to program in C. Such extension modules can do two things that can’t be done directly in Python: they can implement new built-in object types, and they can call C library functions and system calls.
+
+To support extensions, the Python API (Application Programmers Interface) defines a set of functions, macros and variables that provide access to most aspects of the Python run-time system. The Python API is incorporated in a C source file by including the header "Python.h".
+
+The compilation of an extension module depends on its intended use as well as on your system setup; details are given in later chapters.
+
+Note:
+The C extension interface is specific to CPython, and extension modules do not work on other Python implementations. In many cases, it is possible to avoid writing C extensions and preserve portability to other implementations. For example, if your use case is calling C library functions or system calls, you should consider using the ctypes module or the cffi library rather than writing custom C code. These modules let you write Python code to interface with C code and are more portable between implementations of Python than writing and compiling a C extension module.
+
+
+\subsubsection{Downloading and installing Gmpy2}
+
+GMPY and GMPY2 are C-coded Python extension modules that support fast multiple-precision arithmetic. GMPY only supports the GMP library and provides fast multiple-precision integer and rational arithmetic. The limited mpf type from GMP is also supported. GMPY2 supports the GMP library for integer and rational arithmetic but GMPY2 adds support for multiple-precision real and complex arithmetic as provided by the MPFR and MPC libraries. 
+
+GMPY2 can be downloaded from
+
+\vpara
+\href{https://code.google.com/p/gmpy/}{https://code.google.com/p/gmpy/}.
+
+The file which needs to downloaded is specific for the Python version. For Python 2.7x 32 bit, the file gmpy2-2.0.3.win32-py2.7.exe needs to be downloaded. After download, start the executable file and follow the instructions.
+
+\vpara
+The license can be found in appendix \ref{LGPLv3})
+
+%The contributors are listed in section \ref{Contributors to mpMath}
+
+
+
+
+
+
+\chapter{LibreOffice Calc}
+\label{Spreadsheets} 
+
+
+\section{LibreOffice Calc}
+The mpFormulaPy library provides multiprecision arithmetic versions of  functions which are equivalent to the numerically orientated functions of LibreOffice Calc.
+
+
+\subsection{Windows}
+Installation on Windows, LibreOffice Portable:
+
+The mpmath directory needs to be copied into the LibreOffice Python site-packages directory:
+\begin{verbatim}
+\LibreOfficePortable\App\libreoffice\program\python-core-3.3.3\lib\site-packages
+\end{verbatim}
+If you want gmpy2 support, copy the files 
+\begin{verbatim}
+gmpy2.pyd
+gmpy2-2.0.5-py3.3.egg-info
+\end{verbatim}
+into the same directory.
+
+The \verb|sheetFunction.py| file needs to be copied into the  LibreOffice Python Scripts directory:
+\begin{verbatim}
+\LibreOfficePortable\App\libreoffice\share\Scripts\python
+\end{verbatim}
+
+
+\subsection{Mac OSX}
+Installation on the Macintosh:
+
+In Finder, navigate to:
+\begin{verbatim}
+Macintosh HD/Applications/LibreOffice
+\end{verbatim}	
+Right-Click on LibreOffice, and choose 'Show Package Contents'. This will open the LibreOffice  'Contents' subdirectory.
+The mpmath directory needs to be copied into the Python site-packages directory:
+\begin{verbatim}
+Contents/Frameworks/LibreOfficePython.framework/Versions/3.3/lib/python3.3/site-packages
+\end{verbatim}
+The \verb|sheetFunction.py| file needs to be copied into the  LibreOffice Python Scripts directory:
+\begin{verbatim}
+Contents/Resources/Scripts/Python
+\end{verbatim}
+
+
+\subsection{GNU/Linux}
+Installation on Ubuntu 14.04
+
+To install support for python scripting from within LibreOffice:
+\begin{verbatim}
+sudo apt-get install libreoffice-script-provider-python
+\end{verbatim}
+
+To install mpmath for Python 3.x:
+\begin{verbatim}
+sudo apt-get install python3-mpmath
+\end{verbatim}
+
+if nautilus is not already working, do the following:
+\begin{verbatim}
+sudo mkdir -p /root/.config/nautilus
+gksu nautilus
+\end{verbatim}
+
+if gksu was not already installed, you need to install it:
+\begin{verbatim}
+sudo apt-get install gksu
+\end{verbatim}
+
+The \verb|sheetFunction.py| file needs to be copied into the LibreOffice Python Scripts directory:
+\begin{verbatim}
+Computer/usr/lib/libreoffice/share/Scripts/python
+\end{verbatim}
+
+
+
 
 
 
@@ -2157,822 +2157,822 @@ print "Result: ", x3.Str();
 	%\end{lstlisting}
 	
 	
-%	
-%	\chapter{Component Object Model (COM) Interface}
-%	\label{COMInterface}
-%	
-%	Component Object Model (COM) is a binary-interface standard for software components introduced by Microsoft in 1993. It is used to enable interprocess communication and dynamic object creation in a large range of programming languages. COM is the basis for several other Microsoft technologies and frameworks, including OLE, OLE Automation, ActiveX, COM+, DCOM, the Windows shell, DirectX, and Windows Runtime
-%	
-%	\vpara
-%	Overview[edit source | edit]The essence of COM is a language-neutral way of implementing objects that can be used in environments different from the one in which they were created, even across machine boundaries. For well-authored components, COM allows reuse of objects with no knowledge of their internal implementation, as it forces component implementers to provide well-defined interfaces that are separated from the implementation. The different allocation semantics of languages are accommodated by making objects responsible for their own creation and destruction through reference-counting. Casting between different interfaces of an object is achieved through the QueryInterface method. The preferred method of inheritance within COM is the creation of sub-objects to which method calls are delegated.
-%	
-%	\vpara
-%	COM is an interface technology defined and implemented as standard only on Microsoft Windows and Apple's Core Foundation 1.3 and later plug-in API,[1] that in any case implement only a subset of the whole COM interface.[2] For some applications, COM has been replaced at least to some extent by the Microsoft .NET framework, and support for Web Services through the Windows Communication Foundation (WCF). However, COM objects can be used with all .NET languages through .NET COM Interop. Networked DCOM uses binary proprietary formats, while WCF encourages the use of XML-based SOAP messaging. COM is very similar to other component software interface technologies, such as CORBA and Java Beans, although each has its own strengths and weaknesses.
-%	
-%	\vpara
-%	Unlike C++, COM provides a stable ABI that does not change between compiler releases.[3] This makes COM interfaces attractive for object-oriented C++ libraries that are to be used by clients compiled using different compiler versions.
-%	
-%	\vpara
-%	For further information, see \href{http://en.wikipedia.org/wiki/Component_Object_Model}{Wikipedia: Component Object Model} (the text above has been copied from this reference).
-%	
-%	\vpara
-%	Missing:
-%	
-%	A description of how to build the relevant projects.
-%	
-%	
-%	
-%	
-%	\newpage
-%	\section{VBScript (Windows Script Host)}
-%	VBScript (Visual Basic Scripting Edition) is an Active Scripting language developed by Microsoft that is modeled on Visual Basic. It is designed as a “lightweight” language with a fast interpreter for use in a wide variety of Microsoft environments. VBScript uses the Component Object Model to access elements of the environment within which it is running; for example, the FileSystemObject (FSO) is used to create, read, update and delete files.
-%	
-%	\vpara
-%	VBScript has been installed by default in every desktop release of Microsoft Windows since Windows 98;[1] in Windows Server since Windows NT 4.0 Option Pack;[2] and optionally with Windows CE (depending on the device it is installed on).
-%	
-%	\vpara
-%	A VBScript script must be executed within a host environment, of which there are several provided with Microsoft Windows, including: Windows Script Host (WSH), Internet Explorer (IE), and Internet Information Services (IIS).[3] Additionally, the VBScript hosting environment is embeddable in other programs, through technologies such as the Microsoft Script Control (msscript.ocx).
-%	
-%	\vpara
-%	VBScript can also be used to create applications that run directly on a workstation running Microsoft Windows. The simplest example is a script that makes use of the Windows Script Host (WSH) environment. Such a script is usually in a stand-alone file with the file extension .vbs. The script can be invoked in two ways. Wscript.exe is used to display output and receive input through a GUI, such as dialog and input boxes. Cscript.exe is used in a command line environment.
-%	
-%	\vpara
-%	VBScript can be included in two other types of scripting files: Windows Script Files, and HTML Applications.
-%	
-%	\vpara
-%	A Windows Script File (WSF) is styled after XML. A WSF file can include multiple VBS files. As a result WSF files provide a means for code reuse: one can write a library of classes or functions in one or more .vbs files, and include those files in one or more WSF files to use and reuse that functionality in a modular way. The files have extension .wsf and can be executed using wscript.exe or cscript.exe, just like a .vbe file.
-%	
-%	\vpara
-%	An HTML Application (HTA) is styled after HTML. The HTML in the file is used to generate the user interface, and a scripting language such as VBScript is used for the program logic. The files have extension .hta and can be executed using mshta.exe.
-%	
-%	\vpara
-%	VBScript (and JScript) can also be used in a Windows Script Component - an ActiveX-enabled script class that can be invoked by other COM-enabled applications.[13] These files have extension .wsc.
-%	
-%	For further information on VBScript, see \href{http://en.wikipedia.org/wiki/VBScript}{Wikipedia: VBScript} (the text above has been copied from this reference).
-%	
-%	\vpara
-%	\noindent Example for using the library
-%	
-%	\lstset{language={VBScript}}
-%	\begin{lstlisting}
-%	Option Explicit
-%	
-%	Sub Print(s)
-%	WScript.Echo  s
-%	End Sub
-%	
-%	
-%	Sub DemoBetadist()
-%	Dim mp, x, df1 , df2, px1 
-%	Set mp = CreateObject("mpNumerics.mp_Lib")
-%	With mp
-%	'FloatingPointType: Single = 1, Double = 2, Multi = 3, Interval = 4, Decimal = 5, Rational = 6
-%	.FloatingPointType() = 3
-%	.Prec10() = 36
-%	Set x = .Real(0.1)
-%	Set df1 = .Real(13.0)
-%	Set df2 = .Real(23.0)
-%	Set px1 = .Real(0.0005)	
-%	' pdf = 1, LeftTail = 2, RightTail = 3, LeftQuantile = 4, RightQuantile = 5
-%	Print ("#TableStart#")
-%	Print ("Item" & "|" & "Value")
-%	Print  ("Density:" & "|"  & .BetaDist(1, x, df1, df2).Str())
-%	Print  ("LeftTail:" & "|" & .BetaDist(2, x, df1, df2).Str())
-%	Print  ("RightTail:" & "|"  & .BetaDist(3, x, df1, df2).Str())
-%	Print  ("LeftQuantile:" & "|"  & .BetaDist(4, px1, df1, df2).Str())
-%	Print  ("RightQuantile:" & "|"  & .BetaDist(5, px1, df1, df2).Str())
-%	Print("#TableEnd#")
-%	Print("")
-%	End With
-%	Set mp = Nothing
-%	End Sub
-%	
-%	Call DemoBetadist()
-%	\end{lstlisting}
-%	
-%	
-%	\vpara
-%	Example for using Excel
-%	
-%	\lstset{language={VBScript}}
-%	\begin{lstlisting}
-%	Option Explicit
-%	
-%	Sub Print(s)
-%	WScript.Echo  s
-%	End Sub
-%	
-%	Sub DemoExcel()
-%	Dim objExcel 'As Excel.Application
-%	Set objExcel = CreateObject("Excel.Application")
-%	'objExcel.Workbooks.Open("C:\Extra\mpNumerics\Output\mpTemp00.html")
-%	objExcel.Visible = True
-%	objExcel.Workbooks.Add
-%	objExcel.Cells(1, 1).Value = "Test value"
-%	Set objExcel = Nothing
-%	End Sub
-%	
-%	Call DemoExcel()
-%	\end{lstlisting}
-%	
-%	
-%	
-%	
-%	\newpage
-%	\section{JScript (Windows Script Host)}
-%	JScript is Microsoft's dialect of the ECMAScript standard[1] that is used in Microsoft's Internet Explorer.
-%	
-%	\vpara
-%	JScript is implemented as a Windows Script engine.[2] This means that it can be "plugged in" to any application that supports Windows Script,[3] such as Internet Explorer, Active Server Pages, and Windows Script Host. It also means that any application supporting Windows Script can use multiple languages (JScript, VBScript, Perl, and others).
-%	
-%	\vpara
-%	JScript was first supported in the Internet Explorer 3.0 browser released in August 1996. Its most recent version is JScript 9.0, included in Internet Explorer 9.
-%	
-%	\vpara
-%	JScript supports conditional compilation, which allows a programmer to selectively execute code within block comments. This is an extension to the ECMAScript standard that is not supported in other JavaScript implementations.
-%	
-%	\vpara
-%	The original JScript is an Active Scripting engine. Like other Active Scripting languages, it is built on the COM/OLE Automation platform and provides scripting capabilities to host applications.
-%	
-%	\vpara
-%	This is the version used when hosting JScript inside a Web page displayed by Internet Explorer, in an HTML application, in classic ASP, in Windows Script Host scripts and several other Automation environments.
-%	
-%	\vpara
-%	JScript is sometimes referred to as "classic JScript" or "Active Scripting JScript" to differentiate it from newer .NET-based versions.
-%	
-%	\vpara
-%	Some versions of JScript are available for multiple versions of Internet Explorer and Windows. For example, JScript 5.7 was introduced with Internet Explorer 7.0 and is also installed for Internet Explorer 6.0 with Windows XP Service Pack 3, while JScript 5.8 was introduced with Internet Explorer 8.0 and is also installed with Internet Explorer 6.0 on Windows Mobile 6.5.
-%	
-%	\vpara
-%	Microsoft's implementation of ECMAScript 5th Edition in Windows 8 Consumer Preview is called JavaScript and the corresponding Visual Studio 11 Express Beta includes a “completely new”, full-featured JavaScript editor with IntelliSense enhancements for HTML5 and ECMAScript 5 syntax, “VSDOC” annotations for multiple overloads, simplified DOM configuration, brace matching, collapsible outlining and “go to definition”.[6]
-%	
-%	\vpara
-%	For further information on JScript, see \href{http://en.wikipedia.org/wiki/JScript}{Wikipedia: JScript} (the text above has been copied from this reference).
-%	For further information on JavaScript, see \href{http://en.wikipedia.org/wiki/JavaScript}{Wikipedia: JavaScript}.
-%	
-%	
-%	\vpara
-%	Example for using the library
-%	
-%	\lstset{language={JavaScript}}
-%	\begin{lstlisting}
-%	var stdin = WScript.StdIn;
-%	var stdout = WScript.StdOut;
-%	
-%	var mp = new ActiveXObject ("mpNumerics.mp_Lib");
-%	mp.Prec10 = 60;
-%	mp.FloatingPointType = 3;
-%	var x = mp.Real(2);
-%	var y = mp.Sqrt(x);
-%	var s = y.Str();
-%	
-%	stdout.WriteLine("Sqrt(2):");
-%	stdout.WriteLine(s);
-%	\end{lstlisting}
-%	
-%	
-%	\vpara
-%	Example for using Excel
-%	
-%	\lstset{language={JavaScript}}
-%	\begin{lstlisting}
-%	var xls = new ActiveXObject ( "Excel.Application" );
-%	xls.visible = true;
-%	var newBook = xls.Workbooks.Add;
-%	newBook.Worksheets.Add;
-%	newBook.Worksheets(1).Activate;
-%	newBook.Worksheets(1).Cells(1,1).value="First Column, First Cell";
-%	newBook.Worksheets(1).Cells(2,1).value="First Column, Second Cell";
-%	newBook.Worksheets(1).Cells(1,2).value="Second Column, First Cell";
-%	newBook.Worksheets(1).Cells(2,2).value="Second Column, Second Cell";
-%	newBook.Worksheets(1).Name="WorkSheet from Javascript";
-%	// newBook.Worksheets(1).SaveAs("C:\\temp\\TEST2.XLS");
-%	\end{lstlisting}
-%	
-%	
-%	
-%	
-%	\newpage
-%	\section{Visual Basic for Applications, Visual Basic 6.0}
-%	
-%	Visual Basic for Applications (VBA) is an implementation of Microsoft's event-driven programming language Visual Basic 6 and its associated integrated development environment (IDE).
-%	
-%	\vpara
-%	Visual Basic for Applications enables building user defined functions, automating processes and accessing Windows API and other low-level functionality through dynamic-link libraries (DLLs). It supersedes and expands on the abilities of earlier application-specific macro programming languages such as Word's WordBasic. It can be used to control many aspects of the host application, including manipulating user interface features, such as menus and toolbars, and working with custom user forms or dialog boxes.
-%	
-%	\vpara
-%	As its name suggests, VBA is closely related to Visual Basic and uses the Visual Basic Runtime Library, but it can normally only run code within a host application rather than as a standalone program. It can, however, be used to control one application from another via OLE Automation. For example, it is used to automatically create a Word report from Excel data, which are automatically collected by Excel from polled observation sensors. VBA has the ability to use (but not create) (ActiveX/COM) DLLs, and later versions add support for class modules.
-%	
-%	\vpara
-%	VBA is built into most Microsoft Office applications, including Office for Mac OS X (apart from version 2008) and other Microsoft applications such as Microsoft MapPoint and Microsoft Visio
-%	
-%	For further information, see \href{http://en.wikipedia.org/wiki/Visual_Basic_for_Applications}{Wikipedia: VBA} (the text above has been copied from this reference).
-%	
-%	\vpara
-%	Visual Basic is a third-generation event-driven programming language and integrated development environment (IDE) from Microsoft for its COM programming model first released in 1991. Microsoft intends Visual Basic to be relatively easy to learn and use.[1][2] Visual Basic was derived from BASIC and enables the rapid application development (RAD) of graphical user interface (GUI) applications, access to databases using Data Access Objects, Remote Data Objects, or ActiveX Data Objects, and creation of ActiveX controls and objects. The scripting language VBScript is a subset of Visual Basic.
-%	
-%	\vpara
-%	A programmer can create an application using the components provided by the Visual Basic program itself. Programs written in Visual Basic can also use the Windows API, but doing so requires external function declarations. Though the program has received criticism for its perceived faults, version 3 of Visual Basic was a runaway commercial success, and many companies offered third party controls greatly extending its functionality.
-%	
-%	\vpara
-%	The final release was version 6 in 1998. Microsoft's extended support ended in March 2008 and the designated successor was Visual Basic .NET (now known simply as Visual Basic).
-%	
-%	For further information, see \href{http://en.wikipedia.org/wiki/Visual_Basic}{Wikipedia: VB6} (the text above has been copied from this reference).
-%	
-%	\lstset{language={[Visual]Basic}}
-%	\begin{lstlisting}
-%	'Imports System
-%	'Imports System.Console
-%	'Imports Microsoft.VisualBasic.Strings
-%	'Imports mpNumericsLib
-%	
-%	'Module Module1
-%	
-%	Sub Print(s As String)
-%	WriteLine(s)
-%	End Sub
-%	
-%	
-%	Sub DemoBetadist()
-%	Dim mp As New mp_Lib
-%	Dim x, df1 , df2, px1  As New mp_Real
-%	With mp
-%	'FloatingPointType: Single = 1, Double = 2, Multi = 3, Interval = 4, Rational = 5
-%	.FloatingPointType() = 3
-%	.Prec10() = 40
-%	x = .Real(0.1)
-%	df1 = .Real(13.0)
-%	df2 = .Real(23.0)
-%	px1 = .Real(0.0005)	
-%	' pdf = 1, LeftTail = 2, RightTail = 3, LeftQuantile = 4, RightQuantile = 5
-%	Print ("Density:" & .BetaDist(1, x, df1, df2).Str())
-%	Print ("LeftTail:"& .BetaDist(2, x, df1, df2).Str())
-%	Print ("RightTail:" & .BetaDist(3, x, df1, df2).Str())
-%	Print ("LeftQuantile:" & .BetaDist(4, px1, df1, df2).Str())
-%	Print ("RightQuantile:" & .BetaDist(5, px1, df1, df2).Str())
-%	End With
-%	mp = Nothing
-%	End Sub
-%	
-%	Sub Main()
-%	Call DemoBetadist()
-%	End Sub
-%	
-%	'End Module
-%	\end{lstlisting}
-%	
-%	
-%	
-%	
-%	\newpage
-%	\section{OpenOffice Basic}
-%	
-%	OpenOffice Basic (formerly known as StarOffice Basic or StarBasic or OOoBasic) is a dialect of the programming language BASIC that is included with the OpenOffice, StarOffice and LibreOffice office suites.
-%	
-%	\vpara
-%	Although Openoffice Basic itself is similar to other dialects of Basic, such as Microsoft's VBA, the application programming interface (API) is very different, as the example below of a macro illustrates. While there is a much easier way to obtain the "paragraph count" document property, the example shows the fundamental methods for accessing each paragraph in a text document, sequentially.
-%	
-%	\vpara
-%	For further information, see \href{http://en.wikipedia.org/wiki/OpenOffice_Basic}{Wikipedia: OpenOffice Basic} (the text above has been copied from this reference).
-%	
-%	\vpara
-%	For help regarding the language, see the \href{http://wiki.openoffice.org/wiki/Documentation/BASIC_Guide}{OpenOffice.org BASIC Programming Guide}.
-%	Information on the OpenOffice API is available from  \href{http://www.openoffice.org/api/}{OpenOffice API}.
-%	
-%	\lstset{language={VBScript}}
-%	\begin{lstlisting}
-%	Sub ParaCount
-%	'
-%	' Count number of paragraphs in a text document
-%	'
-%	Dim Doc As Object, Enum As Object, TextEl As Object, Count As Long
-%	Doc = ThisComponent
-%	' Is this a text document?
-%	If Not Doc.SupportsService("com.sun.star.text.TextDocument") Then
-%	MsgBox "This macro must be run from a text document", 64, "Error"
-%	Exit Sub
-%	End If
-%	Count = 0
-%	' Examine each component - paragraph or table?
-%	Enum = Doc.Text.CreateEnumeration
-%	While Enum.HasMoreElements
-%	TextEl = Enum.NextElement
-%	' Is the component a paragraph?
-%	If TextEl.SupportsService("com.sun.star.text.Paragraph") Then
-%	Count = Count + 1
-%	End If
-%	Wend
-%	'Display result
-%	MsgBox Count, 0, "Paragraph Count"
-%	End Sub
-%	\end{lstlisting}
-%	
-%	
-%	\noindent Example for using the library
-%	
-%	\lstset{language={VBScript}}
-%	\begin{lstlisting}
-%	Sub DemoBetadist()
-%	Dim mp, x, df1 , df2, px1 
-%	Set mp = CreateObject("mpNumerics.mp_Lib")
-%	With mp
-%	'FloatingPointType: Single = 1, Double = 2, Multi = 3, Interval = 4, Decimal = 5, Rational = 6
-%	.FloatingPointType() = 3
-%	.Prec10() = 36
-%	Set x = .Real(0.1)
-%	Set df1 = .Real(13.0)
-%	Set df2 = .Real(23.0)
-%	Set px1 = .Real(0.0005)	
-%	' pdf = 1, LeftTail = 2, RightTail = 3, LeftQuantile = 4, RightQuantile = 5
-%	Print ("#TableStart#")
-%	Print ("Item" & "|" & "Value")
-%	Print  ("Density:" & "|"  & .BetaDist(1, x, df1, df2).Str())
-%	Print  ("LeftTail:" & "|" & .BetaDist(2, x, df1, df2).Str())
-%	Print  ("RightTail:" & "|"  & .BetaDist(3, x, df1, df2).Str())
-%	Print  ("LeftQuantile:" & "|"  & .BetaDist(4, px1, df1, df2).Str())
-%	Print  ("RightQuantile:" & "|"  & .BetaDist(5, px1, df1, df2).Str())
-%	Print("#TableEnd#")
-%	Print("")
-%	End With
-%	Set mp = Nothing
-%	End Sub\end{lstlisting}
-%	
-%	
-%	
-%	
-%	
-%	\newpage
-%	\section{Lua}
-%	
-%	Lua is a lightweight multi-paradigm programming language designed as a scripting language with "extensible semantics" as a primary goal. Lua is cross-platform since it is written in ISO C. Lua has a relatively simple C API, thus "Lua is especially useful for providing end users with an easy way to program the behavior of a software product without getting too far into its innards."
-%	
-%	\vpara
-%	Lua is commonly described as a “multi-paradigm” language, providing a small set of general features that can be extended to fit different problem types, rather than providing a more complex and rigid specification to match a single paradigm. Lua, for instance, does not contain explicit support for inheritance, but allows it to be implemented relatively easily with metatables. Similarly, Lua allows programmers to implement namespaces, classes, and other related features using its single table implementation; first-class functions allow the employment of many powerful techniques from functional programming; and full lexical scoping allows fine-grained information hiding to enforce the principle of least privilege.
-%	
-%	\vpara
-%	In general, Lua strives to provide flexible meta-features that can be extended as needed, rather than supply a feature-set specific to one programming paradigm. As a result, the base language is light – the full reference interpreter is only about 180 kB compiled[1] – and easily adaptable to a broad range of applications.
-%	
-%	\vpara
-%	Lua is a dynamically typed language intended for use as an extension or scripting language, and is compact enough to fit on a variety of host platforms. It supports only a small number of atomic data structures such as boolean values, numbers (double-precision floating point by default), and strings. Typical data structures such as arrays, sets, lists, and records can be represented using Lua’s single native data structure, the table, which is essentially a heterogeneous associative array.
-%	
-%	\vpara
-%	Lua implements a small set of advanced features such as first-class functions, garbage collection, closures, proper tail calls, coercion (automatic conversion between string and number values at run time), coroutines (cooperative multitasking) and dynamic module loading.
-%	
-%	\vpara
-%	By including only a minimum set of data types, Lua attempts to strike a balance between power and size.
-%	
-%	For further information on Lua, see \href{http://en.wikipedia.org/wiki/Lua_(programming_language)}{Wikipedia: Lua} (the text above has been copied from this reference), or the  \href{http://code.google.com/p/luaforwindows/}{Lua for Windows Homepage}.
-%	
-%	
-%	\vpara
-%	Example for using the library
-%	
-%	\lstset{language={VBScript}}
-%	\begin{lstlisting}
-%	--Enable COM support
-%	require("luacom")
-%	
-%	--Load the mpNumerics library
-%	mp = luacom.CreateObject("mpNumerics.mp_Lib")
-%	
-%	--Set Floating point type to MPFR with 60 decimal digits precision
-%	mp.FloatingPointType = 3
-%	mp.Prec10 = 60
-%	
-%	--Assign values to x1 and x2
-%	x1 = mp:Real(4.5)
-%	x2 = mp:Real("1.1")
-%	
-%	--Calculate x3 = x1 / x2
-%	x3 = x1:Div(x2)
-%	
-%	--Print the value of x3
-%	print ("Result: ", x3:Str())
-%	\end{lstlisting}
-%	
-%	
-%	\vpara
-%	Example for using Excel
-%	
-%	\lstset{language={VBScript}}
-%	\begin{lstlisting}
-%	require('luacom')
-%	excel = luacom.CreateObject("Excel.Application")
-%	excel.Visible = true
-%	wb = excel.Workbooks:Add()
-%	ws = wb.Worksheets(1)
-%	
-%	for i=1, 20 do
-%	ws.Cells(i,1).Value2 = i
-%	end
-%	
-%	-- excel.DisplayAlerts = false
-%	-- excel:Quit()
-%	-- excel = nil
-%	\end{lstlisting}
-%	
-%	
-%	
-%	\newpage
-%	\section{Ruby}
-%	Ruby is a dynamic, reflective, general-purpose object-oriented programming language that combines syntax inspired by Perl with Smalltalk-like features. It was also influenced by Eiffel and Lisp.[8] Ruby was first designed and developed in the mid-1990s by Yukihiro "Matz" Matsumoto in Japan.
-%	
-%	\vpara
-%	Ruby supports multiple programming paradigms, including functional, object oriented and imperative. It also has a dynamic type system and automatic memory management; it is therefore similar in varying respects to Smalltalk, Python, Perl, Lisp, Dylan, and CLU.
-%	
-%	\vpara
-%	The syntax of Ruby is broadly similar to that of Perl and Python. Class and method definitions are signaled by keywords. In contrast to Perl, variables are not obligatorily prefixed with a sigil. When used, the sigil changes the semantics of scope of the variable. One difference from C and Perl is that keywords are typically used to define logical code blocks, without braces (i.e., pair of { and }). For practical purposes there is no distinction between expressions and statements.[39] Line breaks are significant and taken as the end of a statement; a semicolon may be equivalently used. Unlike Python, indentation is not significant.
-%	
-%	\vpara
-%	One of the differences of Ruby compared to Python and Perl is that Ruby keeps all of its instance variables completely private to the class and only exposes them through accessor methods (attr\_writer, attr\_reader, etc.). Unlike the "getter" and "setter" methods of other languages like C++ or Java, accessor methods in Ruby can be created with a single line of code via metaprogramming; however, accessor methods can also be created in the traditional fashion of C++ and Java. As invocation of these methods does not require the use of parentheses, it is trivial to change an instance variable into a full function, without modifying a single line of code or having to do any refactoring achieving similar functionality to C\# and VB.NET property members.
-%	
-%	\vpara
-%	For further information on Ruby, see \href{http://en.wikipedia.org/wiki/Ruby_(programming_language)}{Wikipedia: Ruby} (the text above has been copied from this reference), or the  \href{http://www.ruby-lang.org/en/}{Ruby Homepage}. An easy-to-install package for Windows can be found at  \href{http://rubyforge.org/projects/rubyinstaller}{RubyForge}.
-%	
-%	\vpara
-%	Example for using the library
-%	
-%	\lstset{language={Ruby}}
-%	\begin{lstlisting}
-%	#Enable COM support
-%	require 'win32ole'
-%	
-%	#Load the mpNumerics library
-%	mp = WIN32OLE.new("mpNumerics.mp_Lib")
-%	
-%	#Set Floating point type to MPFR with 60 decimal digits precision
-%	mp.FloatingPointType = 3
-%	mp.Prec10 = 60
-%	
-%	#Assign values to x1 and x2
-%	x1 = mp.Real(4.5)
-%	x2 = mp.Real("1.1")
-%	
-%	#Calculate x3 = x1 / x2
-%	x3 = x1.Div(x2)
-%	
-%	#Print the value of x3
-%	puts x3.Str
-%	
-%	obj = WIN32OLE_VARIANT.new([[1.345345,2,3],[4,5,6]])
-%	p obj[0,0] 
-%	p obj[1,0] 
-%	obj[0,0] = 7
-%	p obj.value
-%	\end{lstlisting}
-%	
-%	
-%	\vpara
-%	Example for using Excel
-%	
-%	\lstset{language={Ruby}}
-%	\begin{lstlisting}
-%	require 'win32ole'
-%	xl = WIN32OLE.new("Excel.Application")
-%	
-%	puts "Excel failed to start" unless xl
-%	
-%	xl.Visible = true
-%	
-%	workbook = xl.Workbooks.Add
-%	sheet = workbook.Worksheets(1)
-%	
-%	#create some fake data
-%	data_a = []
-%	(1..10).each{|i| data_a.push i }
-%	
-%	data_b = []
-%	(1..10).each{|i| data_b.push((rand * 100).to_i) }
-%	
-%	#fill the worksheet with the fake data
-%	#showing 3 ways to populate cells with values
-%	(1..10).each do |i|
-%	sheet.Range("A#{i}").Select
-%	xl.ActiveCell.Formula = data_a[i-1]
-%	
-%	
-%	sheet.Range("B#{i}").Formula = data_b[i-1]
-%	
-%	
-%	cell = sheet.Range("C#{i}")
-%	cell.Formula = "=A#{i} - B#{i}"
-%	
-%	end 
-%	
-%	#chart type constants (via http://support.microsoft.com/kb/147803)
-%	xlArea = 1
-%	xlBar = 2
-%	
-%	xlColumn = 3
-%	xlLine = 4
-%	xlPie = 5
-%	xlRadar = -4151
-%	
-%	xlXYScatter = -4169
-%	xlCombination = -4111
-%	xl3DArea = -4098
-%	
-%	xl3DBar = -4099
-%	xl3DColumn = -4100
-%	xl3DLine = -4101 
-%	
-%	xl3DPie = -4102
-%	xl3DSurface = -4103
-%	xlDoughnut = -4120
-%	
-%	#creating a chart 
-%	chart_object = sheet.ChartObjects.Add(10, 80, 500, 250)
-%	
-%	chart = chart_object.Chart
-%	chart_range = sheet.Range("A1", "B10")
-%	
-%	chart.SetSourceData(chart_range, nil)
-%	chart.ChartType = xlXYScatter
-%	
-%	#get the value from a cell
-%	
-%	val = sheet.Range("C1").Value
-%	puts val
-%	
-%	#saving as pre-2007 format
-%	excel97_2003_format = -4143 
-%	
-%	pwd =  Dir.pwd.gsub('/','\\') << '\\'
-%	
-%	#otherwise, it sticks it in default save directory- C:\Users\Sam\Documents on my system
-%	#workbook.SaveAs("#{pwd}whatever.xls", excel97_2003_format)
-%	
-%	#xl.Quit
-%	\end{lstlisting}
-%	
-%	
-%	
-%	
-%	\newpage
-%	\section{PHP CLI}
-%	
-%	PHP is a server-side scripting language designed for web development but also used as a general-purpose programming language. PHP is now installed on more than 244 million websites and 2.1 million web servers.[2] Originally created by Rasmus Lerdorf in 1995, the reference implementation of PHP is now produced by The PHP Group.[3] While PHP originally stood for Personal Home Page,[4] it now stands for PHP: Hypertext Preprocessor, a recursive acronym.[5]
-%	
-%	\vpara
-%	PHP code is interpreted by a web server with a PHP processor module which generates the resulting web page: PHP commands can be embedded directly into an HTML source document rather than calling an external file to process data. It has also evolved to include a command-line interface capability and can be used in standalone graphical applications.[6]
-%	
-%	\vpara
-%	PHP is free software released under the PHP License, which is incompatible with the GNU General Public License (GPL) due to restrictions on the usage of the term PHP.[7] PHP can be deployed on most web servers and also as a standalone shell on almost every operating system and platform, free of charge.[8]
-%	
-%	\vpara
-%	The PHP interpreter only executes PHP code within its delimiters. Anything outside its delimiters is not processed by PHP (although non-PHP text is still subject to control structures described in PHP code) . The most common delimiters are <?php to open and ?> to close PHP sections. <script language="php"> and </script> delimiters are also available, as are the shortened forms <? or <?= (which is used to echo back a string or variable) and ?> as well as ASP-style short forms <\% or <\%= and \%>. While short delimiters are used, they make script files less portable as support for them can be disabled in the PHP configuration, and so they are discouraged.[37] The purpose of all these delimiters is to separate PHP code from non-PHP code, including HTML.[38]
-%	
-%	\vpara
-%	The first form of delimiters, <?php and ?>, in XHTML and other XML documents, creates correctly formed XML 'processing instructions'.[39] This means that the resulting mixture of PHP code and other markup in the server-side file is itself well-formed XML.
-%	
-%	\vpara
-%	Variables are prefixed with a dollar symbol, and a type does not need to be specified in advance. Unlike function and class names, variable names are case sensitive. Both double-quoted ("") and heredoc strings provide the ability to interpolate a variable's value into the string.[40] PHP treats newlines as whitespace in the manner of a free-form language (except when inside string quotes), and statements are terminated by a semicolon.[41] PHP has three types of comment syntax: /* */ marks block and inline comments; // as well as \# are used for one-line comments.[42] The echo statement is one of several facilities PHP provides to output text, e.g., to a web browser.
-%	
-%	\vpara
-%	In terms of keywords and language syntax, PHP is similar to most high level languages that follow the C style syntax. if conditions, for and while loops, and function returns are similar in syntax to languages such as C, C++, C\#, Java and Perl.
-%	
-%	\vpara
-%	PHP CLI is a short for PHP Command Line Interface. As the name implies, this is a way of using PHP in the system command line. Or by other words it is a way of running PHP Scripts that aren't on a web server (such as Apache web server or Microsoft IIS). People usually treat PHP as web development, server side tool. However, PHP CLI applies all advantages of PHP to shell scripting allowing to create either service side supporting scripts or system application even with GUI.
-%	
-%	\vpara
-%	For further information on PHP, see \href{http://en.wikipedia.org/wiki/PHP}{Wikipedia: PHP} (the text above has been copied from this reference), or the  \href{http://windows.php.net/}{PHP for Windows Homepage}, or the  \href{http://www.php-cli.com/}{PHP CLI Homepage}.
-%	
-%	\vpara
-%	Example for using the library
-%	
-%	\lstset{language={PHP}}
-%	\begin{lstlisting}
-%	#PHP Command line example
-%	<?php
-%	#Load the mpNumerics library
-%	$mp = new COM("mpNumerics.mp_Lib") or die("Cannot open library");
-%	
-%	#Set Floating point type to MPFR with 60 decimal digits precision
-%	$mp->FloatingPointType = 3;
-%	$mp->Prec10 = 60;
-%	
-%	#Assign values to x1 and x2
-%	$x1 = $mp->Real(4.5);
-%	$x2 = $mp->Real('1.1');
-%	
-%	#Calculate x3 = x1 / x2
-%	$x3 = $x1->Div($x2);
-%	
-%	echo "Hello world of PHP CLI! \n";
-%	
-%	#Print the value of x3
-%	echo $x3->Str();
-%	?>
-%	\end{lstlisting}
-%	
-%	
-%	\vpara
-%	Example for using Excel
-%	
-%	\lstset{language={PHP}}
-%	\begin{lstlisting}
-%	#PHP.ini has to be stored in the PDP application directory (derived from the sample inis)
-%	#Need to enable the win extension_dir directive
-%	#Need to add:
-%	
-%	#[COM_DOT_NET]
-%	#extension=php_com_dotnet.dll
-%	
-%	#as explained in 
-%	#http://www.php.net/manual/en/com.installation.php
-%	
-%	<?php
-%	$xlApp = new COM("Excel.Application");
-%	$xlApp->Workbooks->Add();
-%	$xlApp->Range("A1:C6")->Select();
-%	$xlApp->ActiveCell->Formula = "Hello World!";
-%	$xlApp->Visible = 1;
-%	?>
-%	\end{lstlisting}
-%	
-%	
-%	
-%	
-%	\newpage
-%	\section{Perl}
-%	Perl is a family of high-level, general-purpose, interpreted, dynamic programming languages. The languages in this family include Perl 5 and Perl 6.[4]
-%	
-%	\vpara
-%	Though Perl is not officially an acronym,[5] there are various backronyms in use, such as: Practical Extraction and Reporting Language.[6] Perl was originally developed by Larry Wall in 1987 as a general-purpose Unix scripting language to make report processing easier.[7] Since then, it has undergone many changes and revisions. The latest major stable revision of Perl 5 is 5.18, released in May 2013. Perl 6, which began as a redesign of Perl 5 in 2000, eventually evolved into a separate language. Both languages continue to be developed independently by different development teams and liberally borrow ideas from one another.
-%	
-%	\vpara
-%	The Perl languages borrow features from other programming languages including C, shell scripting (sh), AWK, and sed.[8] They provide powerful text processing facilities without the arbitrary data-length limits of many contemporary Unix tools,[9] facilitating easy manipulation of text files. Perl 5 gained widespread popularity in the late 1990s as a CGI scripting language, in part due to its parsing abilities.[10]
-%	
-%	\vpara
-%	In addition to CGI, Perl 5 is used for graphics programming, system administration, network programming, finance, bioinformatics, and other applications. It's nicknamed "the Swiss Army chainsaw of scripting languages" because of its flexibility and power,[11] and possibly also because of its perceived "ugliness".[12] In 1998, it was also referred to as the "duct tape that holds the Internet together", in reference to its ubiquity and perceived inelegance.[13]
-%	
-%	\vpara
-%	The overall structure of Perl derives broadly from C. Perl is procedural in nature, with variables, expressions, assignment statements, brace-delimited blocks, control structures, and subroutines.
-%	
-%	\vpara
-%	Perl also takes features from shell programming. All variables are marked with leading sigils, which unambiguously identify the data type (for example, scalar, array, hash) of the variable in context. Importantly, sigils allow variables to be interpolated directly into strings. Perl has many built-in functions that provide tools often used in shell programming (although many of these tools are implemented by programs external to the shell) such as sorting, and calling on operating system facilities.
-%	
-%	\vpara
-%	Perl takes lists from Lisp, hashes ("associative arrays") from AWK, and regular expressions from sed. These simplify and facilitate many parsing, text-handling, and data-management tasks. Also shared with Lisp are the implicit return of the last value in a block, and the fact that all statements have a value, and thus are also expressions and can be used in larger expressions themselves.
-%	
-%	\vpara
-%	Perl 5 added features that support complex data structures, first-class functions (that is, closures as values), and an object-oriented programming model. These include references, packages, class-based method dispatch, and lexically scoped variables, along with compiler directives (for example, the strict pragma). A major additional feature introduced with Perl 5 was the ability to package code as reusable modules. 
-%	
-%	\vpara
-%	All versions of Perl do automatic data-typing and automatic memory management. The interpreter knows the type and storage requirements of every data object in the program; it allocates and frees storage for them as necessary using reference counting (so it cannot deallocate circular data structures without manual intervention). Legal type conversions — for example, conversions from number to string — are done automatically at run time; illegal type conversions are fatal errors.
-%	
-%	\vpara
-%	ActivePerl is a closed source distribution from ActiveState that has regular releases that track the core Perl releases.[65] The distribution also includes the Perl package manager (PPM),[66] a popular tool for installing, removing, upgrading, and managing the use of common Perl modules.
-%	
-%	\vpara
-%	Strawberry Perl is an open source distribution for Windows. It has had regular, quarterly releases since January 2008, including new modules as feedback and requests come in. Strawberry Perl aims to be able to install modules like standard Perl distributions on other platforms, including compiling XS modules.
-%	
-%	\vpara
-%	For further information on Perl, see \href{http://en.wikipedia.org/wiki/Perl}{Wikipedia: Perl} (the text above has been copied from this reference), or the  \href{http://www.perl.org/}{Perl Homepage}.
-%	
-%	\vpara
-%	ActivePerl is available from  \href{http://www.activestate.com/activeperl/downloads}{ActivePerl Homepage}. This distribution includes support for COM. See \href{http://support.microsoft.com/kb/214797/en-us}{here} for an example.
-%	
-%	
-%	\vpara
-%	Example for using the library
-%	
-%	\lstset{language={Perl}}
-%	\begin{lstlisting}
-%	#Enable COM support
-%	use Win32::OLE;
-%	
-%	#Load the mpNumerics library
-%	$mp = Win32::OLE->new('mpNumerics.mp_Lib');
-%	
-%	#Set Floating point type to MPFR with 60 decimal digits precision
-%	$mp->{FloatingPointType} = 3;
-%	$mp->{Prec10} = 60;
-%	
-%	#Assign values to x1 and x2
-%	$x1 = $mp->Real(4.5);
-%	$x2 = $mp->Real('1.1');
-%	
-%	#Calculate x3 = x1 / x2
-%	$x3 = $x1->Div($x2);
-%	
-%	#Print the value of x3
-%	print $x3->Str();
-%	
-%	# Wait for user input...
-%	# print "Press <return> to continue...";
-%	# $x = <STDIN>;
-%	\end{lstlisting}
-%	
-%	
-%	\vpara
-%	Example for using the Excel
-%	
-%	\lstset{language={Perl}}
-%	\begin{lstlisting}
-%	use Win32::OLE;
-%	
-%	# Start Excel and make it visible
-%	$xlApp = Win32::OLE->new('Excel.Application');
-%	$xlApp->{Visible} = 1;
-%	
-%	# Create a new workbook
-%	$xlBook = $xlApp->Workbooks->Add;
-%	
-%	# Our data that we will add to the workbook...
-%	$mydata = [["Item",     "Category", "Price"], 
-%	["Nails",    "Hardware",  "5.25"],
-%	["Shirt",    "Clothing", "23.00"],
-%	["Hammer",   "Hardware", "16.25"],
-%	["Sandwich", "Food",      "5.00"],
-%	["Pants",    "Clothing", "31.00"],
-%	["Drinks",   "Food",      "2.25"]];
-%	
-%	# Write all the data at once...
-%	$rng = $xlBook->ActiveSheet->Range("A1:C7");
-%	$rng->{Value} = $mydata;
-%	
-%	# Create a PivotTable for the data...
-%	$tbl = $xlBook->ActiveSheet->PivotTableWizard(1, $rng, "", "MyPivotTable");
-%	
-%	# Set pivot fields...
-%	$tbl->AddFields("Category", "Item");
-%	$tbl->PivotFields("Price")->{Orientation} = 4; # 4=xlDataField
-%	
-%	# Create a chart too...
-%	$chart = $xlBook->Charts->Add;
-%	$chart->SetSourceData($rng, 2);
-%	$chart->{ChartType} = 70; # 3D-pie chart
-%	$chart->Location(2, "Sheet4");
-%	
-%	# Wait for user input...
-%	# print "Press <return> to continue...";
-%	# $x = <STDIN>;
-%	
-%	# Clean up
-%	# $xlBook->{Saved} = 1;
-%	# $xlApp->Quit;
-%	# $xlBook = 0;
-%	# $xlApp = 0;
-%	# $xlApp = 0;
-%	print "All done.";
-%	\end{lstlisting}
-%	
-%	
-%	
-%	
-%
-%	
-%	\newpage
-%	\section{MatLab (COM interface)}
-%	\label{MatLabCOM}
-%	
-%	MATLAB has already been introduced in section \ref{MatLabNET} Apart from the the .NET interface described in this section, MATLAB has also a COM interface. Its use is illustrated by the examples below.
-%	
-%	\vpara
-%	Example for using the library via COM
-%	
-%	\lstset{language={Matlab}}
-%	\begin{lstlisting}
-%	%Open a COM server on Matlab
-%	
-%	mp = actxserver('mpNumerics.mp_Lib');
-%	mp.Prec10 = 60;
-%	mp.FloatingPointType = 3;
-%	
-%	x = mp.Real(2);
-%	y = mp.Sqrt(x);
-%	s = y.Str();
-%	
-%	s2 = char(s);
-%	fprintf('s is equal to %s.\n',s2);
-%	
-%	quit;
-%	
-%	\end{lstlisting}
-%	
-%	
-%	\vpara
-%	Example for using Excel
-%	
-%	\lstset{language={Matlab}}
-%	\begin{lstlisting}
-%	%Open a COM server on Matlab
-%	
-%	x = 4.3;
-%	fprintf('x is equal to %6.2f.\n',x);
-%	
-%	Excel = actxserver('Excel.Application');
-%	
-%	Excel.Workbooks.Add();
-%	Excel.Visible = true;
-%	quit;
-%	\end{lstlisting}
-%	
-%	
-%	
-%	
-%	
+	
+	\chapter{Component Object Model (COM) Interface}
+	\label{COMInterface}
+	
+	Component Object Model (COM) is a binary-interface standard for software components introduced by Microsoft in 1993. It is used to enable interprocess communication and dynamic object creation in a large range of programming languages. COM is the basis for several other Microsoft technologies and frameworks, including OLE, OLE Automation, ActiveX, COM+, DCOM, the Windows shell, DirectX, and Windows Runtime
+	
+	\vpara
+	Overview[edit source | edit]The essence of COM is a language-neutral way of implementing objects that can be used in environments different from the one in which they were created, even across machine boundaries. For well-authored components, COM allows reuse of objects with no knowledge of their internal implementation, as it forces component implementers to provide well-defined interfaces that are separated from the implementation. The different allocation semantics of languages are accommodated by making objects responsible for their own creation and destruction through reference-counting. Casting between different interfaces of an object is achieved through the QueryInterface method. The preferred method of inheritance within COM is the creation of sub-objects to which method calls are delegated.
+	
+	\vpara
+	COM is an interface technology defined and implemented as standard only on Microsoft Windows and Apple's Core Foundation 1.3 and later plug-in API,[1] that in any case implement only a subset of the whole COM interface.[2] For some applications, COM has been replaced at least to some extent by the Microsoft .NET framework, and support for Web Services through the Windows Communication Foundation (WCF). However, COM objects can be used with all .NET languages through .NET COM Interop. Networked DCOM uses binary proprietary formats, while WCF encourages the use of XML-based SOAP messaging. COM is very similar to other component software interface technologies, such as CORBA and Java Beans, although each has its own strengths and weaknesses.
+	
+	\vpara
+	Unlike C++, COM provides a stable ABI that does not change between compiler releases.[3] This makes COM interfaces attractive for object-oriented C++ libraries that are to be used by clients compiled using different compiler versions.
+	
+	\vpara
+	For further information, see \href{http://en.wikipedia.org/wiki/Component_Object_Model}{Wikipedia: Component Object Model} (the text above has been copied from this reference).
+	
+	\vpara
+	Missing:
+	
+	A description of how to build the relevant projects.
+	
+	
+	
+	
+	\newpage
+	\section{VBScript (Windows Script Host)}
+	VBScript (Visual Basic Scripting Edition) is an Active Scripting language developed by Microsoft that is modeled on Visual Basic. It is designed as a “lightweight” language with a fast interpreter for use in a wide variety of Microsoft environments. VBScript uses the Component Object Model to access elements of the environment within which it is running; for example, the FileSystemObject (FSO) is used to create, read, update and delete files.
+	
+	\vpara
+	VBScript has been installed by default in every desktop release of Microsoft Windows since Windows 98;[1] in Windows Server since Windows NT 4.0 Option Pack;[2] and optionally with Windows CE (depending on the device it is installed on).
+	
+	\vpara
+	A VBScript script must be executed within a host environment, of which there are several provided with Microsoft Windows, including: Windows Script Host (WSH), Internet Explorer (IE), and Internet Information Services (IIS).[3] Additionally, the VBScript hosting environment is embeddable in other programs, through technologies such as the Microsoft Script Control (msscript.ocx).
+	
+	\vpara
+	VBScript can also be used to create applications that run directly on a workstation running Microsoft Windows. The simplest example is a script that makes use of the Windows Script Host (WSH) environment. Such a script is usually in a stand-alone file with the file extension .vbs. The script can be invoked in two ways. Wscript.exe is used to display output and receive input through a GUI, such as dialog and input boxes. Cscript.exe is used in a command line environment.
+	
+	\vpara
+	VBScript can be included in two other types of scripting files: Windows Script Files, and HTML Applications.
+	
+	\vpara
+	A Windows Script File (WSF) is styled after XML. A WSF file can include multiple VBS files. As a result WSF files provide a means for code reuse: one can write a library of classes or functions in one or more .vbs files, and include those files in one or more WSF files to use and reuse that functionality in a modular way. The files have extension .wsf and can be executed using wscript.exe or cscript.exe, just like a .vbe file.
+	
+	\vpara
+	An HTML Application (HTA) is styled after HTML. The HTML in the file is used to generate the user interface, and a scripting language such as VBScript is used for the program logic. The files have extension .hta and can be executed using mshta.exe.
+	
+	\vpara
+	VBScript (and JScript) can also be used in a Windows Script Component - an ActiveX-enabled script class that can be invoked by other COM-enabled applications.[13] These files have extension .wsc.
+	
+	For further information on VBScript, see \href{http://en.wikipedia.org/wiki/VBScript}{Wikipedia: VBScript} (the text above has been copied from this reference).
+	
+	\vpara
+	\noindent Example for using the library
+	
+	\lstset{language={VBScript}}
+	\begin{lstlisting}
+	Option Explicit
+	
+	Sub Print(s)
+	WScript.Echo  s
+	End Sub
+	
+	
+	Sub DemoBetadist()
+	Dim mp, x, df1 , df2, px1 
+	Set mp = CreateObject("mpNumerics.mp_Lib")
+	With mp
+	'FloatingPointType: Single = 1, Double = 2, Multi = 3, Interval = 4, Decimal = 5, Rational = 6
+	.FloatingPointType() = 3
+	.Prec10() = 36
+	Set x = .Real(0.1)
+	Set df1 = .Real(13.0)
+	Set df2 = .Real(23.0)
+	Set px1 = .Real(0.0005)	
+	' pdf = 1, LeftTail = 2, RightTail = 3, LeftQuantile = 4, RightQuantile = 5
+	Print ("#TableStart#")
+	Print ("Item" & "|" & "Value")
+	Print  ("Density:" & "|"  & .BetaDist(1, x, df1, df2).Str())
+	Print  ("LeftTail:" & "|" & .BetaDist(2, x, df1, df2).Str())
+	Print  ("RightTail:" & "|"  & .BetaDist(3, x, df1, df2).Str())
+	Print  ("LeftQuantile:" & "|"  & .BetaDist(4, px1, df1, df2).Str())
+	Print  ("RightQuantile:" & "|"  & .BetaDist(5, px1, df1, df2).Str())
+	Print("#TableEnd#")
+	Print("")
+	End With
+	Set mp = Nothing
+	End Sub
+	
+	Call DemoBetadist()
+	\end{lstlisting}
+	
+	
+	\vpara
+	Example for using Excel
+	
+	\lstset{language={VBScript}}
+	\begin{lstlisting}
+	Option Explicit
+	
+	Sub Print(s)
+	WScript.Echo  s
+	End Sub
+	
+	Sub DemoExcel()
+	Dim objExcel 'As Excel.Application
+	Set objExcel = CreateObject("Excel.Application")
+	'objExcel.Workbooks.Open("C:\Extra\mpNumerics\Output\mpTemp00.html")
+	objExcel.Visible = True
+	objExcel.Workbooks.Add
+	objExcel.Cells(1, 1).Value = "Test value"
+	Set objExcel = Nothing
+	End Sub
+	
+	Call DemoExcel()
+	\end{lstlisting}
+	
+	
+	
+	
+	\newpage
+	\section{JScript (Windows Script Host)}
+	JScript is Microsoft's dialect of the ECMAScript standard[1] that is used in Microsoft's Internet Explorer.
+	
+	\vpara
+	JScript is implemented as a Windows Script engine.[2] This means that it can be "plugged in" to any application that supports Windows Script,[3] such as Internet Explorer, Active Server Pages, and Windows Script Host. It also means that any application supporting Windows Script can use multiple languages (JScript, VBScript, Perl, and others).
+	
+	\vpara
+	JScript was first supported in the Internet Explorer 3.0 browser released in August 1996. Its most recent version is JScript 9.0, included in Internet Explorer 9.
+	
+	\vpara
+	JScript supports conditional compilation, which allows a programmer to selectively execute code within block comments. This is an extension to the ECMAScript standard that is not supported in other JavaScript implementations.
+	
+	\vpara
+	The original JScript is an Active Scripting engine. Like other Active Scripting languages, it is built on the COM/OLE Automation platform and provides scripting capabilities to host applications.
+	
+	\vpara
+	This is the version used when hosting JScript inside a Web page displayed by Internet Explorer, in an HTML application, in classic ASP, in Windows Script Host scripts and several other Automation environments.
+	
+	\vpara
+	JScript is sometimes referred to as "classic JScript" or "Active Scripting JScript" to differentiate it from newer .NET-based versions.
+	
+	\vpara
+	Some versions of JScript are available for multiple versions of Internet Explorer and Windows. For example, JScript 5.7 was introduced with Internet Explorer 7.0 and is also installed for Internet Explorer 6.0 with Windows XP Service Pack 3, while JScript 5.8 was introduced with Internet Explorer 8.0 and is also installed with Internet Explorer 6.0 on Windows Mobile 6.5.
+	
+	\vpara
+	Microsoft's implementation of ECMAScript 5th Edition in Windows 8 Consumer Preview is called JavaScript and the corresponding Visual Studio 11 Express Beta includes a “completely new”, full-featured JavaScript editor with IntelliSense enhancements for HTML5 and ECMAScript 5 syntax, “VSDOC” annotations for multiple overloads, simplified DOM configuration, brace matching, collapsible outlining and “go to definition”.[6]
+	
+	\vpara
+	For further information on JScript, see \href{http://en.wikipedia.org/wiki/JScript}{Wikipedia: JScript} (the text above has been copied from this reference).
+	For further information on JavaScript, see \href{http://en.wikipedia.org/wiki/JavaScript}{Wikipedia: JavaScript}.
+	
+	
+	\vpara
+	Example for using the library
+	
+	\lstset{language={JavaScript}}
+	\begin{lstlisting}
+	var stdin = WScript.StdIn;
+	var stdout = WScript.StdOut;
+	
+	var mp = new ActiveXObject ("mpNumerics.mp_Lib");
+	mp.Prec10 = 60;
+	mp.FloatingPointType = 3;
+	var x = mp.Real(2);
+	var y = mp.Sqrt(x);
+	var s = y.Str();
+	
+	stdout.WriteLine("Sqrt(2):");
+	stdout.WriteLine(s);
+	\end{lstlisting}
+	
+	
+	\vpara
+	Example for using Excel
+	
+	\lstset{language={JavaScript}}
+	\begin{lstlisting}
+	var xls = new ActiveXObject ( "Excel.Application" );
+	xls.visible = true;
+	var newBook = xls.Workbooks.Add;
+	newBook.Worksheets.Add;
+	newBook.Worksheets(1).Activate;
+	newBook.Worksheets(1).Cells(1,1).value="First Column, First Cell";
+	newBook.Worksheets(1).Cells(2,1).value="First Column, Second Cell";
+	newBook.Worksheets(1).Cells(1,2).value="Second Column, First Cell";
+	newBook.Worksheets(1).Cells(2,2).value="Second Column, Second Cell";
+	newBook.Worksheets(1).Name="WorkSheet from Javascript";
+	// newBook.Worksheets(1).SaveAs("C:\\temp\\TEST2.XLS");
+	\end{lstlisting}
+	
+	
+	
+	
+	\newpage
+	\section{Visual Basic for Applications, Visual Basic 6.0}
+	
+	Visual Basic for Applications (VBA) is an implementation of Microsoft's event-driven programming language Visual Basic 6 and its associated integrated development environment (IDE).
+	
+	\vpara
+	Visual Basic for Applications enables building user defined functions, automating processes and accessing Windows API and other low-level functionality through dynamic-link libraries (DLLs). It supersedes and expands on the abilities of earlier application-specific macro programming languages such as Word's WordBasic. It can be used to control many aspects of the host application, including manipulating user interface features, such as menus and toolbars, and working with custom user forms or dialog boxes.
+	
+	\vpara
+	As its name suggests, VBA is closely related to Visual Basic and uses the Visual Basic Runtime Library, but it can normally only run code within a host application rather than as a standalone program. It can, however, be used to control one application from another via OLE Automation. For example, it is used to automatically create a Word report from Excel data, which are automatically collected by Excel from polled observation sensors. VBA has the ability to use (but not create) (ActiveX/COM) DLLs, and later versions add support for class modules.
+	
+	\vpara
+	VBA is built into most Microsoft Office applications, including Office for Mac OS X (apart from version 2008) and other Microsoft applications such as Microsoft MapPoint and Microsoft Visio
+	
+	For further information, see \href{http://en.wikipedia.org/wiki/Visual_Basic_for_Applications}{Wikipedia: VBA} (the text above has been copied from this reference).
+	
+	\vpara
+	Visual Basic is a third-generation event-driven programming language and integrated development environment (IDE) from Microsoft for its COM programming model first released in 1991. Microsoft intends Visual Basic to be relatively easy to learn and use.[1][2] Visual Basic was derived from BASIC and enables the rapid application development (RAD) of graphical user interface (GUI) applications, access to databases using Data Access Objects, Remote Data Objects, or ActiveX Data Objects, and creation of ActiveX controls and objects. The scripting language VBScript is a subset of Visual Basic.
+	
+	\vpara
+	A programmer can create an application using the components provided by the Visual Basic program itself. Programs written in Visual Basic can also use the Windows API, but doing so requires external function declarations. Though the program has received criticism for its perceived faults, version 3 of Visual Basic was a runaway commercial success, and many companies offered third party controls greatly extending its functionality.
+	
+	\vpara
+	The final release was version 6 in 1998. Microsoft's extended support ended in March 2008 and the designated successor was Visual Basic .NET (now known simply as Visual Basic).
+	
+	For further information, see \href{http://en.wikipedia.org/wiki/Visual_Basic}{Wikipedia: VB6} (the text above has been copied from this reference).
+	
+	\lstset{language={[Visual]Basic}}
+	\begin{lstlisting}
+	'Imports System
+	'Imports System.Console
+	'Imports Microsoft.VisualBasic.Strings
+	'Imports mpNumericsLib
+	
+	'Module Module1
+	
+	Sub Print(s As String)
+	WriteLine(s)
+	End Sub
+	
+	
+	Sub DemoBetadist()
+	Dim mp As New mp_Lib
+	Dim x, df1 , df2, px1  As New mp_Real
+	With mp
+	'FloatingPointType: Single = 1, Double = 2, Multi = 3, Interval = 4, Rational = 5
+	.FloatingPointType() = 3
+	.Prec10() = 40
+	x = .Real(0.1)
+	df1 = .Real(13.0)
+	df2 = .Real(23.0)
+	px1 = .Real(0.0005)	
+	' pdf = 1, LeftTail = 2, RightTail = 3, LeftQuantile = 4, RightQuantile = 5
+	Print ("Density:" & .BetaDist(1, x, df1, df2).Str())
+	Print ("LeftTail:"& .BetaDist(2, x, df1, df2).Str())
+	Print ("RightTail:" & .BetaDist(3, x, df1, df2).Str())
+	Print ("LeftQuantile:" & .BetaDist(4, px1, df1, df2).Str())
+	Print ("RightQuantile:" & .BetaDist(5, px1, df1, df2).Str())
+	End With
+	mp = Nothing
+	End Sub
+	
+	Sub Main()
+	Call DemoBetadist()
+	End Sub
+	
+	'End Module
+	\end{lstlisting}
+	
+	
+	
+	
+	\newpage
+	\section{OpenOffice Basic}
+	
+	OpenOffice Basic (formerly known as StarOffice Basic or StarBasic or OOoBasic) is a dialect of the programming language BASIC that is included with the OpenOffice, StarOffice and LibreOffice office suites.
+	
+	\vpara
+	Although Openoffice Basic itself is similar to other dialects of Basic, such as Microsoft's VBA, the application programming interface (API) is very different, as the example below of a macro illustrates. While there is a much easier way to obtain the "paragraph count" document property, the example shows the fundamental methods for accessing each paragraph in a text document, sequentially.
+	
+	\vpara
+	For further information, see \href{http://en.wikipedia.org/wiki/OpenOffice_Basic}{Wikipedia: OpenOffice Basic} (the text above has been copied from this reference).
+	
+	\vpara
+	For help regarding the language, see the \href{http://wiki.openoffice.org/wiki/Documentation/BASIC_Guide}{OpenOffice.org BASIC Programming Guide}.
+	Information on the OpenOffice API is available from  \href{http://www.openoffice.org/api/}{OpenOffice API}.
+	
+	\lstset{language={VBScript}}
+	\begin{lstlisting}
+	Sub ParaCount
+	'
+	' Count number of paragraphs in a text document
+	'
+	Dim Doc As Object, Enum As Object, TextEl As Object, Count As Long
+	Doc = ThisComponent
+	' Is this a text document?
+	If Not Doc.SupportsService("com.sun.star.text.TextDocument") Then
+	MsgBox "This macro must be run from a text document", 64, "Error"
+	Exit Sub
+	End If
+	Count = 0
+	' Examine each component - paragraph or table?
+	Enum = Doc.Text.CreateEnumeration
+	While Enum.HasMoreElements
+	TextEl = Enum.NextElement
+	' Is the component a paragraph?
+	If TextEl.SupportsService("com.sun.star.text.Paragraph") Then
+	Count = Count + 1
+	End If
+	Wend
+	'Display result
+	MsgBox Count, 0, "Paragraph Count"
+	End Sub
+	\end{lstlisting}
+	
+	
+	\noindent Example for using the library
+	
+	\lstset{language={VBScript}}
+	\begin{lstlisting}
+	Sub DemoBetadist()
+	Dim mp, x, df1 , df2, px1 
+	Set mp = CreateObject("mpNumerics.mp_Lib")
+	With mp
+	'FloatingPointType: Single = 1, Double = 2, Multi = 3, Interval = 4, Decimal = 5, Rational = 6
+	.FloatingPointType() = 3
+	.Prec10() = 36
+	Set x = .Real(0.1)
+	Set df1 = .Real(13.0)
+	Set df2 = .Real(23.0)
+	Set px1 = .Real(0.0005)	
+	' pdf = 1, LeftTail = 2, RightTail = 3, LeftQuantile = 4, RightQuantile = 5
+	Print ("#TableStart#")
+	Print ("Item" & "|" & "Value")
+	Print  ("Density:" & "|"  & .BetaDist(1, x, df1, df2).Str())
+	Print  ("LeftTail:" & "|" & .BetaDist(2, x, df1, df2).Str())
+	Print  ("RightTail:" & "|"  & .BetaDist(3, x, df1, df2).Str())
+	Print  ("LeftQuantile:" & "|"  & .BetaDist(4, px1, df1, df2).Str())
+	Print  ("RightQuantile:" & "|"  & .BetaDist(5, px1, df1, df2).Str())
+	Print("#TableEnd#")
+	Print("")
+	End With
+	Set mp = Nothing
+	End Sub\end{lstlisting}
+	
+	
+	
+	
+	
+	\newpage
+	\section{Lua}
+	
+	Lua is a lightweight multi-paradigm programming language designed as a scripting language with "extensible semantics" as a primary goal. Lua is cross-platform since it is written in ISO C. Lua has a relatively simple C API, thus "Lua is especially useful for providing end users with an easy way to program the behavior of a software product without getting too far into its innards."
+	
+	\vpara
+	Lua is commonly described as a “multi-paradigm” language, providing a small set of general features that can be extended to fit different problem types, rather than providing a more complex and rigid specification to match a single paradigm. Lua, for instance, does not contain explicit support for inheritance, but allows it to be implemented relatively easily with metatables. Similarly, Lua allows programmers to implement namespaces, classes, and other related features using its single table implementation; first-class functions allow the employment of many powerful techniques from functional programming; and full lexical scoping allows fine-grained information hiding to enforce the principle of least privilege.
+	
+	\vpara
+	In general, Lua strives to provide flexible meta-features that can be extended as needed, rather than supply a feature-set specific to one programming paradigm. As a result, the base language is light – the full reference interpreter is only about 180 kB compiled[1] – and easily adaptable to a broad range of applications.
+	
+	\vpara
+	Lua is a dynamically typed language intended for use as an extension or scripting language, and is compact enough to fit on a variety of host platforms. It supports only a small number of atomic data structures such as boolean values, numbers (double-precision floating point by default), and strings. Typical data structures such as arrays, sets, lists, and records can be represented using Lua’s single native data structure, the table, which is essentially a heterogeneous associative array.
+	
+	\vpara
+	Lua implements a small set of advanced features such as first-class functions, garbage collection, closures, proper tail calls, coercion (automatic conversion between string and number values at run time), coroutines (cooperative multitasking) and dynamic module loading.
+	
+	\vpara
+	By including only a minimum set of data types, Lua attempts to strike a balance between power and size.
+	
+	For further information on Lua, see \href{http://en.wikipedia.org/wiki/Lua_(programming_language)}{Wikipedia: Lua} (the text above has been copied from this reference), or the  \href{http://code.google.com/p/luaforwindows/}{Lua for Windows Homepage}.
+	
+	
+	\vpara
+	Example for using the library
+	
+	\lstset{language={VBScript}}
+	\begin{lstlisting}
+	--Enable COM support
+	require("luacom")
+	
+	--Load the mpNumerics library
+	mp = luacom.CreateObject("mpNumerics.mp_Lib")
+	
+	--Set Floating point type to MPFR with 60 decimal digits precision
+	mp.FloatingPointType = 3
+	mp.Prec10 = 60
+	
+	--Assign values to x1 and x2
+	x1 = mp:Real(4.5)
+	x2 = mp:Real("1.1")
+	
+	--Calculate x3 = x1 / x2
+	x3 = x1:Div(x2)
+	
+	--Print the value of x3
+	print ("Result: ", x3:Str())
+	\end{lstlisting}
+	
+	
+	\vpara
+	Example for using Excel
+	
+	\lstset{language={VBScript}}
+	\begin{lstlisting}
+	require('luacom')
+	excel = luacom.CreateObject("Excel.Application")
+	excel.Visible = true
+	wb = excel.Workbooks:Add()
+	ws = wb.Worksheets(1)
+	
+	for i=1, 20 do
+	ws.Cells(i,1).Value2 = i
+	end
+	
+	-- excel.DisplayAlerts = false
+	-- excel:Quit()
+	-- excel = nil
+	\end{lstlisting}
+	
+	
+	
+	\newpage
+	\section{Ruby}
+	Ruby is a dynamic, reflective, general-purpose object-oriented programming language that combines syntax inspired by Perl with Smalltalk-like features. It was also influenced by Eiffel and Lisp.[8] Ruby was first designed and developed in the mid-1990s by Yukihiro "Matz" Matsumoto in Japan.
+	
+	\vpara
+	Ruby supports multiple programming paradigms, including functional, object oriented and imperative. It also has a dynamic type system and automatic memory management; it is therefore similar in varying respects to Smalltalk, Python, Perl, Lisp, Dylan, and CLU.
+	
+	\vpara
+	The syntax of Ruby is broadly similar to that of Perl and Python. Class and method definitions are signaled by keywords. In contrast to Perl, variables are not obligatorily prefixed with a sigil. When used, the sigil changes the semantics of scope of the variable. One difference from C and Perl is that keywords are typically used to define logical code blocks, without braces (i.e., pair of { and }). For practical purposes there is no distinction between expressions and statements.[39] Line breaks are significant and taken as the end of a statement; a semicolon may be equivalently used. Unlike Python, indentation is not significant.
+	
+	\vpara
+	One of the differences of Ruby compared to Python and Perl is that Ruby keeps all of its instance variables completely private to the class and only exposes them through accessor methods (attr\_writer, attr\_reader, etc.). Unlike the "getter" and "setter" methods of other languages like C++ or Java, accessor methods in Ruby can be created with a single line of code via metaprogramming; however, accessor methods can also be created in the traditional fashion of C++ and Java. As invocation of these methods does not require the use of parentheses, it is trivial to change an instance variable into a full function, without modifying a single line of code or having to do any refactoring achieving similar functionality to C\# and VB.NET property members.
+	
+	\vpara
+	For further information on Ruby, see \href{http://en.wikipedia.org/wiki/Ruby_(programming_language)}{Wikipedia: Ruby} (the text above has been copied from this reference), or the  \href{http://www.ruby-lang.org/en/}{Ruby Homepage}. An easy-to-install package for Windows can be found at  \href{http://rubyforge.org/projects/rubyinstaller}{RubyForge}.
+	
+	\vpara
+	Example for using the library
+	
+	\lstset{language={Ruby}}
+	\begin{lstlisting}
+	#Enable COM support
+	require 'win32ole'
+	
+	#Load the mpNumerics library
+	mp = WIN32OLE.new("mpNumerics.mp_Lib")
+	
+	#Set Floating point type to MPFR with 60 decimal digits precision
+	mp.FloatingPointType = 3
+	mp.Prec10 = 60
+	
+	#Assign values to x1 and x2
+	x1 = mp.Real(4.5)
+	x2 = mp.Real("1.1")
+	
+	#Calculate x3 = x1 / x2
+	x3 = x1.Div(x2)
+	
+	#Print the value of x3
+	puts x3.Str
+	
+	obj = WIN32OLE_VARIANT.new([[1.345345,2,3],[4,5,6]])
+	p obj[0,0] 
+	p obj[1,0] 
+	obj[0,0] = 7
+	p obj.value
+	\end{lstlisting}
+	
+	
+	\vpara
+	Example for using Excel
+	
+	\lstset{language={Ruby}}
+	\begin{lstlisting}
+	require 'win32ole'
+	xl = WIN32OLE.new("Excel.Application")
+	
+	puts "Excel failed to start" unless xl
+	
+	xl.Visible = true
+	
+	workbook = xl.Workbooks.Add
+	sheet = workbook.Worksheets(1)
+	
+	#create some fake data
+	data_a = []
+	(1..10).each{|i| data_a.push i }
+	
+	data_b = []
+	(1..10).each{|i| data_b.push((rand * 100).to_i) }
+	
+	#fill the worksheet with the fake data
+	#showing 3 ways to populate cells with values
+	(1..10).each do |i|
+	sheet.Range("A#{i}").Select
+	xl.ActiveCell.Formula = data_a[i-1]
+	
+	
+	sheet.Range("B#{i}").Formula = data_b[i-1]
+	
+	
+	cell = sheet.Range("C#{i}")
+	cell.Formula = "=A#{i} - B#{i}"
+	
+	end 
+	
+	#chart type constants (via http://support.microsoft.com/kb/147803)
+	xlArea = 1
+	xlBar = 2
+	
+	xlColumn = 3
+	xlLine = 4
+	xlPie = 5
+	xlRadar = -4151
+	
+	xlXYScatter = -4169
+	xlCombination = -4111
+	xl3DArea = -4098
+	
+	xl3DBar = -4099
+	xl3DColumn = -4100
+	xl3DLine = -4101 
+	
+	xl3DPie = -4102
+	xl3DSurface = -4103
+	xlDoughnut = -4120
+	
+	#creating a chart 
+	chart_object = sheet.ChartObjects.Add(10, 80, 500, 250)
+	
+	chart = chart_object.Chart
+	chart_range = sheet.Range("A1", "B10")
+	
+	chart.SetSourceData(chart_range, nil)
+	chart.ChartType = xlXYScatter
+	
+	#get the value from a cell
+	
+	val = sheet.Range("C1").Value
+	puts val
+	
+	#saving as pre-2007 format
+	excel97_2003_format = -4143 
+	
+	pwd =  Dir.pwd.gsub('/','\\') << '\\'
+	
+	#otherwise, it sticks it in default save directory- C:\Users\Sam\Documents on my system
+	#workbook.SaveAs("#{pwd}whatever.xls", excel97_2003_format)
+	
+	#xl.Quit
+	\end{lstlisting}
+	
+	
+	
+	
+	\newpage
+	\section{PHP CLI}
+	
+	PHP is a server-side scripting language designed for web development but also used as a general-purpose programming language. PHP is now installed on more than 244 million websites and 2.1 million web servers.[2] Originally created by Rasmus Lerdorf in 1995, the reference implementation of PHP is now produced by The PHP Group.[3] While PHP originally stood for Personal Home Page,[4] it now stands for PHP: Hypertext Preprocessor, a recursive acronym.[5]
+	
+	\vpara
+	PHP code is interpreted by a web server with a PHP processor module which generates the resulting web page: PHP commands can be embedded directly into an HTML source document rather than calling an external file to process data. It has also evolved to include a command-line interface capability and can be used in standalone graphical applications.[6]
+	
+	\vpara
+	PHP is free software released under the PHP License, which is incompatible with the GNU General Public License (GPL) due to restrictions on the usage of the term PHP.[7] PHP can be deployed on most web servers and also as a standalone shell on almost every operating system and platform, free of charge.[8]
+	
+	\vpara
+	The PHP interpreter only executes PHP code within its delimiters. Anything outside its delimiters is not processed by PHP (although non-PHP text is still subject to control structures described in PHP code) . The most common delimiters are <?php to open and ?> to close PHP sections. <script language="php"> and </script> delimiters are also available, as are the shortened forms <? or <?= (which is used to echo back a string or variable) and ?> as well as ASP-style short forms <\% or <\%= and \%>. While short delimiters are used, they make script files less portable as support for them can be disabled in the PHP configuration, and so they are discouraged.[37] The purpose of all these delimiters is to separate PHP code from non-PHP code, including HTML.[38]
+	
+	\vpara
+	The first form of delimiters, <?php and ?>, in XHTML and other XML documents, creates correctly formed XML 'processing instructions'.[39] This means that the resulting mixture of PHP code and other markup in the server-side file is itself well-formed XML.
+	
+	\vpara
+	Variables are prefixed with a dollar symbol, and a type does not need to be specified in advance. Unlike function and class names, variable names are case sensitive. Both double-quoted ("") and heredoc strings provide the ability to interpolate a variable's value into the string.[40] PHP treats newlines as whitespace in the manner of a free-form language (except when inside string quotes), and statements are terminated by a semicolon.[41] PHP has three types of comment syntax: /* */ marks block and inline comments; // as well as \# are used for one-line comments.[42] The echo statement is one of several facilities PHP provides to output text, e.g., to a web browser.
+	
+	\vpara
+	In terms of keywords and language syntax, PHP is similar to most high level languages that follow the C style syntax. if conditions, for and while loops, and function returns are similar in syntax to languages such as C, C++, C\#, Java and Perl.
+	
+	\vpara
+	PHP CLI is a short for PHP Command Line Interface. As the name implies, this is a way of using PHP in the system command line. Or by other words it is a way of running PHP Scripts that aren't on a web server (such as Apache web server or Microsoft IIS). People usually treat PHP as web development, server side tool. However, PHP CLI applies all advantages of PHP to shell scripting allowing to create either service side supporting scripts or system application even with GUI.
+	
+	\vpara
+	For further information on PHP, see \href{http://en.wikipedia.org/wiki/PHP}{Wikipedia: PHP} (the text above has been copied from this reference), or the  \href{http://windows.php.net/}{PHP for Windows Homepage}, or the  \href{http://www.php-cli.com/}{PHP CLI Homepage}.
+	
+	\vpara
+	Example for using the library
+	
+	\lstset{language={PHP}}
+	\begin{lstlisting}
+	#PHP Command line example
+	<?php
+	#Load the mpNumerics library
+	$mp = new COM("mpNumerics.mp_Lib") or die("Cannot open library");
+	
+	#Set Floating point type to MPFR with 60 decimal digits precision
+	$mp->FloatingPointType = 3;
+	$mp->Prec10 = 60;
+	
+	#Assign values to x1 and x2
+	$x1 = $mp->Real(4.5);
+	$x2 = $mp->Real('1.1');
+	
+	#Calculate x3 = x1 / x2
+	$x3 = $x1->Div($x2);
+	
+	echo "Hello world of PHP CLI! \n";
+	
+	#Print the value of x3
+	echo $x3->Str();
+	?>
+	\end{lstlisting}
+	
+	
+	\vpara
+	Example for using Excel
+	
+	\lstset{language={PHP}}
+	\begin{lstlisting}
+	#PHP.ini has to be stored in the PDP application directory (derived from the sample inis)
+	#Need to enable the win extension_dir directive
+	#Need to add:
+	
+	#[COM_DOT_NET]
+	#extension=php_com_dotnet.dll
+	
+	#as explained in 
+	#http://www.php.net/manual/en/com.installation.php
+	
+	<?php
+	$xlApp = new COM("Excel.Application");
+	$xlApp->Workbooks->Add();
+	$xlApp->Range("A1:C6")->Select();
+	$xlApp->ActiveCell->Formula = "Hello World!";
+	$xlApp->Visible = 1;
+	?>
+	\end{lstlisting}
+	
+	
+	
+	
+	\newpage
+	\section{Perl}
+	Perl is a family of high-level, general-purpose, interpreted, dynamic programming languages. The languages in this family include Perl 5 and Perl 6.[4]
+	
+	\vpara
+	Though Perl is not officially an acronym,[5] there are various backronyms in use, such as: Practical Extraction and Reporting Language.[6] Perl was originally developed by Larry Wall in 1987 as a general-purpose Unix scripting language to make report processing easier.[7] Since then, it has undergone many changes and revisions. The latest major stable revision of Perl 5 is 5.18, released in May 2013. Perl 6, which began as a redesign of Perl 5 in 2000, eventually evolved into a separate language. Both languages continue to be developed independently by different development teams and liberally borrow ideas from one another.
+	
+	\vpara
+	The Perl languages borrow features from other programming languages including C, shell scripting (sh), AWK, and sed.[8] They provide powerful text processing facilities without the arbitrary data-length limits of many contemporary Unix tools,[9] facilitating easy manipulation of text files. Perl 5 gained widespread popularity in the late 1990s as a CGI scripting language, in part due to its parsing abilities.[10]
+	
+	\vpara
+	In addition to CGI, Perl 5 is used for graphics programming, system administration, network programming, finance, bioinformatics, and other applications. It's nicknamed "the Swiss Army chainsaw of scripting languages" because of its flexibility and power,[11] and possibly also because of its perceived "ugliness".[12] In 1998, it was also referred to as the "duct tape that holds the Internet together", in reference to its ubiquity and perceived inelegance.[13]
+	
+	\vpara
+	The overall structure of Perl derives broadly from C. Perl is procedural in nature, with variables, expressions, assignment statements, brace-delimited blocks, control structures, and subroutines.
+	
+	\vpara
+	Perl also takes features from shell programming. All variables are marked with leading sigils, which unambiguously identify the data type (for example, scalar, array, hash) of the variable in context. Importantly, sigils allow variables to be interpolated directly into strings. Perl has many built-in functions that provide tools often used in shell programming (although many of these tools are implemented by programs external to the shell) such as sorting, and calling on operating system facilities.
+	
+	\vpara
+	Perl takes lists from Lisp, hashes ("associative arrays") from AWK, and regular expressions from sed. These simplify and facilitate many parsing, text-handling, and data-management tasks. Also shared with Lisp are the implicit return of the last value in a block, and the fact that all statements have a value, and thus are also expressions and can be used in larger expressions themselves.
+	
+	\vpara
+	Perl 5 added features that support complex data structures, first-class functions (that is, closures as values), and an object-oriented programming model. These include references, packages, class-based method dispatch, and lexically scoped variables, along with compiler directives (for example, the strict pragma). A major additional feature introduced with Perl 5 was the ability to package code as reusable modules. 
+	
+	\vpara
+	All versions of Perl do automatic data-typing and automatic memory management. The interpreter knows the type and storage requirements of every data object in the program; it allocates and frees storage for them as necessary using reference counting (so it cannot deallocate circular data structures without manual intervention). Legal type conversions — for example, conversions from number to string — are done automatically at run time; illegal type conversions are fatal errors.
+	
+	\vpara
+	ActivePerl is a closed source distribution from ActiveState that has regular releases that track the core Perl releases.[65] The distribution also includes the Perl package manager (PPM),[66] a popular tool for installing, removing, upgrading, and managing the use of common Perl modules.
+	
+	\vpara
+	Strawberry Perl is an open source distribution for Windows. It has had regular, quarterly releases since January 2008, including new modules as feedback and requests come in. Strawberry Perl aims to be able to install modules like standard Perl distributions on other platforms, including compiling XS modules.
+	
+	\vpara
+	For further information on Perl, see \href{http://en.wikipedia.org/wiki/Perl}{Wikipedia: Perl} (the text above has been copied from this reference), or the  \href{http://www.perl.org/}{Perl Homepage}.
+	
+	\vpara
+	ActivePerl is available from  \href{http://www.activestate.com/activeperl/downloads}{ActivePerl Homepage}. This distribution includes support for COM. See \href{http://support.microsoft.com/kb/214797/en-us}{here} for an example.
+	
+	
+	\vpara
+	Example for using the library
+	
+	\lstset{language={Perl}}
+	\begin{lstlisting}
+	#Enable COM support
+	use Win32::OLE;
+	
+	#Load the mpNumerics library
+	$mp = Win32::OLE->new('mpNumerics.mp_Lib');
+	
+	#Set Floating point type to MPFR with 60 decimal digits precision
+	$mp->{FloatingPointType} = 3;
+	$mp->{Prec10} = 60;
+	
+	#Assign values to x1 and x2
+	$x1 = $mp->Real(4.5);
+	$x2 = $mp->Real('1.1');
+	
+	#Calculate x3 = x1 / x2
+	$x3 = $x1->Div($x2);
+	
+	#Print the value of x3
+	print $x3->Str();
+	
+	# Wait for user input...
+	# print "Press <return> to continue...";
+	# $x = <STDIN>;
+	\end{lstlisting}
+	
+	
+	\vpara
+	Example for using the Excel
+	
+	\lstset{language={Perl}}
+	\begin{lstlisting}
+	use Win32::OLE;
+	
+	# Start Excel and make it visible
+	$xlApp = Win32::OLE->new('Excel.Application');
+	$xlApp->{Visible} = 1;
+	
+	# Create a new workbook
+	$xlBook = $xlApp->Workbooks->Add;
+	
+	# Our data that we will add to the workbook...
+	$mydata = [["Item",     "Category", "Price"], 
+	["Nails",    "Hardware",  "5.25"],
+	["Shirt",    "Clothing", "23.00"],
+	["Hammer",   "Hardware", "16.25"],
+	["Sandwich", "Food",      "5.00"],
+	["Pants",    "Clothing", "31.00"],
+	["Drinks",   "Food",      "2.25"]];
+	
+	# Write all the data at once...
+	$rng = $xlBook->ActiveSheet->Range("A1:C7");
+	$rng->{Value} = $mydata;
+	
+	# Create a PivotTable for the data...
+	$tbl = $xlBook->ActiveSheet->PivotTableWizard(1, $rng, "", "MyPivotTable");
+	
+	# Set pivot fields...
+	$tbl->AddFields("Category", "Item");
+	$tbl->PivotFields("Price")->{Orientation} = 4; # 4=xlDataField
+	
+	# Create a chart too...
+	$chart = $xlBook->Charts->Add;
+	$chart->SetSourceData($rng, 2);
+	$chart->{ChartType} = 70; # 3D-pie chart
+	$chart->Location(2, "Sheet4");
+	
+	# Wait for user input...
+	# print "Press <return> to continue...";
+	# $x = <STDIN>;
+	
+	# Clean up
+	# $xlBook->{Saved} = 1;
+	# $xlApp->Quit;
+	# $xlBook = 0;
+	# $xlApp = 0;
+	# $xlApp = 0;
+	print "All done.";
+	\end{lstlisting}
+	
+	
+	
+	
+
+	
+	\newpage
+	\section{MatLab (COM interface)}
+	\label{MatLabCOM}
+	
+	MATLAB has already been introduced in section \ref{MatLabNET} Apart from the the .NET interface described in this section, MATLAB has also a COM interface. Its use is illustrated by the examples below.
+	
+	\vpara
+	Example for using the library via COM
+	
+	\lstset{language={Matlab}}
+	\begin{lstlisting}
+	%Open a COM server on Matlab
+	
+	mp = actxserver('mpNumerics.mp_Lib');
+	mp.Prec10 = 60;
+	mp.FloatingPointType = 3;
+	
+	x = mp.Real(2);
+	y = mp.Sqrt(x);
+	s = y.Str();
+	
+	s2 = char(s);
+	fprintf('s is equal to %s.\n',s2);
+	
+	quit;
+	
+	\end{lstlisting}
+	
+	
+	\vpara
+	Example for using Excel
+	
+	\lstset{language={Matlab}}
+	\begin{lstlisting}
+	%Open a COM server on Matlab
+	
+	x = 4.3;
+	fprintf('x is equal to %6.2f.\n',x);
+	
+	Excel = actxserver('Excel.Application');
+	
+	Excel.Workbooks.Add();
+	Excel.Visible = true;
+	quit;
+	\end{lstlisting}
+	
+	
+	
+	
+	
 	
 
 
@@ -3249,145 +3249,145 @@ C:\Extra\mpFormula40\ExternalTools1\msys\local\Win32
 
 
 
-%
-%\newpage
-%\subsection{Downloading, compiling and installing MPC}
-%The source code of MPC can be downloaded from
-%
-%MPC: \href{http://www.multiprecision.org/index.php?prog=mpc}{http://www.multiprecision.org/index.php?prog=mpc} .
-%
-%The license is the GNU Lesser General Public License, Version 3 (see appendix \ref{LGPLv3})
-%
-%The contributors are listed in section \ref{Contributors to MPC}
-%
-%The mpformula library uses MPC version 1.0.3.
-%
-%
-%\vpara
-%Compiling and installing needs to be done separately for 32 bit and 64 bit. The following detailed instructions are for 32 bit. For 64 bit, replace \verb|MP32| by \verb|MP64| and \verb|Win32| by  \verb|Win64| in all file names and directory names, e.g. instead of \verb|mpc_configure_Win32_Release.sh| for 32 bit
-%
-%use \verb|mpc_configure_Win64_Release.sh| for 64 bit.
-%
-%\vpara
-%Within Windows Explorer, copy the directory \verb|mpc-1.0.3|  from the \verb|ExternalLibraries|
-%directory to the \verb|ExternalTools\msys32\home\MP32| directory. 
-%
-%\vpara
-%Within Windows Explorer, copy the file \verb|mpc_configure_Win32_Release.sh|  from the
-%
-%\verb|mpFormulaC\Source\Configure\mpc| directory to the 
-%
-%\verb|ExternalTools\msys32\home\MP32\mpc-1.0.3| directory.  
-%
-%
-%\vpara
-%Start MSYS2. Within MSYS2, type
-%\begin{verbatim}
-%cd ..
-%\end{verbatim}
-%to change to the home directory, and then type 
-%\begin{verbatim}
-%cd MP32/mpc-1.0.3
-%\end{verbatim}
-%to change to the
-%\begin{verbatim}
-%/home/MP32/mpc-1.0.3
-%\end{verbatim}
-%directory. Within MSYS2, type
-%\begin{verbatim}
-%ls *.sh
-%\end{verbatim}
-%to list only the shell scripts. Within MSYS2, type
-%\begin{verbatim}
-%bash mpc_configure_Win32_Release.sh
-%\end{verbatim}
-%to start the shell script which will configure the MPC source files for compilation of a 32 bit static library. This will take some time to complete. Once this has been completed (i.e. the command prompt has returned), type
-%\begin{verbatim}
-%make
-%\end{verbatim}
-%to start the actual compilation. Again, this will take some time to complete. Once this has been done (i.e. the command prompt has returned), type
-%\begin{verbatim}
-%make check
-%\end{verbatim}
-%to start the compilation and execution of a number of test programs. All tests should pass. Only if all of these steps have been completed successfully, you should finally type
-%\begin{verbatim}
-%make install
-%\end{verbatim}
-%to install the compiled files into the folder
-%\begin{verbatim}
-%C:\Extra\mpFormula40\ExternalTools1\msys\local\Win32
-%\end{verbatim}
-%
-%
-%
-%\subsection{Downloading, compiling and installing MPFI}
-%The source code of MPFI can be downloaded from
-%
-%MPFI: \href{https://gforge.inria.fr/projects/mpfi/}{https://gforge.inria.fr/projects/mpfi/} . 
-%
-%The license is the GNU Lesser General Public License, Version 3 (see appendix \ref{LGPLv3})
-%
-%The contributors are listed in section \ref{Contributors to MPFI}
-%
-%The mpformula library uses MPFI version 1.5.2., which is the same as 1.5.1 with a patch to enable DLLs.
-%
-%
-%\vpara
-%Compiling and installing needs to be done separately for 32 bit and 64 bit. The following detailed instructions are for 32 bit. For 64 bit, replace \verb|MP32| by \verb|MP64| and \verb|Win32| by  \verb|Win64| in all file names and directory names, e.g. instead of \verb|mpfi_configure_Win32_Release.sh| for 32 bit
-%
-%use \verb|mpfi_configure_Win64_Release.sh| for 64 bit.
-%
-%\vpara
-%Within Windows Explorer, copy the directory \verb|mpfi-1.5.2|  from the \verb|ExternalLibraries|
-%directory to the \verb|ExternalTools\msys32\home\MP32| directory. 
-%
-%\vpara
-%Within Windows Explorer, copy the file \verb|mpfi_configure_Win32_Release.sh|  from the
-%
-%\verb|mpFormulaC\Source\Configure\mpfi| directory to the 
-%
-%\verb|ExternalTools\msys32\home\MP32\mpfi-1.5.2| directory.  
-%
-%
-%\vpara
-%Start MSYS2. Within MSYS2, type
-%\begin{verbatim}
-%cd ..
-%\end{verbatim}
-%to change to the home directory, and then type 
-%\begin{verbatim}
-%cd MP32/mpfi-1.5.2
-%\end{verbatim}
-%to change to the
-%\begin{verbatim}
-%/home/MP32/mpfi-1.5.2
-%\end{verbatim}
-%directory. Within MSYS2, type
-%\begin{verbatim}
-%ls *.sh
-%\end{verbatim}
-%to list only the shell scripts. Within MSYS2, type
-%\begin{verbatim}
-%bash mpfi_configure_Win32_Release.sh
-%\end{verbatim}
-%to start the shell script which will configure the MPFI source files for compilation of a 32 bit static library. This will take some time to complete. Once this has been completed (i.e. the command prompt has returned), type
-%\begin{verbatim}
-%make
-%\end{verbatim}
-%to start the actual compilation. Again, this will take some time to complete. Once this has been done (i.e. the command prompt has returned), type
-%\begin{verbatim}
-%make check
-%\end{verbatim}
-%to start the compilation and execution of a number of test programs. All tests should pass. Only if all of these steps have been completed successfully, you should finally type
-%\begin{verbatim}
-%make install
-%\end{verbatim}
-%to install the compiled files into the folder
-%\begin{verbatim}
-%C:\Extra\mpFormula40\ExternalTools1\msys\local\Win32
-%\end{verbatim}
-%
-%
+
+\newpage
+\subsection{Downloading, compiling and installing MPC}
+The source code of MPC can be downloaded from
+
+MPC: \href{http://www.multiprecision.org/index.php?prog=mpc}{http://www.multiprecision.org/index.php?prog=mpc} .
+
+The license is the GNU Lesser General Public License, Version 3 (see appendix \ref{LGPLv3})
+
+The contributors are listed in section \ref{Contributors to MPC}
+
+The mpformula library uses MPC version 1.0.3.
+
+
+\vpara
+Compiling and installing needs to be done separately for 32 bit and 64 bit. The following detailed instructions are for 32 bit. For 64 bit, replace \verb|MP32| by \verb|MP64| and \verb|Win32| by  \verb|Win64| in all file names and directory names, e.g. instead of \verb|mpc_configure_Win32_Release.sh| for 32 bit
+
+use \verb|mpc_configure_Win64_Release.sh| for 64 bit.
+
+\vpara
+Within Windows Explorer, copy the directory \verb|mpc-1.0.3|  from the \verb|ExternalLibraries|
+directory to the \verb|ExternalTools\msys32\home\MP32| directory. 
+
+\vpara
+Within Windows Explorer, copy the file \verb|mpc_configure_Win32_Release.sh|  from the
+
+\verb|mpFormulaC\Source\Configure\mpc| directory to the 
+
+\verb|ExternalTools\msys32\home\MP32\mpc-1.0.3| directory.  
+
+
+\vpara
+Start MSYS2. Within MSYS2, type
+\begin{verbatim}
+cd ..
+\end{verbatim}
+to change to the home directory, and then type 
+\begin{verbatim}
+cd MP32/mpc-1.0.3
+\end{verbatim}
+to change to the
+\begin{verbatim}
+/home/MP32/mpc-1.0.3
+\end{verbatim}
+directory. Within MSYS2, type
+\begin{verbatim}
+ls *.sh
+\end{verbatim}
+to list only the shell scripts. Within MSYS2, type
+\begin{verbatim}
+bash mpc_configure_Win32_Release.sh
+\end{verbatim}
+to start the shell script which will configure the MPC source files for compilation of a 32 bit static library. This will take some time to complete. Once this has been completed (i.e. the command prompt has returned), type
+\begin{verbatim}
+make
+\end{verbatim}
+to start the actual compilation. Again, this will take some time to complete. Once this has been done (i.e. the command prompt has returned), type
+\begin{verbatim}
+make check
+\end{verbatim}
+to start the compilation and execution of a number of test programs. All tests should pass. Only if all of these steps have been completed successfully, you should finally type
+\begin{verbatim}
+make install
+\end{verbatim}
+to install the compiled files into the folder
+\begin{verbatim}
+C:\Extra\mpFormula40\ExternalTools1\msys\local\Win32
+\end{verbatim}
+
+
+
+\subsection{Downloading, compiling and installing MPFI}
+The source code of MPFI can be downloaded from
+
+MPFI: \href{https://gforge.inria.fr/projects/mpfi/}{https://gforge.inria.fr/projects/mpfi/} . 
+
+The license is the GNU Lesser General Public License, Version 3 (see appendix \ref{LGPLv3})
+
+The contributors are listed in section \ref{Contributors to MPFI}
+
+The mpformula library uses MPFI version 1.5.2., which is the same as 1.5.1 with a patch to enable DLLs.
+
+
+\vpara
+Compiling and installing needs to be done separately for 32 bit and 64 bit. The following detailed instructions are for 32 bit. For 64 bit, replace \verb|MP32| by \verb|MP64| and \verb|Win32| by  \verb|Win64| in all file names and directory names, e.g. instead of \verb|mpfi_configure_Win32_Release.sh| for 32 bit
+
+use \verb|mpfi_configure_Win64_Release.sh| for 64 bit.
+
+\vpara
+Within Windows Explorer, copy the directory \verb|mpfi-1.5.2|  from the \verb|ExternalLibraries|
+directory to the \verb|ExternalTools\msys32\home\MP32| directory. 
+
+\vpara
+Within Windows Explorer, copy the file \verb|mpfi_configure_Win32_Release.sh|  from the
+
+\verb|mpFormulaC\Source\Configure\mpfi| directory to the 
+
+\verb|ExternalTools\msys32\home\MP32\mpfi-1.5.2| directory.  
+
+
+\vpara
+Start MSYS2. Within MSYS2, type
+\begin{verbatim}
+cd ..
+\end{verbatim}
+to change to the home directory, and then type 
+\begin{verbatim}
+cd MP32/mpfi-1.5.2
+\end{verbatim}
+to change to the
+\begin{verbatim}
+/home/MP32/mpfi-1.5.2
+\end{verbatim}
+directory. Within MSYS2, type
+\begin{verbatim}
+ls *.sh
+\end{verbatim}
+to list only the shell scripts. Within MSYS2, type
+\begin{verbatim}
+bash mpfi_configure_Win32_Release.sh
+\end{verbatim}
+to start the shell script which will configure the MPFI source files for compilation of a 32 bit static library. This will take some time to complete. Once this has been completed (i.e. the command prompt has returned), type
+\begin{verbatim}
+make
+\end{verbatim}
+to start the actual compilation. Again, this will take some time to complete. Once this has been done (i.e. the command prompt has returned), type
+\begin{verbatim}
+make check
+\end{verbatim}
+to start the compilation and execution of a number of test programs. All tests should pass. Only if all of these steps have been completed successfully, you should finally type
+\begin{verbatim}
+make install
+\end{verbatim}
+to install the compiled files into the folder
+\begin{verbatim}
+C:\Extra\mpFormula40\ExternalTools1\msys\local\Win32
+\end{verbatim}
+
+
 
 \newpage
 \subsection{Downloading, compiling and installing FLINT}
@@ -3741,167 +3741,167 @@ For ARB 64 bit, compilation works without errors but a number of warnings, and c
 %
 
 
-%
-%\newpage
-%\section{Building the Library, Part 2}
-%
-%
-%
-%\subsection{Downloading, compiling and installing XSC-MPFI}
-%XSC-MPFI: \href{http://www2.math.uni-wuppertal.de/~xsc/xsc/cxsc_software.html#mpfr-mpfi}{http://www2.math.uni-wuppertal.de/~xsc/xsc/cxscsoftware.htmlmpfr-mpfi} . 
-%
-%The license is the GNU Library General Public License, Version 2 (see appendix \ref{LGPLv2})
-%
-%The contributors are listed in section \ref{Contributors to XSC-MPFI}
-%
-%The mpformula library uses XSC-MPFI version 0.10.0.
-%
-%
-%
-%\subsection{Downloading, compiling and installing libmpdec}
-%
-%libmpdec is a complete implementation of the General Decimal Arithmetic Specification, which defines a general purpose arbitrary precision data type together with rigorously specified functions and rounding behavior. 
-%
-%\vpara
-%The license is the  Simplified BSD License (see appendix \ref{LGPLv3})
-%
-%The contributors are listed in section \ref{Contributors to MPFI}
-%
-%The mpformula library uses libmpdec version 2.4.1.
-%
-%\vpara
-%The libmpdec library could historically be downloaded from
-%
-%\vpara
-%libmpdec: \href{http://www.bytereef.org/mpdecimal/}{http://www.bytereef.org/mpdecimal/} . 
-%
-%unfortunately, this website seems to be no longer reachable. However, a copy of the source code is still available from a numver of sites, including
-%
-%\vpara
-%libmpdec: \href{https://launchpad.net/ubuntu/+source/mpdecimal/2.4.1-1}{https://launchpad.net/ubuntu/+source/mpdecimal/2.4.1-1/} . 
-%
-%
-%
-%
-%\vpara
-%The file to download is mpdecimal-2.4.1.orig.tar.gz. which should unpacked into the ExternalLibraries folder.
-%
-%
-%\vpara
-%Requirements
-%------------
-%
-%- Visual Studio 2008 or later.
-%
-%- For the scripted build vcvarsall.bat must be in the PATH.
-%
-%
-%download and unpack the source file into the (working ) folder
-%
-%\begin{verbatim}
-%I:\Data\mpFormula40\ExternalTools2\mpdecimal-2.4.1
-%\end{verbatim}
-%
-%
-%
-%
-%Copy the file Makefile.vc from the folder
-%
-%\begin{verbatim}
-%I:\Data\mpFormula40\Toolbox\mpNum\Configure\libmpdec
-%\end{verbatim}
-%
-%
-%
-%to the folder
-%
-%\begin{verbatim}
-%I:\Data\mpFormula40\ExternalTools2\mpdecimal-2.4.1\libmpdec
-%\end{verbatim}
-%
-%
-%
-%This will make sure that the vc runtime is included statically in the dll.
-%
-%
-%
-%open a Visual Studio Command Prompt 32 bit as administrator.
-%
-%Within the Visual Studio Command Prompt, navigate to
-%
-%\begin{verbatim}
-%I:\Data\mpFormula40\ExternalTools2\mpdecimal-2.4.1\vcbuild
-%\end{verbatim}
-%
-%
-%
-%type 
-%
-%vcbuild32.bat
-%
-%to start building the 32 bit dll. If successful, the static library, the dynamic
-%library, the common header file and an executable for running the
-%unit tests should be in the dist32 directory.
-%
-%
-%
-%
-%
-%open a Visual Studio Command Prompt 64 bit as administrator.
-%
-%Within the Visual Studio Command Prompt, navigate to
-%
-%\begin{verbatim}
-%I:\Data\mpFormula40\ExternalTools2\mpdecimal-2.4.1\vcbuild
-%\end{verbatim}
-%
-%
-%
-%type 
-%
-%vcbuild64.bat
-%
-%to start building the 64 bit dll. If successful, the static library, the dynamic
-%library, the common header file and an executable for running the
-%unit tests should be in the dist32 directory.
-%
-%
-%
-%
-%
-%Get the unit tests
-%------------------
-%
-%Run gettests.bat. This creates a directory 'testdata' and copies
-%additional tests into the directory. If wget is installed (Cygwin),
-%the script tries to download IBM's official test cases and copy them
-%to 'testdata'.
-%
-%Otherwise, download:
-%
-%http://speleotrove.com/decimal/dectest.zip
-%
-%Unzip the archive such that all .decTest files from the archive are in
-%the testdata directory. The directory structure should look like this:
-%
-%\begin{verbatim}
-%vcbuild\official.decTest
-%vcbuild\additional.decTest
-%vcbuild\testdata\*.decTest
-%\end{verbatim}
-%
-%Run the unit tests
-%------------------
-%
-%Depending on the build, run runtest64.bat or runtest32.bat.
-%
-%
-%
+
+\newpage
+\section{Building the Library, Part 2}
+
+
+
+\subsection{Downloading, compiling and installing XSC-MPFI}
+XSC-MPFI: \href{http://www2.math.uni-wuppertal.de/~xsc/xsc/cxsc_software.html#mpfr-mpfi}{http://www2.math.uni-wuppertal.de/~xsc/xsc/cxscsoftware.htmlmpfr-mpfi} . 
+
+The license is the GNU Library General Public License, Version 2 (see appendix \ref{LGPLv2})
+
+The contributors are listed in section \ref{Contributors to XSC-MPFI}
+
+The mpformula library uses XSC-MPFI version 0.10.0.
+
+
+
+\subsection{Downloading, compiling and installing libmpdec}
+
+libmpdec is a complete implementation of the General Decimal Arithmetic Specification, which defines a general purpose arbitrary precision data type together with rigorously specified functions and rounding behavior. 
+
+\vpara
+The license is the  Simplified BSD License (see appendix \ref{LGPLv3})
+
+The contributors are listed in section \ref{Contributors to MPFI}
+
+The mpformula library uses libmpdec version 2.4.1.
+
+\vpara
+The libmpdec library could historically be downloaded from
+
+\vpara
+libmpdec: \href{http://www.bytereef.org/mpdecimal/}{http://www.bytereef.org/mpdecimal/} . 
+
+unfortunately, this website seems to be no longer reachable. However, a copy of the source code is still available from a numver of sites, including
+
+\vpara
+libmpdec: \href{https://launchpad.net/ubuntu/+source/mpdecimal/2.4.1-1}{https://launchpad.net/ubuntu/+source/mpdecimal/2.4.1-1/} . 
+
+
+
+
+\vpara
+The file to download is mpdecimal-2.4.1.orig.tar.gz. which should unpacked into the ExternalLibraries folder.
+
+
+\vpara
+Requirements
+------------
+
+- Visual Studio 2008 or later.
+
+- For the scripted build vcvarsall.bat must be in the PATH.
+
+
+download and unpack the source file into the (working ) folder
+
+\begin{verbatim}
+I:\Data\mpFormula40\ExternalTools2\mpdecimal-2.4.1
+\end{verbatim}
+
+
+
+
+Copy the file Makefile.vc from the folder
+
+\begin{verbatim}
+I:\Data\mpFormula40\Toolbox\mpNum\Configure\libmpdec
+\end{verbatim}
+
+
+
+to the folder
+
+\begin{verbatim}
+I:\Data\mpFormula40\ExternalTools2\mpdecimal-2.4.1\libmpdec
+\end{verbatim}
+
+
+
+This will make sure that the vc runtime is included statically in the dll.
+
+
+
+open a Visual Studio Command Prompt 32 bit as administrator.
+
+Within the Visual Studio Command Prompt, navigate to
+
+\begin{verbatim}
+I:\Data\mpFormula40\ExternalTools2\mpdecimal-2.4.1\vcbuild
+\end{verbatim}
+
+
+
+type 
+
+vcbuild32.bat
+
+to start building the 32 bit dll. If successful, the static library, the dynamic
+library, the common header file and an executable for running the
+unit tests should be in the dist32 directory.
+
+
+
+
+
+open a Visual Studio Command Prompt 64 bit as administrator.
+
+Within the Visual Studio Command Prompt, navigate to
+
+\begin{verbatim}
+I:\Data\mpFormula40\ExternalTools2\mpdecimal-2.4.1\vcbuild
+\end{verbatim}
+
+
+
+type 
+
+vcbuild64.bat
+
+to start building the 64 bit dll. If successful, the static library, the dynamic
+library, the common header file and an executable for running the
+unit tests should be in the dist32 directory.
+
+
+
+
+
+Get the unit tests
+------------------
+
+Run gettests.bat. This creates a directory 'testdata' and copies
+additional tests into the directory. If wget is installed (Cygwin),
+the script tries to download IBM's official test cases and copy them
+to 'testdata'.
+
+Otherwise, download:
+
+http://speleotrove.com/decimal/dectest.zip
+
+Unzip the archive such that all .decTest files from the archive are in
+the testdata directory. The directory structure should look like this:
+
+\begin{verbatim}
+vcbuild\official.decTest
+vcbuild\additional.decTest
+vcbuild\testdata\*.decTest
+\end{verbatim}
+
+Run the unit tests
+------------------
+
+Depending on the build, run runtest64.bat or runtest32.bat.
+
+
+
 
 
 
 \newpage
-\section{Building the Library, Part 2}
+\section{Building the Library, Part 3}
 
 
 \subsection{Boost Math}
@@ -4049,663 +4049,6 @@ Within Stats32.xls, goto Interface.bas, and within this module to DemoTabularPro
 
 For additional fine tuning: 
 Within Source.xls, goto XLInterface.bas, and within this module to TabularProcs.
-
-
-
-
-
-\chapter{Roadmap}
-\label{Roadmap}
-
-
-
-
-\newpage
-\section{CPython}
-
-CPython, the reference implementation of Python, is free and open source software and has a community-based development model, as do nearly all of its alternative implementations. CPython is managed by the non-profit Python Software Foundation.
-
-\vpara
-For further information on Python, see \href{http://en.wikipedia.org/wiki/Python_(programming_language)}{Wikipedia: Python} (the text above has been copied from this reference), or the  \href{http://www.python.org/}{Python Homepage}. Support for COM is included in the distribution of the \href{http://www.activestate.com/activepython/downloads}{ActivePython Community Edition}.
-
-\vpara
-Python can use  GMP und MPFR thanks to \href{http://code.google.com/p/gmpy/}{GMPY2}, with documentation \href{https://gmpy2.readthedocs.org/en/latest/}{here}.
-
-\vpara
-IPython is an integrations platform for various scientific libraries (NumPy, SciPy, matlibplot, pandas etc.) \href{http://ipython.org/}{http://ipython.org/}. Popular distributions are the 
-
-Community Edition of Anaconda: \href{http://docs.continuum.io/anaconda/index.html}{http://docs.continuum.io/anaconda/index.html}, 
-
-%EPDFree (aka Canopy Express): \href{https://www.enthought.com/products/epd/free/}{https://www.enthought.com/products/epd/free/} 
-%
-%and Python(x, y): \href{https://code.google.com/p/pythonxy/}{https://code.google.com/p/pythonxy/}. 
-
-\vpara
-Book recommendation: \cite{McKinney2012}.
-
-
-
-To compile the mpmath library libraries, Python 2.7 is required.
-
-\subsection{Downloading and installing  CPython 2.7}
-ActivePython is ActiveState's complete and ready-to-install distribution of Python. It provides a one-step installation of all essential Python modules, as well as extensive documentation. 
-The Windows distribution ships with PyWin32 -- a suite of Windows tools developed by Mark Hammond, including bindings to the Win32 API and Windows COM. 
-ActivePython can be downloaded from
-
-\vpara
-\href{http://www.activestate.com/activepython/downloads}{http://www.activestate.com/activepython/downloads}.
-
-\vpara
-The latest release version of the 2.7x series is 2.7.6.9. You need to download 2 separate files to support compilation of both 32 bit and 64 bit dlls.
-
-
-
-
-
-
-\newpage
-\subsection{Plotting}
-
-If matplotlib is available, the functions plot and cplot in mpmath can be used to plot functions respectively as x-y graphs and in the complex plane. Also, splot can be used to
-produce 3D surface plots.
-
-\subsubsection{Function curve plots}
-
-\begin{figure}[ht]
-	\centering
-	\includegraphics[scale=1.0]{Charts/png/MpMathPlot.png}
-	\caption{MpMath 2Dplot}
-	\label{Fig MpMath 2Dplot}
-\end{figure}
-
-
-Output of plot([cos, sin], [-4, 4])
-
-\vpara
-mpmath.plot(ctx, f, xlim=[-5, 5], ylim=None, points=200, file=None, dpi=None, singularities=[], axes=None)
-
-\vpara
-Shows a simple 2D plot of a function $f(x)$ or list of functions $[f_0(x),f_1(x),\ldots,f_n(x)]$ over a given interval specified by xlim. Some examples:
-
-\lstset{language={Python}}
-\begin{lstlisting}
-plot(lambda x: exp(x)*li(x), [1, 4])
-plot([cos, sin], [-4, 4])
-plot([fresnels, fresnelc], [-4, 4])
-plot([sqrt, cbrt], [-4, 4])
-plot(lambda t: zeta(0.5+t*j), [-20, 20])
-plot([floor, ceil, abs, sign], [-5, 5])
-\end{lstlisting}
-
-
-Points where the function raises a numerical exception or returns an infinite value are removed from the graph. Singularities can also be excluded explicitly as follows (useful
-for removing erroneous vertical lines):
-
-\lstset{language={Python}}
-\begin{lstlisting}
-plot(cot, ylim=[-5, 5]) # bad
-plot(cot, ylim=[-5, 5], singularities=[-pi, 0, pi]) # good
-\end{lstlisting}
-
-
-For parts where the function assumes complex values, the real part is plotted with dashes and the imaginary part is plotted with dots.
-
-Note: This function requires matplotlib (pylab).
-
-\newpage
-\subsubsection{Complex function plots}
-
-\begin{figure}[ht]
-	\centering
-	\includegraphics[scale=1.0]{Charts/png/MpMathCplot.png}
-	\caption{MpMath cplot}
-	\label{Fig MpMath cplot}
-\end{figure}
-
-
-
-Output of fp.cplot(fp.gamma, points=100000)
-
-\vpara
-mpmath.cplot(ctx, f, re=[-5, 5], im=[-5, 5], points=2000, color=None, verbose=False, file=None, dpi=None, axes=None)
-
-\vpara
-Plots the given complex-valued function f over a rectangular part of the complex plane specified by the pairs of intervals re and im. For example:
-
-\lstset{language={Python}}
-\begin{lstlisting}
-cplot(lambda z: z, [-2, 2], [-10, 10])
-cplot(exp)
-cplot(zeta, [0, 1], [0, 50])
-\end{lstlisting}
-
-
-By default, the complex argument (phase) is shown as color (hue) and the magnitude is show as brightness. You can also supply a custom color function (color). This function should take a complex number as input and return an RGB 3-tuple containing floats in the range 0.0-1.0.
-
-\vpara
-To obtain a sharp image, the number of points may need to be increased to 100,000 or thereabout. Since evaluating the function that many times is likely to be slow, the 'verbose' option is useful to display progress.
-
-Note: This function requires matplotlib (pylab).
-
-
-\newpage
-\subsubsection{3D surface plots}
-
-
-Output of splot for the donut example.
-
-\vpara
-mpmath.splot(ctx, f, u=[-5, 5], v=[-5, 5], points=100, keep\_aspect=True, wireframe=False, file=None, dpi=None, axes=None)
-
-\begin{figure}[ht]
-	\centering
-	\includegraphics[scale=1.0]{Charts/png/MpMathSplot.png}
-	\caption{MpMath Surface plot}
-	\label{Fig MpMath Surface plot}
-\end{figure}
-
-
-Plots the surface defined by $f$.
-
-\vpara
-If $f$ returns a single component, then this plots the surface defined by $z=f(x,y)$ over the rectangular domain with $x=u$  and $y=v$.
-
-\vpara
-If $f$ returns three components, then this plots the parametric surface $x,y,z = f(u,v)$ over the pairs of intervals $u$ and $v$.
-
-\vpara
-For example, to plot a simple function:
-
-\lstset{language={Python}}
-\begin{lstlisting}
->>> from mpmath import *
->>> f = lambda x, y: sin(x+y)*cos(y)
->>> splot(f, [-pi,pi], [-pi,pi])
-\end{lstlisting}
-
-
-Plotting a donut:
-
-\lstset{language={Python}}
-\begin{lstlisting}
->>> r, R = 1, 2.5
->>> f = lambda u, v: [r*cos(u), (R+r*sin(u))*cos(v), (R+r*sin(u))*sin(v)]
->>> splot(f, [0, 2*pi], [0, 2*pi])
-\end{lstlisting}
-
-
-Note: This function requires matplotlib (pylab) 0.98.5.3 or higher.
-
-
-\subsection{Using the C-API}
-
-This section describes how to write modules in C or C++ to extend the Python interpreter with new modules. Those modules can not only define new functions but also new object types and their methods. The document also describes how to embed the Python interpreter in another application, for use as an extension language. Finally, it shows how to compile and link extension modules so that they can be loaded dynamically (at run time) into the interpreter, if the underlying operating system supports this feature.
-
-This document assumes basic knowledge about Python. For an informal introduction to the language, see The Python Tutorial. The Python Language Reference gives a more formal definition of the language. The Python Standard Library documents the existing object types, functions and modules (both built-in and written in Python) that give the language its wide application range.
-
-For a detailed description of the whole Python/C API, see the separate Python/C API Reference Manual.
-
-. Extending Python with C or C++
-
-It is quite easy to add new built-in modules to Python, if you know how to program in C. Such extension modules can do two things that can’t be done directly in Python: they can implement new built-in object types, and they can call C library functions and system calls.
-
-To support extensions, the Python API (Application Programmers Interface) defines a set of functions, macros and variables that provide access to most aspects of the Python run-time system. The Python API is incorporated in a C source file by including the header "Python.h".
-
-The compilation of an extension module depends on its intended use as well as on your system setup; details are given in later chapters.
-
-Note:
-The C extension interface is specific to CPython, and extension modules do not work on other Python implementations. In many cases, it is possible to avoid writing C extensions and preserve portability to other implementations. For example, if your use case is calling C library functions or system calls, you should consider using the ctypes module or the cffi library rather than writing custom C code. These modules let you write Python code to interface with C code and are more portable between implementations of Python than writing and compiling a C extension module.
-
-As an example for an extension module which provides additional functionality in multi-precision computing, see the documentation on gmpy2 (section \ref{gmpy2}).
-
-
-
-
-
-\subsection{Interfaces to the C family of languages}
-
-\subsubsection{Windows, GNU/Linux, Mac OSX: GNU Compiler Collection}
-The GNU Compiler Collection (GCC) is a compiler system produced by the GNU Project supporting various programming languages. GCC is a key component of the GNU toolchain. The Free Software Foundation (FSF) distributes GCC under the GNU General Public License (GNU GPL). GCC has played an important role in the growth of free software, as both a tool and an example.
-
-\vpara
-Originally named the GNU C Compiler, because it only handled the C programming language, GCC 1.0 was released in 1987 and the compiler was extended to compile C++ in December of that year.[1] Front ends were later developed for Objective-C, Objective-C++, Fortran, Java, Ada, and Go among others.[3]
-
-\vpara
-As well as being the official compiler of the unfinished GNU operating system, GCC has been adopted as the standard compiler by most other modern Unix-like computer operating systems, including Linux and the BSD family. A port to RISC OS has also been developed extensively in recent years. There is also an old (3.0) port of GCC to Plan9, running under its ANSI/POSIX Environment (APE).[4] GCC is also available for Microsoft Windows operating systems and for the ARM processor used by many portable devices.
-
-\vpara
-For further information on the GNU Compiler Collection, see \href{http://en.wikipedia.org/wiki/GNU_Compiler_Collection}{Wikipedia: GCC} (the text above has been copied from this reference), or the  \href{http://gcc.gnu.org/}{GCC Homepage}.
-
-
-\subsubsection{Windows: MSVC}
-Microsoft Visual C++ (often abbreviated as MSVC or VC++) is a commercial (free version available), integrated development environment (IDE) product from Microsoft for the C, C++, and C++/CLI programming languages. It features tools for developing and debugging C++ code, especially code written for the Microsoft Windows API, the DirectX API, and the Microsoft .NET Framework.
-
-\vpara
-Although the product originated as an IDE for the C programming language, the compiler's support for that language conforms only to the original edition of the C standard, dating from 1989. The later revisions of the standard, C99 and C11, are not supported.[41] According to Herb Sutter, the C compiler is only included for "historical reasons" and is not planned to be further developed. Users are advised to either use only the subset of the C language that is also valid C++, and then use the C++ compiler to compile their code, or to just use a different compiler such as Intel C++ Compiler or the GNU Compiler Collection instead.[42]
-
-\vpara
-For further information on Microsoft Visual C++, see \href{http://en.wikipedia.org/wiki/Visual_C\%2B\%2B}{Wikipedia: MSVC} (the text above has been copied from this reference), or the  \href{http://msdn.microsoft.com/en-us/vstudio/hh386302}{MSVC Homepage}.
-
-
-\vpara
-The following C file makes a number of direct calls into Python, passing arguments as strings and receiving a result as string:
-
-\lstset{language={C++}}
-\begin{lstlisting}
-
-#include "stdafx.h"
-#include "CallPython.h"
-
-int main(int argc, const char *argv[])
-{
-long ResultLong = SetSpecialValue_Long(2,3,4);
-printf( "This is a long: %d\n",  ResultLong);
-
-double ResultDouble = SetSpecialValue_Double(2.0,3.0,4.0);
-printf( "This is a double: %f\n",  ResultDouble);
-
-const char *sLong2[] = {"TestLong", "lll", "3", "1432"};
-MyPythonFunction(4, sLong2);
-
-const char *sDouble2[] = {"TestDouble", "fff", "13.5", "265.34"};
-MyPythonFunction(4, sDouble2);
-
-const char *sString2[] = {"TestStringFunc", "sss", "3", "2"};
-MyPythonFunction(4, sString2);
-
-const char *sString3[] = {"TestStringMpf2", "3", "2.456"};
-MyPythonFunctionString2(3, sString3);
-
-char buffer[1600]; // 1600 bytes allocated here on the stack.
-int size0a = MyPythonFunctionStringReturn(3, sString3, buffer, sizeof(buffer));
-printf("New New0a %s\n", buffer); // prints "Mar"
-//printf("Length of string: %ld\n", size0a);
-
-char buffer0[1600]; // 1600 bytes allocated here on the stack.
-int size0 = MyPythonFunctionStringReturn00("TestStringMpf0", buffer0, sizeof(buffer0));
-printf("New New0 %s\n", buffer0); // prints "Mar"
-//printf("Length of string0: %ld\n", size0);
-
-char buffer1[1600]; // 1600 bytes allocated here on the stack.
-int size1 = MyPythonFunctionStringReturn01("TestStringMpf1", "3", buffer1, sizeof(buffer1));
-printf("New New1 %s\n", buffer1); // prints "Mar"
-//printf("Length of string: %ld\n", size1);
-
-char buffer2[1600]; // 1600 bytes allocated here on the stack.
-int size2 = MyPythonFunctionStringReturn02("TestStringMpf2", "3", "2.456", buffer2, sizeof(buffer2));
-printf("New New2 %s\n", buffer2); // prints "Mar"
-//printf("Length of string: %ld\n", size2);
-
-ClosePy();
-return 0;
-}
-
-\end{lstlisting}
-
-The header file CallPython.h looks like this:
-
-\begin{lstlisting}
-#pragma warning(disable: 4244)
-
-#ifdef CALLPYTHON_EXPORTS
-#define MPNUMC_DLL_IMPORTEXPORT __declspec(dllexport)
-#else
-#define MPNUMC_DLL_IMPORTEXPORT __declspec(dllimport)
-#endif
-
-#ifdef __cplusplus
-extern "C" {
-#endif
-
-MPNUMC_DLL_IMPORTEXPORT long SetSpecialValue_Long(long m, long n, long what);
-MPNUMC_DLL_IMPORTEXPORT double SetSpecialValue_Double(double m, double n, double what);
-MPNUMC_DLL_IMPORTEXPORT int CallPythonFunction(int argc, const char *argv[]);
-MPNUMC_DLL_IMPORTEXPORT int MyPythonFunction(int argc, const char *argv[]);
-MPNUMC_DLL_IMPORTEXPORT int MyPythonFunctionString(int argc, const char *argv[]);
-MPNUMC_DLL_IMPORTEXPORT int MyPythonFunctionString2(int argc, const char *argv[]);
-MPNUMC_DLL_IMPORTEXPORT int MyPythonFunctionStringReturn(int argc, const char *argv[], char* buffer, int buffersize);
-
-MPNUMC_DLL_IMPORTEXPORT int MyPythonFunctionStringReturn00(const char* FuncName, char* buffer, int buffersize);
-MPNUMC_DLL_IMPORTEXPORT int MyPythonFunctionStringReturn01(const char* FuncName, const char* Arg01, char* buffer, int buffersize);
-MPNUMC_DLL_IMPORTEXPORT int MyPythonFunctionStringReturn02(const char* FuncName, const char* Arg01, const char* Arg02, char* buffer, int buffersize);
-
-MPNUMC_DLL_IMPORTEXPORT void ClosePy();
-#ifdef __cplusplus
-}
-#endif
-\end{lstlisting}
-
-
-The C file CallPython.cpp (which produces the dynamic link library) looks like this:
-
-\lstset{language={C++}}
-\begin{lstlisting}
-
-#define _CRT_SECURE_NO_WARNINGS
-#include "CallPython.h"
-#include "stdafx.h"
-#include<stdio.h>
-#include <Python.h>
-
-long SetSpecialValue_Long(long m, long n, long what)
-{
-return (m + n + 1) * what;
-}
-
-double SetSpecialValue_Double(double m, double n, double what)
-{
-return (m + n) * what;
-}
-
-
-int MyPythonFunctionStringReturn00(const char* FuncName, char* buffer, int buffersize)
-{
-PyObject *pFunc;
-PyObject *pValue;
-Py_ssize_t size;
-PyObject *pModule= GetPythonModule2();
-pFunc = PyObject_GetAttrString(pModule, FuncName);
-if (pFunc && PyCallable_Check(pFunc)) {
-pValue = PyObject_CallObject(pFunc, NULL);
-if (pValue != NULL) {
-strncpy(buffer, PyUnicode_AsUTF8AndSize(pValue, &size), buffersize-1);
-Py_DECREF(pValue);
-}
-}
-Py_XDECREF(pFunc);
-return size;
-}
-
-
-int MyPythonFunctionStringReturn01(const char* FuncName, const char* Arg01, char* buffer, int buffersize)
-{
-PyObject *pFunc, *pArgs, *pValue;
-PyObject *pModule= GetPythonModule2();
-Py_ssize_t size;
-pFunc = PyObject_GetAttrString(pModule, FuncName);
-if (pFunc && PyCallable_Check(pFunc)) {
-pArgs = PyTuple_New(1);
-pValue = PyUnicode_FromString(Arg01);
-PyTuple_SetItem(pArgs, 0, pValue);
-
-pValue = PyObject_CallObject(pFunc, pArgs);
-Py_DECREF(pArgs);
-if (pValue != NULL) {
-strncpy(buffer, PyUnicode_AsUTF8AndSize(pValue, &size), buffersize-1);
-Py_DECREF(pValue);
-}
-}
-Py_XDECREF(pFunc);
-return size;
-}
-
-
-int MyPythonFunctionStringReturn02(const char* FuncName, const char* Arg01, const char* Arg02, char* buffer, int buffersize)
-{
-PyObject *pFunc, *pArgs, *pValue;
-PyObject *pModule= GetPythonModule2();
-Py_ssize_t size;
-
-pFunc = PyObject_GetAttrString(pModule, FuncName);
-
-if (pFunc && PyCallable_Check(pFunc)) {
-pArgs = PyTuple_New(2);
-pValue = PyUnicode_FromString(Arg01);
-PyTuple_SetItem(pArgs, 0, pValue);
-
-pValue = PyUnicode_FromString(Arg02);
-PyTuple_SetItem(pArgs, 1, pValue);
-
-pValue = PyObject_CallObject(pFunc, pArgs);
-Py_DECREF(pArgs);
-if (pValue != NULL) {
-strncpy(buffer, PyUnicode_AsUTF8AndSize(pValue, &size), buffersize-1);
-Py_DECREF(pValue);
-}
-}
-Py_XDECREF(pFunc);
-return size;
-}
-
-void ClosePy()
-{
-PyObject *pModule;
-pModule = GetPythonModule2();
-Py_DECREF(pModule);
-Py_Finalize();
-}
-\end{lstlisting}
-
-
-
-
-\newpage
-\subsection{Cython: C extensions for the Python language}
-
-[Cython] is a programming language that makes writing C extensions for the Python language as easy as Python itself. It aims to become a superset of the [Python] language which gives it high-level, object-oriented, functional, and dynamic programming. Its main feature on top of these is support for optional static type declarations as part of the language. The source code gets translated into optimized C/C++ code and compiled as Python extension modules. This allows for both very fast program execution and tight integration with external C libraries, while keeping up the high programmer productivity for which the Python language is well known.
-
-The primary Python execution environment is commonly referred to as CPython, as it is written in C. Other major implementations use Java (Jython [Jython]), C\# (IronPython [IronPython]) and Python itself (PyPy [PyPy]). Written in C, CPython has been conducive to wrapping many external libraries that interface through the C language. It has, however, remained non trivial to write the necessary glue code in C, especially for programmers who are more fluent in a high-level language like Python than in a close-to-the-metal language like C.
-
-Originally based on the well-known Pyrex [Pyrex], the Cython project has approached this problem by means of a source code compiler that translates Python code to equivalent C code. This code is executed within the CPython runtime environment, but at the speed of compiled C and with the ability to call directly into C libraries. At the same time, it keeps the original interface of the Python source code, which makes it directly usable from Python code. These two-fold characteristics enable Cython’s two major use cases: extending the CPython interpreter with fast binary modules, and interfacing Python code with external C libraries.
-
-While Cython can compile (most) regular Python code, the generated C code usually gains major (and sometime impressive) speed improvements from optional static type declarations for both Python and C types. These allow Cython to assign C semantics to parts of the code, and to translate them into very efficient C code. Type declarations can therefore be used for two purposes: for moving code sections from dynamic Python semantics into static-and-fast C semantics, but also for directly manipulating types defined in external libraries. Cython thus merges the two worlds into a very broadly applicable programming language.
-
-
-
-\subsection{A Windows-specific interface: using COM}
-\vpara
-Example for using the library
-
-\lstset{language={Python}}
-\begin{lstlisting}
-#Enable COM support
-from win32com.client import Dispatch
-
-#Load the mpNumerics library
-mp = Dispatch("mpNumerics.mp_Lib")
-
-#Set Floating point type to MPFR with 60 decimal digits precision
-mp.FloatingPointType = 3
-mp.Prec10 = 60
-
-#Assign values to x1 and x2
-x1 = mp.Real(4.5)
-x2 = mp.Real(1.21)
-
-#Calculate x3 = x1 / x2
-x3 = x1.Div(x2)
-
-#Print the value of x3
-print (x3.Str())
-\end{lstlisting}
-
-\vpara
-Example for using Excel
-
-\lstset{language={Python}}
-\begin{lstlisting}
-#Enable COM support
-from win32com.client import Dispatch
-
-#Load the Excel library
-xl = Dispatch("Excel.Application")
-xl.Visible = 1
-xl.Workbooks.Add() 
-xl.Cells(1,1).Value = "Hello442" 
-print("From Python")
-\end{lstlisting}
-
-
-
-
-\newpage
-\section{R (Statistical System)}
-
-R is a free software programming language and a software environment for statistical computing and graphics. The R language is widely used among statisticians and data miners for developing statistical software[2][3] and data analysis.[3] Polls and surveys of data miners are showing R's popularity has increased substantially in recent years.[4][5][6]
-
-\vpara
-R is an implementation of the S programming language combined with lexical scoping semantics inspired by Scheme. S was created by John Chambers while at Bell Labs. R was created by Ross Ihaka and Robert Gentleman[7] at the University of Auckland, New Zealand, and is currently developed by the R Development Core Team, of which Chambers is a member. R is named partly after the first names of the first two R authors and partly as a play on the name of S.[8]
-
-\vpara
-R is a GNU project.[9][10] The source code for the R software environment is written primarily in C, Fortran, and R.[11] R is freely available under the GNU General Public License, and pre-compiled binary versions are provided for various operating systems. R uses a command line interface; however, several graphical user interfaces are available for use with R.
-
-\vpara
-R provides a wide variety of statistical and graphical techniques, including linear and nonlinear modeling, classical statistical tests, time-series analysis, classification, clustering, and others. R is easily extensible through functions and extensions, and the R community is noted for its active contributions in terms of packages. There are some important differences, but much code written for S runs unaltered. Many of R's standard functions are written in R itself, which makes it easy for users to follow the algorithmic choices made. For computationally intensive tasks, C, C++, and Fortran code can be linked and called at run time. Advanced users can write C, C++[12] or Java[13] code to manipulate R objects directly.
-
-\vpara
-R is highly extensible through the use of user-submitted packages for specific functions or specific areas of study. Due to its S heritage, R has stronger object-oriented programming facilities than most statistical computing languages. Extending R is also eased by its lexical scoping rules.[14]
-
-\vpara
-Another strength of R is static graphics, which can produce publication-quality graphs, including mathematical symbols. Dynamic and interactive graphics are available through additional packages.[15]
-
-\vpara
-R has its own LaTeX-like documentation format, which is used to supply comprehensive documentation, both on-line in a number of formats and in hard copy.
-
-\vpara
-R is an interpreted language; users typically access it through a command-line interpreter. If a user types "2+2" at the R command prompt and presses enter, the computer replies with "4", as shown below:
-
-> 2+2
-
-[1] 4
-
-\vpara
-Like many other languages, R supports matrix arithmetic. R's data structures include scalars, vectors, matrices, data frames (similar to tables in a relational database) and lists.[16] R's extensible object-system includes objects for (among others): regression models, time-series and geo-spatial coordinates.
-
-\vpara
-R supports procedural programming with functions and, for some functions, object-oriented programming with generic functions. A generic function acts differently depending on the type of arguments passed to it. In other words, the generic function dispatches the function (method) specific to that type of object. For example, R has a generic print() function that can print almost every type of object in R with a simple "print(objectname)" syntax.
-
-\vpara
-Although mostly used by statisticians and other practitioners requiring an environment for statistical computation and software development, R can also operate as a general matrix calculation toolbox - with performance benchmarks comparable to GNU Octave or MATLAB.[17]
-
-\vpara
-For further information on R, see \href{http://en.wikipedia.org/wiki/R_(programming_language)}{Wikipedia: R} (the text above has been copied from this reference), or the  \href{http://www.r-project.org/}{R Homepage}.
-
-%\vpara
-%COM support can be obtained by installing the \href{http://www.omegahat.org/RDCOMClient/}{R RDCOMClient} 
-%
-%Installation of the binary should be as straightforward as any other R package for Windows, e.g. use the command 
-%
-%\begin{verbatim} 
-%install.packages("RDCOMClient", repos = "http://www.omegahat.org/R")
-%\end{verbatim}
-%
-%or use the Packages menu and make certain to include the Omegahat repository in the list of repositories to search. 
-%
-%There exists also a commercial \href{http://rcom.univie.ac.at/main.html}{R for Excel distribution}.
-
-\vpara
-A popular GUI for R is \href{http://www.rstudio.com/}{Rstudio}.
-
-Within RStudio:
-
-Tools - Install Packages.
-
-Type RD in the dialogue box.
-
-RDCOMClient should appear in the drop down box.
-
-Select RDCOMClient and click on Install.
-
-Needs to be done separately for 32 bit and 64 bit.
-
-\vpara
-R contains packages which provide interfaces to 
-
-GMP (\href{http://mulcyber.toulouse.inra.fr/projects/gmp}{http://mulcyber.toulouse.inra.fr/projects/gmp}) and 
-
-MPFR (\href{http://rmpfr.r-forge.r-project.org/}{http://rmpfr.r-forge.r-project.org/}). 
-
-\vpara
-Book recommendation: \cite{Adler2012}.
-
-Book recommendation: \cite{Verzani2011}.
-
-Book recommendation: \cite{Chang2012}.
-
-\vpara
-Example for using the library
-
-\lstset{language={R}}
-\begin{lstlisting}
-#Enable COM support
-require("RDCOMClient")
-
-#Load the mpNumerics library
-mp = COMCreate("mpNumerics.mp_Lib")
-
-#Set Floating point type to MPFR with 60 decimal digits precision
-mp[["Prec10"]] = 160
-mp[["FloatingPointType"]] = 3
-
-#Assign values to x1 and x2
-x1 = mp$Real("4.5")
-x2 = mp$Real("1.1")
-
-#Perform arithmetic operations
-x3 = x1$Plus(x2)
-x4 = x1$Div(x2)
-
-#Display output
-mp[["Prec10"]]
-x3$Str()
-x4$Str()
-\end{lstlisting}
-
-\vpara
-Example for using Excel
-
-\lstset{language={R}}
-\begin{lstlisting}
-#Load Library
-require("rcom")
-
-#Create instance of Excel
-xlApp = comCreateObject("Excel.Application")
-
-#Add 1 workbook and make it visible
-wb = xlApp[["Workbooks"]]$Add()
-xlApp[["Visible"]] = TRUE
-
-#Display the name of the 1st worksheet
-ws = wb[["Worksheets", 1]]
-wsname = ws[["Name"]]
-wsname
-
-#Assign values to a range
-mrange = ws[["Range", "A1:B10"]]
-mrange[["Value"]] = 10.3
-
-#Display the values of the range
-d = mrange[["Value"]]
-d
-$
-\end{lstlisting}
-
-Within RStudio, on the menu bar, click Tools -> Install packages.
-
-In the textbox "Packages" enter "RMpfr" and click on "Install".
-
-This should install the RMpfr and GMP packages.
-
-\lstset{language={R}}
-\begin{lstlisting}
-#Load Library
-require("Rmpfr")
-
-n1.25 <- mpfr(5, precBits = 256)/4
-n1.25
-
-n1.25 ^ c(1:7, 20, 30)
-
-exp(n1.25)
-
-getGroupMembers("Math")
-
-showMethods(classes = "mpfr")
-
-showMethods(classes = "mpfrArray")
-
-\end{lstlisting}
 
 
 
@@ -4950,23 +4293,23 @@ The MPFR-MPC workshop in June 2012 was partly supported by the ERC
 grant ANTICS of Andreas Enge."
 
 
-%
-%
-%\subsection{Contributors to MPC}
-%\label{Contributors to MPC}
-%The main developers of MPC are Andreas Enge, Philippe Th\'eveny and Paul Zimmermann.
-%
-%
-%
-%\subsection{Contributors to MPFI}
-%\label{Contributors to MPFI}
-%The following text has been copied from the MPFI manual (1.5.1):
-%
-%\vpara
-%"MPFI has been written by Fabrice Rouillier, Nathalie Revol, Sylvain Chevillard, Hong Diep
-%Nguyen, Christoph Lauter and Philippe Th\'eveny. Its development has greatly benefited from
-%the patient and supportive help of the MPFR team."
-%
+
+
+\subsection{Contributors to MPC}
+\label{Contributors to MPC}
+The main developers of MPC are Andreas Enge, Philippe Th\'eveny and Paul Zimmermann.
+
+
+
+\subsection{Contributors to MPFI}
+\label{Contributors to MPFI}
+The following text has been copied from the MPFI manual (1.5.1):
+
+\vpara
+"MPFI has been written by Fabrice Rouillier, Nathalie Revol, Sylvain Chevillard, Hong Diep
+Nguyen, Christoph Lauter and Philippe Th\'eveny. Its development has greatly benefited from
+the patient and supportive help of the MPFR team."
+
 
 
 %\section{Contributors to libraries used in the numerical routines}
@@ -4996,31 +4339,31 @@ xxxx
 %xxxx
 %
 
-%
-%
-%\subsection{Contributors to XSC}
-%\label{Contributors to XSC}
-%The main developers of XSC are Frithjof Blomquist, Werner Hofschuster, Walter Kr\"amer.
-%
-%\vpara
-%The Credits sction from the C-XSC - A C++ Class Library for Extended Scientific Computing Documentation 2.5.3 main page http://www2.math.uni-wuppertal.de/~xsc/xsc/cxsc/apidoc/html/main.html contains the following statement:
-%
-%\vpara
-%"The work on C-XSC started in 1990 at the Institute for Applied Mathematics (Prof. Kulisch), University of Karlsruhe. Many colleagues and scientists have directly and indirectly contributed to the realization of C-XSC. The authors would like to thank each of them for his or her cooperation. Special thanks go to U. Allendörfer, C. Baumhof, H. Berlejung, H. Bleher, H. Böhm, B. Bohl, G. Bohlender, F. Blomquist, K. Braune, H.H. Chen, D. Cordes, A. Davidenkoff, H.-C. Fischer, M. Grimmer, K. Grüner, R. Hammer, M. Hinz, M. Hocks, B. Höffgen, W. Hofschuster, P. Januscke, E. Kaucher, R. Kelch, R. Kirchner, R. Klatte, W. Klein, W. Krämer, U. Kulisch, C. Lawo, M. Metzger, W.L. Miranker, M. Neaga, M. Neher, D. Ratz, M. Rauch, S. Ritterbusch, S.M. Rump, R. Saier, D. Schiriaev, L. Schmidt, G. Schumacher, U. Storck, J. Suckfüll, F. Toussaint, C. Ullrich, W. Walter, S. Wedner, G. Werheit, A. Wiethoff, H.W. Wippermann, J. Wolff von Gudenberg and M. Zimmer.
-%
-%\vpara
-%C-XSC is an outcome of an ongoing collaboration of the Institute for Applied Mathematics (Prof. Kulisch), University of Karlsruhe and the Institute for Scientific Computing/Software Engineering (Prof. Krämer), University of Wuppertal. For the latest news and up to date software contact http://www.math.uni-wuppertal.de/~xsc/ .
-%
-%\vpara
-%Thanks to the referees for valuable comments and suggestions."
-%
-%
-%
-%\subsection{Contributors to XSC-MPFI}
-%\label{Contributors to XSC-MPFI}
-%The main developers of XSC-MPFI are Frithjof Blomquist, Werner Hofschuster, Walter Kr\"amer. 
-%The library is in part based on work by Hans-Stephan Brand.
-%
+
+
+\subsection{Contributors to XSC}
+\label{Contributors to XSC}
+The main developers of XSC are Frithjof Blomquist, Werner Hofschuster, Walter Kr\"amer.
+
+\vpara
+The Credits sction from the C-XSC - A C++ Class Library for Extended Scientific Computing Documentation 2.5.3 main page http://www2.math.uni-wuppertal.de/~xsc/xsc/cxsc/apidoc/html/main.html contains the following statement:
+
+\vpara
+"The work on C-XSC started in 1990 at the Institute for Applied Mathematics (Prof. Kulisch), University of Karlsruhe. Many colleagues and scientists have directly and indirectly contributed to the realization of C-XSC. The authors would like to thank each of them for his or her cooperation. Special thanks go to U. Allendörfer, C. Baumhof, H. Berlejung, H. Bleher, H. Böhm, B. Bohl, G. Bohlender, F. Blomquist, K. Braune, H.H. Chen, D. Cordes, A. Davidenkoff, H.-C. Fischer, M. Grimmer, K. Grüner, R. Hammer, M. Hinz, M. Hocks, B. Höffgen, W. Hofschuster, P. Januscke, E. Kaucher, R. Kelch, R. Kirchner, R. Klatte, W. Klein, W. Krämer, U. Kulisch, C. Lawo, M. Metzger, W.L. Miranker, M. Neaga, M. Neher, D. Ratz, M. Rauch, S. Ritterbusch, S.M. Rump, R. Saier, D. Schiriaev, L. Schmidt, G. Schumacher, U. Storck, J. Suckfüll, F. Toussaint, C. Ullrich, W. Walter, S. Wedner, G. Werheit, A. Wiethoff, H.W. Wippermann, J. Wolff von Gudenberg and M. Zimmer.
+
+\vpara
+C-XSC is an outcome of an ongoing collaboration of the Institute for Applied Mathematics (Prof. Kulisch), University of Karlsruhe and the Institute for Scientific Computing/Software Engineering (Prof. Krämer), University of Wuppertal. For the latest news and up to date software contact http://www.math.uni-wuppertal.de/~xsc/ .
+
+\vpara
+Thanks to the referees for valuable comments and suggestions."
+
+
+
+\subsection{Contributors to XSC-MPFI}
+\label{Contributors to XSC-MPFI}
+The main developers of XSC-MPFI are Frithjof Blomquist, Werner Hofschuster, Walter Kr\"amer. 
+The library is in part based on work by Hans-Stephan Brand.
+
 
 
 \subsection{Contributors to MPFRC++}

@@ -81,22 +81,6 @@ void t2()
 }
 
 
-void t2a()
-{
-    fmpq_t x, y;
-    fmpq_init (x);
-    fmpq_init (y);
-    fmpq_set_si (x, 7, 5);
-    fmpq_mul (y, x, x);
-    fmpq_print (x);
-    flint_printf ("^2 = ");
-    fmpq_print (y);
-    flint_printf ("\n");
-    fmpq_clear (x);
-    fmpq_clear (y);
-
-}
-
 
 void t3()
 {
@@ -132,7 +116,6 @@ void t5()
     fmpz_mat_mul (B, A, A);
     flint_printf ("A = \n");
     fmpz_mat_print_pretty (A);
-    flint_printf ("\n");
     flint_printf ("A^2 = \n");
     fmpz_mat_print_pretty (B);
     fmpz_mat_clear (A);
@@ -258,7 +241,7 @@ void t6a()
 void t7a()
 {
     long digits = 20;
-    long prec = 160;
+    long prec = 1600;
     long n = 4;
     arb_mat_t A, B, C;
     fmpq_mat_t A_fmpq;
@@ -299,13 +282,12 @@ int main()
 //    t0();
 //    t1();
 //    t2();
-//    t2a();
 //    t3();
 //    t4();
- //   t5();
+//    t5();
 //    t6();
 //    t7();
-//
+
 //    t5a();
 //    t6a();
     t7a();

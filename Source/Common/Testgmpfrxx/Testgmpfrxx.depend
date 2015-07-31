@@ -1,0 +1,53 @@
+# depslib dependency file v1.0
+1389884984 source:c:\extra\gcc\cppprograms\testgmpfrxx\main.cpp
+	"gmpfrxx.h"
+	<vector>
+	<algorithm>
+	<sstream>
+	<complex>
+
+1389890790 c:\extra\gcc\cppprograms\testgmpfrxx\gmpfrxx.h
+	<stdio.h>
+	<iosfwd>
+	<iostream>
+	<cstring>
+	<string>
+	<stdexcept>
+	<gmp.h>
+	<mpfr.h>
+
+1389794904 c:\extra\gcc\msys\local\win32_dll\include\gmp.h
+	<iosfwd>
+	<cstdio>
+	<cstddef>
+	<stddef.h>
+
+1389650447 c:\extra\gcc\msys\local\win32_dll\include\mpfr.h
+	<gmp.h>
+
+1389884901 source:c:\extra\gcc\cppprograms\testgmpfrxx\gmpfrxx.cpp
+	"gmpfrxx.h"
+	"stdlib.h"
+
+1389884901 source:i:\data\mpformulatdm\mpformulac\source\common\include\gmpfrxx.cpp
+	"gmpfrxx.h"
+	"stdlib.h"
+
+1389896005 i:\data\mpformulatdm\mpformulac\source\common\include\gmpfrxx.h
+	<stdio.h>
+	<iosfwd>
+	<iostream>
+	<cstring>
+	<string>
+	<stdexcept>
+	<gmp.h>
+	<mpfr.h>
+
+1427016218 i:\data\mpformulatdm\externaltools\msys32\local\win32\include\gmp.h
+	<iosfwd>
+	<cstdio>
+	<stddef.h>
+
+1427016836 i:\data\mpformulatdm\externaltools\msys32\local\win32\include\mpfr.h
+	<gmp.h>
+

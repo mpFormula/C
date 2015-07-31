@@ -1,1 +1,0 @@
-./configure --build=x86_64-w64-mingw32 --host=x86_64-w64-mingw32 --enable-fat --enable-gmpcompat --enable-static --disable-shared ABI=64  CFLAGS="-m64 -march=k8 -Wno-attributes" --prefix=/local/Win64 --exec-prefix=/local/Win64 

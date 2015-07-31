@@ -1,6 +1,0 @@
-C:\Extra\mpFormulaTDM\mpFormulaC\Source\mpNumerix2\mpNumerix2\obj\Release\mpNumerix2.vbprojResolveAssemblyReference.cache
-C:\Extra\mpFormulaTDM\mpFormulaC\mpNum\Win32\mpNumerix2.dll.config
-C:\Extra\mpFormulaTDM\mpFormulaC\mpNum\Win32\mpNumerix2.dll
-C:\Extra\mpFormulaTDM\mpFormulaC\mpNum\Win32\mpNumerix2.xml
-C:\Extra\mpFormulaTDM\mpFormulaC\Source\mpNumerix2\mpNumerix2\obj\Release\mpNumerix2.dll
-C:\Extra\mpFormulaTDM\mpFormulaC\Source\mpNumerix2\mpNumerix2\obj\Release\bin\Release\mpNumerix2.xml

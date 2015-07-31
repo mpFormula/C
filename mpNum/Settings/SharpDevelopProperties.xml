@@ -30,7 +30,6 @@
       <ConvertTabsToSpaces>true</ConvertTabsToSpaces>
       <AllowScrollBelowDocument>true</AllowScrollBelowDocument>
       <FontFamily>Consolas</FontFamily>
-      <FontSize>12</FontSize>
       <WordWrap>true</WordWrap>
       <ShowHiddenDefinitions>true</ShowHiddenDefinitions>
     </CodeEditorOptions>
@@ -114,10 +113,10 @@
   <Dialogs.NewFileDialog.CategoryViewState value="[]" />
   <Dialogs.NewFileDialog.LastSelectedCategory value="C#" />
   <Dialogs.NewFileDialog.LastSelectedTemplate value="${res:Templates.File.EmptyClass.Name}" />
-  <Dialogs.NewProjectDialog.CategoryTreeState value="[C#[]]" />
+  <Dialogs.NewProjectDialog.CategoryTreeState value="[VB[]]" />
   <Dialogs.NewProjectDialog.CreateDirectoryForSolution value="True" />
   <Dialogs.NewProjectDialog.LargeImages value="True" />
-  <Dialogs.NewProjectDialog.LastSelectedCategory value="C#\Windows Applications" />
+  <Dialogs.NewProjectDialog.LastSelectedCategory value="VB\Windows Applications" />
   <Dialogs.NewProjectDialog.TargetFramework value="v4.0" />
   <SerializedValue name="DisabledContextActionProviders">
     <ArrayOfString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
@@ -157,13 +156,8 @@
     <ViewMode value="Hexadecimal" />
   </Properties>
   <ICSharpCode.SharpDevelop.Gui.Dialogs.NewProjectDialog.DefaultPath value="C:\Users\DH\Documents\SharpDevelop Projects" />
-  <ICSharpCode.SharpDevelop.Gui.GotoDialog.Bounds value="222.8,409.2,578,298" />
   <ICSharpCode.SharpDevelop.Gui.ProjectBrowser.ShowExtensions value="True" />
-  <ICSharpCode.SharpDevelop.Gui.SearchAndReplaceDialog.Location value="576, 184" />
-  <ICSharpCode.SharpDevelop.Gui.SortOptionsDialog.CaseSensitive value="True" />
-  <ICSharpCode.SharpDevelop.Gui.SortOptionsDialog.IgnoreWhitespaces value="False" />
-  <ICSharpCode.SharpDevelop.Gui.SortOptionsDialog.RemoveDuplicateLines value="False" />
-  <ICSharpCode.SharpDevelop.Gui.SortOptionsDialog.SortDirection value="Ascending" />
+  <ICSharpCode.SharpDevelop.Gui.SearchAndReplaceDialog.Location value="895, 219" />
   <ICSharpCode.SharpDevelop.Gui.StatusBarVisible value="True" />
   <ICSharpCode.SharpDevelop.Gui.ToolBarVisible value="True" />
   <ICSharpCode.SharpDevelop.Gui.UseProfessionalRenderer value="True" />
@@ -196,20 +190,18 @@
   </Properties>
   <Properties name="RecentOpen">
     <Array name="Files">
-      <Element value="C:\Extra\mpFormulaTDM\mpFormulaC\Source\mpNumerix2\mpNumerix2\Library.vb" />
-      <Element value="C:\Extra\mpFormulaTDM\mpFormulaC\Source\mpNumerix2\TestmpNumerix2\Program.vb" />
-      <Element value="C:\Extra\mpFormulaTDM\mpFormulaC\Source\mpNumerix2\TestmpNumerics2b\Program.py" />
-      <Element value="I:\Data\mpFormulaTDM\mpFormulaC\Source\mpNumerix2\mpNumerix2\Library.vb" />
-      <Element value="I:\Data\mpFormulaTDM\mpFormulaC\Source\mpNumerix2\TestmpNumerix2\Program.vb" />
-      <Element value="C:\Extra\mpFormulaTDM\mpFormulaC\Source\mpNumerix2\TestmpNumerix2a\Program.cs" />
-      <Element value="I:\Data\mpFormulaTDM\mpFormulaC\Source\mpNumerix2\TestmpNumerix2a\Program.cs" />
-      <Element value="I:\Data\mpFormulaTDM\mpFormulaC\Source\mpNumerix2\TestmpNumerics2b\Program.py" />
-      <Element value="I:\Data\mpFormulaTDM\mpFormulaC\Source\mpNumerix2\TestCSharp2\Program.cs" />
-      <Element value="I:\Data\mpFormulaTDM\mpFormulaC\Source\mpNumerix2\TestCSharp\Program.vb" />
+      <Element value="I:\Data\mpFormulaTDM\mpFormulaXL\Source\MpMath\TestFormulaXLClassLib\TestMpFormula.vb" />
+      <Element value="I:\Data\mpFormulaTDM\mpFormulaXL\Source\MpMath\mpFormulaOneCOM\Properties\AssemblyInfo.vb" />
+      <Element value="I:\Data\mpFormulaTDM\mpFormulaXL\Source\MpMath\mpFormulaOneCOM\app.config" />
+      <Element value="I:\Data\mpFormulaTDM\mpFormulaXL\Source\MpMath\mpFormulaOneCOM\Library.vb" />
+      <Element value="I:\Data\mpFormulaTDM\mpFormulaXL\Source\MpMath\TestFormulaOneCOM\Program.vb" />
+      <Element value="I:\Data\mpFormulaTDM\mpFormulaXL\Source\MpMath\MpMathNetLib\MpMathClass.vb" />
+      <Element value="I:\Data\mpFormulaTDM\mpFormulaXL\Source\MpMath\MpMathPythonLib\MyModule.py" />
+      <Element value="I:\Data\mpFormulaTDM\mpFormulaXL\Source\MpMath\TestMpMath\TestMpMath.vb" />
+      <Element value="I:\Data\mpFormulaTDM\mpFormulaXL\Source\MpMath\MpMathClient\CallMpMathProgram.vb" />
+      <Element value="I:\Data\mpFormulaTDM\mpFormulaXL\Source\MpMath\MpMathClientForm\MpMathClientFormProgram.vb" />
     </Array>
     <Array name="Projects">
-      <Element value="C:\Extra\mpFormulaTDM\mpFormulaC\Source\mpNumerix2\mpNumerix2.sln" />
-      <Element value="I:\Data\mpFormulaTDM\mpFormulaC\Source\mpNumerix2\mpNumerix2.sln" />
       <Element value="I:\Data\mpFormulaTDM\mpFormulaXL\Source\MpMath\MpMath.sln" />
       <Element value="E:\Extra\mpFormulaTDM\mpFormulaC\Source\mpNumerix2\mpNumerix2.sln" />
       <Element value="E:\Extra\mpFormulaTDM\mpFormulaXL\Source\mpFormulaToolbox\mpFormulaToolbox.sln" />
@@ -218,6 +210,8 @@
       <Element value="C:\Extra\mpFormulaTDM\mpFormulaXL\Source\PythonConsole\PythonConsole.sln" />
       <Element value="C:\Extra\mpFormulaTDM\mpFormulaXL\Source\mpFormulaToolbox\mpFormulaToolbox.sln" />
       <Element value="I:\Data\mpFormulaTDM\mpFormulaXL\Source\mpFormulaToolbox\mpFormulaToolbox.sln" />
+      <Element value="C:\Extra\mpFormulaTDM\mpFormulaXL\Source\MpMathListing\mpmathListing.sln" />
+      <Element value="I:\Data\mpFormulaTDM\mpFormulaXL\Source\MSOffice\MSOffice.sln" />
     </Array>
   </Properties>
   <Properties name="RubyBinding.Options">
@@ -227,11 +221,6 @@
   <SearchAndReplace.GroupResultsByFile value="False" />
   <Properties name="SearchAndReplaceProperties2">
     <Array name="FindPatterns">
-      <Element value="Shared" />
-      <Element value="mpz" />
-      <Element value="mpArb" />
-      <Element value="mpFmpq" />
-      <Element value="mpFmpz" />
       <Element value=") As Object" />
       <Element value="KeyWords.ToString(), Options.ToString(), RefName.ToString())" />
       <Element value="KeyWords.ToString())" />
@@ -263,10 +252,6 @@
     <MatchCase value="False" />
     <MatchWholeWord value="False" />
     <Array name="ReplacePatterns">
-      <Element value="mpq" />
-      <Element value="mpAcb" />
-      <Element value="mpArb" />
-      <Element value="mpFmpq" />
       <Element value=") As mpNum" />
       <Element value="KeyWords.ToString(), RefName.ToString(), Options.ToString())" />
       <Element value="KeyWords.ToString(), Options.ToString(), RefName.ToString())" />
@@ -291,7 +276,7 @@
       <Element value="mpFormulaToolbox" />
     </Array>
     <SearchMode value="Normal" />
-    <SearchTarget value="CurrentDocument" />
+    <SearchTarget value="CurrentSelection" />
   </Properties>
   <Array name="ServiceReference.Urls" />
   <Properties name="ServiceReferenceOptions">
@@ -328,7 +313,7 @@
   </Properties>
   <SharpDevelop.UI.UseProjectAmbience value="True" />
   <ShowTipsAtStartup value="True" />
-  <TreeViewOptionsDialog.WindowBounds value="206,212,750,540" />
+  <TreeViewOptionsDialog.WindowBounds value="207,212,750,414" />
   <Properties name="UnitTesting.Options">
     <CreateXmlOutputFile value="False" />
     <Labels value="False" />
@@ -340,8 +325,8 @@
   <VBBinding.TextEditor.EnableCasing value="True" />
   <VBBinding.TextEditor.EnableEndConstructs value="True" />
   <Properties name="WorkbenchMemento">
-    <Bounds value="98,175,996,704" />
-    <WindowState value="Normal" />
+    <Bounds value="90,176,996,704" />
+    <WindowState value="Maximized" />
   </Properties>
   <Properties name="XamlBinding.Options">
     <EventForeground value="#FF008000" />

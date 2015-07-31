@@ -1,9 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
 <CodeBlocks_workspace_file>
 	<Workspace title="mpNumTDM">
+		<Project filename="NewDecimal/NewDecimal.cbp" />
+		<Project filename="mpfci/mpfci.cbp" />
 		<Project filename="Make_BoostMath.cbp" />
+		<Project filename="Make_EigenMath.cbp" />
 		<Project filename="Test_EigenMath.cbp" />
 		<Project filename="Test_NumC.cbp" />
-		<Project filename="TestFLINT/TestFLINT.cbp" />
+		<Project filename="TestEigen_mpDecimal/TestEigenmpDecimal.cbp" />
+		<Project filename="Testgmpfrxx/Testgmpfrxx.cbp" />
 	</Workspace>
 </CodeBlocks_workspace_file>

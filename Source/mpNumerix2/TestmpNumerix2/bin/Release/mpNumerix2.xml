@@ -1,0 +1,58 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+mpNumerix2
+</name>
+</assembly>
+<members>
+<member name="M:mpNumerix2.mpNum.#ctor(System.Int32,System.Int32)">
+	<summary>
+ Create a new Matrix with some number of rows and columns.  This is the only place where
+ the dimensions can be set.
+ </summary>
+	<param name="m">Number of rows</param>
+	<param name="n">Number of columns</param>
+</member><member name="M:mpNumerix2.mpNum.#ctor(System.Int32)">
+	<summary>
+ Create a new Matrix with some number of rows and columns.  This is the only place where
+ the dimensions can be set.
+ </summary>
+	<param name="n"></param>
+</member><member name="P:mpNumerix2.mpNum.Rows">
+	<summary>
+ The number of rows in the matrix
+ </summary>
+	<returns>The number of rows in the matrix</returns>
+</member><member name="P:mpNumerix2.mpNum.Cols">
+	<summary>
+ The number of columns in the matrix
+ </summary>
+	<returns>The number of columns in the matrix</returns>
+</member><member name="P:mpNumerix2.mpNum.Item(System.Int32,System.Int32)">
+	<summary>
+ Gets and Item
+ </summary>
+	<param name="i"></param>
+	<param name="j"></param>
+</member><member name="P:mpNumerix2.mpNum.Row(System.Int32)">
+	<summary>
+ Gets or Sets a row
+ </summary>
+	<param name="i"></param>
+</member><member name="M:mpNumerix2.mp.GetMatrixInverse(mpNumerix2.mpNum,mpNumerix2.mpNum,System.Int32)">
+	<summary>
+ Returns the Inverse of a matrix
+ </summary>
+	<remarks>Returns the Inverse of a matrix</remarks>
+</member><member name="M:mpNumerix2.mp.StdDoubleSum(System.Double,System.Double)">
+	<summary>
+ Returns the StdDoubleSum of x and y
+ </summary>
+	<param name="x">Number of rows</param>
+	<param name="y">Number of columns</param>
+	<returns>Sqrt(x^2 + y^2)</returns>
+	<remarks>Remarks</remarks>
+</member>
+</members>
+</doc>
