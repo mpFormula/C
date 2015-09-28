@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="Make_Mpfci" />
+		<Option pch_mode="2" />
+		<Option compiler="gnu_gcc_492_compiler_32_bit" />
+		<Build>
+			<Target title="LibWin32">
+				<Option output="../../../../ExternalTools/msys32/local/Win32/lib/mpfci" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="" />
+				<Option object_output="obj/Release/" />
+				<Option type="2" />
+				<Option compiler="gnu_gcc_492_compiler_tdm" />
+				<Option createDefFile="1" />
+				<Compiler>
+					<Add option="-march=i686" />
+					<Add option="-Os" />
+					<Add option="-std=c++11" />
+					<Add option="-Wall" />
+					<Add option="-m32" />
+					<Add directory="../../../../ExternalTools/msys32/local/Win32/include" />
+					<Add directory="../Include" />
+					<Add directory="../mpfci/" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+					<Add option="-m32" />
+					<Add library="user32" />
+				</Linker>
+			</Target>
+			<Target title="LibWin64">
+				<Option output="../../../../ExternalTools/msys32/local/Win64/lib/mpfci" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="" />
+				<Option object_output="obj/Release/" />
+				<Option type="2" />
+				<Option compiler="gnu_gcc_492_compiler_tdm" />
+				<Option createDefFile="1" />
+				<Compiler>
+					<Add option="-Os" />
+					<Add option="-std=c++11" />
+					<Add option="-Wall" />
+					<Add directory="../../../../ExternalTools/msys32/local/Win64/include" />
+					<Add directory="../Include" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+					<Add library="user32" />
+				</Linker>
+			</Target>
+		</Build>
+		<Unit filename="../Include/cxscmpfr.h" />
+		<Unit filename="SpecFunc.cpp" />
+		<Unit filename="mpfcclass.cpp" />
+		<Unit filename="mpfcclass.hpp" />
+		<Unit filename="mpfciclass.cpp" />
+		<Unit filename="mpfciclass.hpp" />
+		<Unit filename="mpficlass.cpp" />
+		<Unit filename="mpficlass.hpp" />
+		<Unit filename="mpfrclass.cpp" />
+		<Unit filename="mpfrclass.hpp" />
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<debugger />
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

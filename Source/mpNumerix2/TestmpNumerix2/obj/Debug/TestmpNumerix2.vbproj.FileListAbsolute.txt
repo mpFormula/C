@@ -1,0 +1,6 @@
+I:\Data\mpFormulaTDM\mpFormulaC\mpNum\Win32\TestmpNumerix2.exe.config
+I:\Data\mpFormulaTDM\mpFormulaC\mpNum\Win32\TestmpNumerix2.exe
+I:\Data\mpFormulaTDM\mpFormulaC\mpNum\Win32\TestmpNumerix2.pdb
+I:\Data\mpFormulaTDM\mpFormulaC\Source\mpNumerix2\TestmpNumerix2\obj\Debug\TestmpNumerix2.vbprojResolveAssemblyReference.cache
+I:\Data\mpFormulaTDM\mpFormulaC\Source\mpNumerix2\TestmpNumerix2\obj\Debug\TestmpNumerix2.exe
+I:\Data\mpFormulaTDM\mpFormulaC\Source\mpNumerix2\TestmpNumerix2\obj\Debug\TestmpNumerix2.pdb

@@ -4,11 +4,11 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 # SharpDevelop 4.4
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "mpNumerix2", "mpNumerix2\mpNumerix2.vbproj", "{2816F6DE-73FE-4245-8EDE-85F3CBD14BEC}"
 EndProject
-Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "TestmpNumerix2", "TestmpNumerix2\TestmpNumerix2.vbproj", "{C43C2D34-AB1E-4B60-857A-DD4D4A5E709A}"
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Tests_VB", "TestmpNumerix2\Tests_VB.vbproj", "{C43C2D34-AB1E-4B60-857A-DD4D4A5E709A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestmpNumerix2a", "TestmpNumerix2a\TestmpNumerix2a.csproj", "{F81EA779-BD7E-4307-BBD9-891E1F243736}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests_CSharp", "TestmpNumerix2a\Tests_CSharp.csproj", "{F81EA779-BD7E-4307-BBD9-891E1F243736}"
 EndProject
-Project("{FD48973F-F585-4F70-812B-4D0503B36CE9}") = "TestmpNumerics2b", "TestmpNumerics2b\TestmpNumerics2b.pyproj", "{D0971C59-C1D5-4661-95E3-0BA58CE7AF8E}"
+Project("{FD48973F-F585-4F70-812B-4D0503B36CE9}") = "Tests_Python", "TestmpNumerics2b\Tests_Python.pyproj", "{D0971C59-C1D5-4661-95E3-0BA58CE7AF8E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -28,8 +28,12 @@
 					<Add option="-m32" />
 					<Add library="libarb.a" />
 					<Add library="libflint.a" />
+					<Add library="libmpfci.a" />
+					<Add library="libmpfi.a" />
+					<Add library="libmpc.a" />
 					<Add library="libmpfr.a" />
 					<Add library="libgmp.a" />
+					<Add library="libmpdec-2.a" />
 					<Add library="libBoostMathLongDouble.a" />
 					<Add directory="../../../ExternalTools/msys32/local/Win32/lib" />
 				</Linker>
@@ -66,11 +70,25 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="Compatibility.cpp" />
 		<Unit filename="Include/mpNumC.h" />
+		<Unit filename="Include/mpRealDecimal.h">
+			<Option target="LibWin64_Num_Make_DLL" />
+		</Unit>
 		<Unit filename="UseAcb.cpp" />
+		<Unit filename="UseAcf.cpp" />
 		<Unit filename="UseArb.cpp" />
+		<Unit filename="UseArf.cpp" />
 		<Unit filename="UseFmpq.cpp" />
 		<Unit filename="UseFmpz.cpp" />
+		<Unit filename="UseMpd.cpp" />
+		<Unit filename="UseMpdc.cpp" />
+		<Unit filename="UseMpfc.cpp" />
+		<Unit filename="UseMpfci.cpp" />
+		<Unit filename="UseMpfi.cpp" />
+		<Unit filename="UseMpfr.cpp" />
+		<Unit filename="UseMpq.cpp" />
+		<Unit filename="UseMpz.cpp" />
 		<Extensions>
 			<code_completion />
 			<envvars />

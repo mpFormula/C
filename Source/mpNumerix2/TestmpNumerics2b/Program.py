@@ -7,7 +7,11 @@ from System import Console
 
 #sys.path.append(r"I:\Data\mpFormulaTDM\mpFormulaC\Source\mpNumerix2\mpNumerix2\bin\Release")
 
-sys.path.append(r"C:\Extra\mpFormulaTDM\mpFormulaC\Source\mpNumerix2\mpNumerix2\bin\Release")
+#sys.path.append(r"C:\Extra\mpFormulaTDM\mpFormulaC\Source\mpNumerix2\mpNumerix2\bin\Release")
+
+sys.path.append(r"I:\Data\mpFormulaTDM\mpFormulaC\mpNum\Win32")
+
+
 
 
 #Load the mpNumerics library

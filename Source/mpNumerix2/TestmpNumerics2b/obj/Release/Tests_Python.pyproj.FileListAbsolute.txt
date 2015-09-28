@@ -1,0 +1,5 @@
+C:\Extra\mpFormulaTDM\mpFormulaC\mpNum\Win32\Tests_Python.exe.config
+C:\Extra\mpFormulaTDM\mpFormulaC\mpNum\Win32\Tests_Python.exe
+C:\Extra\mpFormulaTDM\mpFormulaC\mpNum\Win32\Tests_Python.dll
+C:\Extra\mpFormulaTDM\mpFormulaC\Source\mpNumerix2\TestmpNumerics2b\obj\Release\Tests_Python.pyprojResolveAssemblyReference.cache
+C:\Extra\mpFormulaTDM\mpFormulaC\Source\mpNumerix2\TestmpNumerics2b\obj\Release\Tests_Python.exe

@@ -1,0 +1,228 @@
+# depslib dependency file v1.0
+1438928161 source:c:\extra\mpformulatdm\mpformulac\source\common\useacb.cpp
+	"mpNumC.h"
+	<gmp.h>
+	<mpfr.h>
+	<flint.h>
+	"arb.h"
+	"arb_mat.h"
+	"acb.h"
+	"acb_mat.h"
+	<string.h>
+
+1439138660 c:\extra\mpformulatdm\mpformulac\source\common\include\mpnumc.h
+
+1437476547 c:\extra\mpformulatdm\externaltools\msys32\local\win32\include\gmp.h
+	<stddef.h>
+	<stdarg.h>
+	<cstddef>
+	<iosfwd>
+	<cstdio>
+	<stddef.h>
+
+1437477693 c:\extra\mpformulatdm\externaltools\msys32\local\win32\include\mpfr.h
+	<gmp.h>
+
+1437482764 c:\extra\mpformulatdm\externaltools\msys32\local\win32\include\flint\flint.h
+	<sys/param.h>
+	<gmp.h>
+	<mpfr.h>
+	<stdio.h>
+	<stdlib.h>
+	<alloca.h>
+	<malloc.h>
+	"limits.h"
+	"longlong.h"
+	"config.h"
+	"gc.h"
+	<assert.h>
+	"gmpcompat.h"
+
+1437482764 c:\extra\mpformulatdm\externaltools\msys32\local\win32\include\flint\longlong.h
+
+1437482764 c:\extra\mpformulatdm\externaltools\msys32\local\win32\include\flint\config.h
+
+1437482764 c:\extra\mpformulatdm\externaltools\msys32\local\win32\include\flint\gmpcompat.h
+	<stdio.h>
+	<stdlib.h>
+	<gmp.h>
+
+1437489881 c:\extra\mpformulatdm\externaltools\msys32\local\win32\include\arb.h
+	"fmprb.h"
+	"mag.h"
+	"arf.h"
+
+1437489881 c:\extra\mpformulatdm\externaltools\msys32\local\win32\include\fmprb.h
+	"fmpr.h"
+	"fmpz_poly.h"
+
+1437489881 c:\extra\mpformulatdm\externaltools\msys32\local\win32\include\fmpr.h
+	<stdio.h>
+	<limits.h>
+	<gmp.h>
+	<mpfr.h>
+	"flint.h"
+	"fmpz.h"
+	"fmpq.h"
+	"fmpz_extras.h"
+	"config.h"
+
+1437482764 c:\extra\mpformulatdm\externaltools\msys32\local\win32\include\flint\fmpz.h
+	<stdlib.h>
+	<stdio.h>
+	<gmp.h>
+	"flint.h"
+	"nmod_vec.h"
+	"fmpz-conversions.h"
+	"fmpz_factor.h"
+
+1437482764 c:\extra\mpformulatdm\externaltools\msys32\local\win32\include\flint\nmod_vec.h
+	<stdlib.h>
+	<gmp.h>
+	"longlong.h"
+	"ulong_extras.h"
+	"flint.h"
+
+1437482764 c:\extra\mpformulatdm\externaltools\msys32\local\win32\include\flint\ulong_extras.h
+	<gmp.h>
+	"flint.h"
+
+1437482764 c:\extra\mpformulatdm\externaltools\msys32\local\win32\include\flint\fmpz-conversions.h
+
+1437482764 c:\extra\mpformulatdm\externaltools\msys32\local\win32\include\flint\fmpz_factor.h
+	<gmp.h>
+	"flint.h"
+
+1437482764 c:\extra\mpformulatdm\externaltools\msys32\local\win32\include\flint\fmpq.h
+	<stdio.h>
+	<gmp.h>
+	<mpfr.h>
+	"flint.h"
+	"fmpz.h"
+	"fmpz_vec.h"
+
+1437482764 c:\extra\mpformulatdm\externaltools\msys32\local\win32\include\flint\fmpz_vec.h
+	<gmp.h>
+	"fmpz.h"
+	"flint.h"
+
+1437489881 c:\extra\mpformulatdm\externaltools\msys32\local\win32\include\fmpz_extras.h
+	<limits.h>
+	"flint.h"
+	"fmpz.h"
+
+1437482764 c:\extra\mpformulatdm\externaltools\msys32\local\win32\include\flint\fmpz_poly.h
+	<stdio.h>
+	<gmp.h>
+	"flint.h"
+	"fmpz.h"
+	"fmpz_vec.h"
+	"nmod_poly.h"
+	"fmpz_poly_factor.h"
+
+1437482764 c:\extra\mpformulatdm\externaltools\msys32\local\win32\include\flint\nmod_poly.h
+	<stdio.h>
+	<gmp.h>
+	"flint.h"
+	"nmod_vec.h"
+	"nmod_mat.h"
+	"ulong_extras.h"
+	"fmpz.h"
+	"nmod_poly_factor.h"
+
+1437482764 c:\extra\mpformulatdm\externaltools\msys32\local\win32\include\flint\nmod_mat.h
+	<stdlib.h>
+	<gmp.h>
+	"flint.h"
+	"longlong.h"
+	"ulong_extras.h"
+	"nmod_vec.h"
+
+1437482764 c:\extra\mpformulatdm\externaltools\msys32\local\win32\include\flint\nmod_poly_factor.h
+	<stdio.h>
+	<gmp.h>
+	"flint.h"
+	"nmod_vec.h"
+	"nmod_mat.h"
+	"ulong_extras.h"
+	"fmpz.h"
+
+1437482764 c:\extra\mpformulatdm\externaltools\msys32\local\win32\include\flint\fmpz_poly_factor.h
+	<stdio.h>
+	<gmp.h>
+	"flint.h"
+	"fmpz.h"
+	"fmpz_vec.h"
+	"nmod_poly.h"
+
+1437489881 c:\extra\mpformulatdm\externaltools\msys32\local\win32\include\mag.h
+	<math.h>
+	"flint.h"
+	"fmpz.h"
+	"fmpz_extras.h"
+	"fmpr.h"
+
+1437489881 c:\extra\mpformulatdm\externaltools\msys32\local\win32\include\arf.h
+	<math.h>
+	"flint.h"
+	"fmpr.h"
+	"mag.h"
+
+1437489881 c:\extra\mpformulatdm\externaltools\msys32\local\win32\include\arb_mat.h
+	"arb.h"
+	"fmpz_mat.h"
+	"fmpq_mat.h"
+	"perm.h"
+	"arb_poly.h"
+
+1437482764 c:\extra\mpformulatdm\externaltools\msys32\local\win32\include\flint\fmpz_mat.h
+	<stdio.h>
+	<gmp.h>
+	"flint.h"
+	"fmpz.h"
+	"nmod_mat.h"
+	"fmpz_poly.h"
+
+1437482764 c:\extra\mpformulatdm\externaltools\msys32\local\win32\include\flint\fmpq_mat.h
+	<gmp.h>
+	"flint.h"
+	"fmpz.h"
+	"fmpz_mat.h"
+	"fmpq.h"
+
+1437482764 c:\extra\mpformulatdm\externaltools\msys32\local\win32\include\flint\perm.h
+	<stdlib.h>
+	<stdio.h>
+	<gmp.h>
+	"flint.h"
+
+1437489881 c:\extra\mpformulatdm\externaltools\msys32\local\win32\include\arb_poly.h
+	"arb.h"
+	"acb.h"
+	"fmpz_poly.h"
+	"fmpq_poly.h"
+
+1437489881 c:\extra\mpformulatdm\externaltools\msys32\local\win32\include\acb.h
+	"arf.h"
+	"arb.h"
+
+1437482764 c:\extra\mpformulatdm\externaltools\msys32\local\win32\include\flint\fmpq_poly.h
+	<gmp.h>
+	"fmpz.h"
+	"fmpq.h"
+	"fmpz_vec.h"
+	"fmpz_poly.h"
+	"flint.h"
+
+1437489881 c:\extra\mpformulatdm\externaltools\msys32\local\win32\include\acb_mat.h
+	"arb.h"
+	"acb.h"
+	"fmpz_mat.h"
+	"fmpq_mat.h"
+	"arb_mat.h"
+	"acb_poly.h"
+
+1437489881 c:\extra\mpformulatdm\externaltools\msys32\local\win32\include\acb_poly.h
+	"acb.h"
+	"arb_poly.h"
+

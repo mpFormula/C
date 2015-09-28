@@ -1,1 +1,1 @@
-./configure --build=i686-w64-mingw32 --host=i686-w64-mingw32 --enable-fat  --enable-gmpcompat  --enable-static --disable-shared ABI=32  CFLAGS="-m32 -march=i686 -Wno-attributes" --prefix=/local/Win32 --exec-prefix=/local/Win32
+./configure --build=i686-w64-mingw32 --host=i686-w64-mingw32 --enable-fat  --enable-gmpcompat  --enable-static --disable-shared ABI=32  CFLAGS="-m32 -march=i686 -Wno-attributes -include stdint.h" --prefix=/local/Win32 --exec-prefix=/local/Win32

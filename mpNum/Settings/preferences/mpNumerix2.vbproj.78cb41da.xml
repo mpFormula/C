@@ -1,7 +1,9 @@
 ﻿<Properties>
   <Array name="bookmarks" />
   <Array name="files">
-    <Element value="I:\Data\mpFormulaTDM\mpFormulaC\Source\mpNumerix2\mpNumerix2\Library.vb" />
+    <Element value="I:\Data\mpFormulaTDM\mpFormulaC\Source\mpNumerix2\mpNumerix2\MPFR_MAT.vb" />
+    <Element value="I:\Data\mpFormulaTDM\mpFormulaC\Source\mpNumerix2\mpNumerix2\MPFC2_MAT.vb" />
+    <Element value="I:\Data\mpFormulaTDM\mpFormulaC\Source\mpNumerix2\mpNumerix2\MPFC_MAT.vb" />
   </Array>
   <Properties name="projectSavedData">
     <Properties name="customTool">

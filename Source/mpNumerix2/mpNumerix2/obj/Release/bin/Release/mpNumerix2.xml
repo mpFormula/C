@@ -6,44 +6,167 @@ mpNumerix2
 </name>
 </assembly>
 <members>
-<member name="M:mpNumerix2.mpFmpz.#ctor">
+<member name="M:mpNumerix2.mpz_t.#ctor">
 	<summary>
- Create a new mpFmpz
+ Create a new mpz_t
  </summary>
-</member><member name="M:mpNumerix2.mpFmpz.#ctor(System.Int32)">
+</member><member name="M:mpNumerix2.mpz_t.#ctor(System.Int32)">
 	<summary>
- Create a new mpFmpz
+ Create a new mpz_t
  </summary>
 	<param name="si32"></param>
-</member><member name="M:mpNumerix2.mpFmpzMat.#ctor(System.Int32,System.Int32)">
+</member><member name="M:mpNumerix2.mpfr_mat_t.#ctor(System.Int32,System.Int32)">
+	<summary>
+ Create a new Matrix with m of rows and n columns.  
+ </summary>
+	<param name="m">Number of rows</param>
+	<param name="n">Number of columns</param>
+</member><member name="P:mpNumerix2.mpfr_mat_t.rows">
+	<summary>
+ The number of rows in the matrix
+ </summary>
+	<returns>The number of rows in the matrix</returns>
+</member><member name="P:mpNumerix2.mpfr_mat_t.cols">
+	<summary>
+ The number of columns in the matrix
+ </summary>
+	<returns>The number of columns in the matrix</returns>
+</member><member name="P:mpNumerix2.mpfr_mat_t.item(System.Int32,System.Int32)">
+	<summary>
+ Gets and Sets an Item
+ </summary>
+	<param name="row_i"></param>
+	<param name="col_j"></param>
+</member><member name="P:mpNumerix2.mpfr_mat_t.block(System.Int32,System.Int32,System.Int32,System.Int32)">
+	<summary>
+ Gets or Sets a block
+ </summary>
+	<param name="i"></param>
+	<param name="j"></param>
+	<param name="p"></param>
+	<param name="q"></param>
+</member><member name="M:mpNumerix2.mpfi_t.#ctor">
+	<summary>
+ Create a new mpfi_t
+ </summary>
+</member><member name="M:mpNumerix2.mpfi_t.#ctor(System.Int32)">
+	<summary>
+ Create a new mpfi_t
+ </summary>
+	<param name="si32"></param>
+</member><member name="M:mpNumerix2.mpfc_mat_t.#ctor(System.Int32,System.Int32)">
+	<summary>
+ Create a new Matrix with m of rows and n columns.  
+ </summary>
+	<param name="m">Number of rows</param>
+	<param name="n">Number of columns</param>
+</member><member name="P:mpNumerix2.mpfc_mat_t.rows">
+	<summary>
+ The number of rows in the matrix
+ </summary>
+	<returns>The number of rows in the matrix</returns>
+</member><member name="P:mpNumerix2.mpfc_mat_t.cols">
+	<summary>
+ The number of columns in the matrix
+ </summary>
+	<returns>The number of columns in the matrix</returns>
+</member><member name="P:mpNumerix2.mpfc_mat_t.item(System.Int32,System.Int32)">
+	<summary>
+ Gets and Sets an Item
+ </summary>
+	<param name="row_i"></param>
+	<param name="col_j"></param>
+</member><member name="P:mpNumerix2.mpfc_mat_t.block(System.Int32,System.Int32,System.Int32,System.Int32)">
+	<summary>
+ Gets or Sets a block
+ </summary>
+	<param name="i"></param>
+	<param name="j"></param>
+	<param name="p"></param>
+	<param name="q"></param>
+</member><member name="M:mpNumerix2.mpfci_t.#ctor(System.Int32,System.Int32)">
+	<summary>
+ Create a new mpfci_t
+ </summary>
+	<param name="x_re"></param>
+	<param name="x_im"></param>
+</member><member name="M:mpNumerix2.mpfc2_mat_t.#ctor(System.Int32,System.Int32)">
+	<summary>
+ Create a new Matrix with m of rows and n columns.  
+ </summary>
+	<param name="m">Number of rows</param>
+	<param name="n">Number of columns</param>
+</member><member name="P:mpNumerix2.mpfc2_mat_t.rows">
+	<summary>
+ The number of rows in the matrix
+ </summary>
+	<returns>The number of rows in the matrix</returns>
+</member><member name="P:mpNumerix2.mpfc2_mat_t.cols">
+	<summary>
+ The number of columns in the matrix
+ </summary>
+	<returns>The number of columns in the matrix</returns>
+</member><member name="P:mpNumerix2.mpfc2_mat_t.item(System.Int32,System.Int32)">
+	<summary>
+ Gets and Sets an Item
+ </summary>
+	<param name="row_i"></param>
+	<param name="col_j"></param>
+</member><member name="P:mpNumerix2.mpfc2_mat_t.block(System.Int32,System.Int32,System.Int32,System.Int32)">
+	<summary>
+ Gets or Sets a block
+ </summary>
+	<param name="i"></param>
+	<param name="j"></param>
+	<param name="p"></param>
+	<param name="q"></param>
+</member><member name="M:mpNumerix2.mpdc_t.#ctor">
+	<summary>
+ Create a new mpdc_t
+ </summary>
+</member><member name="M:mpNumerix2.mpdc_t.#ctor(System.Int32)">
+	<summary>
+ Create a new mpdc_t
+ </summary>
+	<param name="si32"></param>
+</member><member name="M:mpNumerix2.mpd_t.#ctor">
+	<summary>
+ Create a new mpd_t
+ </summary>
+</member><member name="M:mpNumerix2.mpd_t.#ctor(System.Int32)">
+	<summary>
+ Create a new mpd_t
+ </summary>
+	<param name="si32"></param>
+</member><member name="M:mpNumerix2.fmpz_mat_t.#ctor(System.Int32,System.Int32)">
 	<summary>
  Create a new Matrix with some number of rows and columns.  This is the only place where
  the dimensions can be set.
  </summary>
 	<param name="m">Number of rows</param>
 	<param name="n">Number of columns</param>
-</member><member name="P:mpNumerix2.mpFmpzMat.Rows">
+</member><member name="P:mpNumerix2.fmpz_mat_t.Rows">
 	<summary>
  The number of rows in the matrix
  </summary>
 	<returns>The number of rows in the matrix</returns>
-</member><member name="P:mpNumerix2.mpFmpzMat.Cols">
+</member><member name="P:mpNumerix2.fmpz_mat_t.Cols">
 	<summary>
  The number of columns in the matrix
  </summary>
 	<returns>The number of columns in the matrix</returns>
-</member><member name="P:mpNumerix2.mpFmpzMat.Item(System.Int32,System.Int32)">
+</member><member name="P:mpNumerix2.fmpz_mat_t.Item(System.Int32,System.Int32)">
 	<summary>
  Gets and Item
  </summary>
 	<param name="i"></param>
 	<param name="j"></param>
-</member><member name="P:mpNumerix2.mpFmpzMat.Row(System.Int32)">
+</member><member name="P:mpNumerix2.fmpz_mat_t.Row(System.Int32)">
 	<summary>
  Gets or Sets a row
  </summary>
 	<param name="i"></param>
-</member><member name="M:mpNumerix2.mpFmpzMat.op_Addition(mpNumerix2.mpFmpzMat,mpNumerix2.mpFmpzMat)">
+</member><member name="M:mpNumerix2.fmpz_mat_t.op_Addition(mpNumerix2.fmpz_mat_t,mpNumerix2.fmpz_mat_t)">
 	<summary>
  Adds two matrices together and returns a third matrix with the sum.  The matrices need to have the
  same dimensions.
@@ -52,98 +175,109 @@ mpNumerix2
 	<param name="m2">Second matrix</param>
 	<returns>A new matrix with the sum of the first two</returns>
 	<remarks></remarks>
-</member><member name="M:mpNumerix2.mpFmpqMat.#ctor(System.Int32,System.Int32)">
+</member><member name="M:mpNumerix2.fmpz_t.#ctor">
+	<summary>
+ Create a new fmpz_t
+ </summary>
+</member><member name="M:mpNumerix2.fmpz_t.#ctor(System.Int32)">
+	<summary>
+ Create a new fmpz_t
+ </summary>
+	<param name="si32"></param>
+</member><member name="M:mpNumerix2.fmpq_mat_t.#ctor(System.Int32,System.Int32)">
 	<summary>
  Create a new Matrix with some number of rows and columns.  This is the only place where
  the dimensions can be set.
  </summary>
 	<param name="m">Number of rows</param>
 	<param name="n">Number of columns</param>
-</member><member name="P:mpNumerix2.mpFmpqMat.Rows">
+</member><member name="P:mpNumerix2.fmpq_mat_t.Rows">
 	<summary>
  The number of rows in the matrix
  </summary>
 	<returns>The number of rows in the matrix</returns>
-</member><member name="P:mpNumerix2.mpFmpqMat.Cols">
+</member><member name="P:mpNumerix2.fmpq_mat_t.Cols">
 	<summary>
  The number of columns in the matrix
  </summary>
 	<returns>The number of columns in the matrix</returns>
-</member><member name="P:mpNumerix2.mpFmpqMat.Item(System.Int32,System.Int32)">
+</member><member name="P:mpNumerix2.fmpq_mat_t.Item(System.Int32,System.Int32)">
 	<summary>
  Gets and Item
  </summary>
 	<param name="i"></param>
 	<param name="j"></param>
-</member><member name="P:mpNumerix2.mpFmpqMat.Row(System.Int32)">
+</member><member name="P:mpNumerix2.fmpq_mat_t.Row(System.Int32)">
 	<summary>
  Gets or Sets a row
  </summary>
 	<param name="i"></param>
-</member><member name="M:mpNumerix2.mpArbMat.#ctor(System.Int32,System.Int32)">
+</member><member name="M:mpNumerix2.arb_mat_t.#ctor(System.Int32,System.Int32)">
 	<summary>
  Create a new Matrix with some number of rows and columns.  This is the only place where
  the dimensions can be set.
  </summary>
 	<param name="m">Number of rows</param>
 	<param name="n">Number of columns</param>
-</member><member name="P:mpNumerix2.mpArbMat.Rows">
+</member><member name="P:mpNumerix2.arb_mat_t.Rows">
 	<summary>
  The number of rows in the matrix
  </summary>
 	<returns>The number of rows in the matrix</returns>
-</member><member name="P:mpNumerix2.mpArbMat.Cols">
+</member><member name="P:mpNumerix2.arb_mat_t.Cols">
 	<summary>
  The number of columns in the matrix
  </summary>
 	<returns>The number of columns in the matrix</returns>
-</member><member name="P:mpNumerix2.mpArbMat.Item(System.Int32,System.Int32)">
+</member><member name="P:mpNumerix2.arb_mat_t.Item(System.Int32,System.Int32)">
 	<summary>
  Gets and Item
  </summary>
 	<param name="i"></param>
 	<param name="j"></param>
-</member><member name="P:mpNumerix2.mpArbMat.Row(System.Int32)">
+</member><member name="P:mpNumerix2.arb_mat_t.Row(System.Int32)">
 	<summary>
  Gets or Sets a row
  </summary>
 	<param name="i"></param>
-</member><member name="M:mpNumerix2.mpAcbMat.#ctor(System.Int32,System.Int32)">
+</member><member name="M:mpNumerix2.arb_t.#ctor(System.Int32)">
+	<summary>
+ Create a new arb_t
+ </summary>
+	<param name="si32"></param>
+</member><member name="M:mpNumerix2.acb_mat_t.#ctor(System.Int32,System.Int32)">
 	<summary>
  Create a new Matrix with some number of rows and columns.  This is the only place where
  the dimensions can be set.
  </summary>
 	<param name="m">Number of rows</param>
 	<param name="n">Number of columns</param>
-</member><member name="P:mpNumerix2.mpAcbMat.Rows">
+</member><member name="P:mpNumerix2.acb_mat_t.Rows">
 	<summary>
  The number of rows in the matrix
  </summary>
 	<returns>The number of rows in the matrix</returns>
-</member><member name="P:mpNumerix2.mpAcbMat.Cols">
+</member><member name="P:mpNumerix2.acb_mat_t.Cols">
 	<summary>
  The number of columns in the matrix
  </summary>
 	<returns>The number of columns in the matrix</returns>
-</member><member name="P:mpNumerix2.mpAcbMat.Item(System.Int32,System.Int32)">
+</member><member name="P:mpNumerix2.acb_mat_t.Item(System.Int32,System.Int32)">
 	<summary>
  Gets and Item
  </summary>
 	<param name="i"></param>
 	<param name="j"></param>
-</member><member name="P:mpNumerix2.mpAcbMat.Row(System.Int32)">
+</member><member name="P:mpNumerix2.acb_mat_t.Row(System.Int32)">
 	<summary>
  Gets or Sets a row
  </summary>
 	<param name="i"></param>
-</member><member name="M:mpNumerix2.Acb.StdDoubleSum(System.Double,System.Double)">
+</member><member name="M:mpNumerix2.acb_t.#ctor(System.Int32)">
 	<summary>
- Returns the StdDoubleSum of x and y
+ Create a new acb_t
  </summary>
-	<param name="x">Number of rows</param>
-	<param name="y">Number of columns</param>
-	<returns>Sqrt(x^2 + y^2)</returns>
-	<remarks>Remarks</remarks>
+	<param name="si32"></param>
 </member>
 </members>
 </doc>

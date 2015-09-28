@@ -36,7 +36,7 @@ void t2a()
     Lib_Fmpq_Init (&x);
     Lib_Fmpq_Init (&y);
 
-    Lib_Fmpq_Set_Si (x, 7, 5);
+    Lib_Fmpq_Set_Si_Si (x, 7, 5);
     Lib_Fmpq_Mul (y, x, x);
     Lib_Fmpq_Print (x);
     Lib_Flint_Printf ("^2 = ");

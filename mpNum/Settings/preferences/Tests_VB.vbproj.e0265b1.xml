@@ -1,0 +1,20 @@
+﻿<Properties>
+  <Array name="bookmarks" />
+  <Array name="files">
+    <Element value="C:\Extra\mpFormulaTDM\mpFormulaC\Source\mpNumerix2\TestmpNumerix2\Main.vb" />
+    <Element value="C:\Extra\mpFormulaTDM\mpFormulaC\Source\mpNumerix2\TestmpNumerix2\TestMpfr.vb" />
+    <Element value="C:\Extra\mpFormulaTDM\mpFormulaC\Source\mpNumerix2\TestmpNumerix2\TestAcb.vb" />
+    <Element value="C:\Extra\mpFormulaTDM\mpFormulaC\Source\mpNumerix2\TestmpNumerix2\TestMpd.vb" />
+    <Element value="C:\Extra\mpFormulaTDM\mpFormulaC\Source\mpNumerix2\TestmpNumerix2\TestArb.vb" />
+    <Element value="C:\Extra\mpFormulaTDM\mpFormulaC\Source\mpNumerix2\TestmpNumerix2\TestMpfc.vb" />
+    <Element value="C:\Extra\mpFormulaTDM\mpFormulaC\Source\mpNumerix2\TestmpNumerix2\TestMpfci.vb" />
+    <Element value="C:\Extra\mpFormulaTDM\mpFormulaC\Source\mpNumerix2\TestmpNumerix2\TestMpfi.vb" />
+    <Element value="C:\Extra\mpFormulaTDM\mpFormulaC\Source\mpNumerix2\TestmpNumerix2\TestMpq.vb" />
+    <Element value="C:\Extra\mpFormulaTDM\mpFormulaC\Source\mpNumerix2\TestmpNumerix2\TestMpz.vb" />
+  </Array>
+  <Properties name="projectSavedData">
+    <Properties name="customTool">
+      <runOnBuild value="False" />
+    </Properties>
+  </Properties>
+</Properties>

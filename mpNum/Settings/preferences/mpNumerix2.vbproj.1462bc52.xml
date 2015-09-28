@@ -1,9 +1,30 @@
 ﻿<Properties>
   <Array name="bookmarks">
-    <Element value="Bookmark|C:\Extra\mpFormulaTDM\mpFormulaC\Source\mpNumerix2\mpNumerix2\Library.vb|302|5" />
+    <Element value="Bookmark|C:\Extra\mpFormulaTDM\mpFormulaC\Source\mpNumerix2\mpNumerix2\MPFR.vb|465|3" />
+    <Element value="Bookmark|C:\Extra\mpFormulaTDM\mpFormulaC\Source\mpNumerix2\mpNumerix2\FMPZ.vb|324|3" />
+    <Element value="Bookmark|C:\Extra\mpFormulaTDM\mpFormulaC\Source\mpNumerix2\mpNumerix2\FMPQ.vb|12|3" />
   </Array>
   <Array name="files">
-    <Element value="C:\Extra\mpFormulaTDM\mpFormulaC\Source\mpNumerix2\mpNumerix2\Library.vb" />
+    <Element value="C:\Extra\mpFormulaTDM\mpFormulaC\Source\mpNumerix2\mpNumerix2\MPFR_MAT.vb" />
+    <Element value="C:\Extra\mpFormulaTDM\mpFormulaC\Source\mpNumerix2\mpNumerix2\MPFC2_MAT.vb" />
+    <Element value="C:\Extra\mpFormulaTDM\mpFormulaC\Source\mpNumerix2\mpNumerix2\MPFC_MAT.vb" />
+    <Element value="C:\Extra\mpFormulaTDM\mpFormulaC\Source\mpNumerix2\mpNumerix2\MPFR.vb" />
+    <Element value="C:\Extra\mpFormulaTDM\mpFormulaC\Source\mpNumerix2\mpNumerix2\MP4.vb" />
+    <Element value="C:\Extra\mpFormulaTDM\mpFormulaC\Source\mpNumerix2\mpNumerix2\ACB.vb" />
+    <Element value="C:\Extra\mpFormulaTDM\mpFormulaC\Source\mpNumerix2\mpNumerix2\ACB_MAT.vb" />
+    <Element value="C:\Extra\mpFormulaTDM\mpFormulaC\Source\mpNumerix2\mpNumerix2\MPFI.vb" />
+    <Element value="C:\Extra\mpFormulaTDM\mpFormulaC\Source\mpNumerix2\mpNumerix2\ARB.vb" />
+    <Element value="C:\Extra\mpFormulaTDM\mpFormulaC\Source\mpNumerix2\mpNumerix2\ARB_MAT.vb" />
+    <Element value="C:\Extra\mpFormulaTDM\mpFormulaC\Source\mpNumerix2\mpNumerix2\FMPQ.vb" />
+    <Element value="C:\Extra\mpFormulaTDM\mpFormulaC\Source\mpNumerix2\mpNumerix2\FMPQ_MAT.vb" />
+    <Element value="C:\Extra\mpFormulaTDM\mpFormulaC\Source\mpNumerix2\mpNumerix2\FMPZ.vb" />
+    <Element value="C:\Extra\mpFormulaTDM\mpFormulaC\Source\mpNumerix2\mpNumerix2\FMPZ_MAT.vb" />
+    <Element value="C:\Extra\mpFormulaTDM\mpFormulaC\Source\mpNumerix2\mpNumerix2\MPD.vb" />
+    <Element value="C:\Extra\mpFormulaTDM\mpFormulaC\Source\mpNumerix2\mpNumerix2\MPDC.vb" />
+    <Element value="C:\Extra\mpFormulaTDM\mpFormulaC\Source\mpNumerix2\mpNumerix2\MPFC.vb" />
+    <Element value="C:\Extra\mpFormulaTDM\mpFormulaC\Source\mpNumerix2\mpNumerix2\MPFCI.vb" />
+    <Element value="C:\Extra\mpFormulaTDM\mpFormulaC\Source\mpNumerix2\mpNumerix2\MPQ.vb" />
+    <Element value="C:\Extra\mpFormulaTDM\mpFormulaC\Source\mpNumerix2\mpNumerix2\MPZ.vb" />
   </Array>
   <Properties name="projectSavedData">
     <Properties name="customTool">

@@ -1,0 +1,1 @@
+C:\Extra\mpFormulaTDM\mpFormulaC\Source\mpNumerix2\TestmpNumerix2a\obj\Release\Tests_CSharp.csprojResolveAssemblyReference.cache

@@ -1,0 +1,15 @@
+﻿<Properties>
+  <Array name="bookmarks" />
+  <Array name="files">
+    <Element value="I:\Data\mpFormulaTDM\mpFormulaC\Source\mpNumerix2\TestmpNumerix2\Main.vb" />
+    <Element value="I:\Data\mpFormulaTDM\mpFormulaC\Source\mpNumerix2\TestmpNumerix2\TestMpfr.vb" />
+    <Element value="I:\Data\mpFormulaTDM\mpFormulaC\Source\mpNumerix2\TestmpNumerix2\TestMpfc.vb" />
+  </Array>
+  <Properties name="projectSavedData">
+    <Properties name="customTool">
+      <fileNames value="" />
+      <runOnBuild value="False" />
+    </Properties>
+    <Properties name="watchVars" />
+  </Properties>
+</Properties>
